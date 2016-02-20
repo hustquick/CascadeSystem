@@ -1,0 +1,6915 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage{indentfirst}
+%\usepackage{amsmath}
+\usepackage{url}
+\usepackage{ifthen}
+
+%for correct jump positions whe clicking on a link to a float
+\usepackage[figure]{hypcap}
+
+% for customized page headers/footers
+% only needed because they are only used in one section of the document
+\usepackage{fancyhdr}
+
+\PassOptionsToPackage{hyphens}{url}\usepackage{hyperref}
+
+\renewcommand{\nomgroup}[1]{%
+%\ifthenelse{\equal{#1}{A}}{\item[\textbf{Roman Symbols}]}{%
+\ifthenelse{\equal{#1}{G}}{\item[\textbf{Greek Symbols}]}{%
+\ifthenelse{\equal{#1}{C}}{\item[\textbf{Abbreviations}]}{%
+\ifthenelse{\equal{#1}{S}}{\item[\textbf{Subscripts}]}{%
+\ifthenelse{\equal{#1}{Z}}{\item[\textbf{Mathematical Symbols}]}
+{}
+%}% matches mathematical symbols
+}% matches Subscripts
+}% matches Abbreviations
+}% matches Greek Symbols
+}% matches Roman Symbols
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language american
+\language_package default
+\inputencoding utf8-plain
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format pdf4
+\output_sync 1
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered true
+\pdf_bookmarksopen true
+\pdf_bookmarksopenlevel 3
+\pdf_breaklinks true
+\pdf_pdfborder false
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\pdf_quoted_options "unicode=false"
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\author -2119886942 "ZhangCheng" 
+\end_header
+
+\begin_body
+
+\begin_layout Title
+CASCADE SYSTEM CALCULATION
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset nomencl_print
+LatexCommand printnomenclature
+set_width "custom"
+width "2.5cm"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Introduction
+\end_layout
+
+\begin_layout Standard
+Different types of collectors and different technologies for electricity
+ generation are suitable for different working temperature zones with different
+ costs.
+ An idea of cascade collection and cascade utilization of solar energy with
+ higher efficiency is presented.
+ Parabolic trough collectors are used to collect lower temperature energy
+ with lower cost and dish collectors are used to collect higher temperature
+ energy with higher efficiency.
+ Rankine cycle is used to work in lower temperature zone and Stirling cycle
+ is used to work in higher temperature zone.
+ Furthermore, effective topological structures are considered to take full
+ advantages of thermodynamic characters of different components of the system.
+ The cold chamber of Stirling engine is cooled by condensed fluid of Rankine
+ cycle to use the heat released by Stirling engine.
+ 
+\end_layout
+
+\begin_layout Section
+Problem description
+\end_layout
+
+\begin_layout Standard
+To characterize the system, calculation of the system must be applied first.
+ The scale of the system and the dimensions of the parameters must be evaluated.
+\end_layout
+
+\begin_layout Standard
+Before detailed model of the system can be created, several simplifying
+ assumptions are made:
+\end_layout
+
+\begin_layout Itemize
+Steady state at nominal load of the system is analyzed
+\end_layout
+
+\begin_layout Itemize
+Pressure drop due to flow is negligible everywhere
+\end_layout
+
+\begin_layout Itemize
+Same isentropic efficiency of the steam turbine with different loads and
+ in different stages
+\end_layout
+
+\begin_layout Itemize
+Simple models are used of some processes and equipments
+\end_layout
+
+\begin_layout Itemize
+All the Stirling engines in the Stirling engine array has the same speed
+\end_layout
+
+\begin_layout Itemize
+A symmetrical regenerator behavior is assumed so that a single effectiveness
+ can be defined as 
+\begin_inset Formula $e=\dfrac{T_{R}-T_{L}}{T_{H}-T_{L}}$
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Formosa2010,Albert2010"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+There is no heat loss to the environment for Stirling engines
+\end_layout
+
+\begin_layout Standard
+\noindent
+For cascade system, water is used as the working fluid of Rankine cycle.
+ Feed water is used to cool the cold chamber of Stirling engine.
+ Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:System-1"
+
+\end_inset
+
+ shows the sketch of cascade system.
+ Air is heated in parabolic dish collectors to be used to heat the hot chamber
+ of Stirling engine and air-to-water heat exchanger successively.
+ Water is heated in the cold chamber of Stirling engine, preheater, evaporator,
+ superheater and air-to-water heat exchanger successively, and then steam
+ expand in the turbine, condense in the condenser.
+ Parabolic trough collectors are used to provide heat for the preheater,
+ evaporator and superheater.
+ Pumps are used to change the pressure of fluids.
+ State numbers are marked on the sketch according to its logical position.
+ Numbers with solid circle means saturated liquid states 
+\begin_inset Formula $\left(x=0\right)$
+\end_inset
+
+, and with dotted circle means saturated gas states 
+\begin_inset Formula $\left(x=1\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename System0118.eps
+	width 80text%
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:System-1"
+
+\end_inset
+
+Sketch of cascade system
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Data
+\end_layout
+
+\begin_layout Standard
+Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Table1"
+
+\end_inset
+
+ shows the basic design data of cascade system, such as the nominal electric
+ power of Stirling engine and generator, temperatures of inlet and outlet
+ of dishes, design parameters of turbine, etc.
+ According to these data, some important parameters of the system, such
+ as mass flow rate, fluid temperature, system efficiency, can be obtained
+ by calculation.
+ To calculate the system, the model must be built first.
+ EES
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "C"
+symbol "EES"
+description "Engineering Equation Solver"
+
+\end_inset
+
+ is used for the model construction and calculation.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Table1"
+
+\end_inset
+
+System characteristics of cascade system
+\end_layout
+
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="20" columns="3">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top">
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Nominal electric power
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$P_{stirling}$"
+description "Power of the Stirling engine array, We"
+
+\end_inset
+
+
+\begin_inset Formula $P_{stirling}=5\times10^{5}\,$
+\end_inset
+
+We
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "a"
+symbol "$P_{generator}$"
+description "Power of generator, We"
+
+\end_inset
+
+
+\begin_inset Formula $P{}_{generator}=6\times10^{6}\,$
+\end_inset
+
+We
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Environment
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$I_{DNI}$"
+description "Direct normal irradiance, W/m$^2$"
+
+\end_inset
+
+
+\begin_inset Formula $I_{DNI}=700\,$
+\end_inset
+
+ W/m
+\begin_inset script superscript
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$T_{amb}$"
+description "Ambient temperature, K"
+
+\end_inset
+
+
+\begin_inset Formula $T_{amb}=293\,$
+\end_inset
+
+K
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$p_{amb}$"
+description "Ambient pressure, Pa"
+
+\end_inset
+
+
+\begin_inset Formula $p_{amb}=1\times10^{5}\,$
+\end_inset
+
+Pa
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$v_{wind}$"
+description "Ambient wind speed, m/s"
+
+\end_inset
+
+
+\begin_inset Formula $v_{wind}=4\,$
+\end_inset
+
+m/s
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Dish collector
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$T_{dish,inlet}$"
+description "Inlet temperature of air for volumeteric receiver, K"
+
+\end_inset
+
+
+\begin_inset Formula $T_{dish,inlet}=623\,$
+\end_inset
+
+K
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$T_{dish,outlet}$"
+description "Outlet temperature of air for volumetric receiver, K"
+
+\end_inset
+
+
+\begin_inset Formula $T_{dish,outlet}=1073\,$
+\end_inset
+
+K
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$p_{dish}$"
+description "Air pressure in volumetric reciver tube, Pa"
+
+\end_inset
+
+
+\begin_inset Formula $p_{dish}=5\times10^{5}\,$
+\end_inset
+
+Pa
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$A_{dishCollector}$"
+description "Aperture area of each dish collector, m$^2$"
+
+\end_inset
+
+
+\begin_inset Formula $A_{dishCollctor}=87.7\,$
+\end_inset
+
+m
+\begin_inset script superscript
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Dish type: a product of SES
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Trough collector
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "G"
+symbol "$\\Delta{}T_{oil,water,min}$"
+description "Minimum temperature difference between oil and water in the oil-to-water heat exchagner, K"
+
+\end_inset
+
+
+\begin_inset Formula $\Delta T_{oil,water,min}=15\,$
+\end_inset
+
+K 
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+Delta{}T_{oil,water,min}$
+\end_layout
+
+\end_inset
+
+ should be chosen carefully, for the pinch temperature of 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$T_{3,1}-T_{2,11}$
+\end_layout
+
+\end_inset
+
+ is stable, and 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+Delta{}T_{oil,water,min}$
+\end_layout
+
+\end_inset
+
+ should be chosen less than this value.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ 
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$T_{trough,outlet}$"
+description "Outlet temperature of therminol for trough receiver, K"
+
+\end_inset
+
+
+\begin_inset Formula $T_{trough,outlet}=623\,$
+\end_inset
+
+K 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$p_{trough}$"
+description "Pressure of therminol in the tube of trough receiver, Pa"
+
+\end_inset
+
+
+\begin_inset Formula $p_{trough}=2\times10^{6}\,$
+\end_inset
+
+Pa
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$A_{troughCollector}$"
+description "Aperture area of each trough collector, m$^2$"
+
+\end_inset
+
+
+\begin_inset Formula $A_{troughCollctor}=545\,$
+\end_inset
+
+m
+\begin_inset script superscript
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Trough type: LS-3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Stirling engine
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$T_{1,afterstirling}$"
+description "Temperature of the air after heating Stirling engine, K"
+
+\end_inset
+
+
+\begin_inset Formula $T_{1,afterstirling}=673\,$
+\end_inset
+
+K 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$n_{se}$"
+description "Speed of Stirling engine, s$^{-1}$"
+
+\end_inset
+
+
+\begin_inset Formula $n_{se}=10\,$
+\end_inset
+
+s
+\begin_inset Formula $^{-1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$U_{stirling,1}$"
+description "Overall heat transfer coefficient of Stirling engine at air side, W/(m$^2\\cdot$K)"
+
+\end_inset
+
+
+\begin_inset Formula $U_{stirling,1}=30\,$
+\end_inset
+
+W/m
+\begin_inset Formula $^{2}\cdot$
+\end_inset
+
+K 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$U_{stirling,2}$"
+description "Overall heat transfer coefficient of Stirling engine at water side, W/(m$^2\\cdot$K)"
+
+\end_inset
+
+
+\begin_inset Formula $U_{stirling,2}=150\,$
+\end_inset
+
+W/m
+\begin_inset Formula $^{2}\cdot$
+\end_inset
+
+K 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$A_{stirling,1}$"
+description "Heat transfer area of each Stirling engine at air side, m$^2$"
+
+\end_inset
+
+
+\begin_inset Formula $A_{stirling,1}=6\,$
+\end_inset
+
+m
+\begin_inset Formula $^{2}$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$A_{stirling,2}$"
+description "Heat transfer area of each Stirling engine at water side, m$^2$"
+
+\end_inset
+
+
+\begin_inset Formula $A_{stirling,2}=6\,$
+\end_inset
+
+m
+\begin_inset Formula $^{2}$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$k$"
+description "Specific heat ratio of the working gas in Stirling engine"
+
+\end_inset
+
+
+\begin_inset Formula $k=1.4$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "G"
+symbol "$\\gamma_{stirling}$"
+description "Compression ratio of Stirling engine"
+
+\end_inset
+
+
+\begin_inset Formula $\gamma_{stirling}=3.375$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$n$"
+description "Amount of working gas in each Stirling engine, mol"
+
+\end_inset
+
+
+\begin_inset Formula $n=7.73\times10^{-2}\,$
+\end_inset
+
+mol
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Steam turbine
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$T_s$"
+description "Main steam temperature of turbine, K"
+
+\end_inset
+
+
+\begin_inset Formula $T_{s}=613\,$
+\end_inset
+
+K 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$p_s$"
+description "Main steam pressure of the turbine, Pa"
+
+\end_inset
+
+
+\begin_inset Formula $p_{s}=2.35\times10^{6}\,$
+\end_inset
+
+Pa
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$p_c$"
+description "Exhaust pressure of the turbine, Pa"
+
+\end_inset
+
+
+\begin_inset Formula $p_{c}=1.5\times10^{4}\,$
+\end_inset
+
+Pa
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$T_{s,d}$"
+description "Designed mean steam temperature of turbine, K"
+
+\end_inset
+
+
+\begin_inset Formula $T_{s,d}=663\,$
+\end_inset
+
+K 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$p_{cp}$"
+description "Condensate pump outlet pressure, Pa"
+
+\end_inset
+
+
+\begin_inset Formula $p_{cp}=1\times10^{6}\,$
+\end_inset
+
+Pa
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Turbine type: a product
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Deaerator
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$p_{deaerator}$"
+description "Pressure of deaerator, Pa"
+
+\end_inset
+
+
+\begin_inset Formula $p_{deaerator}=1\times10^{6}\,$
+\end_inset
+
+Pa
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Model of the system
+\end_layout
+
+\begin_layout Standard
+The system is built in several blocks.
+ These blocks are made of circuits and efficiency calculations.
+ Two circuits, air circuit and water circuit, are built in some specific
+ states and in some components.
+ Known parameters of the states, we can get the efficiency of the system
+ and the overall efficiency of separated systems.
+\end_layout
+
+\begin_layout Subsection
+Air circuit
+\end_layout
+
+\begin_layout Standard
+Use the function 
+\begin_inset Formula $DishReceiver(A_{dishCollector,}T_{dish,inlet},T_{dish,outlet}:\eta_{dish})$
+\end_inset
+
+ to calculate 
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "G"
+symbol "$\\eta_{dish}$"
+description "Thermal efficiency of dish"
+
+\end_inset
+
+
+\begin_inset Formula $\eta_{dish}$
+\end_inset
+
+.
+ The explanation of function 
+\begin_inset Formula $DishReceiver$
+\end_inset
+
+ can be found in Appendix 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Dish-receiver"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+For state 
+\begin_inset Formula $[1,1]$
+\end_inset
+
+
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "S"
+symbol "1,1"
+description "Air at outlet of dishes and inlet of heat exchanger of Stirling engines"
+
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left.\begin{array}{l}
+p_{1,1}=p_{dish}\\
+T_{1,1}=T_{dish,outlet}
+\end{array}\right\} \Rightarrow h_{1,1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For state 
+\begin_inset Formula $[1\text{,}2]$
+\end_inset
+
+
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "S"
+symbol "1,2"
+description "Air outlet of heat exchanger of Stirling engines and inlet of air-to-water heat exchanger"
+
+\end_inset
+
+, 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left.\begin{array}{l}
+p_{1,2}=p_{1,1}\\
+T_{1,2}=T_{1,afterstirling}
+\end{array}\right\} \Rightarrow h_{1,2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For Stirling engines, 
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$n_{stirlingEngine}$"
+description "Number of Stirling engines in the Stirling engine array"
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+n_{stirlingEngine}=P_{stirling}/P_{stirlingEngine}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "G"
+symbol "$\\eta{}_{stirling}$"
+description "Efficiency of Stirling engine array"
+
+\end_inset
+
+Use function 
+\begin_inset Formula $StirlingEngineArray(T_{1,1},T_{1,2},q_{m,1},p_{1,1},T_{2,5},(1-y)q_{m,2},p_{2,5}:\,\eta_{stirling})$
+\end_inset
+
+ to calculate 
+\begin_inset Formula $\eta_{stirling}$
+\end_inset
+
+.
+ The explanation of function 
+\begin_inset Formula $StirlingEngineArray$
+\end_inset
+
+ can be found in Appendix 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Stirling-engine-array"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$q_{stirling}$"
+description "Heat provided to the Stirling engine array, W"
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+q_{stirling}=P_{stirling}/\eta_{stirling}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$q_{m,1}$"
+description "Total mass flow rate of air, kg/s"
+
+\end_inset
+
+
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "S"
+symbol "1"
+description "Air"
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+q_{stirling}=q_{m,1}\left(h_{1,1}-h_{1,2}\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since there is no heat loss to the environment for Stirling engines,
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$q_{stirling,cold}$"
+description "Heat absorbed by cooling water in the Stirling engine array, W"
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+q_{stirling,cold}=q_{stirling}-P_{stirling}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For state 
+\begin_inset Formula $[1,3]$
+\end_inset
+
+
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "S"
+symbol "1,3"
+description "Air at outlet of heat exchanger of air-to-water heat exchanger and inlet of dishes"
+
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left.\begin{array}{l}
+p_{1,3}=p_{1,2}\\
+T_{1,3}=T_{dish,inlet}
+\end{array}\right\} \Rightarrow h_{1,3}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For dish,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+q_{dish}=q_{m,1}\left(h_{1,1}-h_{1,3}\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$A_{dish}$"
+description "Aperture area of all dish collectors, m$^2$"
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+q_{dish}=DNI\cdot A_{dish}\cdot\eta_{dish}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$n_{dishCollector}$"
+description "Number of all dish collectors "
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+n_{dishCollector}=ceil(A_{dish}/A_{dishCollector})
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Water circuit
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\eta_{i,turbine}$
+\end_inset
+
+ is obtained by given design parameters of the turbine.
+\end_layout
+
+\begin_layout Standard
+
+\change_deleted -2119886942 1452678112
+For state 
+\begin_inset Formula $d[2,1]$
+\end_inset
+
+ on design:
+\end_layout
+
+\begin_layout Standard
+
+\change_deleted -2119886942 1452678112
+\begin_inset Formula 
+\begin{equation}
+\left.\begin{array}{l}
+p_{d,2,1}=p_{s}\\
+T_{d,2,1}=T_{s,d}
+\end{array}\right\} \Rightarrow\left\{ \begin{array}{l}
+h_{d,2,1}\\
+s_{d,2,1}
+\end{array}\right.
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\change_deleted -2119886942 1452678112
+For state 
+\begin_inset Formula $d[2,2]$
+\end_inset
+
+ on design:
+\end_layout
+
+\begin_layout Standard
+
+\change_deleted -2119886942 1452678112
+\begin_inset Formula 
+\begin{equation}
+\left.\begin{array}{l}
+P_{turbine,d}=m_{2,d}(h_{d,2,1}-h_{d,2,2})\Rightarrow h_{d,2,2}\\
+\left.\begin{array}{l}
+p_{i,d,2,2}=p_{c}\\
+s_{i,d,2,2}=s_{d,2,1}
+\end{array}\right\} \Rightarrow h_{i,d,2,2}
+\end{array}\right\} \Rightarrow\eta_{i,turbine}
+\end{equation}
+
+\end_inset
+
+
+\change_unchanged
+
+\end_layout
+
+\begin_layout Standard
+For state 
+\begin_inset Formula $[2,1]$
+\end_inset
+
+
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "S"
+symbol "2,1"
+description "Water at outlet of air-to-water heat exchanger and inlet of turbine"
+
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left.\begin{array}{l}
+p_{2,1}=p_{s}\\
+T_{2,1}=T_{s}
+\end{array}\right\} \Rightarrow\left\{ \begin{array}{l}
+h_{2,1}\\
+s_{2,1}
+\end{array}\right.
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For state 
+\begin_inset Formula $[2,2]$
+\end_inset
+
+
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "S"
+symbol "2,2"
+description "Water at outlet of turbine and inlet of condenser"
+
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left.\begin{array}{l}
+s_{i,2,2}=s_{2,1}\\
+p_{i,2,2}=p_{c}
+\end{array}\right\} \Rightarrow h_{i,2,2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\eta_{i,turbine}=\frac{h_{2,1}-h_{2,2}}{h_{2,1}-h_{i,2,2}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left.\begin{array}{l}
+p_{2,2}=p_{c}\\
+h_{2,2}
+\end{array}\right\} \Rightarrow\left\{ \begin{array}{l}
+T_{2,2}\\
+x_{2,2}
+\end{array}\right.
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "S"
+symbol "$i$"
+description "Isentropic parameter"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For state 
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "S"
+symbol "2,3"
+description "Water at outlet of turbine bleed point and inlet1 of deaerator"
+
+\end_inset
+
+
+\begin_inset Formula $[2,3]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left.\begin{array}{l}
+s_{i,2,3}=s_{2,1}\\
+p_{i,2,3}=p_{deaerator}
+\end{array}\right\} \Rightarrow h_{i,2,3}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\eta_{i,turbine}=\frac{h_{2,1}-h_{2,3}}{h_{2,1}-h_{i,2,3}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left.\begin{array}{l}
+p_{2,3}=p_{deaerator}\\
+h_{2,3}
+\end{array}\right\} \Rightarrow\left\{ \begin{array}{l}
+T_{2,3}\\
+x_{2,3}
+\end{array}\right.
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+P_{turbine}=P_{generator}/\eta_{generator}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$y$"
+description "Extraction rate of steam turbine"
+
+\end_inset
+
+
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$q_{m,2}$"
+description "Total mass flow rate of water, kg/s"
+
+\end_inset
+
+
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "S"
+symbol "2"
+description "Water"
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+P_{turbine}=\left(1-y\right)q_{m,2}\left(h_{2,1}-h_{2,2}\right)+yq_{m,2}\left(h_{2,1}-h_{2,3}\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For state 
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "S"
+symbol "2,4"
+description "Water at outlet of condenser and inlet of condenser pump"
+
+\end_inset
+
+
+\begin_inset Formula $[2,4]$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left.\begin{array}{l}
+p_{2,4}=p_{2,2}\\
+x_{2,4}=0
+\end{array}\right\} \Rightarrow\left\{ \begin{array}{l}
+h_{2,4}\\
+s_{2,4}
+\end{array}\right.
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For state 
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "S"
+symbol "2,5"
+description "Water at outlet of condenser pump and inlet of Stirling engine heat exchanger"
+
+\end_inset
+
+
+\begin_inset Formula $[2,5]$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left.\begin{array}{l}
+p_{2,5}=p_{2,stirling}\\
+s_{2,5}=s_{2,4}
+\end{array}\right\} \Rightarrow\left\{ \begin{array}{l}
+T_{2,5}\\
+h_{2,5}
+\end{array}\right.
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For state 
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "S"
+symbol "2,6"
+description "Water at outlet of Stirling engine heat exchanger and inlet2 of deaeretor"
+
+\end_inset
+
+
+\begin_inset Formula $[2,6]$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+q_{stirling,cold}=\left(1-y\right)q_{m,2}\left(h_{2,6}-h_{2,5}\right)\Rightarrow h_{2,6}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left.\begin{array}{l}
+p_{2,6}=p_{2,5}\\
+h_{2,6}
+\end{array}\right\} \Rightarrow\left\{ \begin{array}{l}
+T_{2,6}\\
+s_{2,6}
+\end{array}\right.
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For state 
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "S"
+symbol "2,7"
+description "Water at outlet of deaeretor and inlet of feed water pump"
+
+\end_inset
+
+
+\begin_inset Formula $[2,7]$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left.\begin{array}{l}
+p_{2,7}=p_{deaerator}\\
+x_{2,7}=0
+\end{array}\right\} \Rightarrow\left\{ \begin{array}{l}
+h_{2,7}\\
+s_{2,7}
+\end{array}\right.
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+yh_{2,3}+\left(1-y\right)h_{2,6}=h_{2,7}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For state 
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "S"
+symbol "2,8"
+description "Water at outlet of feed water pump and inlet of preheater"
+
+\end_inset
+
+
+\begin_inset Formula $[2,8]$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left.\begin{array}{l}
+p_{2,8}=p_{s}\\
+s_{2,8}=s_{2,7}
+\end{array}\right\} \Rightarrow\left\{ \begin{array}{l}
+T_{2,8}\\
+h_{2,8}
+\end{array}\right.
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For Rankine cycle,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\eta_{rankine}=\frac{\left(1-y\right)\left(h_{2,1}+h_{2,4}-h_{2,2}-h_{2,5}\right)+y\left(h_{2,1}-h_{2,3}\right)-\left(h_{2,8}-h_{2,7}\right)}{\left(1-y\right)\left(h_{2,6}-h_{2,5}\right)+h_{2,1}-h_{2,8}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For state 
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "S"
+symbol "2,9"
+description "Water at outlet of preheater and inlet of evaporator"
+
+\end_inset
+
+
+\begin_inset Formula $[2,9]$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left.\begin{array}{l}
+p_{2,9}=p_{2,8}\\
+x_{2,9}=0
+\end{array}\right\} \Rightarrow\left\{ \begin{array}{l}
+T_{2,9}\\
+h_{2,9}
+\end{array}\right.
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For state 
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "S"
+symbol "2,10"
+description "Water at outlet of evaporator and inlet of superheater"
+
+\end_inset
+
+
+\begin_inset Formula $[2,10]$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left.\begin{array}{l}
+p_{2,10}=p_{2,9}\\
+x_{2,10}=1
+\end{array}\right\} \Rightarrow\left\{ \begin{array}{l}
+T_{2,10}\\
+h_{2,10}
+\end{array}\right.
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For state 
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "S"
+symbol "2,11"
+description "Water at outlet of superheater and inlet of air-to-water heat exchanger"
+
+\end_inset
+
+
+\begin_inset Formula $[2,11]$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left.\begin{array}{l}
+p_{2,11}=p_{2,10}\\
+q_{m,1}\left(h_{1,2}-h_{1,3}\right)=q_{m,2}\left(h_{2,1}-h_{2,11}\right)
+\end{array}\right\} \Rightarrow T_{2,11}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+q_{trough}=q_{m,2}\left(h_{2,11}-h_{2,8}\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$A_{trough}$"
+description "Aperture area of all trough collectors, m$^2$"
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+q_{trough}=I_{p}\cdot A_{trough}\cdot\eta_{trough}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$n_{troughCollector}$"
+description "Number of all trough collectors"
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+n_{troughCollector}=ceil(A_{trough}/A_{troughCollector})
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $ceil(x)$
+\end_inset
+
+ is a function that returns the smallest integer larger than 
+\begin_inset Formula $x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Oil circuit
+\end_layout
+
+\begin_layout Standard
+Use the function 
+\begin_inset Formula $TroughCollector(T_{trough,inlet},T_{trough,outlet},q_{m,3}:\,\eta_{trough})$
+\end_inset
+
+ to calculate trough collector thermal efficiency.
+ The explanation of function 
+\begin_inset Formula $TroughCollector$
+\end_inset
+
+ can be found in Appendix 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Trough-collector"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+For state 
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "S"
+symbol "3,1"
+description "Therminol at the outlet of troughes and inlet of superheater"
+
+\end_inset
+
+
+\begin_inset Formula $[3,1]$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left.\begin{array}{l}
+p_{3,1}=p_{trough}\\
+T_{3,1}=T_{trough,outlet}
+\end{array}\right\} \Rightarrow h_{3,1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For state 
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "S"
+symbol "3,2"
+description "Therminol at the outlet of superheater and inlet of evaporator"
+
+\end_inset
+
+
+\begin_inset Formula $[3,2]$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$q_{m,3}$"
+description "Total mass flow rate of therminol, kg/s"
+
+\end_inset
+
+
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "S"
+symbol "3"
+description "Therminol"
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\left.\begin{array}{l}
+p_{3,2}=p_{3,1}\\
+q_{m,3}\left(h_{3,1}-h_{3,2}\right)=q_{m,2}\left(h_{2,11}-h_{2,10}\right)\\
+h_{3,2}=h\left(F\$_{3},T_{3,2},p_{3,2}\right)
+\end{array}\right\} \Rightarrow T_{3,2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For state 
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "S"
+symbol "3,3"
+description "Therminol at the outlet of evaporator and inlet of preheater"
+
+\end_inset
+
+
+\begin_inset Formula $[3,3]$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left.\begin{array}{l}
+p_{3,3}=p_{3,2}\\
+q_{m,3}\left(h_{3,2}-h_{3,3}\right)=q_{m,2}\left(h_{2,10}-h_{2,9}\right)\\
+h_{3,3}=h\left(F\$_{3},T_{3,3},p_{3,3}\right)
+\end{array}\right\} \Rightarrow T_{3,3}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For state 
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "S"
+symbol "3,4"
+description "Therminol at the outlet of preheater and inlet of troughes"
+
+\end_inset
+
+
+\begin_inset Formula $[3,4]$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left.\begin{array}{l}
+p_{3,4}=p_{3,3}\\
+q_{m,3}\left(h_{3,3}-h_{3,4}\right)=q_{m,2}\left(h_{2,9}-h_{2,8}\right)\\
+h_{3,4}=h\left(F\$_{3},T_{3,4},p_{3,4}\right)
+\end{array}\right\} \Rightarrow T_{3,4}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\Delta T_{oil,water,min}=min(T_{3,4}-T_{2,8},T_{3,3}-T_{2,9},T_{3,1}-T_{2,11})
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+System efficiency
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+E_{total}=I_{DNI}\cdot\left(A_{dish}+A_{trough}\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\eta_{system}=\left(P_{stirling}+P_{generator}\right)/E_{total}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Separate system
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename SeparateSystem0118.eps
+	width 100text%
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:SeparateSystem-1"
+
+\end_inset
+
+Sketch of separate system
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:SeparateSystem-1"
+
+\end_inset
+
+ shows the sketch of separate system, which uses the same dish collectors
+ and trough collectors.
+ Stirling engines with the same number of dish collectors are directly put
+ on the focuses of the dish collectors, and water is used for cooling the
+ Stirling engines.
+ Steam turbine has the same main parameters and isentropic efficiency with
+ that in cascade system.
+ Generator has the same efficiency with that in cascade system.
+ 
+\end_layout
+
+\begin_layout Subsection
+Separate trough system
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "S"
+symbol "$s$"
+description "Separate system"
+
+\end_inset
+
+
+\begin_inset Formula $p_{deaerator,s}=p_{deaerator}$
+\end_inset
+
+, 
+\begin_inset Formula $p_{cp,s}=p_{cp}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+For state 
+\begin_inset Formula $s[2,1]$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left.\begin{array}{l}
+p_{s,2,1}=p_{s}\\
+T_{s,2,1}=T_{s}
+\end{array}\right\} \Rightarrow\left\{ \begin{array}{l}
+h_{s,2,1}\\
+s_{s,2,1}
+\end{array}\right.
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For state 
+\begin_inset Formula $s[2,2]$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left.\begin{array}{l}
+s_{i,s,2,2}=s_{s,2,1}\\
+p_{i,s,2,2}=p_{c}
+\end{array}\right\} \Rightarrow h_{i,s,2,2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\eta_{i,turbine}=\frac{h_{s,2,1}-h_{s,2,2}}{h_{s,2,1}-h_{s,i,2,2}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left.\begin{array}{l}
+p_{s,2,2}=p_{c}\\
+h_{s,2,2}
+\end{array}\right\} \Rightarrow\left\{ \begin{array}{l}
+T_{s,2,2}\\
+x_{s,2,2}
+\end{array}\right.
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+and state 
+\begin_inset Formula $s[2,3]$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left.\begin{array}{l}
+s_{i,s,2,3}=s_{s,2,1}\\
+p_{i,s,2,3}=p_{deaerator,s}
+\end{array}\right\} \Rightarrow h_{i,s,2,3}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\eta_{i,turbine}=\frac{h_{s,2,1}-h_{s,2,3}}{h_{s,2,1}-h_{s,i,2,3}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left.\begin{array}{l}
+p_{s,2,3}=p_{b,s}\\
+h_{s,2,3}
+\end{array}\right\} \Rightarrow\left\{ \begin{array}{l}
+T_{s,2,3}\\
+x_{s,2,3}
+\end{array}\right.
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+P_{turbine,s}=\left(1-y_{s}\right)q_{m,2,s}\left(h_{s,2,1}-h_{s,2,2}\right)+y_{s}q_{m,2,s}\left(h_{s,2,1}-h_{s,2,3}\right)\label{eq:p_turbine_s}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+P_{generator,s}=P_{turbine,s}\eta_{generator}\label{eq:p_generator_s}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For state 
+\begin_inset Formula $s[2,4]$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left.\begin{array}{l}
+p_{s,2,4}=p_{s,2,2}\\
+x_{s,2,4}=0
+\end{array}\right\} \Rightarrow\left\{ \begin{array}{l}
+h_{s,2,4}\\
+s_{s,2,4}
+\end{array}\right.
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For state 
+\begin_inset Formula $s[2,5],$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left.\begin{array}{l}
+p_{s,2,5}=p_{cp,s}\\
+s_{s,2,5}=s_{s,2,4}
+\end{array}\right\} \Rightarrow\left\{ \begin{array}{l}
+T_{s,2,5}\\
+h_{s,2,5}
+\end{array}\right.
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For state 
+\begin_inset Formula $s[2,6]$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left.\begin{array}{l}
+p_{s,2,6}=p_{deaerator,s}\\
+x_{s,2,6}=0
+\end{array}\right\} \Rightarrow\left\{ \begin{array}{l}
+h_{s,2,6}\\
+s_{s,2,6}
+\end{array}\right.
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+y_{s}h_{s,2,3}+\left(1-y_{s}\right)h_{s,2,5}=h_{s,2,6}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For state 
+\begin_inset Formula $s[2,7]$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left.\begin{array}{l}
+p_{s,2,7}=p_{s}\\
+s_{s,2,7}=s_{s,2,6}
+\end{array}\right\} \Rightarrow\left\{ \begin{array}{l}
+T_{s,2,7}\\
+h_{s,2,7}
+\end{array}\right.
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For Rankine cycle,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\eta_{rankine,s}=\frac{\left(1-y_{s}\right)\left(h_{s,2,1}+h_{s,2,4}-h_{s,2,2}-h_{s,2,5}\right)+y_{s}\left(h_{s,2,1}-h_{s,2,3}\right)-\left(h_{s,2,7}-h_{s,2,6}\right)}{h_{s,2,1}-h_{s,2,7}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For state 
+\begin_inset Formula $s[2,8]$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left.\begin{array}{l}
+p_{s,2,8}=p_{s,2,7}\\
+s_{s,2,8}=0
+\end{array}\right\} \Rightarrow\left\{ \begin{array}{l}
+T_{s,2,8}\\
+h_{s,2,8}
+\end{array}\right.
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For state 
+\begin_inset Formula $s[2,9]$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left.\begin{array}{l}
+p_{s,2,9}=p_{s,2,8}\\
+x_{s,2,9}=1
+\end{array}\right\} \Rightarrow\left\{ \begin{array}{l}
+T_{s,2,9}\\
+h_{s,2,9}
+\end{array}\right.
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+q_{trough}=q_{m,2,s}\left(h_{s,2,1}-h_{s,2,7}\right)\Rightarrow q_{m,2,s}\label{eq:q_m_2_s}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Combine Equation 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:p_turbine_s"
+
+\end_inset
+
+, Equation 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:p_generator_s"
+
+\end_inset
+
+ and Equation 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:q_m_2_s"
+
+\end_inset
+
+, we can get 
+\begin_inset Formula $P_{generator,s}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Separate dish system
+\end_layout
+
+\begin_layout Standard
+For Stirling turbines, 
+\begin_inset Formula $k$
+\end_inset
+
+ and 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ are chosen as the same value.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $T_{H,s}=1073$
+\end_inset
+
+℃, 
+\begin_inset Formula $T_{L,s}=37$
+\end_inset
+
+℃
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $T_{H,s}$
+\end_inset
+
+ is chosen to be equal to outlet temperature of air in dish receiver.
+ 
+\begin_inset Formula $T_{L,s}$
+\end_inset
+
+ is chosen to be 310 K, the default expansion temperature in Fraser's paper
+ for the calculation of 4-95 NK
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+uppercase
+\backslash
+expandafter{
+\backslash
+romannumeral2}
+\end_layout
+
+\end_inset
+
+ engine.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+T_{R,s}=\dfrac{T_{H,s}-T_{L,s}}{\ln\dfrac{T_{H,s}}{T_{L,s}}}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+e_{s}=\dfrac{T_{R,s}-T_{L,s}}{T_{H,s}-T_{L,s}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\eta_{stirling,s}=\dfrac{T_{H,s}-T_{L,s}}{T_{H,s}+\dfrac{1-e_{s}}{k-1}\cdot\dfrac{T_{H,s}-T_{L,s}}{\ln\dfrac{T_{H,s}}{T_{L,s}}}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\eta_{dish,s}$
+\end_inset
+
+ uses the value 0.8.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Wu2010a"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+P_{stirling,s}=q_{dish,s}\eta_{stirling,s}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Separate system efficiency
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\eta_{system,s}=(P_{stirling,s}+P_{generator,s})/E_{total}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Results
+\end_layout
+
+\begin_layout Standard
+Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Main-results"
+
+\end_inset
+
+ shows some important results of the system.
+ From the results, we can see that the overall of the cascade system 
+\begin_inset Formula $\eta_{system}=0.1950$
+\end_inset
+
+ is higher than that of separated system 
+\begin_inset Formula $\eta_{system,s}=0.1946$
+\end_inset
+
+.
+ The separated system uses the same collectors of the cascade system and
+ recirculated cooling water with the same temperature of the environment
+ is used to cool cold chamber of Stirling engine.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename System1_results1.eps
+	width 100text%
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Main-results"
+
+\end_inset
+
+Some important results
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:TroughReceiverPartResults"
+
+\end_inset
+
+ shows results of trough collector part, Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:dishReciverPartResults "
+
+\end_inset
+
+ shows results of dish receiver part, Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:stirlingEnginePartResults"
+
+\end_inset
+
+ shows results of Stirling engine part.
+ The detail explanation of these parts can be found in Appendix.
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename System1_result_troughcollector.eps
+	width 100text%
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:TroughReceiverPartResults"
+
+\end_inset
+
+Results of the trough collector part
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename System1_result_DishReceiver.eps
+	width 100text%
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:dishReciverPartResults "
+
+\end_inset
+
+Results of the dish receiver part
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename System1_result_stirlingEngine.eps
+	width 100text%
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:stirlingEnginePartResults"
+
+\end_inset
+
+Results of the Stirling engine part
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+\start_of_appendix
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Trough-collector"
+
+\end_inset
+
+Trough collector
+\end_layout
+
+\begin_layout Standard
+LS-3 is used as the trough collector, the parameters are listed in Table
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:troughCollector"
+
+\end_inset
+
+.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Romero2007"
+
+\end_inset
+
+ Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:troughCollector"
+
+\end_inset
+
+ shows the sketch of trough collector.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Float table
+placement h
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:troughCollector"
+
+\end_inset
+
+Parameters of trough collector
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="3">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "G"
+symbol "$\\rho$"
+description "Reflectivity"
+
+\end_inset
+
+
+\begin_inset Formula $\rho=0.94$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "G"
+symbol "$\\gamma$"
+description "Intercept factor"
+
+\end_inset
+
+
+\begin_inset Formula $\gamma=0.93$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "G"
+symbol "$\\tau$"
+description "Transmissivity"
+
+\end_inset
+
+
+\begin_inset Formula $\tau=0.95$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "G"
+symbol "$\\alpha_{abs}$"
+description "Absorptivity of the absorber selective coating"
+
+\end_inset
+
+
+\begin_inset Formula $\alpha_{abs}=0.96$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$w_{trough}$"
+description "Width of trough collector, m"
+
+\end_inset
+
+
+\begin_inset Formula $w_{trough}=5.76\,$
+\end_inset
+
+m
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$F_e$"
+description "Soiling factor of the trough collector"
+
+\end_inset
+
+
+\begin_inset Formula $F_{e}=0.97$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$d_i$"
+description "Inner diameter of trough receiver, m"
+
+\end_inset
+
+
+\begin_inset Formula $d_{i}=0.066\,$
+\end_inset
+
+m
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$d_o$"
+description "Outer diameter of trough receiver, m"
+
+\end_inset
+
+
+\begin_inset Formula $d_{o}=0.07\,$
+\end_inset
+
+m
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "G"
+symbol "$\\phi$"
+description "Incidence angle"
+
+\end_inset
+
+
+\begin_inset Formula $\phi=70^{\circ}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename TroughCollector.eps
+	width 80text%
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:troughCollector"
+
+\end_inset
+
+Sketch of trough collector
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$q_{collector,fluid}$"
+description "Heat transferred from trough collector to fluid, W"
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\left.\begin{array}{c}
+p_{trough},T_{i}\Rightarrow h_{i}\\
+p_{trough},T_{o}\Rightarrow h_{o}
+\end{array}\right\} \Rightarrow q_{collector,fluid}=q_{m}(h_{o}-h_{i})
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+P=\pi d_{o}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+q^{''}=I_{DNI}\cdot w_{trough}\eta_{opt,0}K(\phi)F_{e}/P
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$K$"
+description "Incidence angle modifier of trough collector"
+
+\end_inset
+
+
+\begin_inset Formula $K(\phi)$
+\end_inset
+
+ is the incidence angle modifier, 
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "G"
+symbol "$\\eta_{opt,0}$"
+description "Optical efficiency with an incidence angle of 0"
+
+\end_inset
+
+
+\begin_inset Formula $\eta_{opt,0}$
+\end_inset
+
+ is peak optical efficiency (optical efficiency with an incidence angle
+ of 0)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\eta_{opt,0}=\rho\gamma\tau\alpha_{abs}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Assume overall heat transfer coefficient
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$U$"
+description "Overall heat transfer coefficient, W/(m$^2\\cdot$K)"
+
+\end_inset
+
+ 
+\begin_inset Formula $U(T_{abs})$
+\end_inset
+
+ is uniform for whole length, so that we can use the heat transfer correlation
+ in Appendix 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:CTCHTHT"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$q^{''}$"
+description "Heat flux, W/m$^2$"
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\frac{T_{o}-T_{amb}-\dfrac{q^{''}}{U(T_{abs})}}{T_{i}-T_{amb}-\dfrac{q^{''}}{U(T_{abs})}}=\exp(-\frac{U(T_{abs})PL}{q_{m}c_{p}})\label{eq:CTCHF}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $q_{collector,fluid}$
+\end_inset
+
+ can be obtained by calculating the heat transfer of pipe and fluid with
+ the correlation 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Bergman2011"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$Nu$"
+description "Nusselt number"
+
+\end_inset
+
+
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$Re$"
+description "Reynolds number"
+
+\end_inset
+
+
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$Pr$"
+description "Prandtl number"
+
+\end_inset
+
+
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "G"
+symbol "$\\mu$"
+description "Viscosity, kg/(m$\\cdot$s)"
+
+\end_inset
+
+
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "G"
+symbol "$\\mu_w$"
+description "Fluid viscosity evaluated at average temperature of tube wall, kg/(m$\\cdot$s)"
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+Nu=0.027Re^{0.5}Pr^{1/3}(\mu/\mu_{w})^{0.14}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+which is written as a function 
+\begin_inset Formula $NulnPipe(Re,Pr,\mu,\mu_{w})$
+\end_inset
+
+.
+ It returns a large value of 
+\begin_inset Formula $Nu$
+\end_inset
+
+, so small difference exists between 
+\begin_inset Formula $T_{abs}(x)$
+\end_inset
+
+ and 
+\begin_inset Formula $T(x)$
+\end_inset
+
+.
+ So 
+\begin_inset Formula $(T_{i}+T_{o})/2$
+\end_inset
+
+ can be used as the average value of 
+\begin_inset Formula $T_{abs}$
+\end_inset
+
+, and 
+\begin_inset Formula $U(T_{abs})$
+\end_inset
+
+ can be obtained.
+ By using Equation 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:CTCHF"
+
+\end_inset
+
+, we can get the length 
+\begin_inset Formula $L$
+\end_inset
+
+ required.
+ So
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$q_{sun,collector}$"
+description "Solar radiant energy falling on trough collectors, W"
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+q_{sun,collector}=I_{DNI}\cdot w_{trough}L
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\eta=\frac{q_{sun,collector}}{q_{collector,fluid}}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Stirling-engine-array"
+
+\end_inset
+
+Stirling engine array
+\end_layout
+
+\begin_layout Standard
+The layout of Stirling engines is shown in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Layout of Stirling engines"
+
+\end_inset
+
+.
+ 
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$n_1$"
+description "Number of columns of the Stirling engine array"
+
+\end_inset
+
+
+\begin_inset Formula $n_{1}$
+\end_inset
+
+ is chosen to be 10 and can be optimized later.
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename StirlingEngineArray.eps
+	width 80text%
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Layout of Stirling engines"
+
+\end_inset
+
+Layout of Stirling engines
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$n_2$"
+description "Number of rows of the Stirling engine array"
+
+\end_inset
+
+
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$q_{m,1,r}$"
+description "Mass flow rate of air in each row of Stirling engine array, kg/s"
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+T_{1,i,1}=T_{1,i}\label{eq:T_1_i_1}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+q_{m,1,r}=q_{m,1}/n_{2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $n_{2}=n_{stirlingEngine}/n_{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+If the flow type between the heating and cooling flows is parallel flow,
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$q_{m,2,r}$"
+description "Mass flow rate of water in each row of Stirling engine array, kg/s"
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+T_{2,i,1}=T_{2,i}\label{eq:T_2_i_1}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+q_{m,2,r}=q_{m,2}/n_{2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+if the flow type between the heating and cooling flows is counter flow,
+\begin_inset Formula 
+\begin{equation}
+T_{2,o,n_{1}}=T_{2,i}\label{eq:T_2_o_n1}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+q_{m,2,r}=-q_{m,2}/n_{2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "S"
+symbol "$x$"
+description "Stirling engine in column $x$"
+
+\end_inset
+
+For a Stirling engine in column 
+\begin_inset Formula $x$
+\end_inset
+
+, 
+\begin_inset Formula $x$
+\end_inset
+
+ from 
+\begin_inset Formula $1$
+\end_inset
+
+ to 
+\begin_inset Formula $n_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $c_{p,1,x}$
+\end_inset
+
+ and 
+\begin_inset Formula $c_{p,2,x}$
+\end_inset
+
+ can be written as 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+c_{p,1,x}=g_{1}(T_{1,i,x},T_{1,o,x})\label{eq:c_p_1_x}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+c_{p,2,x}=g_{2}(T_{2,i,x},T_{2,o,x})\label{eq:c_p_2_x}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+According to Appendix 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Stirling-engine-model"
+
+\end_inset
+
+, 
+\begin_inset Formula 
+\begin{equation}
+T_{H,x}=T_{1,i,x}-\dfrac{T_{1,i,x}-T_{1,o,x}}{1-\exp(-\dfrac{U_{stirling,1}A_{stirling,1}}{q_{m,1,r}c_{p,1,x}})}\label{eq:T_H_x}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+T_{L,x}=T_{2,i,x}-\dfrac{T_{2,i,x}-T_{2,o,x}}{1-\exp(-\dfrac{U_{stirling,2}A_{stirling,2}}{q_{m,2,r}c_{p,2,x}})}\label{eq:T_L_x}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Because of Equation 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:c_p_1_x"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:c_p_2_x"
+
+\end_inset
+
+, Equation 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:T_H_x"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:T_L_x"
+
+\end_inset
+
+ can be written as
+\begin_inset Formula 
+\begin{equation}
+T_{H,x}=g_{3}(T_{1,i,x},T_{1,o,x})
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+T_{L,x}=g_{4}(T_{2,i,x},T_{2,o,x})
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Choose 
+\begin_inset Formula $T_{R,x}=\dfrac{T_{H,x}-T_{L,x}}{\ln(T_{H,x}/T_{L,x})}$
+\end_inset
+
+, and 
+\begin_inset Formula $e_{x}=\dfrac{T_{R,x}-T_{L,x}}{T_{H,x}-T_{L,x}}$
+\end_inset
+
+, then
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\eta_{stirling,x}=\dfrac{T_{H,x}-T_{L,x}}{T_{H,x}+\dfrac{1-e_{x}}{k-1}\cdot\dfrac{T_{H,x}-T_{L,x}}{\ln\gamma_{stirling}}}\label{eq:eta_striling_x}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+which can be written as
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\eta_{stirling,x}=g_{5}(T_{1,i,x},T_{1,o,x},T_{2,i,x},T_{2,o,x})\label{eq:g_5}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+On the other way, for 
+\begin_inset Formula $x$
+\end_inset
+
+ from 
+\begin_inset Formula $1$
+\end_inset
+
+ to 
+\begin_inset Formula $n_{1}$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+h_{1,i,x}=h_{1}(T_{1,i,x})
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+h_{1,o,x}=h_{1}(T_{1,o,x})
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+h_{2,i,x}=h_{2}(T_{2,i,x})\label{eq:h_2_i_x}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+h_{2,o,x}=h_{2}(T_{2,o,x})\label{eq:h_2_o_x}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For energy balance,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+q_{m,1,r}(h_{1,i,x}-h_{1,o,x})(1-\eta_{stirling,x})=q_{m,2,r}(h_{2,o,x}-h_{2,i,x})
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+which can be written as
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+h_{3}(\eta_{stirling,x},T_{1,i,x},T_{1,o,x},T_{2,i,x},T_{2,o,x})=0\label{eq:h_3}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+for 
+\begin_inset Formula $q_{m,1,r}$
+\end_inset
+
+ and 
+\begin_inset Formula $q_{m,2,r}$
+\end_inset
+
+ can be obtained once the flow type is known.
+\end_layout
+
+\begin_layout Standard
+And in Stirling cycle, the heat absorbed by the working gas is 
+\begin_inset Formula 
+\begin{equation}
+nR\left(T_{H,x}\ln\gamma_{stirling}+\dfrac{1-e_{x}}{k-1}\left(T_{H,x}-T_{L,x}\right)\right)=q_{m,1,r}(h_{1,i,x}-h_{1,o,x})/n_{se}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+can be written as
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+f(T_{1,i,x},T_{1,o,x})=0\label{eq:f}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+And for 
+\begin_inset Formula $x$
+\end_inset
+
+ from 
+\begin_inset Formula $1$
+\end_inset
+
+ to 
+\begin_inset Formula $n_{1}-1$
+\end_inset
+
+, 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+T_{1,i,x+1}=T_{1,o,x}\label{eq:T_1_x+1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+T_{2,i,x+1}=T_{2,o,x}\label{eq:T_2_x+1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Solve the simultaneous equations for 
+\begin_inset Formula $x$
+\end_inset
+
+ from 
+\begin_inset Formula $1$
+\end_inset
+
+ to 
+\begin_inset Formula $n_{1}$
+\end_inset
+
+: Equation 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:T_1_i_1"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:T_2_i_1"
+
+\end_inset
+
+ (or 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:T_2_o_n1"
+
+\end_inset
+
+), 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:g_5"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:h_3"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:f"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:T_1_x+1"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:T_2_x+1"
+
+\end_inset
+
+ (
+\begin_inset Formula $5n_{1}$
+\end_inset
+
+ equations with 
+\begin_inset Formula $5n_{1}$
+\end_inset
+
+ variables), we can get 
+\begin_inset Formula $T_{2,i,1},T_{2,o,n_{1}}$
+\end_inset
+
+ and then use 
+\begin_inset Formula $h_{2,i,1},h_{2,o,n_{1}}$
+\end_inset
+
+ to get 
+\begin_inset Formula $\eta_{stirling}$
+\end_inset
+
+ by Equation 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:eta_stirling-1"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\eta_{stirling}=1-\dfrac{q_{m,2}(h_{2,o,n_{1}}-h_{2,i,1})}{q_{m,1}(h_{1,i,1}-h_{1,o,n_{1}})}\label{eq:eta_stirling-1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+and power of Stirling engine in column 
+\begin_inset Formula $x$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+P_{stirlingEngine,x}=q_{m,1,r}(h_{1,i,x}-h_{1,o,x})\eta_{stirling,x}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+\noindent
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Dish-receiver"
+
+\end_inset
+
+Dish receiver
+\end_layout
+
+\begin_layout Standard
+A dish collector product of SES
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "C"
+symbol "SES"
+description "Stirling Energy System"
+
+\end_inset
+
+ used in Fraser's paper, which is also used in this system, and its parameters
+ are listed in Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:dishReceiver"
+
+\end_inset
+
+.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Fraser2008"
+
+\end_inset
+
+ The structure of the dish receiver is as shown in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:dishreceiver"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Float table
+placement h
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:dishReceiver"
+
+\end_inset
+
+Parameters of the dish receiver
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="4">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$d_{cav}$"
+description "Diameter of volumetric receiver cavity, m"
+
+\end_inset
+
+
+\begin_inset Formula $d_{cav}=0.46\,$
+\end_inset
+
+m
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "G"
+symbol "$\\delta_{insu}$"
+description "Thickness of receiver insulating layer, m"
+
+\end_inset
+
+
+\begin_inset Formula $\delta_{insu}=0.075\,$
+\end_inset
+
+m
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$l_{cav}$"
+description "Depth of volumetric receiver cavity, m"
+
+\end_inset
+
+
+\begin_inset Formula $l_{cav}=0.23\,$
+\end_inset
+
+m
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$d_{ap}$"
+description "Aperture diameter of volumetric receiver, m"
+
+\end_inset
+
+
+\begin_inset Formula $d_{ap}=0.184\,$
+\end_inset
+
+m
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "G"
+symbol "$\\lambda$"
+description "Thermal conductivity, W/(m$\\cdot$K)"
+
+\end_inset
+
+
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "S"
+symbol "$insu$"
+description "Insulating layer of the volumetric receiver"
+
+\end_inset
+
+
+\begin_inset Formula $\lambda_{insu}=0.06\,$
+\end_inset
+
+W/(m
+\begin_inset Formula $\cdot$
+\end_inset
+
+K)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "G"
+symbol "$\\epsilon_{insu}$"
+description "Emissivity of reciver insulating layer"
+
+\end_inset
+
+
+\begin_inset Formula $\epsilon_{insu}=0.6$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "G"
+symbol "$\\alpha_{cav}$"
+description "Cavity surface absorptance"
+
+\end_inset
+
+
+\begin_inset Formula $\alpha_{cav}=0.87$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "G"
+symbol "$\\delta_a$"
+description "Thickness of air tube in volumetric receiver, m"
+
+\end_inset
+
+
+\begin_inset Formula $\delta_{a}=0.005\,$
+\end_inset
+
+m
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$d_{i,air}$"
+description "Inner diameter of air tube, m"
+
+\end_inset
+
+
+\begin_inset Formula $d_{i,air}=0.07\,$
+\end_inset
+
+m
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "G"
+symbol "$\\theta_{dish}$"
+description "Dish aperture angle (0$^{\\circ}$ is horizental, 90$^{\\circ}$ is vertically down)"
+
+\end_inset
+
+
+\begin_inset Formula $\theta_{dish}=45^{\circ}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\gamma=0.97$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "G"
+symbol "$\\eta_{shading}$"
+description "Shading factor"
+
+\end_inset
+
+
+\begin_inset Formula $\eta_{shading}=0.95$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\rho=0.91$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename absorber.png
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+The structure of the dish receiver
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:dishreceiver"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Consider the situation that all the dish collectors are parallel, for energy
+ balance of each dish collectors, the energy flow of the dish receiver is
+ shown in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Heat-network-of-dish-receiver"
+
+\end_inset
+
+, 
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$q_{in}$"
+description "Solar energy lauched into dish receiver aperture, W"
+
+\end_inset
+
+
+\begin_inset Formula $q_{in}$
+\end_inset
+
+ equals to the sum of energy absorbed by working hot air 
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$q_{dish,air}$"
+description "Energy absorbed by air in the dish collector, W"
+
+\end_inset
+
+
+\begin_inset Formula $q_{dish,air}$
+\end_inset
+
+, reflected radiation 
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$q_{rad,reflect}$"
+description "Reflected radiation by volumetric receiver, W"
+
+\end_inset
+
+
+\begin_inset Formula $q_{rad,reflect}$
+\end_inset
+
+, heat losses
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$q_{cond,tot}$"
+description "Total conduction loss of volumetric receiver, W"
+
+\end_inset
+
+
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$q_{conv,tot}$"
+description "Total convection loss of volumetric receiver, W"
+
+\end_inset
+
+
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$q_{rad,emit}$"
+description "Heat emitted by volumetric receiver cavity, W"
+
+\end_inset
+
+ 
+\begin_inset Formula $q_{cond,tot}+q_{conv,tot}+q_{rad,emit}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename heat.eps
+	width 80text%
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Heat-network-of-dish-receiver"
+
+\end_inset
+
+Heat network of the dish receiver
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+q_{in}=q_{rad,reflect}+q_{dish,air}+(q_{cond,tot}+q_{conv,tot}+q_{rad,emit})\label{eq:q_in sum}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+q_{in}=I_{DNI}\cdot A_{dishCollector}\gamma\eta_{shading}\rho\label{eq:q_in}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "G"
+symbol "$\\alpha_{eff}$"
+description "Effective absorptance"
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+q_{rad,reflect}=(1-\alpha_{eff})q_{in}\label{eq:q_rad_reflect}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\alpha_{eff}=\frac{\alpha_{cav}}{\alpha_{cav}+(1-\alpha_{cav})\dfrac{A_{ap}}{A_{cav}}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$A_{ap}$"
+description "Aperture area of the volumetric receiver, m$^2$"
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+A_{ap}=\pi d_{ap}^{2}/4
+\end{equation}
+
+\end_inset
+
+
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$A_{cav}$"
+description "Area of the cavity of the volumetric receiver, m$^2$"
+
+\end_inset
+
+
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$\\bar{d}_{cav}$"
+description "Effective diameter of the cavity, m"
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+A_{cav}=\dfrac{\pi\bar{d}_{cav}^{2}}{4}+\pi\bar{d}_{cav}l_{cav}+\dfrac{\pi(\bar{d}_{cav}^{2}-d_{ap}^{2})}{4}\Leftarrow\bar{d}_{cav}=d_{cav}-2d_{i,air}-4\delta_{a}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$q_{m,dish}$"
+description "Mass flow rate of air in each dish receiver, kg/s"
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+q_{dish,air}=q_{m,dish}(h_{dish,outlet}-h_{dish,inlet})
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+which can be written as
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+q_{dish,air}=f_{1}(q_{m,dish})\label{eq:f1}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+q_{dish,air}=h_{dish,air}A_{dish,air}\Delta T_{ln,Drec,air}\label{eq:q_dish_air1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$A_{dish,air}$"
+description "Heat transfer area of dish receiver between tube and air, m$^2$"
+
+\end_inset
+
+
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$L_C$"
+description "Length of coiled spring tube of volumetric receiver, m"
+
+\end_inset
+
+
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$H_C$"
+description "Height between two adjacent coils of volumetric receiver tube, m"
+
+\end_inset
+
+
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$N$"
+description "Number of coils of the tube in volumetric receiver"
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+A_{dish,air}=\pi d_{i}L_{c}\Leftarrow L_{c}=N\sqrt{(\pi d_{cav})^{2}+H_{c}^{2}}\Leftarrow\left\{ \begin{array}{l}
+H_{c}^{'}=d_{i}+2\delta_{a}\\
+N=floor(l_{cav}/H_{c}^{'})\\
+H_{c}=l_{cav}/N
+\end{array}\right.
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\Delta T_{ln,Drec,air}=\dfrac{(T_{cav}-T_{dish,inlet})-(T_{cav}-T_{dish,outlet})}{\ln\dfrac{T_{cav}-T_{dish,inlet}}{T_{cav}-T_{dish,outlet}}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+To get 
+\begin_inset Formula $q_{dish,air}$
+\end_inset
+
+, 
+\begin_inset Formula $h_{dish,air}$
+\end_inset
+
+ is required
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+h_{dish,air}=Nu_{dish,air}\lambda_{dish,air}/d_{i}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+Nu_{dish,air}=c_{r}Nu_{dish,air}^{'}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$c_r$"
+description "Heat transfer correction factor of coil tube of volumetric receiver "
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+c_{r}=1+1.77\frac{2d_{i}}{d_{cav}-d_{i}-2\delta_{a}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+Nu_{dish,air}^{'}=NuInPipe(Re_{dish,air},Pr_{dish,air},\mu_{dish,air},\mu_{cav})
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\lambda_{dish,air}$
+\end_inset
+
+, 
+\begin_inset Formula $Re_{dish,air}$
+\end_inset
+
+, 
+\begin_inset Formula $Pr_{dish,air}$
+\end_inset
+
+, 
+\begin_inset Formula $\mu_{dish,air}$
+\end_inset
+
+ are evaluated at 
+\begin_inset Formula $T_{dish,air}=(T_{dish,inlet}+T_{dish,outlet})/2$
+\end_inset
+
+, 
+\begin_inset Formula $\mu_{cav}$
+\end_inset
+
+ is evaluated at 
+\begin_inset Formula $T_{cav}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $Re_{dish,air}$
+\end_inset
+
+ can be written as
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+Re_{dish,air}=\frac{\rho_{dish,air}v_{dish,air}d_{i}}{\mu_{dish,air}}=\frac{4q_{m,dish}}{\pi\mu_{dish,air}d_{i}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Equation 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:q_dish_air1"
+
+\end_inset
+
+ can be written as
+\begin_inset Formula 
+\begin{equation}
+q_{dish,air}=f_{2}(q_{m,air},T_{cav})\label{eq:f2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $q_{cond,tot}$
+\end_inset
+
+ is the heat loss through the insulating layer, 
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$T_{insu}$"
+description "Temperature of insulating outside layer, K"
+
+\end_inset
+
+
+\begin_inset Formula $T_{insu}$
+\end_inset
+
+ is outside temperature of the insulating layer.
+\begin_inset Formula 
+\begin{equation}
+q_{cond,tot}=\dfrac{T_{cav}-T_{insu}}{\dfrac{\ln(r_{2}-r_{1})}{2\pi\lambda_{insu}l_{cav}}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+can be written as
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+q_{cond,tot}=g(T_{cav},T_{insu})\label{eq:q_cond_tot1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $r_{1}=d_{cav}/2$
+\end_inset
+
+, 
+\begin_inset Formula $r_{2}=r_{1}+\delta_{insu}$
+\end_inset
+
+.
+\begin_inset Formula 
+\begin{equation}
+q_{cond,tot}=q_{cond,conv}+q_{cond,rad}\label{eq:q_cond_tot}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+q_{cond,conv}=h_{insu}A_{insu}(T_{insu}-T_{amb})\label{eq:q_cond_conv}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+h_{insu}=k_{air,insu}Nu_{insu}/\left(2r_{2}\right)\label{eq:h_insu}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In Equation 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:h_insu"
+
+\end_inset
+
+, 
+\begin_inset Formula $Nu_{insu}$
+\end_inset
+
+ can be calculated by the formula of convection heat transfer over a cylinder,
+ which is calculated by function 
+\begin_inset Formula $Nus(Re_{insu},Pr_{insu},Pr_{insu,w},\theta_{dish})$
+\end_inset
+
+.
+ 
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$k_{air,insu}$"
+description "Thermal conductivity of air at the temperature of outside insulating layer, W/(m$\\cdot$K)"
+
+\end_inset
+
+
+\begin_inset Formula $k_{air,insu}$
+\end_inset
+
+, 
+\begin_inset Formula $Re_{insu}$
+\end_inset
+
+ and 
+\begin_inset Formula $Pr_{insu}$
+\end_inset
+
+ are evaluated at 
+\begin_inset Formula $T_{amb}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $Pr_{insu,w}$
+\end_inset
+
+ is evaluated at 
+\begin_inset Formula $T_{insu}$
+\end_inset
+
+.
+ So Equation 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:q_cond_conv"
+
+\end_inset
+
+ can be written as
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+q_{cond,vonv}=g_{1}(T_{insu})
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+q_{cond,rad}=\epsilon_{insu}A_{insu}\sigma(T_{insu}^{4}-T_{amb}^{4})
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+can be written as
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+q_{cond,rad}=g_{2}(T_{insu})
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+So Equation 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:q_cond_tot"
+
+\end_inset
+
+ can be written as
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+q_{cond,tot}=g_{1}(T_{insu})+g_{2}(T_{insu})\label{eq:q_cond_tot2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+According to Fraser's paper
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Fraser2008"
+
+\end_inset
+
+, the convection loss 
+\begin_inset Formula $q_{conv,tot}$
+\end_inset
+
+ can be written as the sum of free convection loss and forced convection
+ loss, and the relationships are
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+q{}_{conv,tot}=(h_{nature}+h_{forced})A_{cav}(T_{cav}-T_{amb})\label{eq:q_conv_tot}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+h_{nature}=k_{film}Nu_{nat,conv}/\overline{d_{cav}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $k_{film}$
+\end_inset
+
+ is the thermal conductivity of air evaluated by 
+\begin_inset Formula $T_{film}=\left(T_{cav}+T_{amb}\right)/2$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$Gr$"
+description "Grashof number"
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+Nu_{nat,conv}=0.088Gr_{film}^{1/3}(T_{cav}/T_{amb})^{0.18}(\cos\theta_{dish})^{2.47}(\frac{d_{ap}}{\overline{d_{cav}}})^{S}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+S=-0.982(\frac{d_{ap}}{\overline{d_{cav}}})+1.12
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Assume the wind is side-on, then
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+h_{forced}=0.1967[W/m^{2}\cdot K]\cdot(v_{wind}/1[m/s])^{1.849}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+So Equation 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:q_conv_tot"
+
+\end_inset
+
+ can be written as
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+q_{conv,tot}=f_{3}(T_{cav})\label{eq:f3}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The emissivity is set equal to the effective absorptivity of the cavity
+ (gray body),
+\begin_inset Formula 
+\begin{equation}
+\epsilon_{cav}=\alpha_{eff}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+q_{rad,emit}=\epsilon_{cav}A_{ap}\sigma(T_{cav}^{4}-T_{amb}^{4})
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+can be written as
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+q_{rad,emit}=f_{4}(T_{cav})\label{eq:f4}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Solve the simultaneous equations: Equation 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:q_in sum"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:q_in"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:q_rad_reflect"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:f1"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:f2"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:q_cond_tot1"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:q_cond_tot2"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:f3"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:f4"
+
+\end_inset
+
+, (9 equations with 9 variables) we can get 
+\begin_inset Formula $q_{dish,air}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+so
+\begin_inset Formula 
+\begin{equation}
+\eta_{dish}=\frac{q_{dish,air}}{I_{DNI}\cdot A_{dishCollector}}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+\noindent
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Stirling-engine-model"
+
+\end_inset
+
+Stirling engine model
+\end_layout
+
+\begin_layout Standard
+A simple Stirling engine model is used for the system.
+ (See Appendix 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Simple-Stirling-Engine-Model"
+
+\end_inset
+
+ for the model efficiency calculation) The cycle efficiency is given by
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Stine1985"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\eta=\frac{T_{H}-T_{L}}{T_{H}+\text{\dfrac{1-e}{k-1}}\cdot\dfrac{T_{H}-T_{L}}{\ln\gamma}}\label{eq:eta_stirling}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$e$"
+description "Regeneration effectiveness of the Stirling engine"
+
+\end_inset
+
+
+\begin_inset Formula $e=\dfrac{T_{R}-T_{L}}{T_{H}-T_{L}}$
+\end_inset
+
+,
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$T_R$"
+description "Regenerator temperature, K"
+
+\end_inset
+
+
+\begin_inset Formula $T_{R}$
+\end_inset
+
+ is the
+\emph on
+ 
+\emph default
+regenerator temperature, 
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$c_p$"
+description "Heat capacity of Stirling engine working gas at constant pressure, J/(kg$\\cdot$K)"
+
+\end_inset
+
+
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$c_v$"
+description "Heat capacity of Stirling engine working gas at constant volume, J/(kg$\\cdot$K)"
+
+\end_inset
+
+
+\begin_inset Formula $k=\dfrac{c_{p}}{c_{v}}$
+\end_inset
+
+ for the working gas, 
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "G"
+symbol "$\\gamma$"
+description "Compression ratio"
+
+\end_inset
+
+
+\begin_inset Formula $\gamma=\dfrac{V_{max}}{V_{min}}$
+\end_inset
+
+ is the compression ratio.
+\end_layout
+
+\begin_layout Standard
+The heat transfer diagram is shown in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Heat-transfer-diagram"
+
+\end_inset
+
+.
+ Flow 1 is used for heating the hot chamber of Stirling engine, 
+\begin_inset Formula $T_{1i}$
+\end_inset
+
+ is the inlet temperature, 
+\begin_inset Formula $T_{1o}$
+\end_inset
+
+ is the outlet temperature.
+ Flow 2 is used for cooling the cold chamber of Stirling engine, 
+\begin_inset Formula $T_{2i}$
+\end_inset
+
+ is the inlet temperature, 
+\begin_inset Formula $T_{2o}$
+\end_inset
+
+ is the outlet temperature.
+ 
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$T_H$"
+description "Highest temperature of expansion space, K"
+
+\end_inset
+
+
+\begin_inset Formula $T_{H}$
+\end_inset
+
+ is the highest temperature of expansion space, 
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$T_L$"
+description "Lowest temperature of compression space, K"
+
+\end_inset
+
+
+\begin_inset Formula $T_{L}$
+\end_inset
+
+ is the lowest temperature of compression space.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename StirilingHT.eps
+	width 60text%
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Heat-transfer-diagram"
+
+\end_inset
+
+Heat transfer diagram of Stirling engine
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+According to Appendix 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:CTHT"
+
+\end_inset
+
+, we have
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\dfrac{T_{1o}-T_{H}}{T_{1i}-T_{H}}=\exp(-\dfrac{U_{1}A_{1}}{q_{m,1}c{}_{p1}})
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+and
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\dfrac{T_{2o}-T_{L}}{T_{2i}-T_{L}}=\exp(-\dfrac{U_{2}A_{2}}{q_{m,2}c_{p2}})
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+So known 
+\begin_inset Formula $T_{1o}$
+\end_inset
+
+, 
+\begin_inset Formula $T_{1i}$
+\end_inset
+
+, 
+\begin_inset Formula $U_{1}$
+\end_inset
+
+, 
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$A$"
+description "Area, m$^2$"
+
+\end_inset
+
+
+\begin_inset Formula $A_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $q_{m,1}$
+\end_inset
+
+, 
+\begin_inset Formula $c_{p1}$
+\end_inset
+
+, 
+\begin_inset Formula $T_{2o}$
+\end_inset
+
+, 
+\begin_inset Formula $T_{2i}$
+\end_inset
+
+, 
+\begin_inset Formula $U_{2}$
+\end_inset
+
+, 
+\begin_inset Formula $A_{2}$
+\end_inset
+
+, 
+\begin_inset Formula $q_{m,2}$
+\end_inset
+
+, 
+\begin_inset Formula $c_{p2}$
+\end_inset
+
+, we can get 
+\begin_inset Formula $T_{H}$
+\end_inset
+
+ and 
+\begin_inset Formula $T_{L}$
+\end_inset
+
+, and then use Equation 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:eta_stirling"
+
+\end_inset
+
+ to get 
+\begin_inset Formula $\eta$
+\end_inset
+
+.
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+\noindent
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:CTHT"
+
+\end_inset
+
+Ambient loss of a flow
+\end_layout
+
+\begin_layout Standard
+Constant 
+\begin_inset Formula $U$
+\end_inset
+
+, 
+\begin_inset Formula $T_{amb}$
+\end_inset
+
+, 
+\begin_inset Formula $q_{m}$
+\end_inset
+
+, 
+\begin_inset Formula $c_{p}$
+\end_inset
+
+, for given 
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "S"
+symbol "$i$"
+description "Inlet"
+
+\end_inset
+
+
+\begin_inset Formula $T_{i}$
+\end_inset
+
+ ,
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /Users/zhangcheng/Dropbox/Work/CASCADE_SYSTEM/ConstTempHX.eps
+	width 60text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:CTHX"
+
+\end_inset
+
+Diagram of ambient loss
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+if 
+\begin_inset Formula $A(x)=Px$
+\end_inset
+
+, 
+\begin_inset Formula $x$
+\end_inset
+
+ from 
+\begin_inset Formula $0$
+\end_inset
+
+ to 
+\begin_inset Formula $L$
+\end_inset
+
+, 
+\begin_inset Formula $T(x)$
+\end_inset
+
+ from 
+\begin_inset Formula $T_{i}$
+\end_inset
+
+ to 
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "S"
+symbol "$o$"
+description "Outlet"
+
+\end_inset
+
+
+\begin_inset Formula $T_{o}$
+\end_inset
+
+, 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+q_{m}c_{p}dT(x)=(T_{amb}-T(x))UPdx
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+so,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{dT(x)}{dx}=-\frac{UP}{q_{m}c_{p}}(T(x)-T_{amb})
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Set 
+\begin_inset Formula $F(x)=T(x)-T_{amb}$
+\end_inset
+
+, then 
+\begin_inset Formula $F(0)=T_{i}-T_{amb}$
+\end_inset
+
+, and
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\dfrac{dF(x)}{F(x)}=-\dfrac{UP}{q_{m}c_{p}}dx
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+F(x)=F(0)\cdot\exp(-\dfrac{UP}{q_{m}c_{p}}x)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\dfrac{F(L)}{F(0)}=\exp(-\dfrac{UPL}{q_{m}c_{p}})
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+That is
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{T_{o}-T_{amb}}{T_{i}-T_{amb}}=\exp(-\frac{UA}{q_{m}c_{p}})
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+\noindent
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:CTCHTHT"
+
+\end_inset
+
+Ambient loss of a flow under constant heat flux
+\end_layout
+
+\begin_layout Standard
+Constant 
+\begin_inset Formula $U$
+\end_inset
+
+, 
+\begin_inset Formula $T_{amb}$
+\end_inset
+
+, 
+\begin_inset Formula $q_{m}$
+\end_inset
+
+, 
+\begin_inset Formula $c_{p}$
+\end_inset
+
+, 
+\begin_inset Formula $q^{''}$
+\end_inset
+
+, for given 
+\begin_inset Formula $T_{i}$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename CTCHFHX.eps
+	width 60text%
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:CTCHFHX"
+
+\end_inset
+
+Diagram of ambient loss of a flow under constant heat flux
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+if 
+\begin_inset Formula $A(x)=Px$
+\end_inset
+
+, 
+\begin_inset Formula $x$
+\end_inset
+
+ from 
+\begin_inset Formula $0$
+\end_inset
+
+ to 
+\begin_inset Formula $L$
+\end_inset
+
+, 
+\begin_inset Formula $T(x)$
+\end_inset
+
+ from 
+\begin_inset Formula $T_{i}$
+\end_inset
+
+ to 
+\begin_inset Formula $T_{o}$
+\end_inset
+
+,
+\begin_inset Formula 
+\begin{equation}
+q_{m}c_{p}dT(x)=(T_{amb}-T(x))UPdx+q^{''}Pdx
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+so
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{dT(x)}{dx}=-\frac{UP}{q_{m}c_{p}}T(x)+\frac{q^{''}P+UPT_{amb}}{q_{m}c_{p}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Set 
+\begin_inset Formula $G(x)=T(x)-T_{amb}-\dfrac{q^{''}}{U}$
+\end_inset
+
+, then 
+\begin_inset Formula $G(0)=T_{i}-T_{amb}-\dfrac{q^{''}}{U}$
+\end_inset
+
+ and
+\begin_inset Formula 
+\begin{equation}
+\dfrac{dG(x)}{G(x)}=-\dfrac{UP}{q_{m}c_{p}}dx
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+G(x)=G(0)\cdot\exp(-\dfrac{UP}{q_{m}c_{p}}x)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\dfrac{G(L)}{G(0)}=\exp(-\dfrac{UPL}{q_{m}c_{p}})
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+That is
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{T_{o}-T_{amb}-\frac{q^{''}}{U}}{T_{i}-T_{amb}-\frac{q^{''}}{U}}=\exp(-\frac{UA}{q_{m}c_{p}})
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+\noindent
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Simple-Stirling-Engine-Model"
+
+\end_inset
+
+Simple Stirling engine model efficiency calculation
+\end_layout
+
+\begin_layout Standard
+Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:diagram"
+
+\end_inset
+
+ shows thermodynamic diagrams of a Stirling cycle.
+ 
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /Users/zhangcheng/Dropbox/Work/CASCADE_SYSTEM/StirlingCycle.eps
+	width 100text%
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:diagram"
+
+\end_inset
+
+Thermodynamic diagrams of an Stirling Engine
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The net work of a cycle
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+w_{net}=w_{12}+w_{34}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+w_{12}=\int_{P_{1}}^{P_{2}}Pdv=\int_{v_{1}}^{v_{2}}\frac{RT_{L}}{v}dv=RT_{L}\ln\frac{v_{2}}{v_{1}}=-RT_{L}\ln\gamma
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\gamma=\frac{v_{max}}{v_{min}}=\frac{v_{1}}{v_{2}}=\frac{v_{4}}{v_{3}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+w_{34}=\int_{P_{3}}^{P_{4}}Pdv=\int_{v_{3}}^{v_{4}}\frac{RT_{H}}{v}dv=RT_{H}\ln\frac{v_{4}}{v_{3}}=RT_{H}\ln\gamma
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+so
+\begin_inset Formula 
+\begin{equation}
+w_{net}=R(T_{H}-T_{L})\ln\gamma
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For an imperfect regeneration, the heat absorbed in a cycle
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+q_{abs}=q_{63}+q_{34}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+q_{63}=c_{v}(T_{H}-T_{R})
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+q_{34}=w_{34}=RT_{H}\ln\gamma
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+so
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+q_{abs}=RT_{H}\ln\gamma+c_{v}(T_{H}-T_{R})
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The cycle efficiency
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\eta=\frac{w_{net}}{q_{abs}}=\dfrac{T_{H}-T_{L}}{T_{H}+\dfrac{c_{v}}{R}\cdot\dfrac{T_{H}-T_{R}}{\ln\gamma}}\label{eq:efficiency1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+for regeneration effectiveness 
+\begin_inset Formula $e=\dfrac{T_{R}-T_{C}}{T_{H}-T_{C}}$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+T_{H}-T_{R}=(1-e)(T_{H}-T_{L})
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+and
+\begin_inset Formula 
+\begin{equation}
+\frac{c_{v}}{R}=\frac{c_{v}}{c_{p}-c_{v}}=\frac{1}{\frac{c_{p}}{c_{v}}-1}=\frac{1}{k-1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+so Equation 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:efficiency1"
+
+\end_inset
+
+ can be written as
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\eta=\dfrac{T_{H}-T_{L}}{T_{H}+\dfrac{1-e}{k-1}\cdot\dfrac{T_{H}-T_{L}}{\ln\gamma}}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "description"
+options "unsrt"
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

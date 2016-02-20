@@ -1,0 +1,2535 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage{indentfirst}
+\usepackage{amsmath}
+\usepackage{url}
+
+%for correct jump positions whe clicking on a link to a float
+\usepackage[figure]{hypcap}
+
+% for customized page headers/footers
+% only needed because they are only used in one section of the document
+\usepackage{fancyhdr}
+
+\setlength{\parindent}{2em}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language american
+\language_package default
+\inputencoding utf8-plain
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format pdf4
+\output_sync 1
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered true
+\pdf_bookmarksopen true
+\pdf_bookmarksopenlevel 3
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\pdf_quoted_options "unicode=false"
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+CASCADE SYSTEM CALCULATION
+\end_layout
+
+\begin_layout Section
+Introduction
+\end_layout
+
+\begin_layout Standard
+Different types of collectors and different technologies for electricity
+ generation are suitable for different working temperature zones with different
+ costs.
+ A prototype of cascade collection and cascade utilization of solar energy
+ with high efficiency and low cost is presented.
+ Parabolic trough collectors are used to collect low temperature energy
+ with low cost and dish collectors are used to collect high temperature
+ energy with high efficiency.
+ Rankine cycle is used to work in low temperature zone and Stirling cycle
+ is used to work in high temperature zone.
+ Furthermore, effective topological structures are considered to take full
+ advantages of thermodynamic characters of different components of the system.
+ The cold chamber of Stirling engine is cooled by condensed fluid of Rankine
+ cycle to use the heat released by Stirling engine.
+ 
+\end_layout
+
+\begin_layout Section
+Problem description
+\end_layout
+
+\begin_layout Standard
+To characterize the system, calculation of the system must be applied first.
+ The scale of the system and the dimensions of the parameters must be evaluated.
+\end_layout
+
+\begin_layout Standard
+Before detailed model of the system can be created, lots of simplifying
+ assumptions are made:
+\end_layout
+
+\begin_layout Itemize
+Steady state at nominal load
+\end_layout
+
+\begin_layout Itemize
+Pressure losses negligible everywhere in the pressure circuit
+\end_layout
+
+\begin_layout Itemize
+Simplified calculation of processes and equipment
+\end_layout
+
+\begin_layout Standard
+\noindent
+For system 1, water is used as the working fluid of Rankine cycle.
+ Feed water is used to cool the cold chamber of Stirling engine.
+ Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:System-1"
+
+\end_inset
+
+ shows the sketch of system 1.
+ Air is heated in the dishes, then used to heat the hot chamber of Stirling
+ engine and air-water heat exchanger successively.
+ Water is heated in the cold chamber of Stirling engine, preheater, evaporator,
+ superheater and air-water heat exchanger successively, and then used to
+ work in the turbine, cooled in the condenser.
+ Troughs are used to provide heat for the preheater, evaporator and superheater.
+ Pumps are used to change the pressure of fluids.
+ State numbers are marked on the sketch according to its logical position.
+ Numbers with solid circle means saturated liquid states 
+\begin_inset Formula $\left(x=0\right)$
+\end_inset
+
+, and with dotted circle means saturated gas states 
+\begin_inset Formula $\left(x=1\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename System1102.eps
+	width 100text%
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:System-1"
+
+\end_inset
+
+Sketch of system 1
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Data
+\end_layout
+
+\begin_layout Standard
+Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Table1"
+
+\end_inset
+
+ shows the basic design data of system 1, such as the nominal electric power
+ of Stirling engine and generator, temperatures of inlet and outlet of dishes,
+ design parameters of turbine.
+ According to these data, some important parameters of the system, such
+ as mass flow rate, temperature of a state, system efficiency, can be obtained
+ by calculation.
+ To calculate the system, the model must be built first.
+ EES is used for the model construction and calculation.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Table1"
+
+\end_inset
+
+System characteristics of System 1
+\end_layout
+
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="17" columns="3">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top">
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Nominal electric power
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $P_{stirling}=500\,$
+\end_inset
+
+kWe
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $P{}_{generator}=6000\,$
+\end_inset
+
+kWe
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Solar data
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $DNI=0.734\,$
+\end_inset
+
+ kW/m
+\begin_inset script superscript
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Dish
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $T_{dish,inlet}=350$
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+℃
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $T_{dish,outlet}=800$
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+℃
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $p_{dish}=0.5\,$
+\end_inset
+
+MPa
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\eta_{dish}=0.8$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Trough
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\Delta T_{oil,water,min}=20$
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+℃
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang american
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ 
+\begin_inset Formula $T_{trough,outlet}=350$
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+℃
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang american
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $p_{trough}=0.15\,$
+\end_inset
+
+MPa
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\eta_{trough}=0.7$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Stirling engine
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $T_{1,afterstirling}=400$
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+℃
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang american
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $T_{environment}=20$
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+℃
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang american
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\Delta T_{stirling,hot}=30$
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+℃
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang american
+ 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\Delta T_{stirling,cold}=25$
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+℃ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\epsilon=5$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $e=0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $k=1.4$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $p_{2,stirling}=1\,$
+\end_inset
+
+MPa
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Steam generator
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $T_{s}=340$
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+℃
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang american
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $p_{s}=2.35\,$
+\end_inset
+
+MPa
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $p_{c}=0.015\,$
+\end_inset
+
+MPa
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\dot{m}_{d}=32.09\,$
+\end_inset
+
+t/h
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $T_{s,d}=390$
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+℃
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang american
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Table1"
+
+\end_inset
+
+, DNI value reference to SAM website
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset href
+LatexCommand href
+name "Website of DOE(US)"
+target "http://apps1.eere.energy.gov/buildings/energyplus/cfm/weather_data3.cfm/region=2_asia_wmo_region_2/country=CHN/cname=China"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+, 
+\begin_inset Formula $p_{dish}$
+\end_inset
+
+ is according to the design value of air pressure in cavity absorber, 
+\begin_inset Formula $\eta_{dish}$
+\end_inset
+
+ references Wu
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Wu2010"
+
+\end_inset
+
+, 
+\begin_inset Formula $\eta_{trough}$
+\end_inset
+
+ references the conference paper of NREL
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Atul2012"
+
+\end_inset
+
+, the value of 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ references to the example of the book by D.
+ Yogi
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Goswami2000"
+
+\end_inset
+
+, 
+\begin_inset Formula $e=0$
+\end_inset
+
+ for no regeneration, 
+\begin_inset Formula $k=1.4$
+\end_inset
+
+ for hydrogen as the working gas.
+\end_layout
+
+\begin_layout Section
+Model of the system
+\end_layout
+
+\begin_layout Standard
+The system is built in several blocks.
+ These blocks are made of circulations and efficiency calculations.
+ Two circulations, air circulation and water circulation, are built in some
+ specific states and in some components.
+ Known parameters of the states, we can get the efficiency of the system
+ and the overall efficiency of separated systems.
+\end_layout
+
+\begin_layout Subsection
+Air circulation
+\end_layout
+
+\begin_layout Standard
+For state 
+\begin_inset Formula $[1,1]$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left.\begin{array}{l}
+p_{1,1}=p_{dish}\\
+T_{1,1}=T_{dish,outlet}
+\end{array}\right\} \Rightarrow h_{1,1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For state 
+\begin_inset Formula $[1,2]$
+\end_inset
+
+, 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left.\begin{array}{l}
+p_{1,2}=p_{1,1}\\
+T_{1,2}=T_{1,afterstirling}
+\end{array}\right\} \Rightarrow h_{1,2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For Stirling engine, 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+T_{hot}=T_{1,2}-\Delta T_{stirling,hot}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+T_{cold}=T_{2,6}-\Delta T_{stirling,cold}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\eta_{stirling}=\frac{T_{hot}-T_{cold}}{T_{hot}+\frac{\left(1-e\right)\left(T_{hot}-T_{cold}\right)}{(k-1)\ln\epsilon}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+Q_{stirling}=P_{stirling}/\eta_{stirling}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+Q_{stirling}=m_{1}\left(h_{1,1}-h_{1,2}\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+Q_{stirling,cold}=Q_{stirling}-P_{stirling}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For state 
+\begin_inset Formula $[1,3]$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left.\begin{array}{l}
+p_{1,3}=p_{1,2}\\
+T_{1,3}=T_{dish,inlet}
+\end{array}\right\} \Rightarrow h_{1,3}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For dish,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+Q_{dish}=m_{1}\left(h_{1,1}-h_{1,3}\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+Q_{dish}=DNI\cdot A_{dish}\cdot\eta_{dish}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Water circulation
+\end_layout
+
+\begin_layout Standard
+Calculate 
+\begin_inset Formula $\eta_{i,turbine}$
+\end_inset
+
+ first,
+\end_layout
+
+\begin_layout Standard
+For state 
+\begin_inset Formula $d[2,1]$
+\end_inset
+
+ on design:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left.\begin{array}{l}
+p_{d,2,1}=p_{s}\\
+T_{d,2,1}=T_{s,d}
+\end{array}\right\} \Rightarrow\left\{ \begin{array}{l}
+h_{d,2,1}\\
+s_{d,2,1}
+\end{array}\right.
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For state 
+\begin_inset Formula $d[2,2]$
+\end_inset
+
+ on design:
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\begin{equation}
+\left.\begin{array}{l}
+P_{turbine,d}=m_{2,d}(h_{d,2,1}-h_{d,2,2})\Rightarrow h_{d,2,2}\\
+\left.\begin{array}{l}
+p_{i,d,2,2}=p_{c}\\
+s_{i,d,2,2}=s_{d,2,1}
+\end{array}\right\} \Rightarrow h_{i,d,2,2}
+\end{array}\right\} \Rightarrow\eta_{i,turbine}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For state 
+\begin_inset Formula $[2,1]$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left.\begin{array}{l}
+p_{2,1}=p_{s}\\
+T_{2,1}=T_{s}
+\end{array}\right\} \Rightarrow\left\{ \begin{array}{l}
+h_{2,1}\\
+s_{2,1}
+\end{array}\right.
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For state 
+\begin_inset Formula $[2,2]$
+\end_inset
+
+ and state 
+\begin_inset Formula $[2,3]$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+P_{turbine}=\left(1-y\right)m_{2}\left(h_{2,1}-h_{2,2}\right)+ym_{2}\left(h_{2,1}-h_{2,3}\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left.\begin{array}{l}
+p_{2,2}=p_{c}\\
+h_{2,2}
+\end{array}\right\} \Rightarrow\left\{ \begin{array}{l}
+T_{2,2}\\
+x_{2,2}
+\end{array}\right.
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left.\begin{array}{l}
+p_{2,3}=p_{b}\\
+h_{2,3}
+\end{array}\right\} \Rightarrow\left\{ \begin{array}{l}
+T_{2,3}\\
+x_{2,3}
+\end{array}\right.
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left.\begin{array}{l}
+s_{i,2,2}=s_{2,1}\\
+p_{i,2,2}=p_{c}
+\end{array}\right\} \Rightarrow h_{i,2,2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left.\begin{array}{l}
+s_{i,2,3}=s_{2,1}\\
+p_{i,2,3}=p_{b}
+\end{array}\right\} \Rightarrow h_{i,2,3}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\eta_{i,turbine}=\frac{h_{2,1}-h_{2,2}}{h_{2,1}-h_{i,2,2}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\eta_{i,turbine}=\frac{h_{2,1}-h_{2,3}}{h_{2,1}-h_{i,2,3}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For state 
+\begin_inset Formula $[2,4]$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left.\begin{array}{l}
+p_{2,4}=p_{2,2}\\
+x_{2,4}=0
+\end{array}\right\} \Rightarrow\left\{ \begin{array}{l}
+h_{2,4}\\
+s_{2,4}
+\end{array}\right.
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For Rankine cycle,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\eta_{rankine}=\frac{\left(1-y\right)\left(h_{2,1}-h_{2,2}\right)+y\left(h_{2,1}-h_{2,3}\right)}{\left(1-y\right)\left(h_{2,6}-h_{2,4}\right)+h_{2,1}-h_{2,7}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For state 
+\begin_inset Formula $[2,5]$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left.\begin{array}{l}
+p_{2,5}=p_{2,stirling}\\
+s_{2,5}=s_{2,4}
+\end{array}\right\} \Rightarrow\left\{ \begin{array}{l}
+T_{2,5}\\
+h_{2,5}
+\end{array}\right.
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For state 
+\begin_inset Formula $[2,6]$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+Q_{stirling,cold}=\left(1-y\right)m_{2}\left(h_{2,6}-h_{2,5}\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left.\begin{array}{l}
+p_{2,6}=p_{2,5}\\
+h_{2,6}
+\end{array}\right\} \Rightarrow\left\{ \begin{array}{l}
+T_{2,6}\\
+s_{2,6}
+\end{array}\right.
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For state 
+\begin_inset Formula $[2,7]$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left.\begin{array}{l}
+p_{2,7}=p_{deaerator}\\
+x_{2,7}=0
+\end{array}\right\} \Rightarrow\left\{ \begin{array}{l}
+h_{2,7}\\
+s_{2,7}
+\end{array}\right.
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+yh_{2,3}+\left(1-y\right)h_{2,6}=h_{2,7}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For state 
+\begin_inset Formula $[2,8]$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left.\begin{array}{l}
+p_{2,8}=p_{s}\\
+s_{2,8}=s_{2,7}
+\end{array}\right\} \Rightarrow\left\{ \begin{array}{l}
+T_{2,8}\\
+h_{2,8}
+\end{array}\right.
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For state 
+\begin_inset Formula $[2,9]$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left.\begin{array}{l}
+p_{2,9}=p_{2,8}\\
+x_{2,9}=0
+\end{array}\right\} \Rightarrow\left\{ \begin{array}{l}
+T_{2,9}\\
+h_{2,9}
+\end{array}\right.
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For state 
+\begin_inset Formula $[2,10]$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left.\begin{array}{l}
+p_{2,10}=p_{2,9}\\
+x_{2,10}=1
+\end{array}\right\} \Rightarrow\left\{ \begin{array}{l}
+T_{2,10}\\
+h_{2,10}
+\end{array}\right.
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For state 
+\begin_inset Formula $[2,11]$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left.\begin{array}{l}
+p_{2,11}=p_{2,10}\\
+m_{1}\left(h_{1,2}-h_{1,3}\right)=m_{2}\left(h_{2,1}-h_{2,11}\right)
+\end{array}\right\} \Rightarrow T_{2,11}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+Q_{trough}=m_{2}\left(h_{2,11}-h_{2,8}\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+Q_{trough}=DNI\cdot A_{trough}\cdot\eta_{trough}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Oil circulation
+\end_layout
+
+\begin_layout Standard
+For state 
+\begin_inset Formula $[3,1]$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left.\begin{array}{l}
+p_{3,1}=p_{trough}\\
+T_{3,1}=T_{trough,outlet}
+\end{array}\right\} \Rightarrow h_{3,1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For state 
+\begin_inset Formula $[3,2]$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left.\begin{array}{l}
+p_{3,2}=p_{3,1}\\
+m_{3}\left(h_{3,1}-h_{3,2}\right)=m_{2}\left(h_{2,11}-h_{2,10}\right)\\
+h_{3,2}=h\left(F\$_{3},T_{3,2},p_{3,2}\right)
+\end{array}\right\} \Rightarrow T_{3,2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For state 
+\begin_inset Formula $[3,3]$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left.\begin{array}{l}
+p_{3,3}=p_{3,2}\\
+m_{3}\left(h_{3,2}-h_{3,3}\right)=m_{2}\left(h_{2,10}-h_{2,9}\right)\\
+h_{3,3}=h\left(F\$_{3},T_{3,3},p_{3,3}\right)
+\end{array}\right\} \Rightarrow T_{3,3}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+T_{3,3}=T_{2,9}+\Delta T_{oil,water,min}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For state 
+\begin_inset Formula $[3,4]$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left.\begin{array}{l}
+p_{3,4}=p_{3,3}\\
+m_{3}\left(h_{3,3}-h_{3,4}\right)=m_{2}\left(h_{2,9}-h_{2,8}\right)\\
+h_{3,4}=h\left(F\$_{3},T_{3,4},p_{3,4}\right)
+\end{array}\right\} \Rightarrow T_{3,4}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+System efficiency
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+E_{total}=DNI\cdot\left(A_{dish}+A_{trough}\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\eta_{system}=\left(P_{stirling}+P_{generator}\right)/E_{total}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Separate dish system
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $T_{hot,s}=720$
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+℃
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang american
+
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Value 993K is used in SAM as the default heater heat set temperature.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+T_{cold,s}=T_{environment}+\Delta T_{stirling,cold}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\epsilon_{s}=0
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\eta_{stirling,s}=\frac{T_{hot,s}-T_{cold,s}}{T_{hot,s}+\frac{\left(1-e_{s}\right)\left(T_{hot,s}-T_{cold,s}\right)}{\left(k-1\right)\ln\epsilon_{s}}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+P_{stirling,s}=Q_{dish}\eta_{stirling,s}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Separate trough system
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $p_{b,s}=0.1\,$
+\end_inset
+
+MPa
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+?Don't need high pressure.
+\end_layout
+
+\end_inset
+
+,
+\begin_inset Formula $p_{condenser,s}=0.1\,$
+\end_inset
+
+MPa
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+?The pressure after condensate pump.
+\end_layout
+
+\end_inset
+
+ , 
+\begin_inset Formula $p_{deaerator,s}=0.12\,$
+\end_inset
+
+MPa
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Atmospheric deaerator.
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+For state 
+\begin_inset Formula $s[2,1]$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left.\begin{array}{l}
+p_{s,2,1}=p_{s}\\
+T_{s,2,1}=T_{s}
+\end{array}\right\} \Rightarrow\left\{ \begin{array}{l}
+h_{s,2,1}\\
+s_{s,2,1}
+\end{array}\right.
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For state 
+\begin_inset Formula $s[2,2]$
+\end_inset
+
+ and state 
+\begin_inset Formula $s[2,3]$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+P_{turbine,s}=\left(1-y\right)m_{2,s}\left(h_{s,2,1}-h_{s,2,2}\right)+y_{s}m_{2,s}\left(h_{s,2,1}-h_{s,2,3}\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left.\begin{array}{l}
+p_{s,2,2}=p_{c}\\
+h_{s,2,2}
+\end{array}\right\} \Rightarrow\left\{ \begin{array}{l}
+T_{s,2,2}\\
+x_{s,2,2}
+\end{array}\right.
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\left.\begin{array}{l}
+p_{s,2,3}=p_{b,s}\\
+h_{s,2,3}
+\end{array}\right\} \Rightarrow\left\{ \begin{array}{l}
+T_{s,2,3}\\
+x_{s,2,3}
+\end{array}\right.
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left.\begin{array}{l}
+s_{i,s,2,2}=s_{s,2,1}\\
+p_{i,s,2,2}=p_{c}
+\end{array}\right\} \Rightarrow h_{i,s,2,2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left.\begin{array}{l}
+s_{i,s,2,3}=s_{s,2,1}\\
+p_{i,s,2,3}=p_{b,s}
+\end{array}\right\} \Rightarrow h_{i,s,2,3}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\eta_{i,turbine}=\frac{h_{s,2,1}-h_{s,2,2}}{h_{s,2,1}-h_{s,i,2,2}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\eta_{i,turbine}=\frac{h_{s,2,1}-h_{s,2,3}}{h_{s,2,1}-h_{s,i,2,3}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For state 
+\begin_inset Formula $s[2,4]$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left.\begin{array}{l}
+p_{s,2,4}=p_{s,2,2}\\
+x_{s,2,1}=0
+\end{array}\right\} \Rightarrow\left\{ \begin{array}{l}
+h_{s,2,4}\\
+s_{s,2,4}
+\end{array}\right.
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For Rankine cycle,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\eta_{rankine,s}=\frac{\left(1-y_{s}\right)\left(h_{s,2,1}-h_{s,2,2}\right)+y\left(h_{s,2,1}-h_{s,2,3}\right)}{\left(1-y_{s}\right)\left(h_{s,2,5}-h_{s,2,4}\right)+h_{s,2,1}-h_{s,2,6}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For state 
+\begin_inset Formula $s[2,5],$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left.\begin{array}{l}
+p_{s,2,5}=p_{condenser,s}\\
+s_{s,2,5}=s_{s,2,4}
+\end{array}\right\} \Rightarrow\left\{ \begin{array}{l}
+T_{s,2,5}\\
+h_{s,2,5}
+\end{array}\right.
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For state 
+\begin_inset Formula $s[2,6]$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left.\begin{array}{l}
+p_{s,2,6}=p_{deaerator,s}\\
+x_{s,2,6}=0
+\end{array}\right\} \Rightarrow\left\{ \begin{array}{l}
+h_{s,2,6}\\
+s_{s,2,6}
+\end{array}\right.
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+y_{s}h_{s,2,3}+\left(1-y_{s}\right)h_{s,2,5}=h_{2,6}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For state 
+\begin_inset Formula $s[2,7]$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left.\begin{array}{l}
+p_{s,2,7}=p_{s}\\
+s_{s,2,7}=s_{s,2,6}
+\end{array}\right\} \Rightarrow\left\{ \begin{array}{l}
+T_{s,2,7}\\
+h_{s,2,7}
+\end{array}\right.
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For state 
+\begin_inset Formula $s[2,8]$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left.\begin{array}{l}
+p_{s,2,8}=p_{s,2,7}\\
+s_{s,2,8}=0
+\end{array}\right\} \Rightarrow\left\{ \begin{array}{l}
+T_{s,2,8}\\
+h_{s,2,8}
+\end{array}\right.
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For state 
+\begin_inset Formula $s[2,9]$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left.\begin{array}{l}
+p_{s,2,9}=p_{s,2,8}\\
+x_{s,2,9}=1
+\end{array}\right\} \Rightarrow\left\{ \begin{array}{l}
+T_{s,2,9}\\
+h_{s,2,9}
+\end{array}\right.
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+Q_{trough}=m_{2,s}\left(h_{s,2,1}-h_{s,2,7}\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+P_{generator,s}=P_{turbine,s}\eta_{generator}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Separate system efficiency
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\eta_{system,s}=(P_{stirling,s}+P_{generator,s})/E_{total}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Results
+\end_layout
+
+\begin_layout Standard
+Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Main-results"
+
+\end_inset
+
+ shows main results of the system.
+ From the results, we can see that the overall of the cascade system 
+\begin_inset Formula $\eta_{system}=0.1635$
+\end_inset
+
+ is higher than that of separated system 
+\begin_inset Formula $\eta_{system,s}=0.1581$
+\end_inset
+
+.
+ The separated system uses the same collectors of the cascade system and
+ recirculated cooling water with the same temperature of the environment
+ is used to cool cold chamber of Stirling engine.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename System1_results1.eps
+	width 100text%
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Main-results"
+
+\end_inset
+
+Main results
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Arrays-table-results"
+
+\end_inset
+
+ shows part of the array table results of the system.
+ The array shows the enthalpy, pressure, entropy, temperature and dryness
+ of states.
+ The first dimension of the arrays indicate the fluids, the second dimension
+ of the arrays indicate the state points.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename System1_results2.eps
+	width 100text%
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Arrays-table-results"
+
+\end_inset
+
+Array table results
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "description"
+options "unsrt"
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
