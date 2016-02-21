@@ -77,7 +77,9 @@ To build the cascade system model, several simplifying assumptions are made:
 	\item Pressure drop due to flow is negligible everywhere
 	\item Same isentropic efficiency of steam turbine with different loads and in different stages
 	\item There is no heat loss to the environment for Stirling engines
-	\item Simple models are used of some processes and equipments	
+	\item Simple models are used of some processes and equipments
+	\item A symmetrical regenerator behaviour is assumed so that a single effectiveness can be defined as $e=\dfrac{T_R - T_L}{T_H - T_L}$\cite{Formosa2010, Albert2010}
+	\item There is no heat loss to the environment for Stirling engines
 \end{itemize}
 
 \section{System specification}
@@ -90,39 +92,40 @@ Table~\ref{tab:system-data} shows the basic design parameters of the cascade sys
 		\toprule
 		\multicolumn{4}{c}{Nominal electric power}\\
 		\midrule
-		$P_{stirling}$\nomenclature{$P_{stirling}$}{Power of Stirling engine} & 500 kW & 	$P_{generator}$\nomenclature{$P_{generator}$}{Power of generator} & 6 MW\\
+		$P_{generator}$\nomenclature{$P_{generator}$}{Power of generator, W} & 6$\times10^6$ W\\
 		\midrule
 		\multicolumn{4}{c}{Environment}\\
 		\midrule
-		$DNI$\nomenclature[c]{DNI}{Direct Normal Irradiance} & 700 W/m$^2$ & $T_{amb}\nomenclature{$T_{amb}$}{Ambient temperature}$ & 20$^{\circ}$C\\
-		$p_{amb}$\nomenclature{$p_{amb}$}{Ambient pressure} & 1 bar & $v_{wind}$\nomenclature{$v_{wind}$}{Ambient wind speed} & 4 m/s\\
+		$I_{DNI}$\nomenclature{$I_{DNI}$}{Direct Normal Irradiance, W/m$^2$} & 700 W/m$^2$ & $T_{amb}\nomenclature{$T_{amb}$}{Ambient temperature, K}$ & 293 K\\
+		$p_{amb}$\nomenclature{$p_{amb}$}{Ambient pressure, Pa} & 1$\times10^5$ Pa & $v_{wind}$\nomenclature{$v_{wind}$}{Ambient wind speed, m/s} & 4 m/s\\
 		\midrule
 		\multicolumn{4}{c}{Dish collector}\\
 		\midrule
-		$T_{dish,inlet}\nomenclature{$T_{dish,inlet}$}{Dish inlet temperature}$ & 350$^{\circ}$C & $T_{dish,outlet}$\nomenclature{$T_{dish,outlet}$}{Dish outlet temperature} & 800$^{\circ}$C\\
-		$p_{dish}$\nomenclature{$p_{dish}$}{Air pressure in dish} & 0.5 MPa & 	$A_{dishCollector}$\nomenclature{$A_{dishCollector}$}{Aperture area of each dish collector} & 87.7 m$^2$\\
+		$T_{dish,inlet}\nomenclature{$T_{dish,inlet}$}{Dish inlet temperature, K}$ & 623K & $T_{dish,outlet}$\nomenclature{$T_{dish,outlet}$}{Dish outlet temperature} & 1073 K\\
+		$p_{dish}$\nomenclature{$p_{dish}$}{Air pressure in dish, Pa} & 5$\times10^5$ Pa & 	$A_{dishCollector}$\nomenclature{$A_{dishCollector}$}{Aperture area of each dish collector, m$^2$} & 87.7 m$^2$\\
 		\midrule
 		\multicolumn{4}{c}{Trough collector}\\
 		\midrule
-		$\Delta{}T_{oil,water,min}$\nomenclature[G]{$\Delta{}T_{oil,water,min}$}{Minimum temperature difference between oil and water in the oil-to-water heat exchagner} & 15$^{\circ}$C &	$T_{trough,outlet}$\nomenclature{$T_{trough,outlet}$}{Trough outlet temperature} & 350$^{\circ}$C\\
-		$p_{trough}$\nomenclature{$p_{trough}$}{Air pressure in trough} & 2 MPa & $A_{troughCollector}$\nomenclature{$A_{troughCollector}$}{Aperture area of each trough collector} & 545 m$^2$\\
+		$\Delta{}T_{oil,water,min}$\nomenclature[G]{$\Delta{}T_{oil,water,min}$}{Minimum temperature difference between oil and water in the oil-to-water heat exchanger, K} & 15 K &	$T_{trough,outlet}$\nomenclature{$T_{trough,outlet}$}{Trough outlet temperature} & 623 K\\
+		$p_{trough}$\nomenclature{$p_{trough}$}{Air pressure in trough, Pa} & 2$\times10^6$ Pa & $A_{troughCollector}$\nomenclature{$A_{troughCollector}$}{Aperture area of each trough collector, m$^2$} & 545 m$^2$\\
 		\midrule
 		\multicolumn{4}{c}{Stirling engine}\\
 		\midrule
-		$T_{1,afterstirling}$\nomenclature{$T_{1,afterstirling}$}{Air temperature after heating Stirling engine} & 400$^{\circ}$C & $P_{stirlingEngine}$\nomenclature{$P_{stirlingEngine}$}{Power of each Stirling engine} & 5 kW\\
-		$U_{stirling,1}$\nomenclature{$U_{stirling,1}$}{Overall heat transfer coefficient of Stirling engine at air side} & 30 W/m$^2\cdot$K & $U_{stirling,2}$\nomenclature{$U_{stirling,2}$}{Overall heat transfer coefficient of Stirling engine at water side} & 150 W/m$^2\cdot$K\\
-		$A_{stirling,1}$\nomenclature{$A_{stirling,1}$}{Heat transfer area of Stirling engine at air side} & 8 m$^2$ & $A_{stirling,2}$\nomenclature{$A_{stirling,2}$}{Heat transfer area of Stirling engine at water side} & 8 m$^2$\\
+		$T_{1,afterstirling}$\nomenclature{$T_{1,afterstirling}$}{Air temperature after heating Stirling engine} & 673 K & $n_{se}$\nomenclature{$n_{se}$}{Speed of Stirling engine, s$^{-1}$} & 10 s$^{-1}$\\
+		$U_{stirling,1}$\nomenclature{$U_{stirling,1}$}{Overall heat transfer coefficient of Stirling engine at air side, W/(m$^2\cdot$K)} & 30 W/(m$^2\cdot$K) & $U_{stirling,2}$\nomenclature{$U_{stirling,2}$}{Overall heat transfer coefficient of Stirling engine at water side, W/(m$^2\cdot$K)} & 150 W/(m$^2\cdot$K)\\
+		$A_{stirling,1}$\nomenclature{$A_{stirling,1}$}{Heat transfer area of Stirling engine at air side, m$^2$} & 8 m$^2$ & $A_{stirling,2}$\nomenclature{$A_{stirling,2}$}{Heat transfer area of Stirling engine at water side, m$^2$} & 8 m$^2$\\
 		$k_{stirling}$\nomenclature{$k_{stirling}$}{Specific heat ratio of the working gas in Stirling engine} & 1.4 & $\gamma_{stirling}$\nomenclature[G]{$\gamma_{stirling}$}{Compression ratio of Stirling engine} & 3.375\\
+		$n$\nomenclature{$n$}{Amount of working gas in each Stirling engine, mol} & 7.73$\times{}10^{-2}$ mol & $n_{stirlingEngine}$\nomenclature{$n_{stirlingEngine}$}{Number of Stirling engines in the Stirling engine array} & 100\\
 		\midrule
 		\multicolumn{4}{c}{Steam turbine}\\
 		\midrule
-		$T_s$\nomenclature{$T_s$}{Main steam temperature of turbine} & 340$^\circ$C & $p_s$\nomenclature{$p_s$}{Main steam pressure of turbine} & 2.35 MPa\\
-		$p_c$\nomenclature{$p_c$}{Exhaust pressure of turbine} & 0.015 MPa & $T_{s,d}$\nomenclature{$T_{s,d}$}{Designed mean steam temperature of turbine} & 390$^\circ$C\\
-		$p_{c,p}$\nomenclature{$p_{cp}$}{Water pressure after condensate pump} & 1 MPa\\
+		$T_s$\nomenclature{$T_s$}{Main steam temperature of turbine} & 340$^\circ$C & $p_s$\nomenclature{$p_s$}{Main steam pressure of turbine, Pa} & 2.35$\times10^6$ Pa\\
+		$p_c$\nomenclature{$p_c$}{Exhaust pressure of turbine, Pa} & 1.5$\times10^4$ Pa & $T_{s,d}$\nomenclature{$T_{s,d}$}{Designed mean steam temperature of turbine} & 390$^\circ$C\\
+		$p_{c,p}$\nomenclature{$p_{cp}$}{Water pressure after condensate pump, Pa} & 1$\times10^6$ Pa\\
 		\midrule
 		\multicolumn{4}{c}{Deaerator}\\
 		\midrule
-		$p_{deaerator}$\nomenclature{$p_{deaerator}$}{Outlet pressure of deaerator} & 1 MPa\\
+		$p_{deaerator}$\nomenclature{$p_{deaerator}$}{Outlet pressure of deaerator, Pa} & 1$\times10^6$ Pa\\
 		\bottomrule
 	\end{tabular}
 	\end{center}
@@ -133,9 +136,9 @@ Table~\ref{tab:system-data} shows the basic design parameters of the cascade sys
 The system is built in several blocks. These blocks are made of circuits and efficiency calculations. Two circuits, air circuit and water circuit, are built in some specific states and in some components. Known parameters of the states, we can get the efficiency of the system and the overall efficiency of separated systems.
 
 \subsection{Air circuit}
-In air circuit, efficiency of dish collectors must be calculate. Fraser, in his dissertation\cite{Fraser2008}, built a performance prediction model of Stirling dish system, which has detailed description of the dish collector model. The model is also used in the software SAM\nomenclature[C]{SAM}{System Advisor Model}, which provides performance and financial models for facilitate decision in the renewable energy industry.
+In air circuit, efficiency of dish collectors needs to be calculated. Fraser, in his dissertation\cite{Fraser2008}, built a performance prediction model of Stirling dish system, which has detailed description of the dish collector model. The model is also used in the software SAM\nomenclature[C]{SAM}{System Advisor Model}, which provides performance and financial models for facilitate decision in the renewable energy industry.
 
-The structure of the dish receiver is as shown in Figure~\ref{fig:dishReceiver}. The dish receiver model concerns the losses includes: collector losses due to mirror reflectivity, receiver intercept losses, losses due to shading, and thermal losses. Thermal losses take the largest portion of all those losses, which are due to conduction, convection and radiation. Figure~\ref{fig:thermal-lose} shows the heat network of dish receiver, which concerns the losses:
+In our cascade system, the structure of the dish receiver is as shown in Figure~\ref{fig:dishReceiver}. The dish receiver model concerns the losses includes: collector losses due to mirror reflectivity, receiver intercept losses, losses due to shading, and thermal losses. Thermal losses take the largest portion of all those losses, which are due to conduction, convection and radiation. Figure~\ref{fig:thermal-lose} shows the heat network of dish receiver, which concerns the losses:
 \begin{itemize}
 	\item Radiation losses reflected off of the receiver cavity surfaces and out of the receiver through the aperture. ($q_{rad,reflect}$)
 	\item Conductive losses through the receiver insulating layer. ($q_{cond,tot}$)
@@ -146,12 +149,16 @@ The structure of the dish receiver is as shown in Figure~\ref{fig:dishReceiver}.
 
 \noindent \begin{figure}[htbp]
 \begin{center}
-	\includegraphics[width = 0.8\textwidth]{./graphics/dishReceiver}
+	\includegraphics[width = 0.8\textwidth]{graphics/dishReceiver}
 	\caption{Structure of the dish receiver}
 	\label{fig:dishReceiver}
 \end{center}
 \end{figure}
 Ma conducted tests to determine the free convection losses from the receiver for six alternative setups, and the data were consistent with Stine and McDonald's free convection correlation\cite{Ma1993}. It is assumed that forced convection is independent of free convection in the receiver, so the total convection losses can be represented as the sum of the free and forced convection losses as shown in Figure~\ref{fig:thermal-lose}.
+
+\begin{equation}
+	q_{con,tot} = q_{con,free} + q_{con,forced}
+\end{equation}
 
 \noindent \begin{figure}[htbp]
 \begin{center}
@@ -161,7 +168,7 @@ Ma conducted tests to determine the free convection losses from the receiver for
 \end{center}
 \end{figure}
 \begin{equation}
-q_{in}\nomenclature{$q_{in}$}{Solar energy lauched into dish receiver aperture} = q_{rad,reflect}\nomenclature{$q_{rad,reflect}$}{Reflected radiation}+q_{dish,air}\nomenclature{$q_{dish,air}$}{Energy absorbed by air in the dish collector}+(q_{cond,tot}\nomenclature{$q_{cond,tot}$}{Total conduction loss}+q_{conv,tot}\nomenclature{$q_{conv,tot}$}{Total convection loss}+q_{rad,emit}\nomenclature{$q_{rad,emit}$}{Radiation emitted by dish receiver})\label{eq:q_in sum}
+q_{in}\nomenclature{$q_{in}$}{Solar energy launched into dish receiver aperture, W} = q_{rad,reflect}\nomenclature{$q_{rad,reflect}$}{Reflected radiation}+q_{dish,air}\nomenclature{$q_{dish,air}$}{Energy absorbed by air in the dish collector}+(q_{cond,tot}\nomenclature{$q_{cond,tot}$}{Total conduction loss}+q_{conv,tot}\nomenclature{$q_{conv,tot}$}{Total convection loss}+q_{rad,emit}\nomenclature{$q_{rad,emit}$}{Radiation emitted by dish receiver})\label{eq:q_in sum}
 \end{equation}
 
 A dish collector product of SES\nomenclature[C]{SES}{Stirling Energy System} used in Fraser's paper, which is also used in this system, and its parameters are listed in Table~\ref{tab:dishReceiver}.\cite{Fraser2008} 

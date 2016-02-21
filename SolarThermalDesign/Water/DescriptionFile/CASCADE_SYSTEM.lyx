@@ -1523,6 +1523,33 @@ use function
 \begin_inset Formula $StirlingEngineArray(T_{1,1},T_{1,2},q_{m,1},p_{1,1},T_{2,5},(1-y)q_{m,2},p_{2,5}:\,\eta_{stirling},P_{stirling})$
 \end_inset
 
+ 
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Formula $q_{m,1}$
+\end_inset
+
+ can be determined by solving Equation 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:q_stirling"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:q_m,1"
+
+\end_inset
+
+ simultaneously.
+\end_layout
+
+\end_inset
+
  to calculate 
 \begin_inset Formula $\eta_{stirling}$
 \end_inset
@@ -1565,7 +1592,7 @@ description "Power of the Stirling engine array, We"
 
 \begin_inset Formula 
 \begin{equation}
-q_{stirling}=P_{stirling}/\eta_{stirling}
+q_{stirling}=P_{stirling}/\eta_{stirling}\label{eq:q_stirling}
 \end{equation}
 
 \end_inset
@@ -1593,7 +1620,7 @@ description "Air"
 
 \begin_inset Formula 
 \begin{equation}
-q_{stirling}=q_{m,1}\left(h_{1,1}-h_{1,2}\right)
+q_{stirling}=q_{m,1}\left(h_{1,1}-h_{1,2}\right)\label{eq:q_m,1}
 \end{equation}
 
 \end_inset

@@ -1,3 +1,6 @@
 *.[oa]
 *~
-
+*.aux
+*.bbl
+*.ilg
+*.synctex.gz

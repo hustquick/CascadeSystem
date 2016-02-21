@@ -3,44 +3,47 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: CascadeSystem.aux
 The style file: unsrt.bst
 Database file #1: ./bibliography/CascadeSystem.bib
-You've used 2 entries,
+Warning--empty journal in Albert2010
+Warning--there's a number but no volume in Albert2010
+You've used 4 entries,
             1791 wiz_defined-function locations,
-            458 strings with 3814 characters,
-and the built_in function-call counts, 304 in all, are:
-= -- 24
-> -- 8
+            473 strings with 4103 characters,
+and the built_in function-call counts, 758 in all, are:
+= -- 69
+> -- 20
 < -- 0
-+ -- 4
-- -- 2
-* -- 12
-:= -- 57
-add.period$ -- 6
-call.type$ -- 2
-change.case$ -- 1
++ -- 9
+- -- 5
+* -- 48
+:= -- 126
+add.period$ -- 12
+call.type$ -- 4
+change.case$ -- 3
 chr.to.int$ -- 0
-cite$ -- 2
-duplicate$ -- 18
-empty$ -- 35
-format.name$ -- 2
-if$ -- 66
+cite$ -- 6
+duplicate$ -- 36
+empty$ -- 82
+format.name$ -- 5
+if$ -- 163
 int.to.chr$ -- 0
-int.to.str$ -- 2
-missing$ -- 3
-newline$ -- 13
-num.names$ -- 2
-pop$ -- 8
+int.to.str$ -- 4
+missing$ -- 5
+newline$ -- 23
+num.names$ -- 4
+pop$ -- 13
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 6
+skip$ -- 11
 stack$ -- 0
-substring$ -- 0
-swap$ -- 2
+substring$ -- 47
+swap$ -- 3
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 0
-while$ -- 2
-width$ -- 3
-write$ -- 23
+warning$ -- 2
+while$ -- 8
+width$ -- 5
+write$ -- 44
+(There were 2 warnings)
