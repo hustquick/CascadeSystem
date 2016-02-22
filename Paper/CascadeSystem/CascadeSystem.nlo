@@ -30,10 +30,11 @@
 \nomenclatureentry{a$p_{cp}$@[{$p_{cp}$}]\begingroup Water pressure after condensate pump, Pa\nomeqref {0}|nompageref}{5}
 \nomenclatureentry{a$p_{deaerator}$@[{$p_{deaerator}$}]\begingroup Outlet pressure of deaerator, Pa\nomeqref {0}|nompageref}{5}
 \nomenclatureentry{CSAM@[{SAM}]\begingroup System Advisor Model\nomeqref {0}|nompageref}{6}
-\nomenclatureentry{a$q_{in}$@[{$q_{in}$}]\begingroup Solar energy launched into dish receiver aperture, W\nomeqref {2}|nompageref}{6}
-\nomenclatureentry{a$q_{rad,reflect}$@[{$q_{rad,reflect}$}]\begingroup Reflected radiation\nomeqref {2}|nompageref}{6}
-\nomenclatureentry{a$q_{dish,air}$@[{$q_{dish,air}$}]\begingroup Energy absorbed by air in the dish collector\nomeqref {2}|nompageref}{6}
-\nomenclatureentry{a$q_{cond,tot}$@[{$q_{cond,tot}$}]\begingroup Total conduction loss\nomeqref {2}|nompageref}{6}
-\nomenclatureentry{a$q_{conv,tot}$@[{$q_{conv,tot}$}]\begingroup Total convection loss\nomeqref {2}|nompageref}{6}
-\nomenclatureentry{a$q_{rad,emit}$@[{$q_{rad,emit}$}]\begingroup Radiation emitted by dish receiver\nomeqref {2}|nompageref}{6}
-\nomenclatureentry{CSES@[{SES}]\begingroup Stirling Energy System\nomeqref {2}|nompageref}{6}
+\nomenclatureentry{G$\alpha_{eff}$@[{$\alpha_{eff}$}]\begingroup Effective absorptance\nomeqref {0}|nompageref}{6}
+\nomenclatureentry{a$q_{in}$@[{$q_{in}$}]\begingroup Solar energy launched into dish receiver aperture, W\nomeqref {3}|nompageref}{8}
+\nomenclatureentry{a$q_{rad,reflect}$@[{$q_{rad,reflect}$}]\begingroup Reflected radiation\nomeqref {3}|nompageref}{8}
+\nomenclatureentry{a$q_{dish,air}$@[{$q_{dish,air}$}]\begingroup Energy absorbed by air in the dish collector\nomeqref {3}|nompageref}{8}
+\nomenclatureentry{a$q_{cond,tot}$@[{$q_{cond,tot}$}]\begingroup Total conduction loss\nomeqref {3}|nompageref}{8}
+\nomenclatureentry{a$q_{conv,tot}$@[{$q_{conv,tot}$}]\begingroup Total convection loss\nomeqref {3}|nompageref}{8}
+\nomenclatureentry{a$q_{rad,emit}$@[{$q_{rad,emit}$}]\begingroup Radiation emitted by dish receiver\nomeqref {3}|nompageref}{8}
+\nomenclatureentry{CSES@[{SES}]\begingroup Stirling Energy System\nomeqref {3}|nompageref}{8}

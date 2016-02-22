@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.4)  21 FEB 2016 18:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.4)  22 FEB 2016 18:10
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -275,12 +275,17 @@ Package pdftex.def Info: ./graphics/cascadeSystem-eps-converted-to.pdf used on
 input line 67.
 (pdftex.def)             Requested size: 276.00105pt x 200.79596pt.
  [4 <./graphics/cascadeSystem-eps-converted-to.pdf>] [5]
-<graphics/dishReceiver.png, id=44, 170.0754pt x 175.3752pt>
+<graphics/dishReceiver.png, id=44, 499.3857pt x 509.0217pt>
 File: graphics/dishReceiver.png Graphic file (type png)
 
 <use graphics/dishReceiver.png>
 Package pdftex.def Info: graphics/dishReceiver.png used on input line 152.
-(pdftex.def)             Requested size: 276.00105pt x 284.62006pt.
+(pdftex.def)             Requested size: 276.00105pt x 281.32979pt.
+
+
+LaTeX Warning: Citation `Duffie2006' on page 6 undefined on input line 159.
+
+[6] [7 <./graphics/dishReceiver.png (PNG copy)>]
 Package epstopdf Info: Source file: <./graphics/thermalLosses.eps>
 (epstopdf)                    date: 2016-01-20 22:24:31
 (epstopdf)                    size: 62128 bytes
@@ -290,44 +295,46 @@ pdf>
 (epstopdf)                    size: 16223 bytes
 (epstopdf)             Command: <repstopdf --outfile=./graphics/thermalLosses-e
 ps-converted-to.pdf ./graphics/thermalLosses.eps>
-(epstopdf)             \includegraphics on input line 165.
+(epstopdf)             \includegraphics on input line 178.
 Package epstopdf Info: Output file is already uptodate.
 
-<./graphics/thermalLosses-eps-converted-to.pdf, id=46, 834.11626pt x 645.41125p
+<./graphics/thermalLosses-eps-converted-to.pdf, id=52, 834.11626pt x 645.41125p
 t>
 File: ./graphics/thermalLosses-eps-converted-to.pdf Graphic file (type pdf)
  <use ./graphics/thermalLosses-eps-converted-to.pdf>
 Package pdftex.def Info: ./graphics/thermalLosses-eps-converted-to.pdf used on 
-input line 165.
+input line 178.
 (pdftex.def)             Requested size: 276.00105pt x 213.55756pt.
- [6] [7 <./graphics/dishReceiver.png>] [8 <./graphics/thermalLosses-eps-convert
-ed-to.pdf>]
-(./CascadeSystem.bbl) [9
+ [8 <./graphics/thermalLosses-eps-converted-to.pdf>] [9] (./CascadeSystem.bbl) 
+[10
 
-] (./CascadeSystem.aux) ) 
+] (./CascadeSystem.aux)
+
+LaTeX Warning: There were undefined references.
+
+ ) 
 Here is how much of TeX's memory you used:
- 2410 strings out of 493089
- 32986 string characters out of 6134842
- 97213 words of memory out of 5000000
- 5836 multiletter control sequences out of 15000+600000
+ 2412 strings out of 493089
+ 33012 string characters out of 6134842
+ 97221 words of memory out of 5000000
+ 5838 multiletter control sequences out of 15000+600000
  9369 words of font info for 34 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  38i,9n,23p,1191b,273s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2015/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmbx12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmmi10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmmi7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmr10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmr17.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmr7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmsy10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmsy7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-ti10.pfb>
-Output written on CascadeSystem.pdf (9 pages, 311814 bytes).
+</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
+></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
+</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
+/usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></u
+sr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr
+/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/l
+ocal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/loca
+l/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local
+/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/t
+exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on CascadeSystem.pdf (10 pages, 365451 bytes).
 PDF statistics:
- 104 PDF objects out of 1000 (max. 8388607)
- 70 compressed objects within 1 object stream
+ 105 PDF objects out of 1000 (max. 8388607)
+ 71 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  16 words of extra memory for PDF output out of 10000 (max. 10000000)
 

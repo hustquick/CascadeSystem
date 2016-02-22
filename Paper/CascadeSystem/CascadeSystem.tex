@@ -154,11 +154,24 @@ In our cascade system, the structure of the dish receiver is as shown in Figure~
 	\label{fig:dishReceiver}
 \end{center}
 \end{figure}
+
+\subsubsection{Reflected loss of dish receiver}
+To determine the reflected loss of the cavity surfaces of the dish receiver, the effective absorptance of the cavity receiver $\alpha_{eff}$\nomenclature[G]{$\alpha_{eff}$}{Effective absorptance} is required to determine the fraction of energy reflected out of the receiver. The effective absorptance of a cavity receiver without a receiver aperture cover is given by Equation~(\ref{eq:alpha_eff}) where $\alpha_{cav}$ is the cavity surface absrptance, $A_a$ is the cavity aperture area, and $A_{cav}$ is the total inner surface area of the cavity \cite{Duffie2006}.
+
+\begin{equation}
+	\alpha_{eff}=\dfrac{\alpha_{cav}}{\alpha_{cav}+\left(1-\alpha_{cav}\right)\left(A_{ap}/A_{cav}\right)}
+	\label{eq:alpha_eff}
+\end{equation}
+\subsubsection{Conduction loss of dish receiver}
+
+\subsubsection{Convection loss of dish receiver}
 Ma conducted tests to determine the free convection losses from the receiver for six alternative setups, and the data were consistent with Stine and McDonald's free convection correlation\cite{Ma1993}. It is assumed that forced convection is independent of free convection in the receiver, so the total convection losses can be represented as the sum of the free and forced convection losses as shown in Figure~\ref{fig:thermal-lose}.
 
 \begin{equation}
 	q_{con,tot} = q_{con,free} + q_{con,forced}
 \end{equation}
+
+
 
 \noindent \begin{figure}[htbp]
 \begin{center}
@@ -203,7 +216,21 @@ $q_{in}$ can be obtained by
 q_{in}=DNI\cdot A_{dishCollector}\gamma\eta_{shading}\rho\label{eq:q_in}
 \end{equation}
 
+\subsection{Stirling engine array}
 
+\subsection{Water circuit}
+
+\subsubsection{Oil-Water heat exchangers}
+
+\subsubsection{Steam turbine}
+
+\subsubsection{Condensor}
+
+\subsubsection{deaerator}
+
+\section{Separate system model}
+
+\section{Result and Conclusion}
 
 \clearpage
 \bibliography{./bibliography/CascadeSystem}

@@ -36,18 +36,18 @@
 		\nompageref{5}
   \item [{$p_{trough}$}]\begingroup Air pressure in trough, Pa\nomeqref {0}
 		\nompageref{5}
-  \item [{$q_{cond,tot}$}]\begingroup Total conduction loss\nomeqref {1}
-		\nompageref{6}
-  \item [{$q_{conv,tot}$}]\begingroup Total convection loss\nomeqref {1}
-		\nompageref{6}
-  \item [{$q_{dish,air}$}]\begingroup Energy absorbed by air in the dish collector\nomeqref {1}
-		\nompageref{6}
-  \item [{$q_{in}$}]\begingroup Solar energy launched into dish receiver aperture, W\nomeqref {1}
-		\nompageref{6}
-  \item [{$q_{rad,emit}$}]\begingroup Radiation emitted by dish receiver\nomeqref {1}
-		\nompageref{6}
-  \item [{$q_{rad,reflect}$}]\begingroup Reflected radiation\nomeqref {1}
-		\nompageref{6}
+  \item [{$q_{cond,tot}$}]\begingroup Total conduction loss\nomeqref {2}
+		\nompageref{8}
+  \item [{$q_{conv,tot}$}]\begingroup Total convection loss\nomeqref {2}
+		\nompageref{8}
+  \item [{$q_{dish,air}$}]\begingroup Energy absorbed by air in the dish collector\nomeqref {2}
+		\nompageref{8}
+  \item [{$q_{in}$}]\begingroup Solar energy launched into dish receiver aperture, W\nomeqref {2}
+		\nompageref{8}
+  \item [{$q_{rad,emit}$}]\begingroup Radiation emitted by dish receiver\nomeqref {2}
+		\nompageref{8}
+  \item [{$q_{rad,reflect}$}]\begingroup Reflected radiation\nomeqref {2}
+		\nompageref{8}
   \item [{$T_s$}]\begingroup Main steam temperature of turbine\nomeqref {0}
 		\nompageref{5}
   \item [{$T_{1,afterstirling}$}]\begingroup Air temperature after heating Stirling engine\nomeqref {0}
@@ -76,11 +76,13 @@
 		\nompageref{4}
   \item [{SAM}]\begingroup System Advisor Model\nomeqref {0}
 		\nompageref{6}
-  \item [{SES}]\begingroup Stirling Energy System\nomeqref {1}
-		\nompageref{6}
+  \item [{SES}]\begingroup Stirling Energy System\nomeqref {2}
+		\nompageref{8}
 
  \nomgroup{G}
 
+  \item [{$\alpha_{eff}$}]\begingroup Effective absorptance\nomeqref {0}
+		\nompageref{6}
   \item [{$\Delta{}T_{oil,water,min}$}]\begingroup Minimum temperature difference between oil and water in the oil-to-water heat exchanger, K\nomeqref {0}
 		\nompageref{5}
   \item [{$\gamma_{stirling}$}]\begingroup Compression ratio of Stirling engine\nomeqref {0}

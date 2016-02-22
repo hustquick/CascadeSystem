@@ -3142,7 +3142,7 @@ reference "fig:Main-results"
 placement h
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \noindent
@@ -4984,8 +4984,7 @@ status collapsed
 \noindent
 \align center
 \begin_inset Graphics
-	filename dishReceiver.png
-	width 80text%
+	filename absorber.png
 
 \end_inset
 
