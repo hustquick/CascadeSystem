@@ -1,4 +1,14 @@
 This is makeindex, version 2.15 [TeX Live 2015] (kpathsea + Thai support).
-Scanning input file CascadeSystem.idx...done (0 entries accepted, 0 rejected).
-Nothing written in CascadeSystem.ind.
-Transcript written in CascadeSystem.ilg.
+Scanning style file /usr/local/texlive/2015/texmf-dist/makeindex/nomencl/nomencl.ist.......
+** Input style error (file = /usr/local/texlive/2015/texmf-dist/makeindex/nomencl/nomencl.ist, line = 70):
+   -- Unknown specifier lethead_prefix.
+** Input style error (file = /usr/local/texlive/2015/texmf-dist/makeindex/nomencl/nomencl.ist, line = 71):
+   -- Unknown specifier lethead_suffix.
+** Input style error (file = /usr/local/texlive/2015/texmf-dist/makeindex/nomencl/nomencl.ist, line = 72):
+   -- Unknown specifier lethead_flag.
+...done (10 attributes redefined, 3 ignored).
+Scanning input file ./CascadeSystem.nlo....done (52 entries accepted, 0 rejected).
+Sorting entries....done (306 comparisons).
+Generating output file ./CascadeSystem.nls....done (114 lines written, 0 warnings).
+Output written in ./CascadeSystem.nls.
+Transcript written in ./CascadeSystem.ilg.

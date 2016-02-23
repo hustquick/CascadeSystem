@@ -138,6 +138,14 @@ The system is built in several blocks. These blocks are made of circuits and eff
 \subsection{Air circuit}
 In air circuit, efficiency of dish collectors needs to be calculated. Fraser, in his dissertation\cite{Fraser2008}, built a performance prediction model of Stirling dish system, which has detailed description of the dish collector model. The model is also used in the software SAM\nomenclature[C]{SAM}{System Advisor Model}, which provides performance and financial models for facilitate decision in the renewable energy industry.
 
+\noindent \begin{figure}[hp]
+\begin{center}
+	\includegraphics[width = 0.8\textwidth]{graphics/dishReceiver}
+	\caption{Structure of the dish receiver}
+	\label{fig:dishReceiver}
+\end{center}
+\end{figure}
+
 In our cascade system, the structure of the dish receiver is as shown in Figure~\ref{fig:dishReceiver}. The dish receiver model concerns the losses includes: collector losses due to mirror reflectivity, receiver intercept losses, losses due to shading, and thermal losses. Thermal losses take the largest portion of all those losses, which are due to conduction, convection and radiation. Figure~\ref{fig:thermal-lose} shows the heat network of dish receiver, which concerns the losses:
 \begin{itemize}
 	\item Radiation losses reflected off of the receiver cavity surfaces and out of the receiver through the aperture. ($q_{rad,reflect}$)
@@ -149,42 +157,17 @@ In our cascade system, the structure of the dish receiver is as shown in Figure~
 
 \noindent \begin{figure}[htbp]
 \begin{center}
-	\includegraphics[width = 0.8\textwidth]{graphics/dishReceiver}
-	\caption{Structure of the dish receiver}
-	\label{fig:dishReceiver}
-\end{center}
-\end{figure}
-
-\subsubsection{Reflected loss of dish receiver}
-To determine the reflected loss of the cavity surfaces of the dish receiver, the effective absorptance of the cavity receiver $\alpha_{eff}$\nomenclature[G]{$\alpha_{eff}$}{Effective absorptance} is required to determine the fraction of energy reflected out of the receiver. The effective absorptance of a cavity receiver without a receiver aperture cover is given by Equation~(\ref{eq:alpha_eff}) where $\alpha_{cav}$ is the cavity surface absrptance, $A_a$ is the cavity aperture area, and $A_{cav}$ is the total inner surface area of the cavity \cite{Duffie2006}.
-
-\begin{equation}
-	\alpha_{eff}=\dfrac{\alpha_{cav}}{\alpha_{cav}+\left(1-\alpha_{cav}\right)\left(A_{ap}/A_{cav}\right)}
-	\label{eq:alpha_eff}
-\end{equation}
-\subsubsection{Conduction loss of dish receiver}
-
-\subsubsection{Convection loss of dish receiver}
-Ma conducted tests to determine the free convection losses from the receiver for six alternative setups, and the data were consistent with Stine and McDonald's free convection correlation\cite{Ma1993}. It is assumed that forced convection is independent of free convection in the receiver, so the total convection losses can be represented as the sum of the free and forced convection losses as shown in Figure~\ref{fig:thermal-lose}.
-
-\begin{equation}
-	q_{con,tot} = q_{con,free} + q_{con,forced}
-\end{equation}
-
-
-
-\noindent \begin{figure}[htbp]
-\begin{center}
 	\includegraphics[width = 0.8\textwidth]{./graphics/thermalLosses}
 	\caption{Heat network of dish receiver}
 	\label{fig:thermal-lose}
 \end{center}
 \end{figure}
+
 \begin{equation}
-q_{in}\nomenclature{$q_{in}$}{Solar energy launched into dish receiver aperture, W} = q_{rad,reflect}\nomenclature{$q_{rad,reflect}$}{Reflected radiation}+q_{dish,air}\nomenclature{$q_{dish,air}$}{Energy absorbed by air in the dish collector}+(q_{cond,tot}\nomenclature{$q_{cond,tot}$}{Total conduction loss}+q_{conv,tot}\nomenclature{$q_{conv,tot}$}{Total convection loss}+q_{rad,emit}\nomenclature{$q_{rad,emit}$}{Radiation emitted by dish receiver})\label{eq:q_in sum}
+q_{in}\nomenclature{$q_{in}$}{Solar energy launched into dish receiver aperture, W} = q_{rad,reflect}\nomenclature{$q_{rad,reflect}$}{Reflected radiation by volumetric receiver, W}+q_{dish,air}\nomenclature{$q_{dish,air}$}{Energy absorbed by air in the dish collector}+(q_{cond,tot}\nomenclature{$q_{cond,tot}$}{Total conduction loss}+q_{conv,tot}\nomenclature{$q_{conv,tot}$}{Total convection loss}+q_{rad,emit}\nomenclature{$q_{rad,emit}$}{Radiation emitted by dish receiver})\label{eq:q_in sum}
 \end{equation}
 
-A dish collector product of SES\nomenclature[C]{SES}{Stirling Energy System} used in Fraser's paper, which is also used in this system, and its parameters are listed in Table~\ref{tab:dishReceiver}.\cite{Fraser2008} 
+A dish collector product of SES\nomenclature[C]{SES}{Stirling Energy System} used in Fraser's paper, which is also used in this system, and its parameters are listed in Table~\ref{tab:dishReceiver} \cite{Fraser2008}. 
 
 \begin{table}[htbp]
 	\caption{Parameters of the dish receiver}
@@ -196,7 +179,7 @@ A dish collector product of SES\nomenclature[C]{SES}{Stirling Energy System} use
 		$d_{cav}$	&	0.46 m\\
 		$\delta_{insu}$	&	0.075 m\\
 		$l_{cav}$	&	0.23 m\\
-		$d_{cav}$	&	0.184 m\\
+		$d_{ap}$	&	0.184 m\\
 		$\lambda_{insu}$	&	0.06 W/(m$\cdot$K)\\
 		$\epsilon_{insu}$	&	0.6\\
 		$\alpha_{cav}$	&	0.87\\
@@ -211,9 +194,44 @@ A dish collector product of SES\nomenclature[C]{SES}{Stirling Energy System} use
 	\end{center}
 	\label{tab:dishReceiver}
 \end{table}
+
+\nomenclature{$d_{cav}$}{Diameter of volumetric receiver cavity, m}
+\nomenclature[G]{$\delta_{ins}$}{Thickness of receiver insulating layer, m}
+\nomenclature{$l_{cav}$}{Depth of volumetric receiver cavity, m}
+\nomenclature{$d_{ap}$}{Aperture diameter of volumetric receiver, m}
+\nomenclature[G]{$\lambda_{ins}$}{Thermal conductivity of receiver insulating layer, W/(m·K)}
+\nomenclature[G]{$\epsilon_{insu}$}{Emissivity of reciver insulating layer}
+\nomenclature[G]{$\delta_{a}$}{Thickness of air tube in volumetric receiver, m}
+\nomenclature{$d_{i,air}$}{Inner diameter of air tube, m}
+\nomenclature[G]{$\theta_{dish}$}{Dish aperture angle (0$^{\circ}$ is horizental, 90$^{\circ}$ is vertically down)}
+\nomenclature[G]{$\gamma$}{Intercept factor}
+\nomenclature[G]{$\eta_{shading}$}{Shading factor}
+\nomenclature[G]{$\rho$}{Reflectivity}
+
 $q_{in}$ can be obtained by
 \begin{equation}
-q_{in}=DNI\cdot A_{dishCollector}\gamma\eta_{shading}\rho\label{eq:q_in}
+q_{in}=I_{DNI}\cdot A_{dishCollector}\gamma\eta_{shading}\rho\label{eq:q_in}
+\end{equation}
+
+
+\subsubsection{Reflected loss of dish receiver}
+To determine the reflected loss of the cavity surfaces of the dish receiver, the effective absorptance of the cavity receiver $\alpha_{eff}$\nomenclature[G]{$\alpha_{eff}$}{Effective absorptance} is required to determine the fraction of energy reflected out of the receiver. The effective absorptance of a cavity receiver without a receiver aperture cover is given by Equation~(\ref{eq:alpha_eff}) where $\alpha_{cav}$ is the cavity surface absrptance, $A_a$ is the cavity aperture area, and $A_{cav}$ is the total inner surface area of the cavity \cite{Duffie2013}. Sandra National Laboratories gave an estimate value of the absorptance of the cavity surface $\alpha_{cav}$ of an existing Stirling dish receiver to be 0.87 \cite{Hogan1994}. To achieve higher effective absorptance, a smaller ratio of the two surface area should be used. But the ratio is constrained by the concentration ratio of the receiver.
+
+\begin{equation}
+	\alpha_{eff}=\dfrac{\alpha_{cav}}{\alpha_{cav}+\left(1-\alpha_{cav}\right)\left(A_{ap}/A_{cav}\right)}
+	\label{eq:alpha_eff}
+\end{equation}
+
+\begin{equation*}
+	q_{rad,reflect}=q_{in}(1-\alpha_{eff})
+\end{equation*}
+\subsubsection{Conduction loss of dish receiver}
+
+\subsubsection{Convection loss of dish receiver}
+Ma conducted tests to determine the free convection losses from the receiver for six alternative setups, and the data were consistent with Stine and McDonald's free convection correlation\cite{Ma1993}. It is assumed that forced convection is independent of free convection in the receiver, so the total convection losses can be represented as the sum of the free and forced convection losses as shown in Figure~\ref{fig:thermal-lose}.
+
+\begin{equation}
+	q_{con,tot} = q_{con,free} + q_{con,forced}
 \end{equation}
 
 \subsection{Stirling engine array}

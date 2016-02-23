@@ -3923,7 +3923,7 @@ Stirling engine array
 \end_layout
 
 \begin_layout Standard
-The layout of Stirling engines is shown in Figure 
+The layout of the Stirling engine array is shown in Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Layout of Stirling engines"
@@ -6017,16 +6017,7 @@ description "Heat capacity of Stirling engine working gas at constant volume, J/
 \end_inset
 
  for the working gas, 
-\begin_inset CommandInset nomenclature
-LatexCommand nomenclature
-prefix "G"
-symbol "$\\gamma$"
-description "Compression ratio"
-
-\end_inset
-
-
-\begin_inset Formula $\gamma=\dfrac{V_{max}}{V_{min}}$
+\begin_inset Formula $\gamma_{stirling}=\dfrac{V_{max}}{V_{min}}$
 \end_inset
 
  is the compression ratio.
