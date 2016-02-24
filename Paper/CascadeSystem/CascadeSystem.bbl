@@ -1,0 +1,47 @@
+\begin{thebibliography}{1}
+
+\bibitem{goswami2015}
+D.Y. Goswami.
+\newblock {\em Principles of Solar Engineering, Third Edition}.
+\newblock CRC Press, 2015.
+
+\bibitem{Cau2014}
+Giorgio Cau and Daniele Cocco.
+\newblock {Comparison of medium-size concentrating solar power plants based on
+  parabolic trough and linear Fresnel collectors}.
+\newblock {\em Energy Procedia}, 45(0):101--110, 2014.
+
+\bibitem{Formosa2010}
+F.~Formosa and G.~Despesse.
+\newblock {Analytical model for Stirling cycle machine design}.
+\newblock {\em Energy Conversion and Management}, 51(10):1855--1863, 2010.
+
+\bibitem{Albert2010}
+Albert~J. Juhasz.
+\newblock {A Mass Computation Model for Lightweight Brayton Cycle Regenerator
+  Heat Exchangers}.
+\newblock (July):1--12, 2010.
+
+\bibitem{Fraser2008}
+P.R. Fraser.
+\newblock {\em Stirling dish system performance prediction model}.
+\newblock Madison, 2008.
+
+\bibitem{Duffie2013}
+John~A. Duffie and William~A. Beckman.
+\newblock {\em {Solar Engineering of Thermal Processes: Fourth Edition}}.
+\newblock 2013.
+
+\bibitem{Hogan1994}
+R.~E. Hogan.
+\newblock {AEETES - a solar reflux receiver thermal performance numerical
+  model}.
+\newblock {\em Solar energy}, 52(2):167--178, 1994.
+
+\bibitem{Ma1993}
+Robert~Y Ma.
+\newblock Wind effects on convective heat loss from a cavity receiver for a
+  parabolic concentrating solar collector.
+\newblock {\em Sandia National Laboratory}, SAND92-7293(September), 1993.
+
+\end{thebibliography}
