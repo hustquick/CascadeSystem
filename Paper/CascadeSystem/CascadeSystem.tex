@@ -57,7 +57,17 @@
     \item Results
 \end{itemize}
 
-Different types of collectors and different technologies for electricity generation are suitable for different working temperature zones with different costs. An idea of cascade collection and cascade utilisation of solar energy with higher efficiency is presented. Parabolic trough collectors are used to collect lower temperature energy with lower cost and dish collectors are used to collect higher temperature energy with higher efficiency. Rankine cycle is used to work in lower temperature zone and Stirling cycle is used to work in higher temperature zone. Furthermore, effective topological structures are considered to take full advantages of thermodynamic characters of different components of the system. The cold chamber of Stirling engine is cooled by condensed fluid of Rankine cycle to use the heat released by Stirling engine. 
+Energy is the crucial part for the infrastructure and maintenance of  society. With the increase amount of energy consumption, our quality of life has been improved significantly. However, nowadays the world energy consumption is highly dependent on fossil fuels, which supplied 81.3\% of the world's energy consumption in 2012 according to the data of World Bank Group. Using fossil fuels a lot is afflicting the environment, which is sacrificing our quality of life. Environmental pollutions and global warming are becoming serious problem, and it is urgent to find clean and renewable energy to substitute the fossil fuels.
+
+Solar energy is a clean, sustainable, wide-distributed energy. The total amount of solar energy is very huge. The amount of sunlight striking the earth's atmosphere continuously is 1.75$\times10^{5}\,$TW, even if 1\% of it could be converted into electric energy with a 10\% efficiency, it would produce 175 TW, much larger than the total global energy needs predicted to be 25?30 TW in 2050\cite{goswami2015}. But at the same time, solar energy has some disadvantages for its low flux density and large fluctuation due to daily and seasonal variations exacerbated by variations owing to weather. Concentrated solar power (CSP) technology has the ability to overcome these disadvantages and believed to be the future power generation technology.
+
+There are 4 common forms of CSP technologies, parabolic trough, dish Stirlings, concentrating linear Fresnel receiver, and solar power tower. Different types of collectors and different technologies for electricity generation are suitable for different working temperature zones with different costs. 
+
+Cau, G. and D.Cocco\cite{Cau2014} reported a comparative performance analysis of CSP plants using parabolic trough and linear Fresnel collectors, thermal oil as heat transfer fluid and an Organic Rankine Cycle (ORC) power generation unit. A two-tank direct thermal storage system are included and in the Rankine cycle, regenerator, 4~6 steam extractions and air-cooler condenser are used. The performance analysis of the two types of system shows that CSP plants based on linear Fresnel collectors lead to higher values of electrical energy production per unit area of land and CSP plants based on parabolic troughs gives better values of energy production per unit area of collector.
+
+Cipollone, R.\cite{Cipollone2014} discussed some thermodynamic and engineering aspects concerning the use of gasses from gas turbines as HTF for parabolic troughs.
+
+In this paper, an idea of cascade collection and cascade utilisation of solar energy with higher efficiency is presented. Parabolic trough collectors are used to collect lower temperature energy with lower cost and dish collectors are used to collect higher temperature energy with higher efficiency. Rankine cycle is used to work in lower temperature zone and Stirling cycle is used to work in higher temperature zone. Furthermore, effective topological structures are considered to take full advantages of thermodynamic characters of different components of the system. The cold chamber of Stirling engine is cooled by condensed fluid of Rankine cycle to use the heat released by Stirling engine. 
 
 \section{System description}
 An EES\nomenclature[C]{EES}{Engineering Equation Solver} model was used to study the characteristics of the cascade system. Figure~\ref{fig:System-1} shows the sketch of the cascade system. Dish collectors are used to provide heat for Stirling engines and air-to-water heat exchanger. Trough collectors are used to provide heat for preheating, evaporating and superheating in the Rankine cycle. Water is used as the working fluid of Rankine cycle, which is heated in the cold chamber of Stirling engines, preheater, evaporator, superheater, and air-to-water heat exchanger successively, and then expand in turbine, condense in condenser. Pumps are used to change the pressure of fluids. Stirling engines are used for power generation and cooled by feed water of the Rankine cycle. State number pairs of different fluids are marked on the sketch. The first number of a number pair indicates the fluid type, the second number of a number pair indicates the state point of the fluid. Number pairs with solid circle indicate saturated liquid states ($x$\nomenclature{$x$}{Dryness fraction} = 0), and with dotted circle indicates saturated gas states ($x$ = 1).
@@ -74,12 +84,13 @@ To build the cascade system model, several simplifying assumptions are made:
 
 \begin{itemize}
 	\item Steady state at nominal load of the system is analyzed
-	\item Pressure drop due to flow is negligible everywhere
+	\item Pressure drop due to flow is negligible
+	\item The leak of working fluid in the pipes is neglected
 	\item Same isentropic efficiency of steam turbine with different loads and in different stages
+	\item Heat loss that occurs from the tube to the atmosphere is not considered
 	\item There is no heat loss to the environment for Stirling engines
 	\item Simple models are used of some processes and equipments
 	\item A symmetrical regenerator behaviour is assumed so that a single effectiveness can be defined as $e=\dfrac{T_R - T_L}{T_H - T_L}$\cite{Formosa2010, Albert2010}
-	\item There is no heat loss to the environment for Stirling engines
 \end{itemize}
 
 \section{System specification}
