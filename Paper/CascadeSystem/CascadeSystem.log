@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.4)  24 FEB 2016 23:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.4)  25 FEB 2016 17:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -164,6 +164,10 @@ Writing nomenclature file CascadeSystem.nlo
 \openout4 = `CascadeSystem.idx'.
 
 Writing index file CascadeSystem.idx
+
+LaTeX Warning: Unused global option(s):
+    [9pt].
+
 (./CascadeSystem.aux)
 \openout1 = `CascadeSystem.aux'.
 
@@ -244,19 +248,21 @@ e
 
 LaTeX Warning: No \author given.
 
-(./CascadeSystem.nls [1
 
-{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
-Missing character: There is no · in font cmr10!
-) [3]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 32.
+Underfull \hbox (badness 4084) in paragraph at lines 62--63
+[]\OT1/cmr/m/n/10 Solar en-ergy is a clean, sus-tain-able, wide-
+ []
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 32.
- [4]
+
+Underfull \vbox (badness 2922) has occurred while \output is active []
+
+
+Underfull \vbox (badness 3482) has occurred while \output is active []
+
+ [1{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+
+
+]
 Package epstopdf Info: Source file: <./graphics/cascadeSystem.eps>
 (epstopdf)                    date: 2016-02-04 14:56:30
 (epstopdf)                    size: 562190 bytes
@@ -266,24 +272,48 @@ pdf>
 (epstopdf)                    size: 35425 bytes
 (epstopdf)             Command: <repstopdf --outfile=./graphics/cascadeSystem-e
 ps-converted-to.pdf ./graphics/cascadeSystem.eps>
-(epstopdf)             \includegraphics on input line 77.
+(epstopdf)             \includegraphics on input line 83.
 Package epstopdf Info: Output file is already uptodate.
 
-<./graphics/cascadeSystem-eps-converted-to.pdf, id=24, 368.37625pt x 268.00125p
+<./graphics/cascadeSystem-eps-converted-to.pdf, id=11, 368.37625pt x 268.00125p
 t>
 File: ./graphics/cascadeSystem-eps-converted-to.pdf Graphic file (type pdf)
  <use ./graphics/cascadeSystem-eps-converted-to.pdf>
 Package pdftex.def Info: ./graphics/cascadeSystem-eps-converted-to.pdf used on 
-input line 77.
-(pdftex.def)             Requested size: 276.00105pt x 200.79596pt.
- [5] [6 <./graphics/cascadeSystem-eps-converted-to.pdf>] [7]
-<graphics/dishReceiver.png, id=51, 499.3857pt x 509.0217pt>
-File: graphics/dishReceiver.png Graphic file (type png)
+input line 83.
+(pdftex.def)             Requested size: 183.6007pt x 133.57089pt.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 92.
 
-<use graphics/dishReceiver.png>
-Package pdftex.def Info: graphics/dishReceiver.png used on input line 154.
-(pdftex.def)             Requested size: 276.00105pt x 281.32979pt.
- [8 <./graphics/dishReceiver.png (PNG copy)>]
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 92.
+ [2 <./graphics/cascadeSystem-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <graphics/dishReceiver1.eps>
+(epstopdf)                    date: 2016-02-25 12:56:36
+(epstopdf)                    size: 22735503 bytes
+(epstopdf)             Output file: <graphics/dishReceiver1-eps-converted-to.pd
+f>
+(epstopdf)                    date: 2016-02-25 12:57:59
+(epstopdf)                    size: 427731 bytes
+(epstopdf)             Command: <repstopdf --outfile=graphics/dishReceiver1-eps
+-converted-to.pdf graphics/dishReceiver1.eps>
+(epstopdf)             \includegraphics on input line 196.
+Package epstopdf Info: Output file is already uptodate.
+
+<graphics/dishReceiver1-eps-converted-to.pdf, id=32, 499.8675pt x 509.905pt>
+File: graphics/dishReceiver1-eps-converted-to.pdf Graphic file (type pdf)
+
+<use graphics/dishReceiver1-eps-converted-to.pdf>
+Package pdftex.def Info: graphics/dishReceiver1-eps-converted-to.pdf used on in
+put line 196.
+(pdftex.def)             Requested size: 183.6007pt x 187.28474pt.
+ [3]
+Underfull \hbox (badness 1325) in paragraph at lines 207--208
+[]\OT1/cmr/m/n/10 Forced con-vec-tion in the pres-ence of wind.
+ []
+
 Package epstopdf Info: Source file: <./graphics/thermalLosses.eps>
 (epstopdf)                    date: 2016-01-20 22:24:31
 (epstopdf)                    size: 62128 bytes
@@ -293,44 +323,90 @@ pdf>
 (epstopdf)                    size: 16223 bytes
 (epstopdf)             Command: <repstopdf --outfile=./graphics/thermalLosses-e
 ps-converted-to.pdf ./graphics/thermalLosses.eps>
-(epstopdf)             \includegraphics on input line 171.
+(epstopdf)             \includegraphics on input line 213.
 Package epstopdf Info: Output file is already uptodate.
 
-<./graphics/thermalLosses-eps-converted-to.pdf, id=55, 834.11626pt x 645.41125p
+<./graphics/thermalLosses-eps-converted-to.pdf, id=38, 834.11626pt x 645.41125p
 t>
 File: ./graphics/thermalLosses-eps-converted-to.pdf Graphic file (type pdf)
  <use ./graphics/thermalLosses-eps-converted-to.pdf>
 Package pdftex.def Info: ./graphics/thermalLosses-eps-converted-to.pdf used on 
-input line 171.
-(pdftex.def)             Requested size: 276.00105pt x 213.55756pt.
- [9 <./graphics/thermalLosses-eps-converted-to.pdf>] [10] [11] (./CascadeSystem
-.bbl) [12
+input line 213.
+(pdftex.def)             Requested size: 183.6007pt x 142.05984pt.
+ [4 <./graphics/dishReceiver1-eps-converted-to.pdf> <./graphics/thermalLosses-e
+ps-converted-to.pdf>]
+(./CascadeSystem.nls
+Underfull \hbox (badness 2884) in paragraph at lines 15--17
+[]\OT1/cmr/m/n/10 Diameter of vol-u-met-ric re-ceiver
+ []
 
-]
-(./CascadeSystem.aux) ) 
+[5]
+Underfull \hbox (badness 1681) in paragraph at lines 37--39
+[]\OT1/cmr/m/n/10 Water pres-sure af-ter con-den-sate
+ []
+
+
+Underfull \hbox (badness 3108) in paragraph at lines 73--75
+[]\OT1/cmr/m/n/10 Overall heat trans-fer co-ef-fi-cient
+ []
+
+
+Underfull \hbox (badness 4001) in paragraph at lines 73--75
+\OT1/cmr/m/n/10 of Stir-ling en-gine at air side,
+ []
+
+
+Underfull \hbox (badness 3108) in paragraph at lines 75--77
+[]\OT1/cmr/m/n/10 Overall heat trans-fer co-ef-fi-cient
+ []
+
+
+Underfull \hbox (badness 3396) in paragraph at lines 96--98
+[]\OT1/cmr/m/n/10 Thickness of re-ceiver in-su-lat-ing
+ []
+
+
+Underfull \hbox (badness 2237) in paragraph at lines 98--100
+[]\OT1/cmr/m/n/10 Minimum tem-per-a-ture dif-fer-ence
+ []
+
+
+Underfull \hbox (badness 4660) in paragraph at lines 100--102
+[]\OT1/cmr/m/n/10 Emissivity of re-civer in-su-lat-ing
+ []
+
+Missing character: There is no · in font cmr10!
+) [6] (./CascadeSystem.bbl
+Underfull \hbox (badness 2042) in paragraph at lines 39--42
+[]\OT1/cmr/m/n/10 F. For-mosa and G. De-spesse.  An-a-lyt-i-cal
+ []
+
+) [7
+
+] (./CascadeSystem.aux) ) 
 Here is how much of TeX's memory you used:
- 2415 strings out of 493089
- 33045 string characters out of 6134842
- 98235 words of memory out of 5000000
- 5841 multiletter control sequences out of 15000+600000
+ 2420 strings out of 493089
+ 33176 string characters out of 6134842
+ 102262 words of memory out of 5000000
+ 5846 multiletter control sequences out of 15000+600000
  9369 words of font info for 34 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,9n,23p,1191b,273s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2015/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmbx10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmbx12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmmi10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmmi7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmr10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmr17.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmr7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/c
-msy10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-sy7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti
-10.pfb>
-Output written on CascadeSystem.pdf (12 pages, 370895 bytes).
+ 38i,9n,23p,1191b,255s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2015/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmbx12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmmi10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmmi7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmr10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmr17.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmr7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmsy10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmsy7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+ti10.pfb>
+Output written on CascadeSystem.pdf (7 pages, 620268 bytes).
 PDF statistics:
- 111 PDF objects out of 1000 (max. 8388607)
- 75 compressed objects within 1 object stream
+ 105 PDF objects out of 1000 (max. 8388607)
+ 67 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  16 words of extra memory for PDF output out of 10000 (max. 10000000)
 

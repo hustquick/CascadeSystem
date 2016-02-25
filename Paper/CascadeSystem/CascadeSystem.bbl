@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{goswami2015}
 D.Y. Goswami.
@@ -11,16 +11,41 @@ Giorgio Cau and Daniele Cocco.
   parabolic trough and linear Fresnel collectors}.
 \newblock {\em Energy Procedia}, 45(0):101--110, 2014.
 
+\bibitem{Franchini2013}
+G.~Franchini, A.~Perdichizzi, S.~Ravelli, and G.~Barigozzi.
+\newblock {A comparative study between parabolic trough and solar tower
+  technologies in Solar Rankine Cycle and Integrated Solar Combined Cycle
+  plants}.
+\newblock {\em Solar Energy}, 98(PC):302--314, 2013.
+
+\bibitem{Cipollone2014}
+Roberto Cipollone, Andrea Cinocca, and Angelo Gualtieri.
+\newblock {A new conversion section for parabolic trough - Concentrated Solar
+  Power (CSP-PT) plants}.
+\newblock In {\em Energy Procedia}, volume~45, pages 61--70, 2014.
+
+\bibitem{Behar2014}
+Omar Behar, Abdallah Khellaf, Kamal Mohammedi, and Sabrina Ait-Kaci.
+\newblock {A review of integrated solar combined cycle system (ISCCS) with a
+  parabolic trough technology}.
+\newblock {\em Renewable and Sustainable Energy Reviews}, 39(0):223--250, 2014.
+
+\bibitem{Ghaem2012}
+Sara Ghaem.
+\newblock {Modeling and Analysis of Hybrid Solar-Dish Brayton Engine}.
+\newblock {\em SolarPACES Conference}, 2012.
+
 \bibitem{Formosa2010}
 F.~Formosa and G.~Despesse.
 \newblock {Analytical model for Stirling cycle machine design}.
 \newblock {\em Energy Conversion and Management}, 51(10):1855--1863, 2010.
 
-\bibitem{Albert2010}
-Albert~J. Juhasz.
-\newblock {A Mass Computation Model for Lightweight Brayton Cycle Regenerator
-  Heat Exchangers}.
-\newblock (July):1--12, 2010.
+\bibitem{Juhasz2010}
+A.J. Juhasz.
+\newblock A mass computation model for lightweight brayton cycle regenerator
+  heat exchangers.
+\newblock In {\em 8th Annual International Energy Conversion Engineering
+  Conference}, 2010.
 
 \bibitem{Fraser2008}
 P.R. Fraser.
@@ -30,7 +55,7 @@ P.R. Fraser.
 \bibitem{Duffie2013}
 John~A. Duffie and William~A. Beckman.
 \newblock {\em {Solar Engineering of Thermal Processes: Fourth Edition}}.
-\newblock 2013.
+\newblock Wiley, 2013.
 
 \bibitem{Hogan1994}
 R.~E. Hogan.

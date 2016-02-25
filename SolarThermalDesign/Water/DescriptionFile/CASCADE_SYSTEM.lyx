@@ -3149,7 +3149,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename System1_results1.eps
-	width 100text%
+	width 40text%
 
 \end_inset
 
@@ -3163,7 +3163,7 @@ name "fig:Main-results"
 
 \end_inset
 
-Some important results
+Some important results of the systems
 \end_layout
 
 \end_inset
@@ -3198,7 +3198,7 @@ reference "fig:stirlingEnginePartResults"
 
 \end_inset
 
- shows results of Stirling engine part.
+ shows results of Stirling engine array part.
  The detail explanation of these parts can be found in Appendix.
  
 \end_layout
@@ -3216,7 +3216,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename System1_result_troughcollector.eps
-	width 100text%
+	width 80text%
 
 \end_inset
 
@@ -3289,7 +3289,7 @@ Results of the dish receiver part
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \noindent
@@ -3310,7 +3310,7 @@ name "fig:stirlingEnginePartResults"
 
 \end_inset
 
-Results of the Stirling engine part
+Results of the Stirling engine array part
 \end_layout
 
 \end_inset
