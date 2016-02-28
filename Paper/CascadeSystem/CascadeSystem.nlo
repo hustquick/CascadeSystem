@@ -50,3 +50,25 @@
 \nomenclatureentry{a$n$@[{$n$}]\begingroup Amount of working gas in each Stirling engine, mol\nomeqref {1}|nompageref}{4}
 \nomenclatureentry{a$n_{stirlingEngine}$@[{$n_{stirlingEngine}$}]\begingroup Number of Stirling engines in the Stirling engine array\nomeqref {1}|nompageref}{4}
 \nomenclatureentry{G$\alpha_{eff}$@[{$\alpha_{eff}$}]\begingroup Effective absorptance\nomeqref {2}|nompageref}{5}
+\nomenclatureentry{a$n_1$@[{$n_1$}]\begingroup Number of columns of the Stirling engine array\nomeqref {4}|nompageref}{5}
+\nomenclatureentry{a$n_2$@[{$n_2$}]\begingroup Number of rows of the Stirling engine array\nomeqref {6}|nompageref}{5}
+\nomenclatureentry{a$q_{m,1,r}$@[{$q_{m,1,r}$}]\begingroup Mass flow rate of air in each row of Stirling engine array, kg/s\nomeqref {6}|nompageref}{5}
+\nomenclatureentry{a$q_{m,2,r}$@[{$q_{m,2,r}$}]\begingroup Mass flow rate of water in each row of Stirling engine array, kg/s\nomeqref {8}|nompageref}{5}
+\nomenclatureentry{S$x$@[{$x$}]\begingroup Stirling engine in column $x$\nomeqref {10}|nompageref}{5}
+\nomenclatureentry{S2,1@[{2,1}]\begingroup Water at outlet of air-to-water heat exchanger and inlet of turbine\nomeqref {31}|nompageref}{7}
+\nomenclatureentry{S2,2@[{2,2}]\begingroup Water at outlet of turbine and inlet of condenser\nomeqref {32}|nompageref}{7}
+\nomenclatureentry{S$i$@[{$i$}]\begingroup Isentropic parameter\nomeqref {35}|nompageref}{7}
+\nomenclatureentry{S2,3@[{2,3}]\begingroup Water at outlet of turbine bleed point and inlet1 of deaerator\nomeqref {35}|nompageref}{7}
+\nomenclatureentry{a$y$@[{$y$}]\begingroup Extraction rate of steam turbine\nomeqref {39}|nompageref}{7}
+\nomenclatureentry{a$q_{m,2}$@[{$q_{m,2}$}]\begingroup Total mass flow rate of water, kg/s\nomeqref {39}|nompageref}{7}
+\nomenclatureentry{S2@[{2}]\begingroup Water\nomeqref {39}|nompageref}{7}
+\nomenclatureentry{S2,4@[{2,4}]\begingroup Water at outlet of condenser and inlet of condenser pump\nomeqref {40}|nompageref}{7}
+\nomenclatureentry{S2,5@[{2,5}]\begingroup Water at outlet of condenser pump and inlet of Stirling engine heat exchanger\nomeqref {41}|nompageref}{7}
+\nomenclatureentry{S2,6@[{2,6}]\begingroup Water at outlet of Stirling engine heat exchanger and inlet2 of deaeretor\nomeqref {42}|nompageref}{7}
+\nomenclatureentry{S2,7@[{2,7}]\begingroup Water at outlet of deaeretor and inlet of feed water pump\nomeqref {44}|nompageref}{7}
+\nomenclatureentry{S2,8@[{2,8}]\begingroup Water at outlet of feed water pump and inlet of preheater\nomeqref {46}|nompageref}{7}
+\nomenclatureentry{S2,9@[{2,9}]\begingroup Water at outlet of preheater and inlet of evaporator\nomeqref {48}|nompageref}{7}
+\nomenclatureentry{S2,10@[{2,10}]\begingroup Water at outlet of evaporator and inlet of superheater\nomeqref {49}|nompageref}{7}
+\nomenclatureentry{S2,11@[{2,11}]\begingroup Water at outlet of superheater and inlet of air-to-water heat exchanger\nomeqref {50}|nompageref}{7}
+\nomenclatureentry{a$A_{trough}$@[{$A_{trough}$}]\begingroup Aperture area of all trough collectors, m$^2$\nomeqref {52}|nompageref}{7}
+\nomenclatureentry{a$n_{troughCollector}$@[{$n_{troughCollector}$}]\begingroup Number of all trough collectors\nomeqref {53}|nompageref}{7}

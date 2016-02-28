@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.4)  25 FEB 2016 17:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.4)  29 FEB 2016 00:19
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -335,12 +335,71 @@ input line 213.
 (pdftex.def)             Requested size: 183.6007pt x 142.05984pt.
  [4 <./graphics/dishReceiver1-eps-converted-to.pdf> <./graphics/thermalLosses-e
 ps-converted-to.pdf>]
-(./CascadeSystem.nls
+Package epstopdf Info: Source file: <./graphics/StirlingEngineArray.eps>
+(epstopdf)                    date: 2016-02-15 12:03:48
+(epstopdf)                    size: 891230 bytes
+(epstopdf)             Output file: <./graphics/StirlingEngineArray-eps-convert
+ed-to.pdf>
+(epstopdf)                    date: 2016-02-29 00:03:27
+(epstopdf)                    size: 21617 bytes
+(epstopdf)             Command: <repstopdf --outfile=./graphics/StirlingEngineA
+rray-eps-converted-to.pdf ./graphics/StirlingEngineArray.eps>
+(epstopdf)             \includegraphics on input line 314.
+Package epstopdf Info: Output file is already uptodate.
+
+<./graphics/StirlingEngineArray-eps-converted-to.pdf, id=60, 476.78125pt x 399.
+4925pt>
+File: ./graphics/StirlingEngineArray-eps-converted-to.pdf Graphic file (type pd
+f)
+ <use ./graphics/StirlingEngineArray-eps-converted-to.pdf>
+Package pdftex.def Info: ./graphics/StirlingEngineArray-eps-converted-to.pdf us
+ed on input line 314.
+(pdftex.def)             Requested size: 183.6007pt x 153.83861pt.
+ [5 <./graphics/StirlingEngineArray-eps-converted-to.pdf>]
+
+LaTeX Warning: Reference `sec:Stirling-engine-model' on page 6 undefined on inp
+ut line 362.
+
+
+Underfull \hbox (badness 3291) in paragraph at lines 383--384
+[]\OT1/cmr/m/n/10 Choose $\OML/cmm/m/it/10 T[] \OT1/cmr/m/n/10 = []$, and $\OML
+/cmm/m/it/10 e[] \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (17.05432pt too wide) detected at line 419
+\OML/cmm/m/it/10 q[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 h[] \OMS/cmsy/m/n/10 ^^@ 
+\OML/cmm/m/it/10 h[]\OT1/cmr/m/n/10 )(1 \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 ^
+^Q[]\OT1/cmr/m/n/10 ) = \OML/cmm/m/it/10 q[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 h
+[] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 h[]\OT1/cmr/m/n/10 )
+ []
+
+
+Overfull \hbox (86.23497pt too wide) detected at line 433
+\OML/cmm/m/it/10 nR [] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 q[]\OT1/cmr/m/n/10 (\
+OML/cmm/m/it/10 h[] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 h[]\OT1/cmr/m/n/10 )\
+OML/cmm/m/it/10 =n[]
+ []
+
+[6]
+Overfull \hbox (9.09271pt too wide) detected at line 553
+\OML/cmm/m/it/10 P[] \OT1/cmr/m/n/10 = [] \OML/cmm/m/it/10 q[] [] \OT1/cmr/m/n/
+10 + \OML/cmm/m/it/10 yq[] []
+ []
+
+
+Overfull \hbox (101.51013pt too wide) detected at line 635
+\OML/cmm/m/it/10 ^^Q[] \OT1/cmr/m/n/10 = []
+ []
+
+(./CascadeSystem.nls [7
+
+]
 Underfull \hbox (badness 2884) in paragraph at lines 15--17
 []\OT1/cmr/m/n/10 Diameter of vol-u-met-ric re-ceiver
  []
 
-[5]
+
 Underfull \hbox (badness 1681) in paragraph at lines 37--39
 []\OT1/cmr/m/n/10 Water pres-sure af-ter con-den-sate
  []
@@ -360,7 +419,7 @@ Underfull \hbox (badness 3108) in paragraph at lines 75--77
 []\OT1/cmr/m/n/10 Overall heat trans-fer co-ef-fi-cient
  []
 
-
+[8]
 Underfull \hbox (badness 3396) in paragraph at lines 96--98
 []\OT1/cmr/m/n/10 Thickness of re-ceiver in-su-lat-ing
  []
@@ -376,37 +435,44 @@ Underfull \hbox (badness 4660) in paragraph at lines 100--102
  []
 
 Missing character: There is no · in font cmr10!
-) [6] (./CascadeSystem.bbl
+) [9
+
+] (./CascadeSystem.bbl
 Underfull \hbox (badness 2042) in paragraph at lines 39--42
 []\OT1/cmr/m/n/10 F. For-mosa and G. De-spesse.  An-a-lyt-i-cal
  []
 
-) [7
+) [10
 
-] (./CascadeSystem.aux) ) 
+] (./CascadeSystem.aux)
+
+LaTeX Warning: There were undefined references.
+
+ ) 
 Here is how much of TeX's memory you used:
- 2420 strings out of 493089
- 33176 string characters out of 6134842
- 102262 words of memory out of 5000000
- 5846 multiletter control sequences out of 15000+600000
+ 2443 strings out of 493089
+ 33670 string characters out of 6134842
+ 103411 words of memory out of 5000000
+ 5868 multiletter control sequences out of 15000+600000
  9369 words of font info for 34 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,9n,23p,1191b,255s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2015/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmbx12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmmi10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmmi7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmr10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmr17.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmr7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmsy10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmsy7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-ti10.pfb>
-Output written on CascadeSystem.pdf (7 pages, 620268 bytes).
+ 38i,9n,23p,1191b,257s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
+></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
+</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
+/usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
+usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></us
+r/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/
+local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/lo
+cal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local
+/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/te
+xlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/tex
+live/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texli
+ve/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on CascadeSystem.pdf (10 pages, 664317 bytes).
 PDF statistics:
- 105 PDF objects out of 1000 (max. 8388607)
- 67 compressed objects within 1 object stream
+ 133 PDF objects out of 1000 (max. 8388607)
+ 86 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
