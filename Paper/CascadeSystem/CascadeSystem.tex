@@ -1,6 +1,8 @@
-\documentclass[9pt, twocolumn]{article}
-\usepackage{amsmath, indentfirst, epsfig, ifthen, booktabs, multirow}
+\documentclass[twocolumn]{article}
+\usepackage{amsmath, indentfirst, epsfig, ifthen, booktabs, color}
+\usepackage[pdfusetitle, bookmarks=true,bookmarksnumbered=true, bookmarksopen=true, breaklinks=true, colorlinks=true]{hyperref}
 \usepackage{nomencl}
+\usepackage[figure]{hypcap}
 \makenomenclature
 
 \renewcommand{\nomgroup}[1]{%
@@ -21,7 +23,7 @@
 
 \title{Cascade system using both trough system and dish system for power generation}
 \date{}
-%\author{Cheng Zhang}
+\author{}
 \maketitle
 
 
@@ -59,30 +61,50 @@
 
 Energy is the crucial part for the infrastructure and maintenance of  society. With the increase amount of energy consumption, our quality of life has been improved significantly. However, nowadays the world energy consumption is highly dependent on fossil fuels, which supplied 81.3\% of the world's energy consumption in 2012 according to the data of World Bank Group. Using fossil fuels a lot is afflicting the environment, which is sacrificing our quality of life. Environmental pollutions and global warming are becoming serious problem, and it is urgent to find clean and renewable energy to substitute the fossil fuels.
 
-Solar energy is a clean, sustainable, wide-distributed energy. The total amount of solar energy is very huge. The amount of sunlight striking the earth's atmosphere continuously is 1.75$\times10^{5}\,$TW, even if 1\% of it could be converted into electric energy with a 10\% efficiency, it would produce 175 TW, much larger than the total global energy needs predicted to be 25?30 TW in 2050\cite{goswami2015}. But at the same time, solar energy has some disadvantages for its low flux density and large fluctuation due to daily and seasonal variations exacerbated by variations owing to weather. Concentrated solar power (CSP) technology has the ability to overcome these disadvantages and believed to be the future power generation technology.
+Solar energy is a clean, sustainable, wide-distributed energy. The total amount of solar energy is very huge. The amount of sunlight striking the earth's atmosphere continuously is 1.75$\times10^{5}\,$TW, even if 1\% of it could be converted into electric energy with a 10\% efficiency, it would produce 175 TW, much larger than the total global energy needs predicted to be 25?30 TW in 2050~\cite{goswami2015}. But at the same time, solar energy has some disadvantages for its low flux density and large fluctuation due to daily and seasonal variations exacerbated by variations owing to weather. Concentrated solar power (CSP) technology has the ability to overcome these disadvantages and believed to be the future power generation technology.
 
 There are 4 common forms of CSP technologies, parabolic trough, dish Stirlings, concentrating linear Fresnel receiver, and solar power tower. Different types of collectors and different technologies for electricity generation are suitable for different working temperature zones with different costs. Combination of different collectors with different technologies may provide a new direction to achieve higher efficiency with lower cost for CSP.
 
-Cau\cite{Cau2014} reported a comparative performance analysis of CSP plants using parabolic trough and linear Fresnel collectors, thermal oil as heat transfer fluid and an Organic Rankine Cycle (ORC) power generation unit. A two-tank direct thermal storage system are included and in the Rankine cycle, regenerator, 4~6 steam extractions and air-cooler condenser are used. The performance analysis of the two types of system shows that CSP plants based on linear Fresnel collectors lead to higher values of electrical energy production per unit area of land and CSP plants based on parabolic troughs gives better values of energy production per unit area of collector.
+Cau~\cite{Cau2014} reported a comparative performance analysis of CSP plants using parabolic trough and linear Fresnel collectors, thermal oil as heat transfer fluid and an Organic Rankine Cycle (ORC) power generation unit. A two-tank direct thermal storage system are included and in the Rankine cycle, regenerator, 4~6 steam extractions and air-cooler condenser are used. The performance analysis of the two types of system shows that CSP plants based on linear Fresnel collectors lead to higher values of electrical energy production per unit area of land and CSP plants based on parabolic troughs gives better values of energy production per unit area of collector.
 
-Franchini\cite{Franchini2013} carried out simulations to predict the performance of a Solar Rankine Cycle (SRC) and an Integrated Solar Combined Cycle (ISCC) when combined with two different solar field configurations based on parabolic trough collectors (PTCs) and power tower (PT) systems. The comparative analysis was mainly focused on the influence of CSP technology on global solar energy conversion efficiency of both SRC and ISCC plants. Results show that both higher collection efficiency and conversion efficiency of ST compared to PTCs in both SRC and ISCC situations.
+Franchini~\cite{Franchini2013} carried out simulations to predict the performance of a Solar Rankine Cycle (SRC) and an Integrated Solar Combined Cycle (ISCC) when combined with two different solar field configurations based on parabolic trough collectors (PTCs) and power tower (PT) systems. The comparative analysis was mainly focused on the influence of CSP technology on global solar energy conversion efficiency of both SRC and ISCC plants. Results show that both higher collection efficiency and conversion efficiency of ST compared to PTCs in both SRC and ISCC situations.
 
-Cipollone\cite{Cipollone2014} discussed some thermodynamic and engineering aspects concerning the use of parabolic troughs for heating gasses of gas turbines. They further discussed the Discrete Ericsson Cycle (DEC), in the cycle, a sequence of intercooled compressions and reheated expansions is deployed to increase cycle specific work and efficiency. They applied optimization adopting as design parameter the power per unit of collector length, and pointed out that the number of compressions and expansions could not exceed three stages.
+Cipollone~\cite{Cipollone2014} discussed some thermodynamic and engineering aspects concerning the use of parabolic troughs for heating gasses of gas turbines. They further discussed the Discrete Ericsson Cycle (DEC), in the cycle, a sequence of intercooled compressions and reheated expansions is deployed to increase cycle specific work and efficiency. They applied optimization adopting as design parameter the power per unit of collector length, and pointed out that the number of compressions and expansions could not exceed three stages.
 
-Behar\cite{Behar2014} reviewed the R\&D activities and published studies on integrated solar combined cycle system (ISCCS), various configurations have been proposed with their performance investigated. The paper also introduced lots of software or mathematical programs to simulate the performance of various design.
+Behar~\cite{Behar2014} reviewed the R\&D activities and published studies on integrated solar combined cycle system (ISCCS), various configurations have been proposed with their performance investigated. The paper also introduced lots of software or mathematical programs to simulate the performance of various design.
 
-Ghaem\cite{Ghaem2012} investigated and compared the performance of various configurations of hybrid solar dish-Brayton cycle. A thermodynamic model implemented in Engineering Equation Solver (EES) is developed for various configurations. Results show that the model in which receiver located before the turbine can achieve higher performance compare to the one in which the receiver located after the turbine. Simulation of the models pointed out that a comprehensive well defined control algorithm is a vital issue in order to control engine operation, solar input heat flux and sun tracking system.
+Ghaem~\cite{Ghaem2012} investigated and compared the performance of various configurations of hybrid solar dish-Brayton cycle. A thermodynamic model implemented in Engineering Equation Solver (EES) is developed for various configurations. Results show that the model in which receiver located before the turbine can achieve higher performance compare to the one in which the receiver located after the turbine. Simulation of the models pointed out that a comprehensive well defined control algorithm is a vital issue in order to control engine operation, solar input heat flux and sun tracking system.
 
 In this paper, an idea of cascade collection and cascade utilisation of solar energy with higher efficiency is presented. Parabolic trough collectors are used to collect lower temperature energy with lower cost and dish collectors are used to collect higher temperature energy with higher efficiency. Rankine cycle is used to work in lower temperature zone and Stirling cycle is used to work in higher temperature zone. Furthermore, effective topological structures are considered to take full advantages of thermodynamic characters of different components of the system. The cold chamber of Stirling engine is cooled by condensed fluid of Rankine cycle to use the heat released by Stirling engine. 
 
+First, the idea of cascade system is presented and the feasibility analysis of the system is performed. A conceptual sketch of the system is presented with some important state points. Second, based on this sketch, some components are chosen and some key parameters of the system are given. Third, models of components are built according to their thermodynamic properties. Models of different circuits are built with these component models and efficiency can be obtained by the circuit data. Fourth, two separate systems, dish-Stirling system and trough-Rankine system, are built for comparison. At last, the models of the systems are calculated and results are analysed.
+
 \section{System description and specification}
-An EES\nomenclature[C]{EES}{Engineering Equation Solver} model was used to study the characteristics of the cascade system. Figure~\ref{fig:System-1} shows the sketch of the cascade system. Dish collectors are used to provide heat for Stirling engines and air-to-water heat exchanger. Trough collectors are used to provide heat for preheating, evaporating and superheating in the Rankine cycle. Water is used as the working fluid of Rankine cycle, which is heated in the cold chamber of Stirling engines, preheater, evaporator, superheater, and air-to-water heat exchanger successively, and then expand in turbine, condense in condenser. Pumps are used to change the pressure of fluids. Stirling engines are used for power generation and cooled by feed water of the Rankine cycle. State number pairs of different fluids are marked on the sketch. The first number of a number pair indicates the fluid type, the second number of a number pair indicates the state point of the fluid. Number pairs with solid circle indicate saturated liquid states ($x$\nomenclature{$x$}{Dryness fraction} = 0), and with dotted circle indicates saturated gas states ($x$ = 1).
+
+In the cascade system, dish collectors are used to provide heat for Stirling engines and air-to-water heat exchanger. Trough collectors are used to provide heat for preheating, evaporating and superheating in the Rankine cycle. Figure~\ref{fig:System-1} shows the sketch of the cascade system. Water is used as the working fluid of Rankine cycle, which is heated in the cold chamber of Stirling engines, preheater, evaporator, superheater, and air-to-water heat exchanger successively, and then expand in turbine, condense in condenser. Pumps are used to change the pressure of fluids. Stirling engines are used for power generation and cooled by feed water of the Rankine cycle. State number pairs of different fluids are marked on the sketch. The first number of a number pair indicates the type of the fluid, the second number of a number pair indicates the state point of the fluid. Number pairs with solid circle indicate saturated liquid states ($x$\nomenclature{$x$}{Dryness fraction} = 0), and with dotted circle indicates saturated gas states ($x$ = 1). Figure~\ref{fig:T-s_Water} shows the T-s diagram of the water circuit in the cascade system. In this Rankine cycle, the heat released in "2,5-2,6" process can be utilized by series of Stirling engines, which may increase the power of Rankine cycle. Figure~\ref{fig:HeatTransfer_Water-SEs} shows the heat transfer diagram of this process.
 
 \noindent \begin{figure}[htbp]
 \begin{center}
 	\includegraphics[width = 0.8\columnwidth]{./graphics/cascadeSystem}
 	\caption{Sketch of the cascade system}
 	\label{fig:System-1}
+\end{center}
+\end{figure}
+
+%:Should I remove the detailed values?
+\noindent \begin{figure}[htbp]
+\begin{center}
+	\includegraphics[width = 0.8\columnwidth]{./graphics/T-s_Water}
+	\caption{T-s diagram of the water circuit}
+	\label{fig:T-s_Water}
+\end{center}
+\end{figure}
+
+\noindent \begin{figure}[htbp]
+\begin{center}
+	\includegraphics[width = 0.8\columnwidth]{./graphics/HeatTransfer_Water-SEs}
+	\caption{Heat transfer diagram of "2,5-2,6" process}
+	\label{fig:HeatTransfer_Water-SEs}
 \end{center}
 \end{figure}
 
@@ -96,44 +118,91 @@ To build the cascade system model, several simplifying assumptions are made:
 	\item Heat loss that occurs from the tube to the atmosphere is not considered
 	\item There is no heat loss to the environment for Stirling engines
 	\item Simple models are used of some processes and equipments
-	\item A symmetrical regenerator behaviour is assumed so that a single effectiveness can be defined as $e=\dfrac{T_R - T_L}{T_H - T_L}$\cite{Formosa2010, Juhasz2010}
+	\item A symmetrical regenerator behaviour is assumed so that a single effectiveness can be defined as $e=\dfrac{T_R - T_L}{T_H - T_L}$~\cite{Formosa2010, Juhasz2010}
 \end{itemize}
 
 %\section{System specification}
 Table~\ref{tab:system-data} shows the basic design parameters of the cascade system.
 
+%\begin{table}[htbp]
+%	\caption{Parameters of the cascade system}
+%	\begin{center}
+%	\begin{tabular}{cc}
+%		\toprule
+%		\multicolumn{2}{c}{Nominal electric power}\\
+%		\midrule
+%		$P_{generator}$		&	6$\times10^6$ W\\
+%		\midrule
+%		\multicolumn{2}{c}{Environment}\\
+%		\midrule
+%		$I_{DNI}$			&	700 W/m$^2$\\
+%		$T_{amb}$			&	293 K\\
+%		$p_{amb}$			&	1$\times10^5$ Pa\\
+%		$v_{wind}$			&	4 m/s\\
+%		\midrule
+%		\multicolumn{2}{c}{Dish collector}\\
+%		\midrule
+%		$T_{dish,inlet}$	&	623K\\
+%		$T_{dish,outlet}$	&	1073 K\\
+%		$p_{dish}$			&	5$\times10^5$ Pa\\ 
+%		$A_{dishCollector}$	&	87.7 m$^2$\\
+%		\midrule
+%		\multicolumn{2}{c}{Trough collector}\\
+%		\midrule
+%		$\Delta{}T_{oil,water,min}$	&	15 K \\
+%		$T_{trough,outlet}$	&	623 K\\
+%		$p_{trough}$		&	2$\times10^6$ Pa\\
+%		$A_{troughCollector}$	&	545 m$^2$\\
+%		\midrule
+%		\multicolumn{2}{c}{Stirling engine}\\
+%		\midrule
+%		$T_{1,afterstirling}$	&	673 K\\
+%		$n_{se}$			&	10 s$^{-1}$\\
+%		$U_{stirling,1}$	&	30 W/(m$^2\cdot$K)\\
+%		$U_{stirling,2}$	&	150 W/(m$^2\cdot$K)\\
+%		$A_{stirling,1}$	&	8 m$^2$\\
+%		$A_{stirling,2}$	&	8 m$^2$\\
+%		$k_{stirling}$		&	1.4\\
+%		$\gamma_{stirling}	$	&	3.375\\
+%		$n$					&	7.73$\times{}10^{-2}$ mol\\
+%		$n_{stirlingEngine}$	&	100\\
+%		\midrule
+%		\multicolumn{2}{c}{Steam turbine}\\
+%		\midrule
+%		$T_s$				&	340$^\circ$C\\
+%		$p_s$				&	2.35$\times10^6$ Pa\\
+%		$p_c$				&	1.5$\times10^4$ Pa\\
+%		$T_{s,d}$			&	390$^\circ$C\\
+%		$p_{c,p}$			&	1$\times10^6$ Pa\\
+%		\midrule
+%		\multicolumn{2}{c}{Deaerator}\\
+%		\midrule
+%		$p_{deaerator}$ & 1$\times10^6$ Pa\\
+%		\bottomrule
+%	\end{tabular}
+%	\end{center}
+%	\label{tab:system-data}
+%\end{table}
 \begin{table}[htbp]
-	\caption{Parameters of the cascade system}
+	\caption{Basic design parameters of the cascade system}
 	\begin{center}
 	\begin{tabular}{cc}
 		\toprule
-		\multicolumn{2}{c}{Nominal electric power}\\
-		\midrule
-		$P_{generator}$		&	6$\times10^6$ W\\
-		\midrule
-		\multicolumn{2}{c}{Environment}\\
+		Parameters			&	Value\\
 		\midrule
 		$I_{DNI}$			&	700 W/m$^2$\\
 		$T_{amb}$			&	293 K\\
 		$p_{amb}$			&	1$\times10^5$ Pa\\
 		$v_{wind}$			&	4 m/s\\
-		\midrule
-		\multicolumn{2}{c}{Dish collector}\\
-		\midrule
+		$P_{generator}$		&	6$\times10^6$ W\\
 		$T_{dish,inlet}$	&	623K\\
 		$T_{dish,outlet}$	&	1073 K\\
 		$p_{dish}$			&	5$\times10^5$ Pa\\ 
 		$A_{dishCollector}$	&	87.7 m$^2$\\
-		\midrule
-		\multicolumn{2}{c}{Trough collector}\\
-		\midrule
 		$\Delta{}T_{oil,water,min}$	&	15 K \\
 		$T_{trough,outlet}$	&	623 K\\
 		$p_{trough}$		&	2$\times10^6$ Pa\\
 		$A_{troughCollector}$	&	545 m$^2$\\
-		\midrule
-		\multicolumn{2}{c}{Stirling engine}\\
-		\midrule
 		$T_{1,afterstirling}$	&	673 K\\
 		$n_{se}$			&	10 s$^{-1}$\\
 		$U_{stirling,1}$	&	30 W/(m$^2\cdot$K)\\
@@ -144,17 +213,11 @@ Table~\ref{tab:system-data} shows the basic design parameters of the cascade sys
 		$\gamma_{stirling}	$	&	3.375\\
 		$n$					&	7.73$\times{}10^{-2}$ mol\\
 		$n_{stirlingEngine}$	&	100\\
-		\midrule
-		\multicolumn{2}{c}{Steam turbine}\\
-		\midrule
 		$T_s$				&	340$^\circ$C\\
 		$p_s$				&	2.35$\times10^6$ Pa\\
 		$p_c$				&	1.5$\times10^4$ Pa\\
 		$T_{s,d}$			&	390$^\circ$C\\
 		$p_{c,p}$			&	1$\times10^6$ Pa\\
-		\midrule
-		\multicolumn{2}{c}{Deaerator}\\
-		\midrule
 		$p_{deaerator}$ & 1$\times10^6$ Pa\\
 		\bottomrule
 	\end{tabular}
@@ -186,12 +249,14 @@ Table~\ref{tab:system-data} shows the basic design parameters of the cascade sys
 \nomenclature{$p_{deaerator}$}{Outlet pressure of deaerator, Pa}
 
 \section{System model}
-The system is built in several blocks. These blocks are made of circuits and efficiency calculations. Two circuits, air circuit and water circuit, are built in some specific states and in some components. Known parameters of the states, we can get the efficiency of the system and the overall efficiency of separated systems.
+An EES\nomenclature[C]{EES}{Engineering Equation Solver} model was built to investigate the characteristics of the cascade system. The cascade system is built in several blocks. These blocks are made of circuits with efficiency calculations. Three circuits, air circuit, water circuit and oil circuit, are built with some specific state parameters in some key components. Energy-based models of these key components are created on the basis of their thermodynamic behavior, heat transfer and the second law.
 
-\subsection{Air circuit}
-In air circuit, efficiency of dish collectors needs to be calculated. Fraser, in his dissertation\cite{Fraser2008}, built a performance prediction model of Stirling dish system, which has detailed description of the dish collector model. The model is also used in the software SAM\nomenclature[C]{SAM}{System Advisor Model}, which provides performance and financial models for facilitate decision in the renewable energy industry.
+The following parts introduce models of some key components.
 
-\noindent \begin{figure}[hp]
+\subsection{Dish receiver}
+Fraser, in his dissertation~\cite{Fraser2008}, built a performance prediction model of Stirling dish system with detailed description. The model is also used in the software SAM\nomenclature[C]{SAM}{System Advisor Model}, which provides performance and financial models for facilitate decision in the renewable energy industry. The dish collector model in the dissertation considers various heat losses, which is a good reference for the dish receiver model of the cascade system. 
+
+\noindent \begin{figure}[htbp]
 \begin{center}
 	\includegraphics[width = 0.8\columnwidth]{graphics/dishReceiver1}
 	\caption{Structure of the dish receiver}
@@ -216,20 +281,7 @@ In our cascade system, the structure of the dish receiver is as shown in Figure~
 \end{center}
 \end{figure}
 
-\begin{equation}
-\begin{aligned}
-	q_{in} = q_{rad,reflect}+q_{dish,air}+q_{cond,tot}+q_{conv,tot}+
-	\\q_{rad,emit}\label{eq:q_in sum}
-\end{aligned}
-\end{equation}
-\nomenclature{$q_{in}$}{Solar energy launched into dish receiver aperture, W}
-\nomenclature{$q_{rad,reflect}$}{Reflected radiation by volumetric receiver, W}
-\nomenclature{$q_{dish,air}$}{Energy absorbed by air in the dish collector}
-\nomenclature{$q_{cond,tot}$}{Total conduction loss}
-\nomenclature{$q_{conv,tot}$}{Total convection loss}
-\nomenclature{$q_{rad,emit}$}{Radiation emitted by dish receiver}
-
-A dish collector product of SES\nomenclature[C]{SES}{Stirling Energy System} used in Fraser's paper, which is also used in this system, and its parameters are listed in Table~\ref{tab:dishReceiver} \cite{Fraser2008}. 
+A dish collector product of SES\nomenclature[C]{SES}{Stirling Energy System} used in Fraser's paper, which is also used in this system, and its parameters are listed in Table~\ref{tab:dishReceiver}~\cite{Fraser2008}. 
 
 \begin{table}[htbp]
 	\caption{Parameters of the dish receiver}
@@ -246,7 +298,7 @@ A dish collector product of SES\nomenclature[C]{SES}{Stirling Energy System} use
 		$\epsilon_{insu}$	&	0.6\\
 		$\alpha_{cav}$	&	0.87\\
 		$\delta_a$	&	0.005 m\\
-		$d_{i,air}$	&	0.07 m\\
+		$d_{i}$	&	0.07 m\\
 		$\theta_{dish}$	&	45$^\circ$\\
 		$\gamma$	&	0.97\\
 		$\eta_{shading}$	&	0.95\\
@@ -256,7 +308,6 @@ A dish collector product of SES\nomenclature[C]{SES}{Stirling Energy System} use
 	\end{center}
 	\label{tab:dishReceiver}
 \end{table}
-
 \nomenclature{$d_{cav}$}{Diameter of volumetric receiver cavity, m}
 \nomenclature[G]{$\delta_{ins}$}{Thickness of receiver insulating layer, m}
 \nomenclature{$l_{cav}$}{Depth of volumetric receiver cavity, m}
@@ -264,7 +315,7 @@ A dish collector product of SES\nomenclature[C]{SES}{Stirling Energy System} use
 \nomenclature[G]{$\lambda_{ins}$}{Thermal conductivity of receiver insulating layer, W/(m·K)}
 \nomenclature[G]{$\epsilon_{insu}$}{Emissivity of reciver insulating layer}
 \nomenclature[G]{$\delta_{a}$}{Thickness of air tube in volumetric receiver, m}
-\nomenclature{$d_{i,air}$}{Inner diameter of air tube, m}
+\nomenclature{$d_{i}$}{Inner diameter of air tube, m}
 \nomenclature[G]{$\theta_{dish}$}{Dish aperture angle (0$^{\circ}$ is horizental, 90$^{\circ}$ is vertically down)}
 \nomenclature[G]{$\gamma$}{Intercept factor}
 \nomenclature[G]{$\eta_{shading}$}{Shading factor}
@@ -276,14 +327,69 @@ A dish collector product of SES\nomenclature[C]{SES}{Stirling Energy System} use
 \nomenclature{$n$}{Amount of working gas in each Stirling engine, mol}
 \nomenclature{$n_{stirlingEngine}$}{Number of Stirling engines in the Stirling engine array}
 
-$q_{in}$ can be obtained by
+$q_{dish,air}$ can be written as
+\begin{equation*}
+	q_{dish,air}=h_{dish,air}A_{dish,air}\Delta{}T_{ln,Drec,air}
+\end{equation*}
+
+where
+
+\begin{equation*}
+	h_{dish,air}=Nu_{tube}\lambda_{dish,air}/d_i
+\end{equation*}
+
+\begin{equation*}
+	Nu_{tube}=c_rNu_{tube}^{'}
+\end{equation*}
+
+For helical spiral pipe, multiplier $c_r$ based on curvature ratio can be written as~\cite{Pablo2008}
+
+\begin{equation*}
+	c_{r}=1+3.5\frac{d_{i}}{d_{cav}-d_{i}-2\delta_{a}}
+\end{equation*}
+
+$Nu_{tube}^{'}$ is the Nusselt number of straight circular tube, which can be obtained by~\cite{Serth2007}
+
+\begin{equation*}
+	Nu_{tube}^{'}= 0.027Re_{tube}^{0.8}Pr_{tube}^{1/3}(\mu_{tube}/\mu_{tube,w})^{0.14}
+\end{equation*}
+
+\begin{equation*}
+	c_{r}=1+3.5\frac{d_{i}}{d_{cav}-d_{i}-2\delta_{a}}
+\end{equation*}
+
+and $\Delta{}T_{ln,Drec,air}$ can be written as
+
+\begin{equation*}
+	\Delta{}T_{ln,Drec,air}=\frac{(T_{cav}-T_{dish,inlet})-(T_{cav}-T_{dish,outlet})}{\ln\dfrac{T_{cav}-T_{dish,inlet}}{T_{cav}-T_{dish,outlet}}}\label{eq:q_in}
+\end{equation*}
+
+To get $q_{dish,air}$, $T_{cav}$ is required. As shown in Figure~\ref{fig:thermal-lose}, we need to solve the heat network.
+
 \begin{equation}
-q_{in}=I_{DNI}\cdot A_{dishCollector}\gamma\eta_{shading}\rho\label{eq:q_in}
+\begin{aligned}
+	q_{in} = q_{rad,reflect}+q_{dish,air}+q_{cond,tot}+q_{conv,tot}+
+	\\q_{rad,emit}\label{eq:q_in sum}
+\end{aligned}
+\end{equation}
+\nomenclature{$q_{in}$}{Solar energy launched into dish receiver aperture, W}
+\nomenclature{$q_{rad,reflect}$}{Reflected radiation by volumetric receiver, W}
+\nomenclature{$q_{dish,air}$}{Energy absorbed by air in the dish collector}
+\nomenclature{$q_{cond,tot}$}{Total conduction loss}
+\nomenclature{$q_{conv,tot}$}{Total convection loss}
+\nomenclature{$q_{rad,emit}$}{Radiation emitted by dish receiver}
+
+
+$q_{in}$ can be obtained by
+
+\begin{equation}
+	q_{in}=I_{DNI}\cdot A_{dishCollector}\gamma\eta_{shading}\rho\label{eq:q_in}
 \end{equation}
 
+Other losses are presented in following sections.
 
 \subsubsection{Reflected loss of dish receiver}
-To determine the reflected loss of the cavity surfaces of the dish receiver, the effective absorptance of the cavity receiver $\alpha_{eff}$\nomenclature[G]{$\alpha_{eff}$}{Effective absorptance} is required to determine the fraction of energy reflected out of the receiver. The effective absorptance of a cavity receiver without a receiver aperture cover is given by Equation~(\ref{eq:alpha_eff}) where $\alpha_{cav}$ is the cavity surface absrptance, $A_a$ is the cavity aperture area, and $A_{cav}$ is the total inner surface area of the cavity \cite{Duffie2013}. Sandra National Laboratories gave an estimate value of the absorptance of the cavity surface $\alpha_{cav}$ of an existing Stirling dish receiver to be 0.87 \cite{Hogan1994}. To achieve higher effective absorptance, a smaller ratio of the two surface area should be used. But the ratio is constrained by the concentration ratio of the receiver.
+To determine the reflected loss of the cavity surfaces of the dish receiver $q_{rad,reflect}$, the effective absorptance of the cavity receiver $\alpha_{eff}$\nomenclature[G]{$\alpha_{eff}$}{Effective absorptance} is required to determine the fraction of energy reflected out of the receiver. The effective absorptance of a cavity receiver without a receiver aperture cover is given by Equation~(\ref{eq:alpha_eff}) where $\alpha_{cav}$ is the cavity surface absrptance, $A_a$ is the cavity aperture area, and $A_{cav}$ is the total inner surface area of the cavity~\cite{Duffie2013}. Sandra National Laboratories gave an estimate value of the absorptance of the cavity surface $\alpha_{cav}$ of an existing Stirling dish receiver to be 0.87~\cite{Hogan1994}. To achieve higher effective absorptance, a smaller ratio of the two surface area should be used. But the ratio is constrained by the concentration ratio of the receiver.
 
 \begin{equation}
 	\alpha_{eff}=\dfrac{\alpha_{cav}}{\alpha_{cav}+\left(1-\alpha_{cav}\right)\left(A_{ap}/A_{cav}\right)}
@@ -297,12 +403,31 @@ To determine the reflected loss of the cavity surfaces of the dish receiver, the
 \subsubsection{Conduction loss of dish receiver}
 Conduction loss of dish receiver $q_{cond,tot}$ equals to the different two parts: convection loss from the insulating layer to the atmosphere $q_{cond,conv}$ and radiation loss from the insulating layer to the atmosphere $q_{cond,rad}$. Both of the two parts are related to the temperature of insulating layer $T_{ins}$.
 
-\subsubsection{Convection loss of dish receiver}
-Ma\cite{Ma1993} conducted tests to determine the free convection losses from the receiver for six alternative setups, and the data were consistent with Stine and McDonald's free convection correlation. It is assumed that forced convection is independent of free convection in the receiver, so the total convection losses can be represented as the sum of the free and forced convection losses as shown in Figure~\ref{fig:thermal-lose}.
+\begin{equation*}
+	q_{cond,tot}=\dfrac{T_{cav}-T_{insu}}{\ln\dfrac{d_{cav}+2\delta_{insu}}{d_{cav}}/(2\pi\lambda_{insu}l_{cav})}
+\end{equation*}
+\begin{equation*}
+\begin{split}
+	q_{cond,conv}=h_{insu}A_{insu}(T_{insu}-T_{amb})
+	\\=\dfrac{k_{insu}Nu_{insu}A_{insu}(T_{insu}-T_{amb})}{d_{cav}+2\delta_{insu}}
+\end{split}
+\end{equation*}
+\begin{equation*}
+	q_{cond,rad}=\epsilon_{insu}A_{insu}\sigma(T_{insu}^4 - T_{amb}^4)	
+\end{equation*}
+And 
+\begin{equation*}
+	q_{cond,tot}=q_{cond,conv}+q_{cond,rad}	
+\end{equation*}
 
-\begin{equation}
+\subsubsection{Convection loss of dish receiver}
+Ma~\cite{Ma1993} conducted tests to determine the free convection losses from the receiver for alternative setups, and the data were consistent with Stine and McDonald's free convection correlation. It is assumed that forced convection is independent of free convection in the receiver, so the total convection losses can be represented as the sum of the free and forced convection losses as shown in Figure~\ref{fig:thermal-lose}.
+
+\begin{equation*}
 	q_{con,tot} = q_{con,free} + q_{con,forced}
-\end{equation}
+\end{equation*}
+
+
 
 \subsection{Stirling engine array}
 
@@ -317,13 +442,13 @@ The layout of the Stirling engine array is shown in Figure~\ref{fig:Layout of St
 \end{center}
 \end{figure}
 
-\begin{equation}
+\begin{equation*}
 	T_{1,i,1}=T_{1,i}\label{eq:T_1_i_1}
-\end{equation}
+\end{equation*}
 
-\begin{equation}
+\begin{equation*}
 	q_{m,1,r}=q_{m,1}/n_{2}
-\end{equation}
+\end{equation*}
 \nomenclature{$n_2$}{Number of rows of the Stirling engine array}
 \nomenclature{$q_{m,1,r}$}{Mass flow rate of air in each row of Stirling engine array, kg/s}
 
@@ -331,143 +456,144 @@ where $n_{2}=n_{stirlingEngine}/n_{1}$.
 
 If the flow type between the heating and cooling flows is parallel flow,
 
-\begin{equation}
+\begin{equation*}
 	T_{2,i,1}=T_{2,i}\label{eq:T_2_i_1}
-\end{equation}
-\begin{equation}
+\end{equation*}
+\begin{equation*}
 	q_{m,2,r}=q_{m,2}/n_{2}
-\end{equation}
+\end{equation*}
 \nomenclature{$q_{m,2,r}$}{Mass flow rate of water in each row of Stirling engine array, kg/s}
 
 If the flow type between the heating and cooling flows is counter flow,
 
-\begin{equation}
+\begin{equation*}
 	T_{2,o,n_{1}}=T_{2,i}\label{eq:T_2_o_n1}
-\end{equation}
-\begin{equation}
+\end{equation*}
+\begin{equation*}
 	q_{m,2,r}=-q_{m,2}/n_{2}
-\end{equation}
+\end{equation*}
 
 For a Stirling engine in column $x$\nomenclature[S]{$x$}{Stirling engine in column $x$}, $x$ from $1$ to $n_{1}$, $c_{p,1,x}$ and $c_{p,2,x}$ can be written as 
 
-\begin{equation}
+\begin{equation*}
 	c_{p,1,x}=g_{1}(T_{1,i,x},T_{1,o,x})\label{eq:c_p_1_x}
-\end{equation}
+\end{equation*}
 
-\begin{equation}
+\begin{equation*}
 	c_{p,2,x}=g_{2}(T_{2,i,x},T_{2,o,x})\label{eq:c_p_2_x}
-\end{equation}
+\end{equation*}
 
 
-According to Appendix~\ref{sec:Stirling-engine-model}, 
-\begin{equation}
+%According to Appendix~\ref{sec:Stirling-engine-model},
+According to Appendi,  
+\begin{equation*}
 	T_{H,x}=T_{1,i,x}-\dfrac{T_{1,i,x}-T_{1,o,x}}{1-\exp(-\dfrac{U_{stirling,1}A_{stirling,1}}{q_{m,1,r}c_{p,1,x}})}\label{eq:T_H_x}
-\end{equation}
+\end{equation*}
 
 
-\begin{equation}
+\begin{equation*}
 	T_{L,x}=T_{2,i,x}-\dfrac{T_{2,i,x}-T_{2,o,x}}{1-\exp(-\dfrac{U_{stirling,2}A_{stirling,2}}{q_{m,2,r}c_{p,2,x}})}\label{eq:T_L_x}
-\end{equation}
+\end{equation*}
 
 Because of Equation (\ref{eq:c_p_1_x}) and (\ref{eq:c_p_2_x}), Equation (\ref{eq:T_H_x}) and (\ref{eq:T_L_x}) can be written as
-\begin{equation}
+\begin{equation*}
 	T_{H,x}=g_{3}(T_{1,i,x},T_{1,o,x})
-\end{equation}
+\end{equation*}
 
 
-\begin{equation}
+\begin{equation*}
 	T_{L,x}=g_{4}(T_{2,i,x},T_{2,o,x})
-\end{equation}
+\end{equation*}
 
 
 Choose $T_{R,x}=\dfrac{T_{H,x}-T_{L,x}}{\ln(T_{H,x}/T_{L,x})}$, and $e_{x}=\dfrac{T_{R,x}-T_{L,x}}{T_{H,x}-T_{L,x}}$, then
 
-\begin{equation}
+\begin{equation*}
 	\eta_{stirling,x}=\dfrac{T_{H,x}-T_{L,x}}{T_{H,x}+\dfrac{1-e_{x}}{k-1}\cdot\dfrac{T_{H,x}-T_{L,x}}{\ln\gamma_{stirling}}}\label{eq:eta_striling_x}
-\end{equation}
+\end{equation*}
 
 which can be written as
 
-\begin{equation}
+\begin{equation*}
 	\eta_{stirling,x}=g_{5}(T_{1,i,x},T_{1,o,x},T_{2,i,x},T_{2,o,x})\label{eq:g_5}
-\end{equation}
+\end{equation*}
 
 On the other way, for $x$ from $1$ to $n_{1}$,
 
-\begin{equation}
+\begin{equation*}
 	h_{1,i,x}=h_{1}(T_{1,i,x})
-\end{equation}
+\end{equation*}
 
 
-\begin{equation}
+\begin{equation*}
 	h_{1,o,x}=h_{1}(T_{1,o,x})
-\end{equation}
-\begin{equation}
+\end{equation*}
+\begin{equation*}
 	h_{2,i,x}=h_{2}(T_{2,i,x})\label{eq:h_2_i_x}
-\end{equation}
+\end{equation*}
 
 
-\begin{equation}
+\begin{equation*}
 	h_{2,o,x}=h_{2}(T_{2,o,x})\label{eq:h_2_o_x}
-\end{equation}
+\end{equation*}
 
 
 For energy balance,
 
-\begin{equation}
+\begin{equation*}
 	q_{m,1,r}(h_{1,i,x}-h_{1,o,x})(1-\eta_{stirling,x})=q_{m,2,r}(h_{2,o,x}-h_{2,i,x})
-\end{equation}
+\end{equation*}
 
 
 which can be written as 
-\begin{equation}
+\begin{equation*}
 	h_{3}(\eta_{stirling,x},T_{1,i,x},T_{1,o,x},T_{2,i,x},T_{2,o,x})=0\label{eq:h_3}
-\end{equation}
+\end{equation*}
 
 
 for $q_{m,1,r}$ and $q_{m,2,r}$ can be obtained once the flow type is known.
 
 And in Stirling cycle, the heat absorbed by the working gas is 
-\begin{equation}
+\begin{equation*}
 	nR\left(T_{H,x}\ln\gamma_{stirling}+\dfrac{1-e_{x}}{k-1}\left(T_{H,x}-T_{L,x}\right)\right)=q_{m,1,r}(h_{1,i,x}-h_{1,o,x})/n_{se}
-\end{equation}
+\end{equation*}
 
 can be written as
 
-\begin{equation}
+\begin{equation*}
 	f(T_{1,i,x},T_{1,o,x})=0\label{eq:f}
-\end{equation}
+\end{equation*}
 
 
 And for $x$ from $1$ to $n_{1}-1$, 
 
-\begin{equation}
+\begin{equation*}
 	T_{1,i,x+1}=T_{1,o,x}\label{eq:T_1_x+1}
-\end{equation}
+\end{equation*}
 
 
-\begin{equation}
+\begin{equation*}
 	T_{2,i,x+1}=T_{2,o,x}\label{eq:T_2_x+1}
-\end{equation}
+\end{equation*}
 
 
 Solve the simultaneous equations for $x$ from $1$ to $n_{1}$: Equation (\ref{eq:T_1_i_1}), (\ref{eq:T_2_i_1}) (or (\ref{eq:T_2_o_n1})), (\ref{eq:g_5}), (\ref{eq:h_3}), (\ref{eq:f}), (\ref{eq:T_1_x+1}), (\ref{eq:T_2_x+1}) ($5n_{1}$ equations with $5n_{1}$ variables), we can get $T_{2,i,1},T_{2,o,n_{1}}$ and then use $h_{2,i,1},h_{2,o,n_{1}}$ to get $\eta_{stirling}$ by Equation (\ref{eq:eta_stirling-1})
 
-\begin{equation}
+\begin{equation*}
 	\eta_{stirling}=1-\dfrac{q_{m,2}(h_{2,o,n_{1}}-h_{2,i,1})}{q_{m,1}(h_{1,i,1}-h_{1,o,n_{1}})}\label{eq:eta_stirling-1}
-\end{equation}
+\end{equation*}
 
 
 and power of Stirling engine in column $x$
-\begin{equation}
+\begin{equation*}
 	P_{stirlingEngine,x}=q_{m,1,r}(h_{1,i,x}-h_{1,o,x})\eta_{stirling,x}
-\end{equation}
+\end{equation*}
 
 
 and $P_{stirling}$ can be obtained by
-\begin{equation}
+\begin{equation*}
 	P_{stirling}=\eta_{stirling}q_{m,1}(h_{1,i,1}-h_{1,o,n_{1}})
-\end{equation}
+\end{equation*}
 \clearpage{}
 
 
@@ -477,7 +603,7 @@ turbine.
 
 For state $[2,1]$\nomenclature[S]{2,1}{Water at outlet of air-to-water heat exchanger and inlet of turbine},
 
-\begin{equation}
+\begin{equation*}
 \left.\begin{array}{l}
 p_{2,1}=p_{s}\\
 T_{2,1}=T_{s}
@@ -485,25 +611,25 @@ T_{2,1}=T_{s}
 h_{2,1}\\
 s_{2,1}
 \end{array}\right.
-\end{equation}
+\end{equation*}
 
 
 For state $[2,2]$\nomenclature[S]{2,2}{Water at outlet of turbine and inlet of condenser},
 
-\begin{equation}
+\begin{equation*}
 \left.\begin{array}{l}
 s_{i,2,2}=s_{2,1}\\
 p_{i,2,2}=p_{c}
 \end{array}\right\} \Rightarrow h_{i,2,2}
-\end{equation}
+\end{equation*}
 
 
-\begin{equation}
+\begin{equation*}
 \eta_{i,turbine}=\frac{h_{2,1}-h_{2,2}}{h_{2,1}-h_{i,2,2}}
-\end{equation}
+\end{equation*}
 
 
-\begin{equation}
+\begin{equation*}
 \left.\begin{array}{l}
 p_{2,2}=p_{c}\\
 h_{2,2}
@@ -511,27 +637,27 @@ h_{2,2}
 T_{2,2}\\
 x_{2,2}
 \end{array}\right.
-\end{equation}
+\end{equation*}
 
 
 \nomenclature[S]{$i$}{Isentropic parameter}
 
 For state \nomenclature[S]{2,3}{Water at outlet of turbine bleed point and inlet1 of deaerator}$[2,3]$
 
-\begin{equation}
+\begin{equation*}
 \left.\begin{array}{l}
 s_{i,2,3}=s_{2,1}\\
 p_{i,2,3}=p_{deaerator}
 \end{array}\right\} \Rightarrow h_{i,2,3}
-\end{equation}
+\end{equation*}
 
 
-\begin{equation}
+\begin{equation*}
 \eta_{i,turbine}=\frac{h_{2,1}-h_{2,3}}{h_{2,1}-h_{i,2,3}}
-\end{equation}
+\end{equation*}
 
 
-\begin{equation}
+\begin{equation*}
 \left.\begin{array}{l}
 p_{2,3}=p_{deaerator}\\
 h_{2,3}
@@ -539,23 +665,23 @@ h_{2,3}
 T_{2,3}\\
 x_{2,3}
 \end{array}\right.
-\end{equation}
+\end{equation*}
 
 
-\begin{equation}
+\begin{equation*}
 P_{turbine}=P_{generator}/\eta_{generator}
-\end{equation}
+\end{equation*}
 
 
 \nomenclature{$y$}{Extraction rate of steam turbine}\nomenclature{$q_{m,2}$}{Total mass flow rate of water, kg/s}\nomenclature[S]{2}{Water}
-\begin{equation}
+\begin{equation*}
 P_{turbine}=\left(1-y\right)q_{m,2}\left(h_{2,1}-h_{2,2}\right)+yq_{m,2}\left(h_{2,1}-h_{2,3}\right)
-\end{equation}
+\end{equation*}
 
 
 For state \nomenclature[S]{2,4}{Water at outlet of condenser and inlet of condenser pump}$[2,4]$,
 
-\begin{equation}
+\begin{equation*}
 \left.\begin{array}{l}
 p_{2,4}=p_{2,2}\\
 x_{2,4}=0
@@ -563,12 +689,12 @@ x_{2,4}=0
 h_{2,4}\\
 s_{2,4}
 \end{array}\right.
-\end{equation}
+\end{equation*}
 
 
 For state \nomenclature[S]{2,5}{Water at outlet of condenser pump and inlet of Stirling engine heat exchanger}$[2,5]$,
 
-\begin{equation}
+\begin{equation*}
 \left.\begin{array}{l}
 p_{2,5}=p_{2,stirling}\\
 s_{2,5}=s_{2,4}
@@ -576,17 +702,17 @@ s_{2,5}=s_{2,4}
 T_{2,5}\\
 h_{2,5}
 \end{array}\right.
-\end{equation}
+\end{equation*}
 
 
 For state \nomenclature[S]{2,6}{Water at outlet of Stirling engine heat exchanger and inlet2 of deaeretor}$[2,6]$,
 
-\begin{equation}
+\begin{equation*}
 q_{stirling,cold}=\left(1-y\right)q_{m,2}\left(h_{2,6}-h_{2,5}\right)\Rightarrow h_{2,6}
-\end{equation}
+\end{equation*}
 
 
-\begin{equation}
+\begin{equation*}
 \left.\begin{array}{l}
 p_{2,6}=p_{2,5}\\
 h_{2,6}
@@ -594,12 +720,12 @@ h_{2,6}
 T_{2,6}\\
 s_{2,6}
 \end{array}\right.
-\end{equation}
+\end{equation*}
 
 
 For state \nomenclature[S]{2,7}{Water at outlet of deaeretor and inlet of feed water pump}$[2,7]$,
 
-\begin{equation}
+\begin{equation*}
 \left.\begin{array}{l}
 p_{2,7}=p_{deaerator}\\
 x_{2,7}=0
@@ -607,17 +733,17 @@ x_{2,7}=0
 h_{2,7}\\
 s_{2,7}
 \end{array}\right.
-\end{equation}
+\end{equation*}
 
 
-\begin{equation}
+\begin{equation*}
 yh_{2,3}+\left(1-y\right)h_{2,6}=h_{2,7}
-\end{equation}
+\end{equation*}
 
 
 For state \nomenclature[S]{2,8}{Water at outlet of feed water pump and inlet of preheater}$[2,8]$,
 
-\begin{equation}
+\begin{equation*}
 \left.\begin{array}{l}
 p_{2,8}=p_{s}\\
 s_{2,8}=s_{2,7}
@@ -625,19 +751,19 @@ s_{2,8}=s_{2,7}
 T_{2,8}\\
 h_{2,8}
 \end{array}\right.
-\end{equation}
+\end{equation*}
 
 
 For Rankine cycle,
 
-\begin{equation}
+\begin{equation*}
 \eta_{rankine}=\frac{\left(1-y\right)\left(h_{2,1}+h_{2,4}-h_{2,2}-h_{2,5}\right)+y\left(h_{2,1}-h_{2,3}\right)-\left(h_{2,8}-h_{2,7}\right)}{\left(1-y\right)\left(h_{2,6}-h_{2,5}\right)+h_{2,1}-h_{2,8}}
-\end{equation}
+\end{equation*}
 
 
 For state \nomenclature[S]{2,9}{Water at outlet of preheater and inlet of evaporator}$[2,9]$,
 
-\begin{equation}
+\begin{equation*}
 \left.\begin{array}{l}
 p_{2,9}=p_{2,8}\\
 x_{2,9}=0
@@ -645,12 +771,12 @@ x_{2,9}=0
 T_{2,9}\\
 h_{2,9}
 \end{array}\right.
-\end{equation}
+\end{equation*}
 
 
 For state \nomenclature[S]{2,10}{Water at outlet of evaporator and inlet of superheater}$[2,10]$,
 
-\begin{equation}
+\begin{equation*}
 \left.\begin{array}{l}
 p_{2,10}=p_{2,9}\\
 x_{2,10}=1
@@ -658,34 +784,34 @@ x_{2,10}=1
 T_{2,10}\\
 h_{2,10}
 \end{array}\right.
-\end{equation}
+\end{equation*}
 
 
 For state \nomenclature[S]{2,11}{Water at outlet of superheater and inlet of air-to-water heat exchanger}$[2,11]$,
 
-\begin{equation}
+\begin{equation*}
 \left.\begin{array}{l}
 p_{2,11}=p_{2,10}\\
 q_{m,1}\left(h_{1,2}-h_{1,3}\right)=q_{m,2}\left(h_{2,1}-h_{2,11}\right)
 \end{array}\right\} \Rightarrow T_{2,11}
-\end{equation}
+\end{equation*}
 
 
-\begin{equation}
+\begin{equation*}
 q_{trough}=q_{m,2}\left(h_{2,11}-h_{2,8}\right)
-\end{equation}
+\end{equation*}
 
 
 \nomenclature{$A_{trough}$}{Aperture area of all trough collectors, m$^2$}
-\begin{equation}
+\begin{equation*}
 q_{trough}=I_{p}\cdot A_{trough}\cdot\eta_{trough}
-\end{equation}
+\end{equation*}
 
 
 \nomenclature{$n_{troughCollector}$}{Number of all trough collectors}
-\begin{equation}
+\begin{equation*}
 n_{troughCollector}=ceil(A_{trough}/A_{troughCollector})
-\end{equation}
+\end{equation*}
 
 
 where $ceil(x)$ is a function that returns the smallest integer larger

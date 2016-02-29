@@ -5398,13 +5398,6 @@ description "Heat transfer correction factor of coiled tube of volumetric receiv
 \end_inset
 
  is the helical spiral tube multiplier based on curvature ratio
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Pablo2008"
-
-\end_inset
-
-
 \begin_inset Formula 
 \begin{equation}
 c_{r}=1+\frac{3.5d_{i}}{d_{cav}-d_{i}-2\delta_{a}}
@@ -5515,7 +5508,7 @@ description "Temperature of insulating outside layer, K"
  is outside temperature of the insulating layer.
 \begin_inset Formula 
 \begin{equation}
-q_{cond,tot}=\dfrac{T_{cav}-T_{insu}}{\dfrac{\ln(r_{2}/r_{1})}{2\pi\lambda_{insu}l_{cav}}}
+q_{cond,tot}=\dfrac{T_{cav}-T_{insu}}{\dfrac{\ln(r_{2}-r_{1})}{2\pi\lambda_{insu}l_{cav}}}
 \end{equation}
 
 \end_inset
