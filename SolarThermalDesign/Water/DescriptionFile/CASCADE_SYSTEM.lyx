@@ -1285,18 +1285,7 @@ K
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset CommandInset nomenclature
-LatexCommand nomenclature
-symbol "$p_{cp}$"
-description "Condensate pump outlet pressure, Pa"
-
-\end_inset
-
-
-\begin_inset Formula $p_{cp}=1\times10^{6}\,$
-\end_inset
-
-Pa
+Turbine type: a product
 \end_layout
 
 \end_inset
@@ -1305,7 +1294,7 @@ Pa
 \begin_inset Text
 
 \begin_layout Plain Layout
-Turbine type: a product
+
 \end_layout
 
 \end_inset
@@ -2607,10 +2596,6 @@ description "Separate system"
 \begin_inset Formula $p_{deaerator,s}=p_{deaerator}$
 \end_inset
 
-, 
-\begin_inset Formula $p_{cp,s}=p_{cp}$
-\end_inset
-
 .
 \end_layout
 
@@ -3060,7 +3045,7 @@ e_{s}=\dfrac{T_{R,s}-T_{L,s}}{T_{H,s}-T_{L,s}}
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\eta_{stirling,s}=\dfrac{T_{H,s}-T_{L,s}}{T_{H,s}+\dfrac{1-e_{s}}{k-1}\cdot\dfrac{T_{H,s}-T_{L,s}}{\ln\dfrac{T_{H,s}}{T_{L,s}}}}
+\eta_{stirling,s}=\dfrac{T_{H,s}-T_{L,s}}{T_{H,s}+\dfrac{1-e_{s}}{k-1}\cdot\dfrac{T_{H,s}-T_{L,s}}{\ln\gamma}}
 \end{equation}
 
 \end_inset
@@ -3072,7 +3057,7 @@ e_{s}=\dfrac{T_{R,s}-T_{L,s}}{T_{H,s}-T_{L,s}}
 \begin_inset Formula $\eta_{dish,s}$
 \end_inset
 
- uses the value 0.8.
+ uses the same value as cascade system.
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Wu2010a"
@@ -3085,7 +3070,7 @@ key "Wu2010a"
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-P_{stirling,s}=q_{dish,s}\eta_{stirling,s}
+P_{stirling,s}=q_{dish}\eta_{stirling,s}
 \end{equation}
 
 \end_inset
@@ -3371,7 +3356,7 @@ reference "fig:troughCollector"
 placement h
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -3610,7 +3595,7 @@ description "Incidence angle"
 placement h
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \noindent
@@ -5714,7 +5699,7 @@ key "Fraser2008"
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-q{}_{conv,tot}=(h_{nature}+h_{forced})A_{cav}(T_{cav}-T_{amb})\label{eq:q_conv_tot}
+q{}_{conv,tot}=(h_{free}+h_{forced})A_{cav}(T_{cav}-T_{amb})\label{eq:q_conv_tot}
 \end{equation}
 
 \end_inset
@@ -5722,7 +5707,7 @@ q{}_{conv,tot}=(h_{nature}+h_{forced})A_{cav}(T_{cav}-T_{amb})\label{eq:q_conv_t
 
 \begin_inset Formula 
 \begin{equation}
-h_{nature}=k_{film}Nu_{nat,conv}/\overline{d_{cav}}
+h_{free}=k_{film}Nu_{free}/\overline{d_{cav}}
 \end{equation}
 
 \end_inset
@@ -5753,7 +5738,7 @@ description "Grashof number"
 
 \begin_inset Formula 
 \begin{equation}
-Nu_{nat,conv}=0.088Gr_{film}^{1/3}(T_{cav}/T_{amb})^{0.18}(\cos\theta_{dish})^{2.47}(\frac{d_{ap}}{\overline{d_{cav}}})^{S}
+Nu_{free}=0.088Gr_{film}^{1/3}(T_{cav}/T_{amb})^{0.18}(\cos\theta_{dish})^{2.47}(\frac{d_{ap}}{\overline{d_{cav}}})^{S}
 \end{equation}
 
 \end_inset

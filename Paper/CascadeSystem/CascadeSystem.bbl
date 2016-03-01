@@ -1,6 +1,6 @@
 \begin{thebibliography}{10}
 
-\bibitem{goswami2015}
+\bibitem{Goswami2015}
 D.Y. Goswami.
 \newblock {\em Principles of Solar Engineering, Third Edition}.
 \newblock CRC Press, 2015.
@@ -74,10 +74,62 @@ R.~E. Hogan.
   model}.
 \newblock {\em Solar energy}, 52(2):167--178, 1994.
 
+\bibitem{Churchill1977}
+S.~W. Churchill and M.~Bernstein.
+\newblock A correlating equation for forced convection from gases and liquids
+  to a circular cylinder in crossflow.
+\newblock {\em Journal of Heat Transfer}, 99(2):300--306, 05 1977.
+
 \bibitem{Ma1993}
 Robert~Y Ma.
 \newblock Wind effects on convective heat loss from a cavity receiver for a
   parabolic concentrating solar collector.
 \newblock {\em Sandia National Laboratory}, SAND92-7293(September), 1993.
+
+\bibitem{Wu2010}
+Shuang-Ying Wu, Lan Xiao, Yiding Cao, and You-Rong Li.
+\newblock Convection heat loss from cavity receiver in parabolic dish solar
+  thermal power system: A review.
+\newblock {\em Solar Energy}, 84(8):1342 -- 1355, 2010.
+
+\bibitem{Leibfried1995}
+U.~Leibfried and J.~Ortjohann.
+\newblock Convective heat loss from upward and downward-facing cavity solar
+  receivers: Measurements and calculations.
+\newblock {\em Journal of Solar Energy Engineering}, 117(2):75--84, 05 1995.
+
+\bibitem{Koenig1981}
+A.A. Koenig and M.~Marvin.
+\newblock Convection heat loss sensitivity in open cavity solar receivers.
+\newblock Technical report, Department of Energy, USA, 1981.
+
+\bibitem{Stine1994}
+William~B Stine and Richard~B Diver.
+\newblock A compendium of solar dish/stirling technology.
+\newblock Technical report, DTIC Document, 1994.
+
+\bibitem{Romero2007}
+M~Romero-Alvarez and E~Zarza.
+\newblock {Concentrating solar thermal power}.
+\newblock {\em Efficiency and Renewable Energy}, 2007.
+
+\bibitem{Der2007}
+A.~Der~Minassians.
+\newblock {\em Stirling Engines for Low-temperature Solar-thermal-electric
+  Power Generation}.
+\newblock University of California, Berkeley, 2007.
+
+\bibitem{Cavazzuti2012}
+M.~Cavazzuti.
+\newblock {\em Optimization Methods: From Theory to Design Scientific and
+  Technological Aspects in Mechanics}.
+\newblock Springer Berlin Heidelberg, 2012.
+
+\bibitem{Stine1985}
+W.B. Stine and R.W. Harrigan.
+\newblock {\em Solar energy fundamentals and design: with computer
+  applications}.
+\newblock A Wiley-Interscience publication. John Wiley \& Sons, Incorporated,
+  1985.
 
 \end{thebibliography}

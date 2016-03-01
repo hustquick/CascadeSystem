@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.4)  1 MAR 2016 10:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.4)  2 MAR 2016 00:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -294,28 +294,25 @@ Writing nomenclature file CascadeSystem.nlo
 \openout4 = `CascadeSystem.idx'.
 
 Writing index file CascadeSystem.idx
-(./CascadeSystem.aux
-
-LaTeX Warning: Label `eq:q_in' multiply defined.
-
-)
+(./CascadeSystem.aux)
 \openout1 = `CascadeSystem.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
- (/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+
+(/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count114
 \scratchdimen=\dimen135
@@ -344,7 +341,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 \AtBeginShipoutBox=\box29
-Package hyperref Info: Link coloring ON on input line 22.
+Package hyperref Info: Link coloring ON on input line 23.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -354,23 +351,17 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count120
 )
-LaTeX Info: Redefining \ref on input line 22.
-LaTeX Info: Redefining \pageref on input line 22.
-LaTeX Info: Redefining \nameref on input line 22.
+LaTeX Info: Redefining \ref on input line 23.
+LaTeX Info: Redefining \pageref on input line 23.
+LaTeX Info: Redefining \nameref on input line 23.
 
 (./CascadeSystem.out) (./CascadeSystem.out)
 \@outlinefile=\write5
 \openout5 = `CascadeSystem.out'.
 
+ [1
 
-Underfull \hbox (badness 4084) in paragraph at lines 64--65
-[]\OT1/cmr/m/n/10 Solar en-ergy is a clean, sus-tain-able, wide-
- []
-
-[1{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
-
-
-]
+{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
 Package epstopdf Info: Source file: <./graphics/cascadeSystem.eps>
 (epstopdf)                    date: 2016-02-04 14:56:30
 (epstopdf)                    size: 562190 bytes
@@ -380,16 +371,16 @@ pdf>
 (epstopdf)                    size: 35425 bytes
 (epstopdf)             Command: <repstopdf --outfile=./graphics/cascadeSystem-e
 ps-converted-to.pdf ./graphics/cascadeSystem.eps>
-(epstopdf)             \includegraphics on input line 88.
+(epstopdf)             \includegraphics on input line 89.
 Package epstopdf Info: Output file is already uptodate.
 
-<./graphics/cascadeSystem-eps-converted-to.pdf, id=87, 368.37625pt x 268.00125p
+<./graphics/cascadeSystem-eps-converted-to.pdf, id=94, 368.37625pt x 268.00125p
 t>
 File: ./graphics/cascadeSystem-eps-converted-to.pdf Graphic file (type pdf)
  <use ./graphics/cascadeSystem-eps-converted-to.pdf>
 Package pdftex.def Info: ./graphics/cascadeSystem-eps-converted-to.pdf used on 
-input line 88.
-(pdftex.def)             Requested size: 183.6007pt x 133.57089pt.
+input line 89.
+(pdftex.def)             Requested size: 241.49895pt x 175.69543pt.
 Package epstopdf Info: Source file: <./graphics/T-s_Water.eps>
 (epstopdf)                    date: 2016-03-01 00:49:11
 (epstopdf)                    size: 662122 bytes
@@ -399,45 +390,46 @@ Package epstopdf Info: Source file: <./graphics/T-s_Water.eps>
 (epstopdf)                    size: 23773 bytes
 (epstopdf)             Command: <repstopdf --outfile=./graphics/T-s_Water-eps-c
 onverted-to.pdf ./graphics/T-s_Water.eps>
-(epstopdf)             \includegraphics on input line 97.
+(epstopdf)             \includegraphics on input line 98.
 Package epstopdf Info: Output file is already uptodate.
 
-<./graphics/T-s_Water-eps-converted-to.pdf, id=88, 473.77pt x 330.23375pt>
+<./graphics/T-s_Water-eps-converted-to.pdf, id=95, 473.77pt x 330.23375pt>
 File: ./graphics/T-s_Water-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./graphics/T-s_Water-eps-converted-to.pdf>
 Package pdftex.def Info: ./graphics/T-s_Water-eps-converted-to.pdf used on inpu
-t line 97.
-(pdftex.def)             Requested size: 183.6007pt x 127.97432pt.
+t line 98.
+(pdftex.def)             Requested size: 241.49895pt x 168.33131pt.
 Package epstopdf Info: Source file: <./graphics/HeatTransfer_Water-SEs.eps>
-(epstopdf)                    date: 2016-03-01 00:49:11
-(epstopdf)                    size: 765750 bytes
+(epstopdf)                    date: 2016-03-01 13:04:06
+(epstopdf)                    size: 765778 bytes
 (epstopdf)             Output file: <./graphics/HeatTransfer_Water-SEs-eps-conv
 erted-to.pdf>
-(epstopdf)                    date: 2016-03-01 00:49:11
-(epstopdf)                    size: 17320 bytes
+(epstopdf)                    date: 2016-03-01 14:07:34
+(epstopdf)                    size: 18219 bytes
 (epstopdf)             Command: <repstopdf --outfile=./graphics/HeatTransfer_Wa
 ter-SEs-eps-converted-to.pdf ./graphics/HeatTransfer_Water-SEs.eps>
-(epstopdf)             \includegraphics on input line 105.
+(epstopdf)             \includegraphics on input line 106.
 Package epstopdf Info: Output file is already uptodate.
 
-<./graphics/HeatTransfer_Water-SEs-eps-converted-to.pdf, id=89, 383.4325pt x 34
+<./graphics/HeatTransfer_Water-SEs-eps-converted-to.pdf, id=96, 383.4325pt x 34
 0.27126pt>
 File: ./graphics/HeatTransfer_Water-SEs-eps-converted-to.pdf Graphic file (type
  pdf)
  <use ./graphics/HeatTransfer_Water-SEs-eps-converted-to.pdf>
 Package pdftex.def Info: ./graphics/HeatTransfer_Water-SEs-eps-converted-to.pdf
- used on input line 105.
-(pdftex.def)             Requested size: 183.6007pt x 162.93373pt.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 114.
+ used on input line 106.
+(pdftex.def)             Requested size: 241.49895pt x 214.3149pt.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 115.
 
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 114.
- [2]
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 115.
+ [4 <./graphics/cascadeSystem-eps-converted-to.pdf>] [5 <./graphics/T-s_Water-e
+ps-converted-to.pdf> <./graphics/HeatTransfer_Water-SEs-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <graphics/dishReceiver1.eps>
 (epstopdf)                    date: 2016-03-01 09:16:45
 (epstopdf)                    size: 5479194 bytes
@@ -447,21 +439,16 @@ f>
 (epstopdf)                    size: 636128 bytes
 (epstopdf)             Command: <repstopdf --outfile=graphics/dishReceiver1-eps
 -converted-to.pdf graphics/dishReceiver1.eps>
-(epstopdf)             \includegraphics on input line 261.
+(epstopdf)             \includegraphics on input line 252.
 Package epstopdf Info: Output file is already uptodate.
 
-<graphics/dishReceiver1-eps-converted-to.pdf, id=104, 499.8675pt x 510.90875pt>
+<graphics/dishReceiver1-eps-converted-to.pdf, id=149, 499.8675pt x 510.90875pt>
 File: graphics/dishReceiver1-eps-converted-to.pdf Graphic file (type pdf)
 <use graphics/dishReceiver1-eps-converted-to.pdf>
 Package pdftex.def Info: graphics/dishReceiver1-eps-converted-to.pdf used on in
-put line 261.
-(pdftex.def)             Requested size: 183.6007pt x 187.65341pt.
- [3 <./graphics/cascadeSystem-eps-converted-to.pdf> <./graphics/T-s_Water-eps-c
-onverted-to.pdf> <./graphics/HeatTransfer_Water-SEs-eps-converted-to.pdf>]
-Underfull \hbox (badness 1325) in paragraph at lines 272--273
-[]\OT1/cmr/m/n/10 Forced con-vec-tion in the pres-ence of wind.
- []
-
+put line 252.
+(pdftex.def)             Requested size: 241.49895pt x 246.83156pt.
+ [6] [7 <./graphics/dishReceiver1-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <./graphics/thermalLosses.eps>
 (epstopdf)                    date: 2016-03-01 09:18:23
 (epstopdf)                    size: 62126 bytes
@@ -471,147 +458,151 @@ pdf>
 (epstopdf)                    size: 16206 bytes
 (epstopdf)             Command: <repstopdf --outfile=./graphics/thermalLosses-e
 ps-converted-to.pdf ./graphics/thermalLosses.eps>
-(epstopdf)             \includegraphics on input line 278.
+(epstopdf)             \includegraphics on input line 318.
 Package epstopdf Info: Output file is already uptodate.
 
-<./graphics/thermalLosses-eps-converted-to.pdf, id=153, 834.11626pt x 627.34375
+<./graphics/thermalLosses-eps-converted-to.pdf, id=183, 834.11626pt x 627.34375
 pt>
 File: ./graphics/thermalLosses-eps-converted-to.pdf Graphic file (type pdf)
  <use ./graphics/thermalLosses-eps-converted-to.pdf>
 Package pdftex.def Info: ./graphics/thermalLosses-eps-converted-to.pdf used on 
-input line 278.
-(pdftex.def)             Requested size: 183.6007pt x 138.08305pt.
- [4 <./graphics/dishReceiver1-eps-converted-to.pdf>]
-Overfull \hbox (18.12437pt too wide) detected at line 365
-\OT1/cmr/m/n/10 ^^A[]\OML/cmm/m/it/10 T[] \OT1/cmr/m/n/10 = [][]
- []
-
-[5 <./graphics/thermalLosses-eps-converted-to.pdf>]
-Package epstopdf Info: Source file: <./graphics/StirlingEngineArray.eps>
-(epstopdf)                    date: 2016-03-01 00:38:44
-(epstopdf)                    size: 891230 bytes
-(epstopdf)             Output file: <./graphics/StirlingEngineArray-eps-convert
-ed-to.pdf>
-(epstopdf)                    date: 2016-03-01 00:38:44
-(epstopdf)                    size: 21617 bytes
-(epstopdf)             Command: <repstopdf --outfile=./graphics/StirlingEngineA
-rray-eps-converted-to.pdf ./graphics/StirlingEngineArray.eps>
-(epstopdf)             \includegraphics on input line 439.
+input line 318.
+(pdftex.def)             Requested size: 241.49895pt x 181.62828pt.
+ [8] [9 <./graphics/thermalLosses-eps-converted-to.pdf>] [10]
+Package epstopdf Info: Source file: <./graphics/troughCollector.eps>
+(epstopdf)                    date: 2016-02-12 11:30:21
+(epstopdf)                    size: 1471202 bytes
+(epstopdf)             Output file: <./graphics/troughCollector-eps-converted-t
+o.pdf>
+(epstopdf)                    date: 2016-03-01 17:21:35
+(epstopdf)                    size: 21705 bytes
+(epstopdf)             Command: <repstopdf --outfile=./graphics/troughCollector
+-eps-converted-to.pdf ./graphics/troughCollector.eps>
+(epstopdf)             \includegraphics on input line 450.
 Package epstopdf Info: Output file is already uptodate.
 
-<./graphics/StirlingEngineArray-eps-converted-to.pdf, id=204, 476.78125pt x 399
+<./graphics/troughCollector-eps-converted-to.pdf, id=233, 769.87625pt x 621.321
+24pt>
+File: ./graphics/troughCollector-eps-converted-to.pdf Graphic file (type pdf)
+ <use ./graphics/troughCollector-eps-converted-to.pdf>
+Package pdftex.def Info: ./graphics/troughCollector-eps-converted-to.pdf used o
+n input line 450.
+(pdftex.def)             Requested size: 241.49895pt x 194.9019pt.
+
+
+LaTeX Warning: Reference `sec:CTCHTHT' on page 11 undefined on input line 488.
+
+[11 <./graphics/troughCollector-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <./graphics/StirlingEngineArray.eps>
+(epstopdf)                    date: 2016-03-01 14:33:13
+(epstopdf)                    size: 897446 bytes
+(epstopdf)             Output file: <./graphics/StirlingEngineArray-eps-convert
+ed-to.pdf>
+(epstopdf)                    date: 2016-03-01 14:33:20
+(epstopdf)                    size: 22882 bytes
+(epstopdf)             Command: <repstopdf --outfile=./graphics/StirlingEngineA
+rray-eps-converted-to.pdf ./graphics/StirlingEngineArray.eps>
+(epstopdf)             \includegraphics on input line 510.
+Package epstopdf Info: Output file is already uptodate.
+
+<./graphics/StirlingEngineArray-eps-converted-to.pdf, id=256, 476.78125pt x 399
 .4925pt>
 File: ./graphics/StirlingEngineArray-eps-converted-to.pdf Graphic file (type pd
 f)
  <use ./graphics/StirlingEngineArray-eps-converted-to.pdf>
 Package pdftex.def Info: ./graphics/StirlingEngineArray-eps-converted-to.pdf us
-ed on input line 439.
-(pdftex.def)             Requested size: 183.6007pt x 153.83861pt.
- [6 <./graphics/StirlingEngineArray-eps-converted-to.pdf>]
-Underfull \hbox (badness 3291) in paragraph at lines 509--510
-[]\OT1/cmr/m/n/10 Choose $\OML/cmm/m/it/10 T[] \OT1/cmr/m/n/10 = []$, and $\OML
-/cmm/m/it/10 e[] \OT1/cmr/m/n/10 =
- []
+ed on input line 510.
+(pdftex.def)             Requested size: 241.49895pt x 202.35474pt.
+Package epstopdf Info: Source file: <./graphics/HeatTransfer_Parallel.eps>
+(epstopdf)                    date: 2016-03-01 13:09:30
+(epstopdf)                    size: 791222 bytes
+(epstopdf)             Output file: <./graphics/HeatTransfer_Parallel-eps-conve
+rted-to.pdf>
+(epstopdf)                    date: 2016-03-01 14:10:10
+(epstopdf)                    size: 20703 bytes
+(epstopdf)             Command: <repstopdf --outfile=./graphics/HeatTransfer_Pa
+rallel-eps-converted-to.pdf ./graphics/HeatTransfer_Parallel.eps>
+(epstopdf)             \includegraphics on input line 521.
+Package epstopdf Info: Output file is already uptodate.
 
+<./graphics/HeatTransfer_Parallel-eps-converted-to.pdf, id=259, 383.4325pt x 34
+0.27126pt>
+File: ./graphics/HeatTransfer_Parallel-eps-converted-to.pdf Graphic file (type 
+pdf)
+ <use ./graphics/HeatTransfer_Parallel-eps-converted-to.pdf>
+Package pdftex.def Info: ./graphics/HeatTransfer_Parallel-eps-converted-to.pdf 
+used on input line 521.
+(pdftex.def)             Requested size: 241.49895pt x 214.3149pt.
+Package epstopdf Info: Source file: <./graphics/HeatTransfer_Counter.eps>
+(epstopdf)                    date: 2016-03-01 13:12:18
+(epstopdf)                    size: 790802 bytes
+(epstopdf)             Output file: <./graphics/HeatTransfer_Counter-eps-conver
+ted-to.pdf>
+(epstopdf)                    date: 2016-03-01 14:12:49
+(epstopdf)                    size: 20531 bytes
+(epstopdf)             Command: <repstopdf --outfile=./graphics/HeatTransfer_Co
+unter-eps-converted-to.pdf ./graphics/HeatTransfer_Counter.eps>
+(epstopdf)             \includegraphics on input line 529.
+Package epstopdf Info: Output file is already uptodate.
 
-Overfull \hbox (17.05432pt too wide) detected at line 545
-\OML/cmm/m/it/10 q[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 h[] \OMS/cmsy/m/n/10 ^^@ 
-\OML/cmm/m/it/10 h[]\OT1/cmr/m/n/10 )(1 \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 ^
-^Q[]\OT1/cmr/m/n/10 ) = \OML/cmm/m/it/10 q[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 h
-[] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 h[]\OT1/cmr/m/n/10 )
- []
+<./graphics/HeatTransfer_Counter-eps-converted-to.pdf, id=260, 383.4325pt x 340
+.27126pt>
+File: ./graphics/HeatTransfer_Counter-eps-converted-to.pdf Graphic file (type p
+df)
+ <use ./graphics/HeatTransfer_Counter-eps-converted-to.pdf>
+Package pdftex.def Info: ./graphics/HeatTransfer_Counter-eps-converted-to.pdf u
+sed on input line 529.
+(pdftex.def)             Requested size: 241.49895pt x 214.3149pt.
+ [12]
+[13 <./graphics/StirlingEngineArray-eps-converted-to.pdf> <./graphics/HeatTrans
+fer_Parallel-eps-converted-to.pdf>] [14 <./graphics/HeatTransfer_Counter-eps-co
+nverted-to.pdf>]
+Package epstopdf Info: Source file: <./graphics/separateSystem.eps>
+(epstopdf)                    date: 2016-03-01 20:57:53
+(epstopdf)                    size: 544958 bytes
+(epstopdf)             Output file: <./graphics/separateSystem-eps-converted-to
+.pdf>
+(epstopdf)                    date: 2016-03-01 20:58:01
+(epstopdf)                    size: 27371 bytes
+(epstopdf)             Command: <repstopdf --outfile=./graphics/separateSystem-
+eps-converted-to.pdf ./graphics/separateSystem.eps>
+(epstopdf)             \includegraphics on input line 673.
+Package epstopdf Info: Output file is already uptodate.
 
+<./graphics/separateSystem-eps-converted-to.pdf, id=322, 403.5075pt x 268.00125
+pt>
+File: ./graphics/separateSystem-eps-converted-to.pdf Graphic file (type pdf)
+ <use ./graphics/separateSystem-eps-converted-to.pdf>
+Package pdftex.def Info: ./graphics/separateSystem-eps-converted-to.pdf used on
+ input line 673.
+(pdftex.def)             Requested size: 241.49895pt x 160.39713pt.
+ [15] [16 <./graphics/separateSystem-eps-converted-to.pdf>] (./CascadeSystem.nl
+s [17] [18] [19])
+[20] (./CascadeSystem.bbl [21
 
-Overfull \hbox (86.23497pt too wide) detected at line 559
-\OML/cmm/m/it/10 nR [] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 q[]\OT1/cmr/m/n/10 (\
-OML/cmm/m/it/10 h[] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 h[]\OT1/cmr/m/n/10 )\
-OML/cmm/m/it/10 =n[]
- []
-
-[7]
-Overfull \hbox (9.09271pt too wide) detected at line 679
-\OML/cmm/m/it/10 P[] \OT1/cmr/m/n/10 = [] \OML/cmm/m/it/10 q[] [] \OT1/cmr/m/n/
-10 + \OML/cmm/m/it/10 yq[] []
- []
-
-
-Overfull \hbox (101.51013pt too wide) detected at line 761
-\OML/cmm/m/it/10 ^^Q[] \OT1/cmr/m/n/10 = []
- []
-
-(./CascadeSystem.nls [8
-
-]
-Underfull \hbox (badness 2884) in paragraph at lines 17--19
-[]\OT1/cmr/m/n/10 Diameter of vol-u-met-ric re-ceiver
- []
-
-
-Underfull \hbox (badness 1681) in paragraph at lines 45--47
-[]\OT1/cmr/m/n/10 Water pres-sure af-ter con-den-sate
- []
-
-[9]
-Underfull \hbox (badness 3108) in paragraph at lines 87--89
-[]\OT1/cmr/m/n/10 Overall heat trans-fer co-ef-fi-cient
- []
-
-
-Underfull \hbox (badness 4001) in paragraph at lines 87--89
-\OT1/cmr/m/n/10 of Stir-ling en-gine at air side,
- []
-
-
-Underfull \hbox (badness 3108) in paragraph at lines 89--91
-[]\OT1/cmr/m/n/10 Overall heat trans-fer co-ef-fi-cient
- []
-
-
-Underfull \hbox (badness 3396) in paragraph at lines 112--114
-[]\OT1/cmr/m/n/10 Thickness of re-ceiver in-su-lat-ing
- []
-
-
-Underfull \hbox (badness 2237) in paragraph at lines 114--116
-[]\OT1/cmr/m/n/10 Minimum tem-per-a-ture dif-fer-ence
- []
-
-
-Underfull \hbox (badness 4660) in paragraph at lines 116--118
-[]\OT1/cmr/m/n/10 Emissivity of re-civer in-su-lat-ing
- []
-
-Missing character: There is no · in font cmr10!
-) [10] (./CascadeSystem.bbl
-Underfull \hbox (badness 2042) in paragraph at lines 39--42
-[]\OT1/cmr/m/n/10 F. For-mosa and G. De-spesse.  An-a-lyt-i-cal
- []
-
-)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 838.
- [11
-
-]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 838.
+])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 754.
+ [22]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 754.
  (./CascadeSystem.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 838.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 838.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 754.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 754.
 Package rerunfilecheck Info: File `CascadeSystem.out' has not changed.
-(rerunfilecheck)             Checksum: 65B523BCE206257FD4D167765D8B0D7F;1090.
+(rerunfilecheck)             Checksum: E4E7A8CDC40DE23CD889C24B54096DE0;993.
 
 
-LaTeX Warning: There were multiply-defined labels.
+LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 838.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 754.
  ) 
 Here is how much of TeX's memory you used:
- 6122 strings out of 493089
- 89819 string characters out of 6134842
- 184034 words of memory out of 5000000
- 9463 multiletter control sequences out of 15000+600000
+ 6172 strings out of 493089
+ 91027 string characters out of 6134842
+ 179208 words of memory out of 5000000
+ 9483 multiletter control sequences out of 15000+600000
  9369 words of font info for 34 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 34i,17n,28p,1449b,401s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 34i,18n,28p,1447b,431s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
@@ -625,10 +616,10 @@ xlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/tex
 live/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texli
 ve/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive
 /2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on CascadeSystem.pdf (11 pages, 925724 bytes).
+Output written on CascadeSystem.pdf (22 pages, 1016525 bytes).
 PDF statistics:
- 319 PDF objects out of 1000 (max. 8388607)
- 260 compressed objects within 3 object streams
- 54 named destinations out of 1000 (max. 500000)
- 151 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 443 PDF objects out of 1000 (max. 8388607)
+ 355 compressed objects within 4 object streams
+ 80 named destinations out of 1000 (max. 500000)
+ 163 words of extra memory for PDF output out of 10000 (max. 10000000)
 

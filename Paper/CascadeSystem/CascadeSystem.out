@@ -1,15 +1,14 @@
 \BOOKMARK [1][]{section.1}{1 Introduction}{}% 1
 \BOOKMARK [1][]{section.2}{2 System description and specification}{}% 2
 \BOOKMARK [1][]{section.3}{3 System model}{}% 3
-\BOOKMARK [2][]{subsection.3.1}{3.1 Dish receiver}{section.3}% 4
+\BOOKMARK [2][]{subsection.3.1}{3.1 Dish collector}{section.3}% 4
 \BOOKMARK [3][]{subsubsection.3.1.1}{3.1.1 Reflected loss of dish receiver}{subsection.3.1}% 5
 \BOOKMARK [3][]{subsubsection.3.1.2}{3.1.2 Conduction loss of dish receiver}{subsection.3.1}% 6
 \BOOKMARK [3][]{subsubsection.3.1.3}{3.1.3 Convection loss of dish receiver}{subsection.3.1}% 7
-\BOOKMARK [2][]{subsection.3.2}{3.2 Stirling engine array}{section.3}% 8
-\BOOKMARK [2][]{subsection.3.3}{3.3 Water circuit}{section.3}% 9
-\BOOKMARK [3][]{subsubsection.3.3.1}{3.3.1 Oil-Water heat exchangers}{subsection.3.3}% 10
-\BOOKMARK [3][]{subsubsection.3.3.2}{3.3.2 Steam turbine}{subsection.3.3}% 11
-\BOOKMARK [3][]{subsubsection.3.3.3}{3.3.3 Condensor}{subsection.3.3}% 12
-\BOOKMARK [3][]{subsubsection.3.3.4}{3.3.4 deaerator}{subsection.3.3}% 13
-\BOOKMARK [1][]{section.4}{4 Separate system model}{}% 14
-\BOOKMARK [1][]{section.5}{5 Result and Conclusion}{}% 15
+\BOOKMARK [2][]{subsection.3.2}{3.2 Trough collector}{section.3}% 8
+\BOOKMARK [2][]{subsection.3.3}{3.3 Stirling engine array}{section.3}% 9
+\BOOKMARK [2][]{subsection.3.4}{3.4 Steam turbine}{section.3}% 10
+\BOOKMARK [1][]{section.4}{4 Separate system models}{}% 11
+\BOOKMARK [2][]{subsection.4.1}{4.1 Separate trough system}{section.4}% 12
+\BOOKMARK [2][]{subsection.4.2}{4.2 Separate dish system}{section.4}% 13
+\BOOKMARK [1][]{section.5}{5 Result and Conclusion}{}% 14
