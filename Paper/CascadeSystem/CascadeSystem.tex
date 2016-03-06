@@ -1,6 +1,6 @@
 %\documentclass[twocolumn]{article}
 \documentclass{article}
-\usepackage{amsmath, indentfirst, epsfig, ifthen, booktabs, color, multirow}
+\usepackage{amsmath, indentfirst, epsfig, ifthen, booktabs, color, multirow, float}
 \usepackage[pdfusetitle, bookmarks=true,bookmarksnumbered=true, bookmarksopen=true, breaklinks=true, colorlinks=true]{hyperref}
 \usepackage{nomencl}
 \usepackage[figure]{hypcap}
@@ -12,7 +12,6 @@
 \ifthenelse{\equal{#1}{C}}{\item[\textbf{Abbreviations}]}{%
 \ifthenelse{\equal{#1}{S}}{\item[\textbf{Subscripts}]}{%
 \ifthenelse{\equal{#1}{Z}}{\item[\textbf{Mathematical Symbols}]}
-{}
 %}% matches mathematical symbols
 }% matches Subscripts
 }% matches Abbreviations
@@ -27,38 +26,14 @@
 \author{}
 \maketitle
 
+\begin{abstract}
+This paper represents an idea of cascade collection and cascade utilization of solar energy with higher efficiency. Parabolic trough collectors are used to collect lower temperature energy and dish collectors are used to collect higher temperature energy, Rankine cycle is used to work in lower temperature zone and Stirling cycle is used to work in higher temperature zone. An effective structure using the condensed fluid of Rankine cycle to cool the Stirling engines to use the heat released by Stirling engines was proposed. A cascade system model including different fluid circuits with component models was established. Simulations were conducted with design parameters. The model some important components of the system, such as dish collector, trough collector and Stirling engine array, are presented with detail explanation in this paper. Corresponding separate systems were also established for comparison. Results show that the cascade system can achieve a higher efficiency under certain conditions. The directions of increase the efficiency difference between cascade system and corresponding separate systems were also considered. Higher irradiance and Stirling engine ratio is better for a cascade system. The flow type of fluids between heating and cooling Stirling engine array is also required to concern on designing a cascade system with Stirling engine array.
+\end{abstract}
 
+\noindent{\bf Keywords:} cascade system, dish receiver, trough collector, Stirling engine array
 \newpage{}
 
 \section{Introduction}
-%\begin{itemize}
-%    \item Background Information
-%    \begin{enumerate}
-%        \item Why do we need cascade system
-%        \item What is the advantage of cascade system
-%        \item What are others' works
-%        \item What have been done
-%        \item What to be done
-%        \item What can we improve
-%        \item What have we done
-%    \end{enumerate}
-%    \item System specification
-%    \begin{enumerate}
-%    	\item Environment
-%	\item Trough collector
-%	\item Dish collector
-%	\item Steam turbine
-%	\item Stirling engine
-%    \end{enumerate}
-%    \begin{enumerate}
-%    	\item Air circuit
-%	\item Water circuit
-%	\item Oil circuit
-%	\item System efficiency
-%    \end{enumerate}    
-%    \item Separate systems
-%    \item Results
-%\end{itemize}
 
 Energy is the crucial part for the infrastructure and maintenance of  society. With the increase amount of energy consumption, our quality of life has been improved significantly. However, nowadays the world energy consumption is highly dependent on fossil fuels, which supplied 81.3\% of the world's energy consumption in 2012 according to the data of World Bank Group. Using fossil fuels a lot is afflicting the environment, which is sacrificing our quality of life. Environmental pollutions and global warming are becoming serious problem, and it is urgent to find clean and renewable energy to substitute the fossil fuels.
 
@@ -76,7 +51,7 @@ Behar~\cite{Behar2014} reviewed the R\&D activities and published studies on int
 
 Ghaem~\cite{Ghaem2012} investigated and compared the performance of various configurations of hybrid solar dish-Brayton cycle. A thermodynamic model implemented in Engineering Equation Solver (EES) is developed for various configurations. Results show that the model in which receiver located before the turbine can achieve higher performance compare to the one in which the receiver located after the turbine. Simulation of the models pointed out that a comprehensive well defined control algorithm is a vital issue in order to control engine operation, solar input heat flux and sun tracking system.
 
-In this paper, an idea of cascade collection and cascade utilisation of solar energy with higher efficiency is presented. Parabolic trough collectors are used to collect lower temperature energy with lower cost and dish collectors are used to collect higher temperature energy with higher efficiency. Rankine cycle is used to work in lower temperature zone and Stirling cycle is used to work in higher temperature zone. Furthermore, effective topological structures are considered to take full advantages of thermodynamic characters of different components of the system. The cold chamber of Stirling engine is cooled by condensed fluid of Rankine cycle to use the heat released by Stirling engine. 
+In this paper, an idea of cascade collection and cascade utilization of solar energy with higher efficiency is presented. Parabolic trough collectors are used to collect lower temperature energy with lower cost and dish collectors are used to collect higher temperature energy with higher efficiency. Rankine cycle is used to work in lower temperature zone and Stirling cycle is used to work in higher temperature zone. Furthermore, effective topological structures are considered to take full advantages of thermodynamic characters of different components of the system. The Stirling engines are cooled by condensed fluid of Rankine cycle to use the heat released by Stirling engines. 
 
 First, the idea of cascade system is presented and the feasibility analysis of the system is performed. A conceptual sketch of the system is presented with some important state points. Second, based on this sketch, some components are chosen and some key parameters of the system are given. Third, models of components are built according to their thermodynamic properties. Models of different circuits are built with these component models and efficiency can be obtained by the circuit data. Fourth, two separate systems, dish-Stirling system and trough-Rankine system, are built for comparison. At last, the models of the systems are calculated and results are analysed.
 
@@ -146,14 +121,14 @@ Table~\ref{tab:system-data} shows the basic design parameters of the cascade sys
 %		$T_{dish,inlet}$	&	623K\\
 %		$T_{dish,outlet}$	&	1073 K\\
 %		$p_{dish}$			&	5$\times10^5$ Pa\\ 
-%		$A_{dC}$	&	87.7 m$^2$\\
+%		$A_{dc}$	&	87.7 m$^2$\\
 %		\midrule
 %		\multicolumn{2}{c}{Trough collector}\\
 %		\midrule
 %		$\Delta{}T_{oil,water,min}$	&	15 K \\
 %		$T_{trough,outlet}$	&	623 K\\
 %		$p_{trough}$		&	2$\times10^6$ Pa\\
-%		$A_{tC}$	&	545 m$^2$\\
+%		$A_{tc}$	&	545 m$^2$\\
 %		\midrule
 %		\multicolumn{2}{c}{Stirling engine}\\
 %		\midrule
@@ -191,7 +166,7 @@ Table~\ref{tab:system-data} shows the basic design parameters of the cascade sys
 		\toprule
 		Parameters			&	Value\\
 		\midrule
-		$I_{DNI}$			&	700 W/m$^2$\\
+		$I_r$			&	700 W/m$^2$\\
 		$T_{amb}$			&	293 K\\
 		$p_{amb}$			&	1$\times10^5$ Pa\\
 		$v_{wind}$			&	4 m/s\\
@@ -209,25 +184,25 @@ Table~\ref{tab:system-data} shows the basic design parameters of the cascade sys
 		$p_c$				&	1.5$\times10^4$ Pa\\
 		$T_{s,d}$			&	390$^\circ$C\\
 %		$p_{c,p}$			&	1$\times10^6$ Pa\\
-		$p_{deaerator}$ & 1$\times10^6$ Pa\\
+		$p_{deaerator}$ 	& 	1$\times10^6$ Pa\\
 		\bottomrule
 	\end{tabular}
 	\end{center}
 	\label{tab:system-data}
 \end{table}
 \nomenclature{$P_{generator}$}{Power of generator, W}
-\nomenclature{$I_{DNI}$}{Direct Normal Irradiance, W/m$^2$}
+\nomenclature{$I_r$}{Direct Normal Irradiance, W/m$^2$}
 \nomenclature{$T_{amb}$}{Ambient temperature, K}
 \nomenclature{$p_{amb}$}{Ambient pressure, Pa}
 \nomenclature{$v_{wind}$}{Ambient wind speed, m/s}
 \nomenclature{$T_{dish,inlet}$}{Dish inlet temperature, K}
 \nomenclature{$T_{dish,outlet}$}{Dish outlet temperature}
 \nomenclature{$p_{dish}$}{Air pressure in dish, Pa}
-\nomenclature{$A_{dC}$}{Aperture area of each dish collector, m$^2$}
+\nomenclature[S]{$dc$}{Dish collector}
 \nomenclature[G]{$\Delta{}T_{oil,water,min}$}{Minimum temperature difference between oil and water in the oil-to-water heat exchanger, K}
 \nomenclature{$T_{trough,outlet}$}{Trough outlet temperature}
 \nomenclature{$p_{trough}$}{Air pressure in trough, Pa}
-\nomenclature{$A_{tC}$}{Aperture area of each trough collector, m$^2$}
+\nomenclature[S]{$tc$}{Trough collector}
 \nomenclature{$T_{1,afterstirling}$}{Air temperature after heating Stirling engine}
 \nomenclature{$n_{se}$}{Speed of Stirling engine, s$^{-1}$}
 \nomenclature{$U_{stirling,1}$}{Overall heat transfer coefficient of Stirling engine at air side, W/(m$^2\cdot$K)}
@@ -237,7 +212,7 @@ Table~\ref{tab:system-data} shows the basic design parameters of the cascade sys
 \nomenclature{$p_c$}{Exhaust pressure of turbine, Pa}
 \nomenclature{$T_{s,d}$}{Designed mean steam temperature of turbine}
 \nomenclature{$p_{cp}$}{Water pressure after condensate pump, Pa}
-\nomenclature{$p_{deaerator}$}{Outlet pressure of deaerator, Pa}
+\nomenclature{$p_{deaerator}$}{Pressure of deaerator, Pa}
 
 \section{System model}
 An EES\nomenclature[C]{EES}{Engineering Equation Solver} model was built to investigate the characteristics of the cascade system. The cascade system is built in several blocks. These blocks are made of circuits with efficiency calculations. Three circuits, air circuit, water circuit and oil circuit, are built with some specific state parameters in some key components. Energy-based models of these key components are created on the basis of their thermodynamic behavior, heat transfer and the second law.
@@ -257,7 +232,7 @@ The most complicate part of the dish collector is the dish receiver. In our casc
 
 Fraser, in his dissertation~\cite{Fraser2008}, built a performance prediction model of Stirling dish system with detailed description. The model is also used in the software SAM\nomenclature[C]{SAM}{System Advisor Model}, which provides performance and financial models for facilitate decision in the renewable energy industry. The dish collector model in the dissertation considers various heat losses, which is a good reference for the dish receiver model of the cascade system. 
 
-A dish collector product of SES\nomenclature[C]{SES}{Stirling Energy System} used in Fraser's dissertation, which is also used in this system, and its parameters are listed in Table~\ref{tab:dC}~\cite{Fraser2008}. 
+A dish collector product of SES\nomenclature[C]{SES}{Stirling Energy System} used in Fraser's dissertation, which is also used in this system, and its parameters are listed in Table~\ref{tab:dc}~\cite{Fraser2008}. 
 
 \begin{table}[htbp]
 	\caption{Parameters of the dish collector}
@@ -268,14 +243,14 @@ A dish collector product of SES\nomenclature[C]{SES}{Stirling Energy System} use
 		\midrule
 		$d_{cav}$	&	0.46 m\\
 		$\delta_{insu}$	&	0.075 m\\
-		$l_{cav}$	&	0.23 m\\
+		$dep_{cav}$	&	0.23 m\\
 		$d_{ap}$	&	0.184 m\\
 		$\lambda_{insu}$	&	0.06 W/(m$\cdot$K)\\
 		$\epsilon_{insu}$	&	0.6\\
 		$\alpha_{cav}$	&	0.87\\
 		$\delta_a$	&	0.005 m\\
 		$d_{i,air}$	&	0.07 m\\
-		$A_{dC}$	&	87.7 m$^2$\\
+		$A_{dc}$	&	87.7 m$^2$\\
 		$\theta_{dish}$	&	45$^\circ$\\
 		$\gamma$	&	0.97\\
 		$\eta_{shading}$	&	0.95\\
@@ -283,12 +258,11 @@ A dish collector product of SES\nomenclature[C]{SES}{Stirling Energy System} use
 		\bottomrule
 	\end{tabular}
 	\end{center}
-	\label{tab:dC}
+	\label{tab:dc}
 \end{table}
-\nomenclature{$d_{cav}$}{Diameter of volumetric receiver cavity, m}
-\nomenclature[G]{$\delta_{ins}$}{Thickness of receiver insulating layer, m}
-\nomenclature{$l_{cav}$}{Depth of volumetric receiver cavity, m}
-\nomenclature{$d_{ap}$}{Aperture diameter of volumetric receiver, m}
+\nomenclature[G]{$\delta_{insu}$}{Thickness of receiver insulating layer, m}
+\nomenclature{$dep$}{Depth, m}
+\nomenclature{$d$}{Diameter, m}
 \nomenclature[G]{$\lambda_{insu}$}{Thermal conductivity of receiver insulating layer, W/(m$\cdot$K)}
 \nomenclature[G]{$\epsilon_{insu}$}{Emissivity of reciver insulating layer}
 \nomenclature[G]{$\delta_{a}$}{Thickness of air tube in volumetric receiver, m}
@@ -301,7 +275,7 @@ A dish collector product of SES\nomenclature[C]{SES}{Stirling Energy System} use
 \nomenclature{$A_{stirling,2}$}{Heat transfer area of Stirling engine at water side, m$^2$}
 \nomenclature{$k_{stirling}$}{Specific heat ratio of the working gas in Stirling engine}
 \nomenclature[G]{$\gamma_{stirling}$}{Compression ratio of Stirling engine}
-\nomenclature{$n$}{Amount of working gas in each Stirling engine, mol}
+\nomenclature{$n_g$}{Amount of working gas in each Stirling engine, mol}
 \nomenclature{$n_{stirlingEngine}$}{Number of Stirling engines in the Stirling engine array}
 
 The dish receiver model concerns the losses include: collector losses due to mirror reflectivity, receiver intercept losses, losses due to shading, and thermal losses. Thermal losses take the largest portion of all those losses, which are due to conduction, convection and radiation. Figure~\ref{fig:thermal-lose} shows the heat network of dish receiver, which concerns the losses:
@@ -325,6 +299,7 @@ $q_{dish,air}$ can be written as
 \begin{equation*}
 	q_{dish,air}=h_{dish,air}A_{dish,air}\Delta{}T_{ln,Drec,air}
 \end{equation*}
+\nomenclature{$A_{dish,air}$}{Heat transfer area of dish receiver between tube and air, m$^2$}
 
 where
 
@@ -374,27 +349,31 @@ To get $q_{dish,air}$, $T_{cav}$ is required. As shown in Figure~\ref{fig:therma
 \nomenclature{$q_{rad,emit}$}{Radiation emitted by dish receiver}
 
 
-$q_{in}$ and $\eta_{dC}$ can be obtained by
+$q_{in}$ and $\eta_{dc}$ can be obtained by
+\nomenclature[G]{$\eta$}{Thermal efficiency}
 
 \begin{equation}
-	q_{in}=I_{DNI}\cdot A_{dC}\gamma\eta_{shading}\rho
+	q_{in}=I_r\cdot A_{dc}\gamma\eta_{shading}\rho
 	\label{eq:q_in}
 \end{equation}
 
 \begin{equation}
-	\eta_{dC}=q_{dish,air}/\left(I_{DNI}\cdot A_{dC}\right)
-	\label{eq:eta_dC}
+	\eta_{dc}=q_{dish,air}/\left(I_r\cdot A_{dc}\right)
+	\label{eq:eta_dc}
 \end{equation}
 
 Other losses are presented in following sections.
 
 \subsubsection{Reflected loss of dish receiver}
-To determine the reflected loss of the cavity surfaces of the dish receiver $q_{rad,reflect}$, the effective absorptance of the cavity receiver $\alpha_{eff}$\nomenclature[G]{$\alpha_{eff}$}{Effective absorptance} is required to determine the fraction of energy reflected out of the receiver. The effective absorptance of a cavity receiver without a receiver aperture cover is given by Equation~(\ref{eq:alpha_eff}) where $\alpha_{cav}$ is the cavity surface absrptance, $A_a$ is the cavity aperture area, and $A_{cav}$ is the total inner surface area of the cavity~\cite{Duffie2013}. Sandra National Laboratories gave an estimate value of the absorptance of the cavity surface $\alpha_{cav}$ of an existing Stirling dish receiver to be 0.87~\cite{Hogan1994}. To achieve higher effective absorptance, a smaller ratio of the two surface area should be used. But the ratio is constrained by the concentration ratio of the receiver.
+To determine the reflected loss of the cavity surfaces of the dish receiver $q_{rad,reflect}$, the effective absorptance of the cavity receiver $\alpha_{eff}$\nomenclature[S]{$eff$}{Effective parameter of the dish receiver cavity} is required to determine the fraction of energy reflected out of the receiver. The effective absorptance of a cavity receiver without a receiver aperture cover is given by Equation~(\ref{eq:alpha_eff}) where $\alpha_{cav}$ is the cavity surface absrptance, $A_a$ is the cavity aperture area, and $A_{cav}$ is the total inner surface area of the cavity~\cite{Duffie2013}. Sandra National Laboratories gave an estimate value of the absorptance of the cavity surface $\alpha_{cav}$ of an existing Stirling dish receiver to be 0.87~\cite{Hogan1994}. To achieve higher effective absorptance, a smaller ratio of the two surface area should be used. But the ratio is constrained by the concentration ratio of the receiver.
 
 \begin{equation}
 	\alpha_{eff}=\dfrac{\alpha_{cav}}{\alpha_{cav}+\left(1-\alpha_{cav}\right)\left(A_{ap}/A_{cav}\right)}
 	\label{eq:alpha_eff}
 \end{equation}
+\nomenclature[G]{$\alpha$}{Absorptance}
+\nomenclature[S]{$ap$}{Aperture of the dish receiver}
+\nomenclature[S]{$cav$}{Cavity of the dish receiver}
 
 \begin{equation*}
 	q_{rad,reflect}=q_{in}(1-\alpha_{eff})
@@ -404,7 +383,7 @@ To determine the reflected loss of the cavity surfaces of the dish receiver $q_{
 Conduction loss of dish receiver $q_{cond,tot}$ equals to the different two parts: convection loss from the insulating layer to the atmosphere $q_{cond,conv}$ and radiation loss from the insulating layer to the atmosphere $q_{cond,rad}$. Both of the two parts are related to the temperature of insulating layer $T_{ins}$.
 
 \begin{equation*}
-	q_{cond,tot}=\dfrac{T_{cav}-T_{insu}}{\ln\dfrac{d_{cav}+2\delta_{insu}}{d_{cav}}/(2\pi\lambda_{insu}l_{cav})}
+	q_{cond,tot}=\dfrac{T_{cav}-T_{insu}}{\ln\dfrac{d_{cav}+2\delta_{insu}}{d_{cav}}/(2\pi\lambda_{insu}dep_{cav})}
 \end{equation*}
 \begin{equation*}
 \begin{split}
@@ -431,7 +410,8 @@ Ma~\cite{Ma1993} conducted tests to determine the free convection losses from th
 \end{equation*}
 
 
-where $h_{free}=k_{film}Nu_{free}/\overline{d_{cav}}$, $\overline{d_{cav}}=$.
+where $h_{free}=k_{film}Nu_{free}/\overline{d_{cav}}$, $\overline{d_{cav}}=d_{cav}-2d_i-4 \delta_a$.
+\nomenclature{$\overline{d_{cav}}$}{Effective diameter of the cavity, m}
 
 Wu~\cite{Wu2010} present a comprehensive review and systematic summarization of convection heat loss from cavity receiver in parabolic dish solar thermal power system. And we choose the correlation presented by Leibfried~\cite{Leibfried1995}. This correlation gives an extended model of Koenig~\cite{Koenig1981} and Stine~\cite{Stine1994} with better results.
 
@@ -443,13 +423,13 @@ For forced convection loss, side-on wind convection loss model given by Ma~\cite
 
 \subsection{Trough collector}
 
-LS-3 is used as the trough collector, its sketch is shown in Figure~\ref{fig:tC}, its parameters are listed in Table~\ref{tab:tC}.
+LS-3 is used as the trough collector, its sketch is shown in Figure~\ref{fig:tc}, its parameters are listed in Table~\ref{tab:tc}.
 
 \noindent \begin{figure}[htbp]
 \begin{center}
 	\includegraphics[width = 0.7\columnwidth]{./graphics/troughCollector}
 	\caption{Sketch of trough collector}
-	\label{fig:tC}
+	\label{fig:tc}
 \end{center}
 \end{figure}
 
@@ -460,7 +440,7 @@ LS-3 is used as the trough collector, its sketch is shown in Figure~\ref{fig:tC}
 		\toprule
 		Parameters	&	Value\\
 		\midrule
-		$A_{tC}$	&	545 m$^2$\\
+		$A_{tc}$	&	545 m$^2$\\
 		$w_{trough}$&	5.76 m\\
 		$d_i$		&	0.066 m\\
 		$d_o$	&	0.07 m\\
@@ -473,11 +453,11 @@ LS-3 is used as the trough collector, its sketch is shown in Figure~\ref{fig:tC}
 		\bottomrule
 	\end{tabular}
 	\end{center}
-	\label{tab:tC}
+	\label{tab:tc}
 \end{table}
 
 \begin{equation*}
-	q^{''}=I_{DNI}w_{trough}\eta_{opt,0}K(\phi)F_{e}/P
+	q^{''}=I_rw_{trough}\eta_{opt,0}K(\phi)F_{e}/P
 \end{equation*}
 
 where $P=\pi{}d$, $K(\phi)$ is the incidence angle modifier, $\eta_{opt,0}$
@@ -485,7 +465,7 @@ is peak optical efficiency (optical efficiency with an incidence angle of 0).
 \nomenclature{$K$}{Incidence angle modifier of trough collector}
 \nomenclature[G]{$\eta_{opt,0}$}{Optical efficiency with an incidence angle of 0}
 
-Assume overall heat transfer coefficient $U(T_{abs})$ is uniform for whole length, so that we can use the heat transfer correlation in Appendix \ref{sec:CTCHTHT}.
+Assume overall heat transfer coefficient $U(T_{abs})$ is uniform for whole length, so that we can use the heat transfer correlation in Appendix~\ref{sec:CTCHTHT}.
 \nomenclature{$U$}{Overall heat transfer coefficient, W/(m$^2\cdot$K)}
 \nomenclature{$q^{''}$}{Heat flux, W/m$^2$}
 
@@ -498,12 +478,12 @@ Since the $Nu$ in the pipe is very large (about $1\times10^4$), small temperatur
 The efficiency of the trough collector
 
 \begin{equation*}
-	\eta_{trough}=\frac{q_m(h_{out}-h_{in})}{I_{DNI}w_{trough}L}
+	\eta_{trough}=\frac{q_m(h_{out}-h_{in})}{I_rw_{trough}L}
 \end{equation*}
 
 \subsection{Stirling engine array}
 
-Stirling engine array is used in the cascade system, Figure~\ref{fig:Layout of Stirling engines} shows the layout of the Stirling engine array. Each Stirling engine in the Stirling engine array has the identical parameters: $U_{stirling,1}=30\,$W/m$^2\cdot$K, $U_{stirling,2}=150\,$W/m$^2\cdot$K, $A_{stirling,1}=6\,$m$^2$, $A_{stirling,2}=6\,$m$^2$, $k_{stirling}=1.4$, $\gamma_{stirling}=3.375$, $n=7.84\times{}10^{-2}\,$mol, $n_{se}=10\,$s$^{-1}$.
+Stirling engine array is used in the cascade system, Figure~\ref{fig:Layout of Stirling engines} shows the layout of the Stirling engine array. Each Stirling engine in the Stirling engine array has the identical parameters: $U_{stirling,1}=30\,$W/m$^2\cdot$K, $U_{stirling,2}=150\,$W/m$^2\cdot$K, $A_{stirling,1}=6\,$m$^2$, $A_{stirling,2}=6\,$m$^2$, $k_{stirling}=1.4$, $\gamma_{stirling}=3.375$, $n_g=7.84\times{}10^{-2}\,$mol, $n_{se}=10\,$s$^{-1}$.
 
 \noindent \begin{figure}[htbp]
 \begin{center}
@@ -532,7 +512,7 @@ Depending on the flow directions of heating and cooling flows, there are two flo
 \end{center}
 \end{figure}
 
-In Figure~\ref{fig:Layout of Stirling engines}, $T_{1,i,1}=T_{1,i},q_{m,1,r}=q_{m,1}/n_{2}$. For $x$ from $1$ to $n_{1}-1$, where $x$ is the column number of Stirling engine, $T_{1,i,x+1}=T_{1,o,x},T_{2,i,x+1}=T_{2,o,x}$.
+In Figure~\ref{fig:Layout of Stirling engines}, $T_{1,i,1}=T_{1,i},q_{m,1,r}=q_{m,1}/n_{2}$. For $x$ from $1$ to $n_{1}-1$, where $x$ is the column number of Stirling engines, $T_{1,i,x+1}=T_{1,o,x},T_{2,i,x+1}=T_{2,o,x}$.
 
 Assume that the positive flow direction is to the right, for parallel flow,
 \nomenclature{$n_2$}{Number of rows of the Stirling engine array}
@@ -555,8 +535,7 @@ for counter flow,
 	q_{m,2,r}=-q_{m,2}/n_{2}
 \end{equation*}
 
-For a Stirling engine in column $x$\nomenclature[S]{$x$}{Stirling engine in column $x$}, $x$ from $1$ to $n_{1}$, according to Appendix,  
-%According to Appendix~\ref{sec:Stirling-engine-model},
+For a Stirling engine in column $x$\nomenclature[S]{$x$}{Stirling engine in column $x$}, $x$ from $1$ to $n_{1}$, according to Appendix~\ref{sec:Stirling-engine-model},
 
 \begin{equation*}
 	T_{H,x}=T_{1,i,x}-\dfrac{T_{1,i,x}-T_{1,o,x}}{1-\exp(-\dfrac{U_{stirling,1}A_{stirling,1}}{q_{m,1,r}c_{p,1,x}})}\label{eq:T_H_x}
@@ -567,31 +546,11 @@ For a Stirling engine in column $x$\nomenclature[S]{$x$}{Stirling engine in colu
 	T_{L,x}=T_{2,i,x}-\dfrac{T_{2,i,x}-T_{2,o,x}}{1-\exp(-\dfrac{U_{stirling,2}A_{stirling,2}}{q_{m,2,r}c_{p,2,x}})}\label{eq:T_L_x}
 \end{equation*}
 
-Assuming a linear temperature profile across the regenerator, the mean effective temperature $T_{R,x}=\dfrac{T_{H,x}-T_{L,x}}{\ln(T_{H,x}/T_{L,x})}$~\cite{Der2007,Cavazzuti2012}, and the symmetrical regenerator behaviour assumption $e_{x}=\dfrac{T_{R,x}-T_{L,x}}{T_{H,x}-T_{L,x}}$~\cite{Formosa2010,Juhasz2010}, then the efficiency of Stirling engine in column $x$ can be written as~\cite{Stine1985,Goswami2015}
+Assuming a linear temperature profile across the regenerator, the mean effective temperature $T_{R,x}=\dfrac{T_{H,x}-T_{L,x}}{\ln(T_{H,x}/T_{L,x})}$~\cite{Der2007,Cavazzuti2012}, and the symmetrical regenerator behaviour assumption $e_{x}=\dfrac{T_{R,x}-T_{L,x}}{T_{H,x}-T_{L,x}}$~\cite{Formosa2010,Juhasz2010}, then the efficiency of each Stirling engine in column $x$ can be written as~\cite{Stine1985,Goswami2015}
 
 \begin{equation*}
 	\eta_{stirling,x}=\dfrac{T_{H,x}-T_{L,x}}{T_{H,x}+\dfrac{1-e_{x}}{k-1}\cdot\dfrac{T_{H,x}-T_{L,x}}{\ln\gamma_{stirling}}}\label{eq:eta_striling_x}
 \end{equation*}
-%
-%On the other way, for $x$ from $1$ to $n_{1}$,
-%
-%\begin{equation*}
-%	h_{1,i,x}=h_{1}(T_{1,i,x})
-%\end{equation*}
-%
-%
-%\begin{equation*}
-%	h_{1,o,x}=h_{1}(T_{1,o,x})
-%\end{equation*}
-%\begin{equation*}
-%	h_{2,i,x}=h_{2}(T_{2,i,x})\label{eq:h_2_i_x}
-%\end{equation*}
-%
-%
-%\begin{equation*}
-%	h_{2,o,x}=h_{2}(T_{2,o,x})\label{eq:h_2_o_x}
-%\end{equation*}
-%
 
 For energy balance,
 
@@ -602,7 +561,7 @@ For energy balance,
 And in each Stirling cycle, the heat absorbed by the working gas is 
 \begin{equation*}
 \begin{split}
-	nR\left(T_{H,x}\ln\gamma_{stirling}+\dfrac{1-e_{x}}{k-1}\left(T_{H,x}-T_{L,x}\right)\right)=\\q_{m,1,r}(h_{1,i,x}-h_{1,o,x})/n_{se}
+	n_gR\left(T_{H,x}\ln\gamma_{stirling}+\dfrac{1-e_{x}}{k-1}\left(T_{H,x}-T_{L,x}\right)\right)=\\q_{m,1,r}(h_{1,i,x}-h_{1,o,x})/n_{se}
 \end{split}
 \end{equation*}
 
@@ -613,7 +572,7 @@ By solving above equations, efficiency of the Stirling engine array $\eta_{stirl
 \end{equation*}
 
 
-and power of Stirling engine in column $x$
+and power of each Stirling engine in column $x$
 \begin{equation*}
 	P_{stirlingEngine,x}=q_{m,1,r}(h_{1,i,x}-h_{1,o,x})\eta_{stirling,x}
 \end{equation*}
@@ -676,7 +635,7 @@ The efficiency of Rankine cycle can be expressed as
 \end{center}
 \end{figure}
 
-Figure~\ref{fig:System-2} shows the sketch of the separate systems. These two separate systems are built for comparison. They use the same dish collectors and trough collectors. They have the same thermal efficiencies.
+Figure~\ref{fig:System-2} shows the sketch of the separate systems. These two separate systems were built for comparison. They use the same dish collectors and trough collectors with the same thermal efficiencies.
 
 \subsection{Separate trough system}
 
@@ -737,15 +696,16 @@ $T_{H,s}$ is chosen to be equal to outlet temperature of air in dish receiver. $
 	\eta_{stirling,s}=\dfrac{T_{H,s}-T_{L,s}}{T_{H,s}+\dfrac{1-e_{s}}{k-1}\cdot\dfrac{T_{H,s}-T_{L,s}}{\ln\gamma}}
 \end{equation*}
 
-The power of Stirling engine
+The power of Stirling engines
 
 \begin{equation*}
-	P_{stirling,s}=n_{dC}A_{dC}I_{DNI}\eta_{dC}\eta_{stirling,s}
+	P_{stirling,s}=n_{dc}A_{dc}I_r\eta_{dc}\eta_{stirling,s}
 \end{equation*}
+\nomenclature{$n$}{Number of collectors}
 
 \section{Results and Conclusion}
 
-The results presented in Table~\ref{tab:importantResults} are issued using parameters in Table~\ref{tab:system-data}. Different results between two flow types of Stirling engine array are listed in Table~\ref{tab:SEAresults}.       
+The results presented in Table~\ref{tab:importantResults} are issued using design parameters with counter flow of two fluids in Stirling engine array as the default flow type. Different results between two flow types of Stirling engine array are listed in Table~\ref{tab:SEAresults}.
 
 \begin{table}[htbp]
 	\caption{Some important results using typical parameters}
@@ -756,8 +716,8 @@ The results presented in Table~\ref{tab:importantResults} are issued using param
 		\midrule
 		$\eta_{system}$		&	0.1974\\
 		$\eta_{system,s}$	&	0.1962\\
-		$\eta_{diff}$		&	
-		$\eta_{stirling}$	&	0.3395\\
+		$\eta_{diff}$		&	0.0062\\
+		$\eta_{stirling}$	&	0.3407\\
 		$\eta_{stirling,s}$	&	0.3786\\
 		$\eta_{rankine}$	&	0.2660\\
 		$\eta_{rankine,s}$	&	0.2678\\
@@ -797,13 +757,210 @@ The results presented in Table~\ref{tab:importantResults} are issued using param
 	\label{tab:SEAresults}
 \end{table}
 
-\subsubsection{Influence of DNI}
+\subsection{Influence of $I_r$}
 
+It is found that $I_r$ can effect the efficiency difference of cascade system and separate systems $\eta_{diff}$. Figure~\ref{fig:I_r-eta_diff} shows curve fits of efficiency differences $\eta_{diff}$ versus $I_r$ with a series of different Stirling engine array power ratios. As it can be seen, for a higher $I_r$ ($I_r > 550\,$W/m$^2$), $\eta_{diff}>0$, the cascade system can achieve a higher efficiency than corresponding separate systems, and increase $\beta$ achieve a higher $\eta_{diff}$. For a lower $I_r$ ($I_r < 550\,$W/m$^2$), increase $\beta$ may achieve a lower $\eta_{diff}$, even a negative $\eta_{diff}$. At this situation, the cascade system achieves a lower efficiency than corresponding separate systems, and the higher $\beta$, the lower $\eta_{diff}$. This means $I_r$ is a key factor to determine whether cascade system should be applied in a certain location.
 
+\noindent \begin{figure}[htbp]
+\begin{center}
+	\includegraphics[width = 0.8\columnwidth, angle = 0]{./graphics/I_r-eta_diff}
+	\caption{Curve fits of efficiency difference $\eta_{diff}$ versus $I_r$}
+	\label{fig:I_r-eta_diff}
+\end{center}
+\end{figure}
+
+\subsection{Influence of $\beta$}
+
+As it can be seen in Table~\ref{tab:importantResults}, the $\eta_{diff}$ is very small with the design parameters given above. A reason $\eta_{diff}$ to be so small is that $\beta$, the ratio of power of Stirling engines to the total power, is very small, the heat released by the Stirling engine array is a small portion of the heat absorbed in the Rankine cycle. So increase $\beta$ may achieve higher $\eta_{diff}$. The relationship between $\eta_{diff}$ and $\beta$ under a series of $I_r$ is shown in Figure~\ref{fig:beta-eta_diff}. It can be found that, for a certain $\beta$, higher $I_r$ can achieve higher $\eta_{diff}$, so a higher $I_r$ location is always more suitable for cascade system. for a higher $I_r$, increase $\beta$ may achieve a higher $\eta_{diff}$, but there is a limit. For $I_r=900$W/m$^2$, the maximum $\eta_{diff}=0.0228$ appears at $\beta=0.23$.
+
+\noindent \begin{figure}[H]
+\begin{center}
+	\includegraphics[width = 0.8\columnwidth, angle = 0]{./graphics/beta-eta_diff}
+	\caption{Curve fits of efficiency difference $\eta_{diff}$ versus $\beta$}
+	\label{fig:beta-eta_diff}
+\end{center}
+\end{figure}
+
+\subsection{Influence of flow type}
+
+Flow type between heating and cooling streams can influence the efficiency of Stirling engine array. Parallel flow, compared to counter flow, leads to higher Stirling engine efficiency in the first columns of the array for lower cooling temperature, while lower Stirling engine efficiency in the last columns for higher cooling temperature. Table~\ref{tab:SEAresults} shows the different results of the two flow types. The fit curves of temperature series of the heating and cooling fluids and the efficiency of Stirling engines in different columns are shown in Figure~\ref{fig:Parallelflow} and~\ref{fig:Counterflow}.
+
+\noindent \begin{figure}[htbp]
+\begin{center}
+	\includegraphics[width = 0.8\columnwidth, angle = 0]{./graphics/Parallelflow}
+	\caption{Parallel flow: Temperature series of two fluids and efficiency of Stirling engines in column $x$}
+	\label{fig:Parallelflow}
+\end{center}
+\end{figure}
+\noindent \begin{figure}[H]
+\begin{center}
+	\includegraphics[width = 0.8\columnwidth, angle = 0]{./graphics/Counterflow}
+	\caption{Counter flow: Temperature series of two fluids and efficiency of Stirling engines in column $x$}
+	\label{fig:Counterflow}
+\end{center}
+\end{figure}
+
+From Figure~\ref{fig:Parallelflow} and~\ref{fig:Counterflow}, it can be concluded that the temperature increment of cooling fluid is much smaller than the temperature decrement of heating fluid due to their large difference of $c_pq_m$, which leads to a small difference of overall efficiency of Stirling engine array between the two flow types.
+
+To find out a clear difference of the two flow types, a simple model of Stirling engine array was built with air as the heating fluid and water as the cooling fluid. $T_{1,i}, T_{1,o}, T_{2,i}, q_{1,m}$ are fixed and chosen the same values as in the cascade system. Change the value of $q_{2,m}$, and the corresponding Stirling engine array efficiency of the two flow types can be obtained. Figure~\ref{fig:SEAflowtypes} shows the efficiency of Stirling engine array with different $q_{2,m}$ in two flow types. It can be found that counter flow has a higher efficiency than parallel flow, and with lower $q_{2,m}$ comes with higher efficiency difference.
+
+For a system with large difference of $c_pq_m$ of two fluids, that means one fluid can only achieve a small $\Delta T$ compared to the other fluid, will lead to a small difference of two flow types. For a system with similar difference of $c_pq_m$, use the counter flow can achieve a higher efficiency.
+
+\noindent \begin{figure}[H]
+\begin{center}
+	\includegraphics[width = 0.8\columnwidth, angle = 0]{./graphics/SEAflowtypes}
+	\caption{Efficiency of Stirling engine array with different $q_{2,m}$}
+	\label{fig:SEAflowtypes}
+\end{center}
+\end{figure}
+
+The first version of cascade system with two different types of collectors and two different power generation methods has been established, including different fluid circuits, with component models. Simulations were carried out and results were compared with corresponding separate systems. Results show that the cascade system can achieve a higher efficiency under certain parameters. The directions of increase the efficiency difference between cascade system and corresponding separate systems were also discussed. higher $I_r$ and $\beta$ is better for a cascade system. The flow type of fluids for heating and cooling Stirling engine array is also required to concern on designing a relative cascade system. Using a cascade system with a different $\beta$ can change the portion of dish collector area of total collector area, which can affect the cost of this technique. The cost analysis and optimization research of the cascade system is not included in this paper, which are worthy for further research later.
+
+\clearpage
 \printnomenclature[2.5cm]{}
 \clearpage
 
 \bibliography{./bibliography/CascadeSystem}
 \bibliographystyle{unsrt}
+
+\clearpage
+\appendix
+
+\section{\noindent \label{sec:CTHT}Heat transfer to a constant temperature heat source}
+
+Constant $U$, $T_{c}$, $q_{m}$, $c_{p}$, for a given \nomenclature[S]{$i$}{Inlet}$T_{i}$,
+
+\noindent \begin{center}
+\begin{figure}[h]
+\begin{centering}
+\includegraphics[width=0.6\columnwidth]{graphics/ConstTempHX}
+\par\end{centering}
+
+\protect\caption{\label{fig:CTHX}Diagram of heat transfer to a constant temperature heat source}
+\end{figure}
+
+\par\end{center}
+
+if $A(x)=Px$, $x$ from $0$ to $L$, $T(x)$ from $T_{i}$ to \nomenclature[S]{$o$}{Outlet}$T_{o}$, 
+
+\begin{equation*}
+	q_{m}c_{p}dT(x)=(T_{c}-T(x))UPdx
+\end{equation*}
+
+so,
+
+\begin{equation*}
+	\frac{dT(x)}{dx}=-\frac{UP}{q_{m}c_{p}}(T(x)-T_{c})
+\end{equation*}
+
+Set $F(x)=T(x)-T_{c}$, then $F(0)=T_{i}-T_{c}$, and
+
+\begin{equation*}
+	\dfrac{dF(x)}{F(x)}=-\dfrac{UP}{q_{m}c_{p}}dx
+\end{equation*}
+
+
+\begin{equation*}
+	F(x)=F(0)\cdot\exp(-\dfrac{UP}{q_{m}c_{p}}x)
+\end{equation*}
+
+
+\begin{equation*}
+	\dfrac{F(L)}{F(0)}=\exp(-\dfrac{UPL}{q_{m}c_{p}})
+\end{equation*}
+
+
+That is
+
+\begin{equation*}
+	\frac{T_{o}-T_{c}}{T_{i}-T_{c}}=\exp(-\frac{UA}{q_{m}c_{p}})
+\end{equation*}
+\clearpage{}
+
+\section{\noindent \label{sec:CTCHTHT}Ambient loss of a flow under constant
+heat flux}
+
+Constant $U$, $T_{amb}$, $q_{m}$, $c_{p}$, $q^{''}$, for given
+$T_{i}$,
+
+\noindent \begin{center}
+\begin{figure}[h]
+	\noindent \centering{}\includegraphics[width=0.8\columnwidth]{graphics/CTCHFHX}
+	\protect\caption{\label{fig:CTCHFHX}Diagram of ambient loss of a flow under constant
+heat flux}
+\end{figure}
+
+\par\end{center}
+
+if $A(x)=Px$, $x$ from $0$ to $L$, $T(x)$ from $T_{i}$ to $T_{o}$,
+
+\begin{equation*}
+	q_{m}c_{p}dT(x)=(T_{amb}-T(x))UPdx+q^{''}Pdx
+\end{equation*}
+
+so
+
+\begin{equation*}
+	\frac{dT(x)}{dx}=-\frac{UP}{q_{m}c_{p}}T(x)+\frac{q^{''}P+UPT_{amb}}{q_{m}c_{p}}
+\end{equation*}
+
+Set $G(x)=T(x)-T_{amb}-\dfrac{q^{''}}{U}$, then $G(0)=T_{i}-T_{amb}-\dfrac{q^{''}}{U}$ and
+
+\begin{equation*}
+	\dfrac{dG(x)}{G(x)}=-\dfrac{UP}{q_{m}c_{p}}dx
+\end{equation*}
+
+\begin{equation*}
+	G(x)=G(0)\cdot\exp(-\dfrac{UP}{q_{m}c_{p}}x)
+\end{equation*}
+
+\begin{equation*}
+	\dfrac{G(L)}{G(0)}=\exp(-\dfrac{UPL}{q_{m}c_{p}})
+\end{equation*}
+
+That is
+
+\begin{equation*}
+	\frac{T_{o}-T_{amb}-\frac{q^{''}}{U}}{T_{i}-T_{amb}-\frac{q^{''}}{U}}=\exp(-\frac{UA}{q_{m}c_{p}})
+\end{equation*}
+\clearpage{}
+
+\section{\noindent \label{sec:Stirling-engine-model}Stirling engine model}
+
+A simple Stirling engine model is used for the system. The cycle efficiency is given by \cite{Stine1985}
+
+\begin{equation}
+	\eta=\frac{T_{H}-T_{L}}{T_{H}+\text{\ensuremath{\dfrac{1-e}{k-1}}}\cdot\dfrac{T_{H}-T_{L}}{\ln\gamma}}\label{eq:eta_stirling}
+\end{equation}
+
+
+where \nomenclature{$e$}{Regeneration effectiveness of the Stirling engine}$e=\dfrac{T_{R}-T_{L}}{T_{H}-T_{L}}$,\nomenclature{$T_R$}{Regenerator temperature, K}$T_{R}$ is the\emph{ }regenerator temperature, \nomenclature{$c_p$}{Heat capacity of Stirling engine working gas at constant pressure, J/(kg$\cdot$K)}\nomenclature{$c_v$}{Heat capacity of Stirling engine working gas at constant volume, J/(kg$\cdot$K)}$k=\dfrac{c_{p}}{c_{v}}$ for the working gas, $\gamma_{stirling}=\dfrac{V_{max}}{V_{min}}$ is the compression ratio.
+
+The heat transfer diagram is shown in Figure \ref{fig:Heat-transfer-diagram}. Flow 1 is used for heating the hot chamber of Stirling engine, $T_{1i}$ is the inlet temperature, $T_{1o}$ is the outlet temperature. Flow 2 is used for cooling the cold chamber of Stirling engine, $T_{2i}$ is the inlet temperature, $T_{2o}$ is the outlet temperature. \nomenclature{$T_H$}{Highest temperature of expansion space, K}$T_{H}$ is the highest temperature of expansion space, \nomenclature{$T_L$}{Lowest temperature of compression space, K}$T_{L}$ is the lowest temperature of compression space.
+
+\noindent \begin{center}
+\begin{figure}[h]
+	\noindent \centering{}\includegraphics[width=0.6\columnwidth]{graphics/StirilingHT}
+	\protect\caption{\label{fig:Heat-transfer-diagram}Heat transfer diagram of Stirling
+engine}
+\end{figure}
+
+\par\end{center}
+
+According to Appendix \ref{sec:CTHT}, we have
+
+\begin{equation*}
+	\dfrac{T_{1o}-T_{H}}{T_{1i}-T_{H}}=\exp(-\dfrac{U_{1}A_{1}}{q_{m,1}c{}_{p1}})
+\end{equation*}
+
+and
+
+\begin{equation*}
+	\dfrac{T_{2o}-T_{L}}{T_{2i}-T_{L}}=\exp(-\dfrac{U_{2}A_{2}}{q_{m,2}c_{p2}})
+\end{equation*}
+
+So known $T_{1o},T_{1i},U_{1},A_{1},q_{m,1},c_{p1},T_{2o},T_{2i},U_{2},A_{2},q_{m,2},c_{p2}$, we can get $T_{H}$ and $T_{L}$, and then use Equation (\ref{eq:eta_stirling}) to get $\eta$.
+\nomenclature{$A$}{Area, m$^2$}
+\clearpage
 
 \end{document}

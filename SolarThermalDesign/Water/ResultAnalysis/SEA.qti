@@ -1,0 +1,129 @@
+QtiPlot 0.9.8 project file
+<scripting-lang>	muParser
+<windows>	2
+<table>
+Table1	30	3	16/3/6 10:13
+geometry	0	0	1436	779	
+header	q-m-2[X]	eta-p[Y]	eta-c[Y]
+ColWidth	100	100	100	
+<com>
+</com>
+ColType	0;0/13	0;0/13	0;0/13
+ReadOnlyColumn	0	0	0
+HiddenColumn	0	0	0
+Comments				
+WindowLabel		2
+<data>
+0	2	0.326284	0.330338
+1	2.4	0.329337	0.332709
+2	2.8	0.331485	0.334372
+3	3.2	0.333081	0.335603
+4	3.6	0.334311	0.336551
+5	4	0.335287	0.337303
+6	4.4	0.336083	0.337914
+7	4.8	0.336743	0.33842
+8	5.2	0.337298	0.338846
+9	5.6	0.337771	0.339209
+10	6	0.338182	0.339523
+11	6.4	0.338541	0.339797
+12	6.8	0.338855	0.340038
+13	7.2	0.339135	0.340252
+14	7.6	0.339384	0.340443
+15	8	0.339609	0.340614
+16	8.4	0.339812	0.340769
+17	8.8	0.339995	0.340909
+18	9.2	0.340163	0.341037
+19	9.6	0.340317	0.341154
+20	10	0.340458	0.341262
+</data>
+</table>
+<multiLayer>
+Graph1	1	1	16/3/6 10:14
+geometry	192	56	974	634	active
+WindowLabel		2
+Margins	5	5	5	5
+Spacing	5	5
+LayerCanvasSize	400	300
+Alignement	0	0
+<AlignPolicy>0</AlignPolicy>
+<CommonAxes>0</CommonAxes>
+<graph>
+ggeometry	5	6	957	571
+<PageGeometry>0.00514403	0.0101523	0.984568	0.966159</PageGeometry>
+PlotTitle		#000000	4228
+<Antialiasing>0</Antialiasing>
+<Autoscaling>1</Autoscaling>
+<ScaleFonts>1</ScaleFonts>
+<GridOnTop>0</GridOnTop>
+<MissingDataGap>1</MissingDataGap>
+Background	#ffffff	0
+Margin	0
+Border	0	#000000
+grid	0	0	0	0	#0000ff	0	0.5	#a0a0a4	2	0.4	#0000ff	0	0.5	#a0a0a4	2	0.4	0	0	2	0	0
+EnabledAxes	1	0	1	0	
+AxesTitles	<i>q<sub>2,m</sub></i>, kg/s	<i>η</i>		%(?Y)	
+AxesTitleColors	#000000	#000000	#000000	#000000	
+AxesTitleAlignment	5124	4	5124	4
+AxesTitleDistance	11	-1	2	-1
+InvertedTitle	0	0	0	0
+TitleFont	.Helvetica Neue DeskInterface	22	75	0	0	0
+ScaleFont0	Helvetica	36	75	0	0	0
+ScaleFont1	.Helvetica Neue DeskInterface	19	75	0	0	0
+ScaleFont2	Helvetica	36	75	0	0	0
+ScaleFont3	.Helvetica Neue DeskInterface	19	75	0	0	0
+AxisFont0	Helvetica	24	50	0	0	0
+AxisFont1	.Helvetica Neue DeskInterface	19	50	0	0	0
+AxisFont2	Helvetica	24	50	0	0	0
+AxisFont3	.Helvetica Neue DeskInterface	19	50	0	0	0
+AxesColors	#000000	#000000	#000000	#000000
+AxesNumberColors	#000000	#000000	#000000	#000000
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffff	0
+curve	Table1_q-m-2	Table1_eta-c	2	1	#0000ff	0	3	13	4	#0000ff	#0000ff	0	#000000	14	1	2	0	0	29	1
+curve	Table1_q-m-2	Table1_eta-p	2	1	#00ff00	0	3	13	3	#00ff00	#00ff00	0	#000000	14	1	2	0	0	29	1
+scale	0	0.326	0.342	0	9	5	0	0
+scale	1	0.326	0.342	0	9	5	0	0
+scale	2	2	10	0	5	5	0	0
+scale	3	2	10	0	5	5	0	0
+LabelsFormat	0	6	0	6	0	6	0	6
+AxisType	0	0	0	0	
+MajorTicks	1	1	1	1
+MinorTicks	1	1	1	1
+TicksLength	5	9
+DrawAxesBackbone	1	1	1	1	1
+AxesLineWidth	1
+LabelsRotation	0	0	0	0
+LabelsPrefix				
+LabelsSuffix				
+TickLabelsSpace	4	4	4	4
+ShowTicksPolicy	0	0	0	0
+EnabledTickLabels	1	1	1	1
+<Legend>
+<Frame>0</Frame>
+<Color>#000000</Color>
+<FrameWidth>1</FrameWidth>
+<LineStyle>0</LineStyle>
+<x>2.2506024096386</x>
+<y>0.34173443983402</y>
+<right>4.03373493975904</right>
+<bottom>0.338116182572614</bottom>
+<attachTo>1</attachTo>
+<onTop>1</onTop>
+<visible>1</visible>
+<Text>
+\l(1)<i>η<sub>c</sub></i>
+\l(2)<i>η<sub>p</sub></i>
+</Text>
+<Font>Helvetica	48	75	0	0	0</Font>
+<TextColor>#000000</TextColor>
+<Background>#ffffff</Background>
+<Alpha>0</Alpha>
+<Angle>0</Angle>
+<AutoUpdate>1</AutoUpdate>
+<TeXOutput>0</TeXOutput>
+</Legend>
+</graph>
+<LinkXAxes>0</LinkXAxes>
+<ScaleLayers>1</ScaleLayers>
+</multiLayer>
+<open>1</open>

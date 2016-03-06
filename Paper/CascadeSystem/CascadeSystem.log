@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.4)  4 MAR 2016 14:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.4)  6 MAR 2016 15:03
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -157,6 +157,14 @@ Package color Info: Driver file: pdftex.def on input line 142.
 (/usr/local/texlive/2015/texmf-dist/tex/latex/multirow/multirow.sty
 \bigstrutjot=\dimen129
 )
+(/usr/local/texlive/2015/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count104
+\float@exts=\toks20
+\float@box=\box28
+\@float@everytoks=\toks21
+\@floatcapt=\box29
+)
 (/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
 
@@ -215,13 +223,13 @@ Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 )
 \@linkdim=\dimen130
-\Hy@linkcounter=\count104
-\Hy@pagecounter=\count105
+\Hy@linkcounter=\count105
+\Hy@pagecounter=\count106
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
 )
-\Hy@SavedSpaceFactor=\count106
+\Hy@SavedSpaceFactor=\count107
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
@@ -240,7 +248,7 @@ Package hyperref Info: Plain pages OFF on input line 4458.
 Package hyperref Info: Backreferencing OFF on input line 4463.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4688.
-\c@Hy@tempcnt=\count107
+\c@Hy@tempcnt=\count108
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip11
@@ -248,7 +256,7 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5041.
 \XeTeXLinkMargin=\dimen131
-\Fld@menulength=\count108
+\Fld@menulength=\count109
 \Field@Width=\dimen132
 \Fld@charsize=\dimen133
 Package hyperref Info: Hyper figures OFF on input line 6295.
@@ -260,17 +268,17 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6320.
 Package hyperref Info: PDF/A mode OFF on input line 6325.
 LaTeX Info: Redefining \ref on input line 6365.
 LaTeX Info: Redefining \pageref on input line 6369.
-\Hy@abspage=\count109
-\c@Item=\count110
-\c@Hfootnote=\count111
+\Hy@abspage=\count110
+\c@Item=\count111
+\c@Hfootnote=\count112
 )
 
 Package hyperref Message: Driver (autodetected): hpdftex.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
-\Fld@listcount=\count112
-\c@bookmark@seq@number=\count113
+\Fld@listcount=\count113
+\c@bookmark@seq@number=\count114
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
 Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
@@ -300,34 +308,34 @@ Writing index file CascadeSystem.idx
 (./CascadeSystem.aux)
 \openout1 = `CascadeSystem.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
 
 (/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count114
+\scratchcounter=\count115
 \scratchdimen=\dimen136
-\scratchbox=\box28
-\nofMPsegments=\count115
-\nofMParguments=\count116
-\everyMPshowfont=\toks20
-\MPscratchCnt=\count117
+\scratchbox=\box30
+\nofMPsegments=\count116
+\nofMParguments=\count117
+\everyMPshowfont=\toks22
+\MPscratchCnt=\count118
 \MPscratchDim=\dimen137
-\MPnumerator=\count118
-\makeMPintoPDFobject=\count119
-\everyMPtoPDFconversion=\toks21
+\MPnumerator=\count119
+\makeMPintoPDFobject=\count120
+\everyMPtoPDFconversion=\toks23
 ) (/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
@@ -343,8 +351,8 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\AtBeginShipoutBox=\box29
-Package hyperref Info: Link coloring ON on input line 23.
+\AtBeginShipoutBox=\box31
+Package hyperref Info: Link coloring ON on input line 22.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -352,11 +360,11 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count120
+\c@section@level=\count121
 )
-LaTeX Info: Redefining \ref on input line 23.
-LaTeX Info: Redefining \pageref on input line 23.
-LaTeX Info: Redefining \nameref on input line 23.
+LaTeX Info: Redefining \ref on input line 22.
+LaTeX Info: Redefining \pageref on input line 22.
+LaTeX Info: Redefining \nameref on input line 22.
 
 (./CascadeSystem.out) (./CascadeSystem.out)
 \@outlinefile=\write5
@@ -374,15 +382,15 @@ pdf>
 (epstopdf)                    size: 35425 bytes
 (epstopdf)             Command: <repstopdf --outfile=./graphics/cascadeSystem-e
 ps-converted-to.pdf ./graphics/cascadeSystem.eps>
-(epstopdf)             \includegraphics on input line 89.
+(epstopdf)             \includegraphics on input line 64.
 Package epstopdf Info: Output file is already uptodate.
 
-<./graphics/cascadeSystem-eps-converted-to.pdf, id=94, 368.37625pt x 268.00125p
-t>
+<./graphics/cascadeSystem-eps-converted-to.pdf, id=121, 368.37625pt x 268.00125
+pt>
 File: ./graphics/cascadeSystem-eps-converted-to.pdf Graphic file (type pdf)
  <use ./graphics/cascadeSystem-eps-converted-to.pdf>
 Package pdftex.def Info: ./graphics/cascadeSystem-eps-converted-to.pdf used on 
-input line 89.
+input line 64.
 (pdftex.def)             Requested size: 241.49895pt x 175.69543pt.
 Package epstopdf Info: Source file: <./graphics/T-s_Water.eps>
 (epstopdf)                    date: 2016-03-01 00:49:11
@@ -393,15 +401,15 @@ Package epstopdf Info: Source file: <./graphics/T-s_Water.eps>
 (epstopdf)                    size: 23773 bytes
 (epstopdf)             Command: <repstopdf --outfile=./graphics/T-s_Water-eps-c
 onverted-to.pdf ./graphics/T-s_Water.eps>
-(epstopdf)             \includegraphics on input line 98.
+(epstopdf)             \includegraphics on input line 73.
 Package epstopdf Info: Output file is already uptodate.
 
-<./graphics/T-s_Water-eps-converted-to.pdf, id=95, 473.77pt x 330.23375pt>
+<./graphics/T-s_Water-eps-converted-to.pdf, id=122, 473.77pt x 330.23375pt>
 File: ./graphics/T-s_Water-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./graphics/T-s_Water-eps-converted-to.pdf>
 Package pdftex.def Info: ./graphics/T-s_Water-eps-converted-to.pdf used on inpu
-t line 98.
+t line 73.
 (pdftex.def)             Requested size: 241.49895pt x 168.33131pt.
 Package epstopdf Info: Source file: <./graphics/HeatTransfer_Water-SEs.eps>
 (epstopdf)                    date: 2016-03-01 13:04:06
@@ -412,46 +420,45 @@ erted-to.pdf>
 (epstopdf)                    size: 18219 bytes
 (epstopdf)             Command: <repstopdf --outfile=./graphics/HeatTransfer_Wa
 ter-SEs-eps-converted-to.pdf ./graphics/HeatTransfer_Water-SEs.eps>
-(epstopdf)             \includegraphics on input line 106.
+(epstopdf)             \includegraphics on input line 81.
 Package epstopdf Info: Output file is already uptodate.
 
-<./graphics/HeatTransfer_Water-SEs-eps-converted-to.pdf, id=96, 383.4325pt x 34
-0.27126pt>
+<./graphics/HeatTransfer_Water-SEs-eps-converted-to.pdf, id=123, 383.4325pt x 3
+40.27126pt>
 File: ./graphics/HeatTransfer_Water-SEs-eps-converted-to.pdf Graphic file (type
  pdf)
  <use ./graphics/HeatTransfer_Water-SEs-eps-converted-to.pdf>
 Package pdftex.def Info: ./graphics/HeatTransfer_Water-SEs-eps-converted-to.pdf
- used on input line 106.
+ used on input line 81.
 (pdftex.def)             Requested size: 241.49895pt x 214.3149pt.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 115.
-
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 90.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 115.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 90.
  [4 <./graphics/cascadeSystem-eps-converted-to.pdf>] [5 <./graphics/T-s_Water-e
 ps-converted-to.pdf> <./graphics/HeatTransfer_Water-SEs-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <graphics/dishReceiver1.eps>
-(epstopdf)                    date: 2016-03-01 09:16:45
-(epstopdf)                    size: 5479194 bytes
+(epstopdf)                    date: 2016-03-06 14:00:41
+(epstopdf)                    size: 1689410 bytes
 (epstopdf)             Output file: <graphics/dishReceiver1-eps-converted-to.pd
 f>
-(epstopdf)                    date: 2016-03-01 09:18:39
-(epstopdf)                    size: 636128 bytes
+(epstopdf)                    date: 2016-03-06 14:00:55
+(epstopdf)                    size: 80483 bytes
 (epstopdf)             Command: <repstopdf --outfile=graphics/dishReceiver1-eps
 -converted-to.pdf graphics/dishReceiver1.eps>
-(epstopdf)             \includegraphics on input line 252.
+(epstopdf)             \includegraphics on input line 227.
 Package epstopdf Info: Output file is already uptodate.
 
-<graphics/dishReceiver1-eps-converted-to.pdf, id=149, 499.8675pt x 510.90875pt>
+<graphics/dishReceiver1-eps-converted-to.pdf, id=176, 845.1575pt x 597.23125pt>
 File: graphics/dishReceiver1-eps-converted-to.pdf Graphic file (type pdf)
 <use graphics/dishReceiver1-eps-converted-to.pdf>
 Package pdftex.def Info: graphics/dishReceiver1-eps-converted-to.pdf used on in
-put line 252.
-(pdftex.def)             Requested size: 241.49895pt x 246.83156pt.
- [6] [7 <./graphics/dishReceiver1-eps-converted-to.pdf>]
+put line 227.
+(pdftex.def)             Requested size: 241.49895pt x 170.65009pt.
+ [6]
 Package epstopdf Info: Source file: <./graphics/thermalLosses.eps>
 (epstopdf)                    date: 2016-03-01 09:18:23
 (epstopdf)                    size: 62126 bytes
@@ -461,17 +468,18 @@ pdf>
 (epstopdf)                    size: 16206 bytes
 (epstopdf)             Command: <repstopdf --outfile=./graphics/thermalLosses-e
 ps-converted-to.pdf ./graphics/thermalLosses.eps>
-(epstopdf)             \includegraphics on input line 318.
+(epstopdf)             \includegraphics on input line 292.
 Package epstopdf Info: Output file is already uptodate.
 
-<./graphics/thermalLosses-eps-converted-to.pdf, id=183, 834.11626pt x 627.34375
+<./graphics/thermalLosses-eps-converted-to.pdf, id=192, 834.11626pt x 627.34375
 pt>
 File: ./graphics/thermalLosses-eps-converted-to.pdf Graphic file (type pdf)
  <use ./graphics/thermalLosses-eps-converted-to.pdf>
 Package pdftex.def Info: ./graphics/thermalLosses-eps-converted-to.pdf used on 
-input line 318.
+input line 292.
 (pdftex.def)             Requested size: 241.49895pt x 181.62828pt.
- [8] [9 <./graphics/thermalLosses-eps-converted-to.pdf>] [10]
+ [7 <./graphics/dishReceiver1-eps-converted-to.pdf>] [8 <./graphics/thermalLoss
+es-eps-converted-to.pdf>] [9] [10]
 Package epstopdf Info: Source file: <./graphics/troughCollector.eps>
 (epstopdf)                    date: 2016-02-12 11:30:21
 (epstopdf)                    size: 1471202 bytes
@@ -481,21 +489,17 @@ o.pdf>
 (epstopdf)                    size: 21705 bytes
 (epstopdf)             Command: <repstopdf --outfile=./graphics/troughCollector
 -eps-converted-to.pdf ./graphics/troughCollector.eps>
-(epstopdf)             \includegraphics on input line 450.
+(epstopdf)             \includegraphics on input line 430.
 Package epstopdf Info: Output file is already uptodate.
 
-<./graphics/troughCollector-eps-converted-to.pdf, id=233, 769.87625pt x 621.321
+<./graphics/troughCollector-eps-converted-to.pdf, id=257, 769.87625pt x 621.321
 24pt>
 File: ./graphics/troughCollector-eps-converted-to.pdf Graphic file (type pdf)
  <use ./graphics/troughCollector-eps-converted-to.pdf>
 Package pdftex.def Info: ./graphics/troughCollector-eps-converted-to.pdf used o
-n input line 450.
+n input line 430.
 (pdftex.def)             Requested size: 241.49895pt x 194.9019pt.
-
-
-LaTeX Warning: Reference `sec:CTCHTHT' on page 11 undefined on input line 488.
-
-[11 <./graphics/troughCollector-eps-converted-to.pdf>]
+ [11 <./graphics/troughCollector-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <./graphics/StirlingEngineArray.eps>
 (epstopdf)                    date: 2016-03-01 14:33:13
 (epstopdf)                    size: 897446 bytes
@@ -505,16 +509,16 @@ ed-to.pdf>
 (epstopdf)                    size: 22882 bytes
 (epstopdf)             Command: <repstopdf --outfile=./graphics/StirlingEngineA
 rray-eps-converted-to.pdf ./graphics/StirlingEngineArray.eps>
-(epstopdf)             \includegraphics on input line 510.
+(epstopdf)             \includegraphics on input line 490.
 Package epstopdf Info: Output file is already uptodate.
 
-<./graphics/StirlingEngineArray-eps-converted-to.pdf, id=256, 476.78125pt x 399
+<./graphics/StirlingEngineArray-eps-converted-to.pdf, id=280, 476.78125pt x 399
 .4925pt>
 File: ./graphics/StirlingEngineArray-eps-converted-to.pdf Graphic file (type pd
 f)
  <use ./graphics/StirlingEngineArray-eps-converted-to.pdf>
 Package pdftex.def Info: ./graphics/StirlingEngineArray-eps-converted-to.pdf us
-ed on input line 510.
+ed on input line 490.
 (pdftex.def)             Requested size: 241.49895pt x 202.35474pt.
 Package epstopdf Info: Source file: <./graphics/HeatTransfer_Parallel.eps>
 (epstopdf)                    date: 2016-03-01 13:09:30
@@ -525,16 +529,16 @@ rted-to.pdf>
 (epstopdf)                    size: 20703 bytes
 (epstopdf)             Command: <repstopdf --outfile=./graphics/HeatTransfer_Pa
 rallel-eps-converted-to.pdf ./graphics/HeatTransfer_Parallel.eps>
-(epstopdf)             \includegraphics on input line 521.
+(epstopdf)             \includegraphics on input line 501.
 Package epstopdf Info: Output file is already uptodate.
 
-<./graphics/HeatTransfer_Parallel-eps-converted-to.pdf, id=259, 383.4325pt x 34
+<./graphics/HeatTransfer_Parallel-eps-converted-to.pdf, id=283, 383.4325pt x 34
 0.27126pt>
 File: ./graphics/HeatTransfer_Parallel-eps-converted-to.pdf Graphic file (type 
 pdf)
  <use ./graphics/HeatTransfer_Parallel-eps-converted-to.pdf>
 Package pdftex.def Info: ./graphics/HeatTransfer_Parallel-eps-converted-to.pdf 
-used on input line 521.
+used on input line 501.
 (pdftex.def)             Requested size: 241.49895pt x 214.3149pt.
 Package epstopdf Info: Source file: <./graphics/HeatTransfer_Counter.eps>
 (epstopdf)                    date: 2016-03-01 13:12:18
@@ -545,21 +549,21 @@ ted-to.pdf>
 (epstopdf)                    size: 20531 bytes
 (epstopdf)             Command: <repstopdf --outfile=./graphics/HeatTransfer_Co
 unter-eps-converted-to.pdf ./graphics/HeatTransfer_Counter.eps>
-(epstopdf)             \includegraphics on input line 529.
+(epstopdf)             \includegraphics on input line 509.
 Package epstopdf Info: Output file is already uptodate.
 
-<./graphics/HeatTransfer_Counter-eps-converted-to.pdf, id=260, 383.4325pt x 340
+<./graphics/HeatTransfer_Counter-eps-converted-to.pdf, id=284, 383.4325pt x 340
 .27126pt>
 File: ./graphics/HeatTransfer_Counter-eps-converted-to.pdf Graphic file (type p
 df)
  <use ./graphics/HeatTransfer_Counter-eps-converted-to.pdf>
 Package pdftex.def Info: ./graphics/HeatTransfer_Counter-eps-converted-to.pdf u
-sed on input line 529.
+sed on input line 509.
 (pdftex.def)             Requested size: 241.49895pt x 214.3149pt.
  [12]
 [13 <./graphics/StirlingEngineArray-eps-converted-to.pdf> <./graphics/HeatTrans
 fer_Parallel-eps-converted-to.pdf>] [14 <./graphics/HeatTransfer_Counter-eps-co
-nverted-to.pdf>]
+nverted-to.pdf>] [15]
 Package epstopdf Info: Source file: <./graphics/separateSystem.eps>
 (epstopdf)                    date: 2016-03-01 20:57:53
 (epstopdf)                    size: 544958 bytes
@@ -569,64 +573,261 @@ Package epstopdf Info: Source file: <./graphics/separateSystem.eps>
 (epstopdf)                    size: 27371 bytes
 (epstopdf)             Command: <repstopdf --outfile=./graphics/separateSystem-
 eps-converted-to.pdf ./graphics/separateSystem.eps>
-(epstopdf)             \includegraphics on input line 673.
+(epstopdf)             \includegraphics on input line 632.
 Package epstopdf Info: Output file is already uptodate.
 
-<./graphics/separateSystem-eps-converted-to.pdf, id=322, 403.5075pt x 268.00125
+<./graphics/separateSystem-eps-converted-to.pdf, id=353, 403.5075pt x 268.00125
 pt>
 File: ./graphics/separateSystem-eps-converted-to.pdf Graphic file (type pdf)
  <use ./graphics/separateSystem-eps-converted-to.pdf>
 Package pdftex.def Info: ./graphics/separateSystem-eps-converted-to.pdf used on
- input line 673.
+ input line 632.
 (pdftex.def)             Requested size: 241.49895pt x 160.39713pt.
- [15] [16 <./graphics/separateSystem-eps-converted-to.pdf>]
-Overfull \hbox (31.07129pt too wide) in paragraph at lines 776--795
+ [16 <./graphics/separateSystem-eps-converted-to.pdf>] [17]
+Overfull \hbox (31.07129pt too wide) in paragraph at lines 737--756
  [] 
  []
 
-(./CascadeSystem.nls [17] [18] [19] [20]) [21] (./CascadeSystem.bbl [22
 
-])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 807.
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 760.
 
-[23]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 807.
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 760.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 760.
+
+Package epstopdf Info: Source file: <./graphics/I_r-eta_diff.eps>
+(epstopdf)                    date: 2016-03-06 00:09:48
+(epstopdf)                    size: 8933854 bytes
+(epstopdf)             Output file: <./graphics/I_r-eta_diff-eps-converted-to.p
+df>
+(epstopdf)                    date: 2016-03-06 00:10:00
+(epstopdf)                    size: 1454202 bytes
+(epstopdf)             Command: <repstopdf --outfile=./graphics/I_r-eta_diff-ep
+s-converted-to.pdf ./graphics/I_r-eta_diff.eps>
+(epstopdf)             \includegraphics on input line 766.
+Package epstopdf Info: Output file is already uptodate.
+
+<./graphics/I_r-eta_diff-eps-converted-to.pdf, id=385, 1462.46375pt x 738.76pt>
+File: ./graphics/I_r-eta_diff-eps-converted-to.pdf Graphic file (type pdf)
+<use ./graphics/I_r-eta_diff-eps-converted-to.pdf>
+Package pdftex.def Info: ./graphics/I_r-eta_diff-eps-converted-to.pdf used on i
+nput line 766.
+(pdftex.def)             Requested size: 276.00105pt x 139.41896pt.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 772.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\beta' on input line 772.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 772.
+
+[18] [19 <./graphics/I_r-eta_diff-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <./graphics/beta-eta_diff.eps>
+(epstopdf)                    date: 2016-03-05 18:33:23
+(epstopdf)                    size: 5931407 bytes
+(epstopdf)             Output file: <./graphics/beta-eta_diff-eps-converted-to.
+pdf>
+(epstopdf)                    date: 2016-03-05 18:38:12
+(epstopdf)                    size: 1818808 bytes
+(epstopdf)             Command: <repstopdf --outfile=./graphics/beta-eta_diff-e
+ps-converted-to.pdf ./graphics/beta-eta_diff.eps>
+(epstopdf)             \includegraphics on input line 778.
+Package epstopdf Info: Output file is already uptodate.
+
+<./graphics/beta-eta_diff-eps-converted-to.pdf, id=829, 1454.43375pt x 738.76pt
+>
+File: ./graphics/beta-eta_diff-eps-converted-to.pdf Graphic file (type pdf)
+ <use ./graphics/beta-eta_diff-eps-converted-to.pdf>
+Package pdftex.def Info: ./graphics/beta-eta_diff-eps-converted-to.pdf used on 
+input line 778.
+(pdftex.def)             Requested size: 276.00105pt x 140.18549pt.
+Package epstopdf Info: Source file: <./graphics/Parallelflow.eps>
+(epstopdf)                    date: 2016-03-06 00:07:37
+(epstopdf)                    size: 1383197 bytes
+(epstopdf)             Output file: <./graphics/Parallelflow-eps-converted-to.p
+df>
+(epstopdf)                    date: 2016-03-06 00:07:46
+(epstopdf)                    size: 955469 bytes
+(epstopdf)             Command: <repstopdf --outfile=./graphics/Parallelflow-ep
+s-converted-to.pdf ./graphics/Parallelflow.eps>
+(epstopdf)             \includegraphics on input line 790.
+Package epstopdf Info: Output file is already uptodate.
+
+<./graphics/Parallelflow-eps-converted-to.pdf, id=833, 1012.78375pt x 551.05875
+pt>
+File: ./graphics/Parallelflow-eps-converted-to.pdf Graphic file (type pdf)
+ <use ./graphics/Parallelflow-eps-converted-to.pdf>
+Package pdftex.def Info: ./graphics/Parallelflow-eps-converted-to.pdf used on i
+nput line 790.
+(pdftex.def)             Requested size: 276.00105pt x 150.16682pt.
+Package epstopdf Info: Source file: <./graphics/Counterflow.eps>
+(epstopdf)                    date: 2016-03-05 23:37:28
+(epstopdf)                    size: 3477388 bytes
+(epstopdf)             Output file: <./graphics/Counterflow-eps-converted-to.pd
+f>
+(epstopdf)                    date: 2016-03-06 00:38:04
+(epstopdf)                    size: 841599 bytes
+(epstopdf)             Command: <repstopdf --outfile=./graphics/Counterflow-eps
+-converted-to.pdf ./graphics/Counterflow.eps>
+(epstopdf)             \includegraphics on input line 797.
+Package epstopdf Info: Output file is already uptodate.
+
+<./graphics/Counterflow-eps-converted-to.pdf, id=834, 1011.78pt x 551.05875pt>
+File: ./graphics/Counterflow-eps-converted-to.pdf Graphic file (type pdf)
+
+<use ./graphics/Counterflow-eps-converted-to.pdf>
+Package pdftex.def Info: ./graphics/Counterflow-eps-converted-to.pdf used on in
+put line 797.
+(pdftex.def)             Requested size: 276.00105pt x 150.31818pt.
+ [20 <./graphics/beta-eta_diff-eps-converted-to.pdf>] [21 <./graphics/Parallelf
+low-eps-converted-to.pdf> <./graphics/Counterflow-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <./graphics/SEAflowtypes.eps>
+(epstopdf)                    date: 2016-03-06 10:42:12
+(epstopdf)                    size: 4007650 bytes
+(epstopdf)             Output file: <./graphics/SEAflowtypes-eps-converted-to.p
+df>
+(epstopdf)                    date: 2016-03-06 10:42:24
+(epstopdf)                    size: 706335 bytes
+(epstopdf)             Command: <repstopdf --outfile=./graphics/SEAflowtypes-ep
+s-converted-to.pdf ./graphics/SEAflowtypes.eps>
+(epstopdf)             \includegraphics on input line 811.
+Package epstopdf Info: Output file is already uptodate.
+
+<./graphics/SEAflowtypes-eps-converted-to.pdf, id=2088, 1024.82875pt x 593.2162
+5pt>
+File: ./graphics/SEAflowtypes-eps-converted-to.pdf Graphic file (type pdf)
+ <use ./graphics/SEAflowtypes-eps-converted-to.pdf>
+Package pdftex.def Info: ./graphics/SEAflowtypes-eps-converted-to.pdf used on i
+nput line 811.
+(pdftex.def)             Requested size: 276.00105pt x 159.7632pt.
+ [22 <./graphics/SEAflowtypes-eps-converted-to.pdf>] (./CascadeSystem.nls [23
+
+] [24]) [25]
+(./CascadeSystem.bbl [26
+
+]) [27]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\noindent' on input line 829.
+
+Package epstopdf Info: Source file: <graphics/ConstTempHX.eps>
+(epstopdf)                    date: 2016-03-06 14:08:02
+(epstopdf)                    size: 595354 bytes
+(epstopdf)             Output file: <graphics/ConstTempHX-eps-converted-to.pdf>
+
+(epstopdf)                    date: 2016-03-06 14:08:09
+(epstopdf)                    size: 12990 bytes
+(epstopdf)             Command: <repstopdf --outfile=graphics/ConstTempHX-eps-c
+onverted-to.pdf graphics/ConstTempHX.eps>
+(epstopdf)             \includegraphics on input line 836.
+Package epstopdf Info: Output file is already uptodate.
+
+<graphics/ConstTempHX-eps-converted-to.pdf, id=2418, 241.90375pt x 235.88126pt>
+File: graphics/ConstTempHX-eps-converted-to.pdf Graphic file (type pdf)
+<use graphics/ConstTempHX-eps-converted-to.pdf>
+Package pdftex.def Info: graphics/ConstTempHX-eps-converted-to.pdf used on inpu
+t line 836.
+(pdftex.def)             Requested size: 207.0021pt x 201.85692pt.
+ [28
+
+ <./graphics/ConstTempHX-eps-converted-to.pdf>] [29]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\noindent' on input line 881.
+
+Package epstopdf Info: Source file: <graphics/CTCHFHX.eps>
+(epstopdf)                    date: 2016-02-15 10:31:06
+(epstopdf)                    size: 609066 bytes
+(epstopdf)             Output file: <graphics/CTCHFHX-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-03-06 11:26:52
+(epstopdf)                    size: 16963 bytes
+(epstopdf)             Command: <repstopdf --outfile=graphics/CTCHFHX-eps-conve
+rted-to.pdf graphics/CTCHFHX.eps>
+(epstopdf)             \includegraphics on input line 888.
+Package epstopdf Info: Output file is already uptodate.
+<graphics/CTCHFHX-eps-converted-to.pdf, id=2435, 251.94125pt x 229.85875pt>
+File: graphics/CTCHFHX-eps-converted-to.pdf Graphic file (type pdf)
+
+<use graphics/CTCHFHX-eps-converted-to.pdf>
+Package pdftex.def Info: graphics/CTCHFHX-eps-converted-to.pdf used on input li
+ne 888.
+(pdftex.def)             Requested size: 276.00105pt x 251.81071pt.
+ [30
+
+ <./graphics/CTCHFHX-eps-converted-to.pdf>] [31]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\noindent' on input line 928.
+
+Package epstopdf Info: Source file: <graphics/StirilingHT.eps>
+(epstopdf)                    date: 2016-01-22 00:37:42
+(epstopdf)                    size: 605054 bytes
+(epstopdf)             Output file: <graphics/StirilingHT-eps-converted-to.pdf>
+
+(epstopdf)                    date: 2016-03-06 11:31:32
+(epstopdf)                    size: 14860 bytes
+(epstopdf)             Command: <repstopdf --outfile=graphics/StirilingHT-eps-c
+onverted-to.pdf graphics/StirilingHT.eps>
+(epstopdf)             \includegraphics on input line 943.
+Package epstopdf Info: Output file is already uptodate.
+
+<graphics/StirilingHT-eps-converted-to.pdf, id=2456, 247.92625pt x 229.85875pt>
+File: graphics/StirilingHT-eps-converted-to.pdf Graphic file (type pdf)
+<use graphics/StirilingHT-eps-converted-to.pdf>
+Package pdftex.def Info: graphics/StirilingHT-eps-converted-to.pdf used on inpu
+t line 943.
+(pdftex.def)             Requested size: 207.0021pt x 191.91908pt.
+ [32
+
+ <./graphics/StirilingHT-eps-converted-to.pdf>] [33]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 966.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 966.
  (./CascadeSystem.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 807.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 807.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 966.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 966.
 Package rerunfilecheck Info: File `CascadeSystem.out' has not changed.
-(rerunfilecheck)             Checksum: 086CAB6338A594B52FCFF62EFD15209C;994.
-
-
-LaTeX Warning: There were undefined references.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 807.
+(rerunfilecheck)             Checksum: DAF2BC2D798A7EBFD9A3C6082B615B24;1436.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 966.
  ) 
 Here is how much of TeX's memory you used:
- 6189 strings out of 493089
- 91380 string characters out of 6134842
- 184560 words of memory out of 5000000
- 9493 multiletter control sequences out of 15000+600000
- 9369 words of font info for 34 fonts, out of 8000000 for 9000
+ 6333 strings out of 493089
+ 94320 string characters out of 6134842
+ 187883 words of memory out of 5000000
+ 9598 multiletter control sequences out of 15000+600000
+ 9976 words of font info for 36 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 34i,18n,28p,1447b,431s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 34i,18n,31p,1447b,431s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
-</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
-/usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
-usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></us
-r/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/
-local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/lo
-cal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local
-/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/te
-xlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/tex
-live/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texli
-ve/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive
-/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on CascadeSystem.pdf (23 pages, 1018522 bytes).
+</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></
+usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></u
+sr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></us
+r/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr
+/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/l
+ocal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/loc
+al/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local
+/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/t
+exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texl
+ive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive
+/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/20
+15/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/201
+5/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2015/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2015/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on CascadeSystem.pdf (33 pages, 6312020 bytes).
 PDF statistics:
- 452 PDF objects out of 1000 (max. 8388607)
- 363 compressed objects within 4 object streams
- 83 named destinations out of 1000 (max. 500000)
- 163 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2556 PDF objects out of 2984 (max. 8388607)
+ 516 compressed objects within 6 object streams
+ 108 named destinations out of 1000 (max. 500000)
+ 251 words of extra memory for PDF output out of 10000 (max. 10000000)
 
