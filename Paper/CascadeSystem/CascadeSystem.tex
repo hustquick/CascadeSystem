@@ -211,8 +211,9 @@ Table~\ref{tab:system-data} shows the basic design parameters of the cascade sys
 \nomenclature{$p_s$}{Main steam pressure of turbine, Pa}
 \nomenclature{$p_c$}{Exhaust pressure of turbine, Pa}
 \nomenclature{$T_{s,d}$}{Designed mean steam temperature of turbine}
-\nomenclature{$p_{cp}$}{Water pressure after condensate pump, Pa}
 \nomenclature{$p_{deaerator}$}{Pressure of deaerator, Pa}
+\nomenclature[S]{1}{First fluid, Air}
+\nomenclature[S]{2}{Second fluid, Water}
 
 \section{System model}
 An EES\nomenclature[C]{EES}{Engineering Equation Solver} model was built to investigate the characteristics of the cascade system. The cascade system is built in several blocks. These blocks are made of circuits with efficiency calculations. Three circuits, air circuit, water circuit and oil circuit, are built with some specific state parameters in some key components. Energy-based models of these key components are created on the basis of their thermodynamic behavior, heat transfer and the second law.
@@ -306,10 +307,12 @@ where
 \begin{equation*}
 	h_{dish,air}=Nu_{tube}\lambda_{dish,air}/d_{i,air}
 \end{equation*}
+\nomenclature{$Nu$}{Nusselt number}
 
 \begin{equation*}
 	Nu_{tube}=c_rNu_{tube}^{'}
 \end{equation*}
+\nomenclature{$c_r$}{Heat transfer correction factor of coiled tube of volumetric receiver}
 
 For helical spiral pipe, multiplier $c_r$ based on curvature ratio can be written as~\cite{Pablo2008}
 
@@ -322,6 +325,10 @@ $Nu_{tube}^{'}$ is the Nusselt number of straight circular tube, which can be ob
 \begin{equation*}
 	Nu_{tube}^{'}= 0.027Re_{tube}^{0.8}Pr_{tube}^{1/3}(\mu_{tube}/\mu_{tube,w})^{0.14}
 \end{equation*}
+\nomenclature{$Pr$}{Prandtl number}
+\nomenclature{$Re$}{Reynolds number}
+\nomenclature[G]{$\mu$}{Viscosity, kg/(m$\cdot$s)}
+\nomenclature[S]{$w$}{Tube wall}
 
 \begin{equation*}
 	c_{r}=1+3.5\frac{d_{i,air}}{d_{cav}-d_{i,air}-2\delta_{a}}
@@ -380,7 +387,8 @@ To determine the reflected loss of the cavity surfaces of the dish receiver $q_{
 \end{equation*}
 
 \subsubsection{Conduction loss of dish receiver}
-Conduction loss of dish receiver $q_{cond,tot}$ equals to the different two parts: convection loss from the insulating layer to the atmosphere $q_{cond,conv}$ and radiation loss from the insulating layer to the atmosphere $q_{cond,rad}$. Both of the two parts are related to the temperature of insulating layer $T_{ins}$.
+Conduction loss of dish receiver $q_{cond,tot}$ equals to the different two parts: convection loss from the insulating layer to the atmosphere $q_{cond,conv}$ and radiation loss from the insulating layer to the atmosphere $q_{cond,rad}$. Both of the two parts are related to the temperature of insulating layer $T_{insu}$.
+\nomenclature{$T_{insu}$}{Temperature of insulating outside layer, K}
 
 \begin{equation*}
 	q_{cond,tot}=\dfrac{T_{cav}-T_{insu}}{\ln\dfrac{d_{cav}+2\delta_{insu}}{d_{cav}}/(2\pi\lambda_{insu}dep_{cav})}
@@ -391,6 +399,7 @@ Conduction loss of dish receiver $q_{cond,tot}$ equals to the different two part
 	\\=\dfrac{k_{insu}Nu_{insu}A_{insu}(T_{insu}-T_{amb})}{d_{cav}+2\delta_{insu}}
 \end{split}
 \end{equation*}
+\nomenclature{$k_{insu}$}{Thermal conductivity of air at the temperature of outside insulating layer, W/(m$\cdot$K)}
 
 where $Nu_{insu}$ can be obtained by the correlation for flow over a circular cylinder.~\cite{Churchill1977} 
 
@@ -412,6 +421,7 @@ Ma~\cite{Ma1993} conducted tests to determine the free convection losses from th
 
 where $h_{free}=k_{film}Nu_{free}/\overline{d_{cav}}$, $\overline{d_{cav}}=d_{cav}-2d_i-4 \delta_a$.
 \nomenclature{$\overline{d_{cav}}$}{Effective diameter of the cavity, m}
+\nomenclature{$d_i$}{Inner diameter of trough receiver, m}$d_{i}=0.066\,$m
 
 Wu~\cite{Wu2010} present a comprehensive review and systematic summarization of convection heat loss from cavity receiver in parabolic dish solar thermal power system. And we choose the correlation presented by Leibfried~\cite{Leibfried1995}. This correlation gives an extended model of Koenig~\cite{Koenig1981} and Stine~\cite{Stine1994} with better results.
 
@@ -455,6 +465,10 @@ LS-3 is used as the trough collector, its sketch is shown in Figure~\ref{fig:tc}
 	\end{center}
 	\label{tab:tc}
 \end{table}
+\nomenclature{$d_o$}{Outer diameter of trough receiver, m}
+\nomenclature{$F_e$}{Soiling factor of the trough collector}
+\nomenclature{$w_{trough}$}{Width of trough collector, m}
+\nomenclature[G]{$\phi$}{Incidence angle}
 
 \begin{equation*}
 	q^{''}=I_rw_{trough}\eta_{opt,0}K(\phi)F_{e}/P
@@ -494,7 +508,7 @@ Stirling engine array is used in the cascade system, Figure~\ref{fig:Layout of S
 \end{figure}
 
 Depending on the flow directions of heating and cooling flows, there are two flow types: parallel flow and counter flow. Figure~\ref{fig:ParallelFlow} and Figure~\ref{fig:CounterFlow} show the heat transfer diagrams of the two flow types.
-%: \nomenclature{$n_1$}{Number of columns of the Stirling engine array} $n_{1}$ is chosen to be 10 and can be optimized later. 
+%: \nomenclature{$n_1$}{Number of columns of the Stirling engine array} $n_1$ is chosen to be 10 and can be optimized later. 
 
 \noindent \begin{figure}[htbp]
 \begin{center}
@@ -512,7 +526,9 @@ Depending on the flow directions of heating and cooling flows, there are two flo
 \end{center}
 \end{figure}
 
-In Figure~\ref{fig:Layout of Stirling engines}, $T_{1,i,1}=T_{1,i},q_{m,1,r}=q_{m,1}/n_{2}$. For $x$ from $1$ to $n_{1}-1$, where $x$ is the column number of Stirling engines, $T_{1,i,x+1}=T_{1,o,x},T_{2,i,x+1}=T_{2,o,x}$.
+In Figure~\ref{fig:Layout of Stirling engines}, $T_{1,i,1}=T_{1,i},q_{m,1,r}=q_{m,1}/n_{2}$. For $x$ from $1$ to $n_1-1$, where $x$ is the column number of Stirling engines, $T_{1,i,x+1}=T_{1,o,x},T_{2,i,x+1}=T_{2,o,x}$.
+\nomenclature{$n_1$}{Number of columns of the Stirling engine array}
+\nomenclature{$q_{m,1}$}{Total mass flow rate of air, kg/s}
 
 Assume that the positive flow direction is to the right, for parallel flow,
 \nomenclature{$n_2$}{Number of rows of the Stirling engine array}
@@ -525,17 +541,18 @@ Assume that the positive flow direction is to the right, for parallel flow,
 	q_{m,2,r}=q_{m,2}/n_{2}
 \end{equation*}
 \nomenclature{$q_{m,2,r}$}{Mass flow rate of water in each row of Stirling engine array, kg/s}
+\nomenclature{$q_{m,2}$}{Total mass flow rate of water, kg/s}
 
 for counter flow,
 
 \begin{equation*}
-	T_{2,o,n_{1}}=T_{2,i}\label{eq:T_2_o_n1}
+	T_{2,o,n_1}=T_{2,i}\label{eq:T_2_o_n1}
 \end{equation*}
 \begin{equation*}
 	q_{m,2,r}=-q_{m,2}/n_{2}
 \end{equation*}
 
-For a Stirling engine in column $x$\nomenclature[S]{$x$}{Stirling engine in column $x$}, $x$ from $1$ to $n_{1}$, according to Appendix~\ref{sec:Stirling-engine-model},
+For a Stirling engine in column $x$\nomenclature[S]{$x$}{Stirling engine in column $x$}, $x$ from $1$ to $n_1$, according to Appendix~\ref{sec:Stirling-engine-model},
 
 \begin{equation*}
 	T_{H,x}=T_{1,i,x}-\dfrac{T_{1,i,x}-T_{1,o,x}}{1-\exp(-\dfrac{U_{stirling,1}A_{stirling,1}}{q_{m,1,r}c_{p,1,x}})}\label{eq:T_H_x}
@@ -568,7 +585,7 @@ And in each Stirling cycle, the heat absorbed by the working gas is
 By solving above equations, efficiency of the Stirling engine array $\eta_{stirling}$ can be obtained by
 
 \begin{equation*}
-	\eta_{stirling}=1-\dfrac{q_{m,2}(h_{2,o,n_{1}}-h_{2,i,1})}{q_{m,1}(h_{1,i,1}-h_{1,o,n_{1}})}\label{eq:eta_stirling-1}
+	\eta_{stirling}=1-\dfrac{q_{m,2}(h_{2,o,n_1}-h_{2,i,1})}{q_{m,1}(h_{1,i,1}-h_{1,o,n_1})}\label{eq:eta_stirling-1}
 \end{equation*}
 
 
@@ -580,12 +597,13 @@ and power of each Stirling engine in column $x$
 
 and power of the Stirling engine array
 \begin{equation*}
-	P_{stirling}=\eta_{stirling}q_{m,1}(h_{1,i,1}-h_{1,o,n_{1}})
+	P_{stirling}=\eta_{stirling}q_{m,1}(h_{1,i,1}-h_{1,o,n_1})
 \end{equation*}
 
 \subsection{Steam turbine}
 
 A steam turbine product, N-6 2.35, of Qingdao Jieneng Power Station Engineering Co., Ltd is used for calculation. Its isentropic efficiency $\eta_{i,turbine}$ can be obtained by the given design parameters.
+\nomenclature[S]{$i$}{Isentropic}
 
 Using basic design parameters in Table~\ref{tab:system-data}, parameters of state 2,2 and 2,3 in Figure~\ref{fig:System-1} of the steam turbine can be obtained by the following equations.
 
@@ -602,6 +620,7 @@ The output power of steam turbine
 \begin{equation*}
 	P_{turbine}=\left(1-y\right)q_{m,2}\left(h_{2,1}-h_{2,2}\right)+yq_{m,2}\left(h_{2,1}-h_{2,3}\right)
 \end{equation*}
+\nomenclature{$y$}{Extraction rate of steam turbine}
 
 The sum power of pumps
 
@@ -644,6 +663,7 @@ Steam turbine has the same main parameters and same isentropic efficiency with t
 \begin{equation*}
 	\eta_{i,turbine}=\frac{h_{2,1,s}-h_{2,2,s}}{h_{2,1,s}-h_{i,2,2,s}}
 \end{equation*}
+\nomenclature[S]{$s$}{Separate systems}
 
 \begin{equation*}
 	\eta_{i,turbine}=\frac{h_{2,1,s}-h_{2,3,s}}{h_{2,1,s}-h_{i,2,3,s}}
@@ -730,6 +750,13 @@ The results presented in Table~\ref{tab:importantResults} are issued using desig
 	\end{center}
 	\label{tab:importantResults}
 \end{table}
+\nomenclature[G]{$\eta_{system}$}{Efficiency of cascade system}
+\nomenclature[G]{$\eta_{system,s}$}{Efficiency of separate systems}
+\nomenclature[G]{$\eta_{stirling}$}{Efficiency of Stirling engine array}
+\nomenclature[G]{$\eta_{stirling,s}$}{Efficiency of Stirling engines in separate dish system}
+\nomenclature[G]{$\eta_{diff}$}{Efficiency difference of cascade system and separate systems, $\eta_{system}-\eta_{system,s}$}
+\nomenclature{$P_{stirling}$}{Power of Stirling engine array, W}
+\nomenclature{$P_{stirling,s}$}{Total power of Stirling engines in separate dish system, W}
 
 \begin{table}[htbp]
 	\caption{Results of Stirling engine array with two different flow types}
@@ -760,6 +787,7 @@ The results presented in Table~\ref{tab:importantResults} are issued using desig
 \subsection{Influence of $I_r$}
 
 It is found that $I_r$ can effect the efficiency difference of cascade system and separate systems $\eta_{diff}$. Figure~\ref{fig:I_r-eta_diff} shows curve fits of efficiency differences $\eta_{diff}$ versus $I_r$ with a series of different Stirling engine array power ratios. As it can be seen, for a higher $I_r$ ($I_r > 550\,$W/m$^2$), $\eta_{diff}>0$, the cascade system can achieve a higher efficiency than corresponding separate systems, and increase $\beta$ achieve a higher $\eta_{diff}$. For a lower $I_r$ ($I_r < 550\,$W/m$^2$), increase $\beta$ may achieve a lower $\eta_{diff}$, even a negative $\eta_{diff}$. At this situation, the cascade system achieves a lower efficiency than corresponding separate systems, and the higher $\beta$, the lower $\eta_{diff}$. This means $I_r$ is a key factor to determine whether cascade system should be applied in a certain location.
+\nomenclature[G]{$\beta$}{Ratio of power of Stirling engines to the total output power of cascade system}
 
 \noindent \begin{figure}[htbp]
 \begin{center}
