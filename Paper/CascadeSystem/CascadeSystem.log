@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.4)  6 MAR 2016 16:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.4)  6 MAR 2016 17:10
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -802,7 +802,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 994.
 Here is how much of TeX's memory you used:
  6334 strings out of 493089
  94327 string characters out of 6134842
- 187883 words of memory out of 5000000
+ 187885 words of memory out of 5000000
  9598 multiletter control sequences out of 15000+600000
  9976 words of font info for 36 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -824,7 +824,7 @@ ive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive
 5/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2015/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2015/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on CascadeSystem.pdf (34 pages, 6313550 bytes).
+Output written on CascadeSystem.pdf (34 pages, 6313592 bytes).
 PDF statistics:
  2562 PDF objects out of 2984 (max. 8388607)
  521 compressed objects within 6 object streams
