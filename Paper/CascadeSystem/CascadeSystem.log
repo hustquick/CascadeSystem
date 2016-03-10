@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.4)  6 MAR 2016 17:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.4)  10 MAR 2016 11:13
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -441,11 +441,11 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
  [4 <./graphics/cascadeSystem-eps-converted-to.pdf>] [5 <./graphics/T-s_Water-e
 ps-converted-to.pdf> <./graphics/HeatTransfer_Water-SEs-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <graphics/dishReceiver1.eps>
-(epstopdf)                    date: 2016-03-06 14:00:41
+(epstopdf)                    date: 2016-03-10 10:53:02
 (epstopdf)                    size: 1689410 bytes
 (epstopdf)             Output file: <graphics/dishReceiver1-eps-converted-to.pd
 f>
-(epstopdf)                    date: 2016-03-06 14:00:55
+(epstopdf)                    date: 2016-03-10 10:53:02
 (epstopdf)                    size: 80483 bytes
 (epstopdf)             Command: <repstopdf --outfile=graphics/dishReceiver1-eps
 -converted-to.pdf graphics/dishReceiver1.eps>
@@ -480,26 +480,26 @@ input line 293.
 (pdftex.def)             Requested size: 241.49895pt x 181.62828pt.
  [7 <./graphics/dishReceiver1-eps-converted-to.pdf>] [8 <./graphics/thermalLoss
 es-eps-converted-to.pdf>] [9] [10]
-Package epstopdf Info: Source file: <./graphics/troughCollector.eps>
+Package epstopdf Info: Source file: <./graphics/TroughCollector.eps>
 (epstopdf)                    date: 2016-02-12 11:30:21
 (epstopdf)                    size: 1471202 bytes
-(epstopdf)             Output file: <./graphics/troughCollector-eps-converted-t
+(epstopdf)             Output file: <./graphics/TroughCollector-eps-converted-t
 o.pdf>
 (epstopdf)                    date: 2016-03-01 17:21:35
 (epstopdf)                    size: 21705 bytes
-(epstopdf)             Command: <repstopdf --outfile=./graphics/troughCollector
--eps-converted-to.pdf ./graphics/troughCollector.eps>
+(epstopdf)             Command: <repstopdf --outfile=./graphics/TroughCollector
+-eps-converted-to.pdf ./graphics/TroughCollector.eps>
 (epstopdf)             \includegraphics on input line 440.
 Package epstopdf Info: Output file is already uptodate.
 
-<./graphics/troughCollector-eps-converted-to.pdf, id=257, 769.87625pt x 621.321
+<./graphics/TroughCollector-eps-converted-to.pdf, id=257, 769.87625pt x 621.321
 24pt>
-File: ./graphics/troughCollector-eps-converted-to.pdf Graphic file (type pdf)
- <use ./graphics/troughCollector-eps-converted-to.pdf>
-Package pdftex.def Info: ./graphics/troughCollector-eps-converted-to.pdf used o
+File: ./graphics/TroughCollector-eps-converted-to.pdf Graphic file (type pdf)
+ <use ./graphics/TroughCollector-eps-converted-to.pdf>
+Package pdftex.def Info: ./graphics/TroughCollector-eps-converted-to.pdf used o
 n input line 440.
 (pdftex.def)             Requested size: 241.49895pt x 194.9019pt.
- [11 <./graphics/troughCollector-eps-converted-to.pdf>]
+ [11 <./graphics/TroughCollector-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <./graphics/StirlingEngineArray.eps>
 (epstopdf)                    date: 2016-03-01 14:33:13
 (epstopdf)                    size: 897446 bytes
@@ -601,11 +601,11 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 787.
 
 Package epstopdf Info: Source file: <./graphics/I_r-eta_diff.eps>
-(epstopdf)                    date: 2016-03-06 00:09:48
+(epstopdf)                    date: 2016-03-10 10:53:01
 (epstopdf)                    size: 8933854 bytes
 (epstopdf)             Output file: <./graphics/I_r-eta_diff-eps-converted-to.p
 df>
-(epstopdf)                    date: 2016-03-06 00:10:00
+(epstopdf)                    date: 2016-03-10 10:53:01
 (epstopdf)                    size: 1454202 bytes
 (epstopdf)             Command: <repstopdf --outfile=./graphics/I_r-eta_diff-ep
 s-converted-to.pdf ./graphics/I_r-eta_diff.eps>
@@ -633,11 +633,11 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 
 [18] [19 <./graphics/I_r-eta_diff-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <./graphics/beta-eta_diff.eps>
-(epstopdf)                    date: 2016-03-05 18:33:23
+(epstopdf)                    date: 2016-03-10 10:53:02
 (epstopdf)                    size: 5931407 bytes
 (epstopdf)             Output file: <./graphics/beta-eta_diff-eps-converted-to.
 pdf>
-(epstopdf)                    date: 2016-03-05 18:38:12
+(epstopdf)                    date: 2016-03-10 10:53:02
 (epstopdf)                    size: 1818808 bytes
 (epstopdf)             Command: <repstopdf --outfile=./graphics/beta-eta_diff-e
 ps-converted-to.pdf ./graphics/beta-eta_diff.eps>
@@ -652,11 +652,11 @@ Package pdftex.def Info: ./graphics/beta-eta_diff-eps-converted-to.pdf used on
 input line 806.
 (pdftex.def)             Requested size: 276.00105pt x 140.18549pt.
 Package epstopdf Info: Source file: <./graphics/Parallelflow.eps>
-(epstopdf)                    date: 2016-03-06 00:07:37
+(epstopdf)                    date: 2016-03-10 10:53:01
 (epstopdf)                    size: 1383197 bytes
 (epstopdf)             Output file: <./graphics/Parallelflow-eps-converted-to.p
 df>
-(epstopdf)                    date: 2016-03-06 00:07:46
+(epstopdf)                    date: 2016-03-10 10:53:01
 (epstopdf)                    size: 955469 bytes
 (epstopdf)             Command: <repstopdf --outfile=./graphics/Parallelflow-ep
 s-converted-to.pdf ./graphics/Parallelflow.eps>
@@ -671,11 +671,11 @@ Package pdftex.def Info: ./graphics/Parallelflow-eps-converted-to.pdf used on i
 nput line 818.
 (pdftex.def)             Requested size: 276.00105pt x 150.16682pt.
 Package epstopdf Info: Source file: <./graphics/Counterflow.eps>
-(epstopdf)                    date: 2016-03-05 23:37:28
+(epstopdf)                    date: 2016-03-10 10:53:01
 (epstopdf)                    size: 3477388 bytes
 (epstopdf)             Output file: <./graphics/Counterflow-eps-converted-to.pd
 f>
-(epstopdf)                    date: 2016-03-06 00:38:04
+(epstopdf)                    date: 2016-03-10 10:53:01
 (epstopdf)                    size: 841599 bytes
 (epstopdf)             Command: <repstopdf --outfile=./graphics/Counterflow-eps
 -converted-to.pdf ./graphics/Counterflow.eps>
@@ -692,11 +692,11 @@ put line 825.
  [20 <./graphics/beta-eta_diff-eps-converted-to.pdf>] [21 <./graphics/Parallelf
 low-eps-converted-to.pdf> <./graphics/Counterflow-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <./graphics/SEAflowtypes.eps>
-(epstopdf)                    date: 2016-03-06 10:42:12
+(epstopdf)                    date: 2016-03-10 10:53:01
 (epstopdf)                    size: 4007650 bytes
 (epstopdf)             Output file: <./graphics/SEAflowtypes-eps-converted-to.p
 df>
-(epstopdf)                    date: 2016-03-06 10:42:24
+(epstopdf)                    date: 2016-03-10 10:53:01
 (epstopdf)                    size: 706335 bytes
 (epstopdf)             Command: <repstopdf --outfile=./graphics/SEAflowtypes-ep
 s-converted-to.pdf ./graphics/SEAflowtypes.eps>
@@ -721,11 +721,11 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\noindent' on input line 857.
 
 Package epstopdf Info: Source file: <graphics/ConstTempHX.eps>
-(epstopdf)                    date: 2016-03-06 14:08:02
+(epstopdf)                    date: 2016-03-10 10:53:01
 (epstopdf)                    size: 595354 bytes
 (epstopdf)             Output file: <graphics/ConstTempHX-eps-converted-to.pdf>
 
-(epstopdf)                    date: 2016-03-06 14:08:09
+(epstopdf)                    date: 2016-03-10 10:53:01
 (epstopdf)                    size: 12990 bytes
 (epstopdf)             Command: <repstopdf --outfile=graphics/ConstTempHX-eps-c
 onverted-to.pdf graphics/ConstTempHX.eps>
@@ -746,10 +746,10 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\noindent' on input line 909.
 
 Package epstopdf Info: Source file: <graphics/CTCHFHX.eps>
-(epstopdf)                    date: 2016-02-15 10:31:06
+(epstopdf)                    date: 2016-03-10 10:53:01
 (epstopdf)                    size: 609066 bytes
 (epstopdf)             Output file: <graphics/CTCHFHX-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-03-06 11:26:52
+(epstopdf)                    date: 2016-03-10 10:53:01
 (epstopdf)                    size: 16963 bytes
 (epstopdf)             Command: <repstopdf --outfile=graphics/CTCHFHX-eps-conve
 rted-to.pdf graphics/CTCHFHX.eps>
@@ -770,11 +770,11 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\noindent' on input line 956.
 
 Package epstopdf Info: Source file: <graphics/StirilingHT.eps>
-(epstopdf)                    date: 2016-01-22 00:37:42
+(epstopdf)                    date: 2016-03-10 10:53:02
 (epstopdf)                    size: 605054 bytes
 (epstopdf)             Output file: <graphics/StirilingHT-eps-converted-to.pdf>
 
-(epstopdf)                    date: 2016-03-06 11:31:32
+(epstopdf)                    date: 2016-03-10 10:53:02
 (epstopdf)                    size: 14860 bytes
 (epstopdf)             Command: <repstopdf --outfile=graphics/StirilingHT-eps-c
 onverted-to.pdf graphics/StirilingHT.eps>
