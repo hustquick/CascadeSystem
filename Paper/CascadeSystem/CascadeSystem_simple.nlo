@@ -1,0 +1,60 @@
+\nomenclatureentry{a$x$@[{$x$}]\begingroup Dryness fraction\nomeqref {0}|nompageref}{4}
+\nomenclatureentry{a$P_{ge}$@[{$P_{ge}$}]\begingroup Power of generator, W\nomeqref {0}|nompageref}{6}
+\nomenclatureentry{a$I_r$@[{$I_r$}]\begingroup Direct Normal Irradiance, W/m$^2$\nomeqref {0}|nompageref}{6}
+\nomenclatureentry{a$T_{amb}$@[{$T_{amb}$}]\begingroup Ambient temperature, K\nomeqref {0}|nompageref}{6}
+\nomenclatureentry{a$p_{amb}$@[{$p_{amb}$}]\begingroup Ambient pressure, Pa\nomeqref {0}|nompageref}{6}
+\nomenclatureentry{a$v_{wind}$@[{$v_{wind}$}]\begingroup Ambient wind speed, m/s\nomeqref {0}|nompageref}{6}
+\nomenclatureentry{a$T_{dr,i}$@[{$T_{dr,i}$}]\begingroup Dish inlet temperature, K\nomeqref {0}|nompageref}{6}
+\nomenclatureentry{a$T_{dr,o}$@[{$T_{dr,o}$}]\begingroup Dish outlet temperature, K\nomeqref {0}|nompageref}{6}
+\nomenclatureentry{a$p_{dr}$@[{$p_{dr}$}]\begingroup Air pressure in dish, Pa\nomeqref {0}|nompageref}{6}
+\nomenclatureentry{a$A_{dc}$@[{$A_{dc}$}]\begingroup Aperture area of each dish collector, m$^2$\nomeqref {0}|nompageref}{6}
+\nomenclatureentry{G$\Delta{}T_{3,2,min}$@[{$\Delta{}T_{3,2,min}$}]\begingroup Minimum temperature difference between oil and water in the oil-to-water heat exchanger, K\nomeqref {0}|nompageref}{6}
+\nomenclatureentry{a$T_{tc,o}$@[{$T_{tc,o}$}]\begingroup Trough outlet temperature, K\nomeqref {0}|nompageref}{6}
+\nomenclatureentry{a$p_{tc}$@[{$p_{tc}$}]\begingroup Air pressure in trough, Pa\nomeqref {0}|nompageref}{6}
+\nomenclatureentry{a$A_{tc}$@[{$A_{tc}$}]\begingroup Aperture area of each trough collector, m$^2$\nomeqref {0}|nompageref}{6}
+\nomenclatureentry{a$T_{1.2}$@[{$T_{1.2}$}]\begingroup Air temperature after heating Stirling engine, K\nomeqref {0}|nompageref}{6}
+\nomenclatureentry{a$n_{se}$@[{$n_{se}$}]\begingroup Speed of Stirling engine, s$^{-1}$\nomeqref {0}|nompageref}{6}
+\nomenclatureentry{a$U_{stirling,1}$@[{$U_{stirling,1}$}]\begingroup Overall heat transfer coefficient of Stirling engine at air side, W/(m$^2\cdot$K)\nomeqref {0}|nompageref}{6}
+\nomenclatureentry{a$U_{stirling,2}$@[{$U_{stirling,2}$}]\begingroup Overall heat transfer coefficient of Stirling engine at water side, W/(m$^2\cdot$K)\nomeqref {0}|nompageref}{6}
+\nomenclatureentry{a$T_s$@[{$T_s$}]\begingroup Main steam temperature of turbine, K\nomeqref {0}|nompageref}{6}
+\nomenclatureentry{a$p_s$@[{$p_s$}]\begingroup Main steam pressure of turbine, Pa\nomeqref {0}|nompageref}{6}
+\nomenclatureentry{a$p_c$@[{$p_c$}]\begingroup Exhaust pressure of turbine, Pa\nomeqref {0}|nompageref}{6}
+\nomenclatureentry{a$T_{s,d}$@[{$T_{s,d}$}]\begingroup Designed mean steam temperature of turbine\nomeqref {0}|nompageref}{6}
+\nomenclatureentry{a$p_{cp}$@[{$p_{cp}$}]\begingroup Water pressure after condensate pump, Pa\nomeqref {0}|nompageref}{6}
+\nomenclatureentry{a$p_{da}$@[{$p_{da}$}]\begingroup Outlet pressure of deaerator, Pa\nomeqref {0}|nompageref}{6}
+\nomenclatureentry{CEES@[{EES}]\begingroup Engineering Equation Solver\nomeqref {0}|nompageref}{6}
+\nomenclatureentry{CSAM@[{SAM}]\begingroup System Advisor Model\nomeqref {0}|nompageref}{7}
+\nomenclatureentry{CSES@[{SES}]\begingroup Stirling Energy System\nomeqref {0}|nompageref}{7}
+\nomenclatureentry{a$d_{cav}$@[{$d_{cav}$}]\begingroup Diameter of volumetric receiver cavity, m\nomeqref {0}|nompageref}{7}
+\nomenclatureentry{G$\delta_{ins}$@[{$\delta_{ins}$}]\begingroup Thickness of receiver insulating layer, m\nomeqref {0}|nompageref}{7}
+\nomenclatureentry{a$dep_{cav}$@[{$dep_{cav}$}]\begingroup Depth of volumetric receiver cavity, m\nomeqref {0}|nompageref}{7}
+\nomenclatureentry{a$d_{ap}$@[{$d_{ap}$}]\begingroup Aperture diameter of volumetric receiver, m\nomeqref {0}|nompageref}{7}
+\nomenclatureentry{G$\lambda_{ins}$@[{$\lambda_{ins}$}]\begingroup Thermal conductivity of receiver insulating layer, W/(m$\cdot$K)\nomeqref {0}|nompageref}{7}
+\nomenclatureentry{G$\epsilon_{ins}$@[{$\epsilon_{ins}$}]\begingroup Emissivity of reciver insulating layer\nomeqref {0}|nompageref}{7}
+\nomenclatureentry{G$\delta_{a}$@[{$\delta_{a}$}]\begingroup Thickness of air tube in volumetric receiver, m\nomeqref {0}|nompageref}{7}
+\nomenclatureentry{a$d_{dr,i}$@[{$d_{dr,i}$}]\begingroup Inner diameter of air tube, m\nomeqref {0}|nompageref}{7}
+\nomenclatureentry{G$\theta_{dr}$@[{$\theta_{dr}$}]\begingroup Dish aperture angle (0$^{\circ}$ is horizental, 90$^{\circ}$ is vertically down)\nomeqref {0}|nompageref}{7}
+\nomenclatureentry{G$\gamma_{dc}$@[{$\gamma_{dc}$}]\begingroup Intercept factor of dish receiver\nomeqref {0}|nompageref}{7}
+\nomenclatureentry{G$\eta_{shading,dc}$@[{$\eta_{shading,dc}$}]\begingroup Shading factor\nomeqref {0}|nompageref}{7}
+\nomenclatureentry{G$\rho_{dc}$@[{$\rho_{dc}$}]\begingroup Reflectivity of dish receiver\nomeqref {0}|nompageref}{7}
+\nomenclatureentry{a$A_{stirling,1}$@[{$A_{stirling,1}$}]\begingroup Heat transfer area of Stirling engine at air side, m$^2$\nomeqref {0}|nompageref}{7}
+\nomenclatureentry{a$A_{stirling,2}$@[{$A_{stirling,2}$}]\begingroup Heat transfer area of Stirling engine at water side, m$^2$\nomeqref {0}|nompageref}{7}
+\nomenclatureentry{a$k_{stirling}$@[{$k_{stirling}$}]\begingroup Specific heat ratio of the working gas in Stirling engine\nomeqref {0}|nompageref}{7}
+\nomenclatureentry{G$\gamma_{stirling}$@[{$\gamma_{stirling}$}]\begingroup Compression ratio of Stirling engine\nomeqref {0}|nompageref}{7}
+\nomenclatureentry{a$n$@[{$n$}]\begingroup Amount of working gas in each Stirling engine, mol\nomeqref {0}|nompageref}{7}
+\nomenclatureentry{a$n_{se}$@[{$n_{se}$}]\begingroup Number of Stirling engines in the Stirling engine array\nomeqref {0}|nompageref}{7}
+\nomenclatureentry{a$q_{in}$@[{$q_{in}$}]\begingroup Solar energy launched into dish receiver aperture, W\nomeqref {1}|nompageref}{9}
+\nomenclatureentry{a$q_{rad,ref}$@[{$q_{rad,ref}$}]\begingroup Reflected radiation by volumetric receiver, W\nomeqref {1}|nompageref}{9}
+\nomenclatureentry{a$q_{dr,air}$@[{$q_{dr,air}$}]\begingroup Energy absorbed by air in the dish collector\nomeqref {1}|nompageref}{9}
+\nomenclatureentry{a$q_{cond,tot}$@[{$q_{cond,tot}$}]\begingroup Total conduction loss\nomeqref {1}|nompageref}{9}
+\nomenclatureentry{a$q_{conv,tot}$@[{$q_{conv,tot}$}]\begingroup Total convection loss\nomeqref {1}|nompageref}{9}
+\nomenclatureentry{a$q_{rad,emit}$@[{$q_{rad,emit}$}]\begingroup Radiation emitted by dish receiver\nomeqref {1}|nompageref}{9}
+\nomenclatureentry{G$\alpha_{eff}$@[{$\alpha_{eff}$}]\begingroup Effective absorptance\nomeqref {3}|nompageref}{9}
+\nomenclatureentry{a$K$@[{$K$}]\begingroup Incidence angle modifier of trough collector\nomeqref {4}|nompageref}{11}
+\nomenclatureentry{G$\eta_{opt,0}$@[{$\eta_{opt,0}$}]\begingroup Optical efficiency with an incidence angle of 0\nomeqref {4}|nompageref}{11}
+\nomenclatureentry{a$U$@[{$U$}]\begingroup Overall heat transfer coefficient, W/(m$^2\cdot$K)\nomeqref {4}|nompageref}{11}
+\nomenclatureentry{a$q^{''}$@[{$q^{''}$}]\begingroup Heat flux, W/m$^2$\nomeqref {4}|nompageref}{11}
+\nomenclatureentry{a$n_2$@[{$n_2$}]\begingroup Number of rows of the Stirling engine array\nomeqref {5}|nompageref}{12}
+\nomenclatureentry{a$q_{m,1,r}$@[{$q_{m,1,r}$}]\begingroup Mass flow rate of air in each row of Stirling engine array, kg/s\nomeqref {5}|nompageref}{12}
+\nomenclatureentry{a$q_{m,2,r}$@[{$q_{m,2,r}$}]\begingroup Mass flow rate of water in each row of Stirling engine array, kg/s\nomeqref {5}|nompageref}{14}
+\nomenclatureentry{S$x$@[{$x$}]\begingroup Stirling engine in column $x$\nomeqref {5}|nompageref}{14}
