@@ -107,53 +107,53 @@ Table~\ref{tab:system-data} shows the basic design parameters of the cascade sys
 %		\toprule
 %		\multicolumn{2}{c}{Nominal electric power}\\
 %		\midrule
-%		$P_{generator}$		&	6$\times10^6$ W\\
+%		$P_{ge}$		&	6$\times10^6$ W\\
 %		\midrule
 %		\multicolumn{2}{c}{Environment}\\
 %		\midrule
 %		$I_{DNI}$			&	700 W/m$^2$\\
 %		$T_{amb}$			&	293 K\\
 %		$p_{amb}$			&	1$\times10^5$ Pa\\
-%		$v_{wind}$			&	4 m/s\\
+%		$v_w$			&	4 m/s\\
 %		\midrule
 %		\multicolumn{2}{c}{Dish collector}\\
 %		\midrule
-%		$T_{dish,inlet}$	&	623K\\
-%		$T_{dish,outlet}$	&	1073 K\\
-%		$p_{dish}$			&	5$\times10^5$ Pa\\ 
+%		$T_{dr,i}$	&	623K\\
+%		$T_{dr,o}$	&	1073 K\\
+%		$p_{dr}$			&	5$\times10^5$ Pa\\ 
 %		$A_{dc}$	&	87.7 m$^2$\\
 %		\midrule
 %		\multicolumn{2}{c}{Trough collector}\\
 %		\midrule
-%		$\Delta{}T_{oil,water,min}$	&	15 K \\
-%		$T_{trough,outlet}$	&	623 K\\
-%		$p_{trough}$		&	2$\times10^6$ Pa\\
+%		$\Delta{}T_{3,2,min}$	&	15 K \\
+%		$T_{tr,o}$	&	623 K\\
+%		$p_{tr}$		&	2$\times10^6$ Pa\\
 %		$A_{tc}$	&	545 m$^2$\\
 %		\midrule
 %		\multicolumn{2}{c}{Stirling engine}\\
 %		\midrule
-%		$T_{1,afterstirling}$	&	673 K\\
-%		$n_{se}$			&	10 s$^{-1}$\\
-%		$U_{stirling,1}$	&	30 W/(m$^2\cdot$K)\\
-%		$U_{stirling,2}$	&	150 W/(m$^2\cdot$K)\\
-%		$A_{stirling,1}$	&	8 m$^2$\\
-%		$A_{stirling,2}$	&	8 m$^2$\\
-%		$k_{stirling}$		&	1.4\\
-%		$\gamma_{stirling}	$	&	3.375\\
+%		$T_{1,ses,o}$	&	673 K\\
+%		$s_{se}$			&	10 s$^{-1}$\\
+%		$U_{se,1}$	&	30 W/(m$^2\cdot$K)\\
+%		$U_{se,2}$	&	150 W/(m$^2\cdot$K)\\
+%		$A_{se,1}$	&	8 m$^2$\\
+%		$A_{se,2}$	&	8 m$^2$\\
+%		$k_{se}$		&	1.4\\
+%		$\gamma_{se}	$	&	3.375\\
 %		$n$					&	7.73$\times{}10^{-2}$ mol\\
-%		$n_{stirlingEngine}$	&	100\\
+%		$n_{se}$	&	100\\
 %		\midrule
 %		\multicolumn{2}{c}{Steam turbine}\\
 %		\midrule
-%		$T_s$				&	340$^\circ$C\\
-%		$p_s$				&	2.35$\times10^6$ Pa\\
-%		$p_c$				&	1.5$\times10^4$ Pa\\
-%		$T_{s,d}$			&	390$^\circ$C\\
+%		$T_{tb,s}$				&	340$^\circ$C\\
+%		$p_{tb,s}$				&	2.35$\times10^6$ Pa\\
+%		$p_{tb,c}$				&	1.5$\times10^4$ Pa\\
+%		$T_{tb,s,d}$			&	390$^\circ$C\\
 %		$p_{c,p}$			&	1$\times10^6$ Pa\\
 %		\midrule
 %		\multicolumn{2}{c}{Deaerator}\\
 %		\midrule
-%		$p_{deaerator}$ & 1$\times10^6$ Pa\\
+%		$p_{da}$ & 1$\times10^6$ Pa\\
 %		\bottomrule
 %	\end{tabular}
 %	\end{center}
@@ -166,52 +166,57 @@ Table~\ref{tab:system-data} shows the basic design parameters of the cascade sys
 		\toprule
 		Parameters			&	Value\\
 		\midrule
-		$I_r$			&	700 W/m$^2$\\
+		$I_r$				&	700 W/m$^2$\\
 		$T_{amb}$			&	293 K\\
 		$p_{amb}$			&	1$\times10^5$ Pa\\
-		$v_{wind}$			&	4 m/s\\
-		$P_{generator}$		&	6$\times10^6$ W\\
-		$T_{dish,inlet}$	&	623K\\
-		$T_{dish,outlet}$	&	1073 K\\
-		$p_{dish}$			&	5$\times10^5$ Pa\\
-		$\Delta{}T_{oil,water,min}$	&	15 K \\
-		$T_{trough,outlet}$	&	623 K\\
-		$p_{trough}$		&	2$\times10^6$ Pa\\
-		$T_{1,afterstirling}$	&	673 K\\
-		$n_{stirlingEngine}$	&	100\\
-		$T_s$				&	340$^\circ$C\\
-		$p_s$				&	2.35$\times10^6$ Pa\\
-		$p_c$				&	1.5$\times10^4$ Pa\\
-		$T_{s,d}$			&	390$^\circ$C\\
-%		$p_{c,p}$			&	1$\times10^6$ Pa\\
-		$p_{deaerator}$ 	& 	1$\times10^6$ Pa\\
+		$v_w$			&	4 m/s\\
+		$P_{ge}$			&	6$\times10^6$ W\\
+		$T_{dr,i}$			&	623K\\
+		$T_{dr,o}$			&	1073 K\\
+		$p_{dr}$			&	5$\times10^5$ Pa\\
+		$\Delta{}T_{3,2,min}$	&	15 K \\
+		$T_{tr,o}$			&	623 K\\
+		$p_{tr}$			&	2$\times10^6$ Pa\\
+		$T_{1,ses,o}$		&	673 K\\
+		$n_{se}$			&	100\\
+		$T_{tb,s}$			&	340$^\circ$C\\
+		$p_{tb,s}$			&	2.35$\times10^6$ Pa\\
+		$p_{tb,c}$			&	1.5$\times10^4$ Pa\\
+		$T_{tb,s,d}$		&	390$^\circ$C\\
+		$p_{da}$ 			& 	1$\times10^6$ Pa\\
 		\bottomrule
 	\end{tabular}
 	\end{center}
 	\label{tab:system-data}
 \end{table}
-\nomenclature{$P_{generator}$}{Power of generator, W}
+\nomenclature{$P$}{Power, W}
 \nomenclature{$I_r$}{Direct Normal Irradiance, W/m$^2$}
-\nomenclature{$T_{amb}$}{Ambient temperature, K}
-\nomenclature{$p_{amb}$}{Ambient pressure, Pa}
-\nomenclature{$v_{wind}$}{Ambient wind speed, m/s}
-\nomenclature{$T_{dish,inlet}$}{Dish inlet temperature, K}
-\nomenclature{$T_{dish,outlet}$}{Dish outlet temperature}
-\nomenclature{$p_{dish}$}{Air pressure in dish, Pa}
+%\nomenclature{$T_{amb}$}{Ambient temperature, K}
+\nomenclature{$p$}{Pressure, Pa}
+\nomenclature{$v_w$}{Ambient wind speed, m/s}
+%\nomenclature{$T_{dr,i}$}{Dish inlet temperature, K}
+%\nomenclature{$T_{dr,o}$}{Dish outlet temperature, K}
+%\nomenclature{$p_{dr}$}{Air pressure in dish, Pa}
 \nomenclature[S]{$dc$}{Dish collector}
-\nomenclature[G]{$\Delta{}T_{oil,water,min}$}{Minimum temperature difference between oil and water in the oil-to-water heat exchanger, K}
-\nomenclature{$T_{trough,outlet}$}{Trough outlet temperature}
-\nomenclature{$p_{trough}$}{Air pressure in trough, Pa}
+\nomenclature[G]{$\Delta{}T_{3,2,min}$}{Minimum temperature difference between oil and water in the oil-to-water heat exchanger, K}
+%\nomenclature{$T_{tr,o}$}{Trough outlet temperature, K}
+%\nomenclature{$p_{tr}$}{Air pressure in trough, Pa}
 \nomenclature[S]{$tc$}{Trough collector}
-\nomenclature{$T_{1,afterstirling}$}{Air temperature after heating Stirling engine}
-\nomenclature{$n_{se}$}{Speed of Stirling engine, s$^{-1}$}
-\nomenclature{$U_{stirling,1}$}{Overall heat transfer coefficient of Stirling engine at air side, W/(m$^2\cdot$K)}
-\nomenclature{$U_{stirling,2}$}{Overall heat transfer coefficient of Stirling engine at water side, W/(m$^2\cdot$K)}
-\nomenclature{$T_s$}{Main steam temperature of turbine}
-\nomenclature{$p_s$}{Main steam pressure of turbine, Pa}
-\nomenclature{$p_c$}{Exhaust pressure of turbine, Pa}
-\nomenclature{$T_{s,d}$}{Designed mean steam temperature of turbine}
-\nomenclature{$p_{deaerator}$}{Pressure of deaerator, Pa}
+\nomenclature{$T_{1,ses,o}$}{Air temperature after heating Stirling engine, K}
+\nomenclature[S]{$se$}{Stirling engine}
+\nomenclature[S]{$ses$}{Stirling engine array}
+\nomenclature[S]{$tb$}{Steam turbine}
+\nomenclature[S]{$dr$}{Dish receiver}
+\nomenclature[S]{$tr$}{Trough receiver}
+\nomenclature[S]{$da$}{Deaerator}
+\nomenclature{$s_{se}$}{Speed of Stirling engine, s$^{-1}$}
+\nomenclature{$U_{se,1}$}{Overall heat transfer coefficient of Stirling engine at air side, W/(m$^2\cdot$K)}
+\nomenclature{$U_{se,2}$}{Overall heat transfer coefficient of Stirling engine at water side, W/(m$^2\cdot$K)}
+\nomenclature{$T_{tb,s}$}{Main steam temperature of turbine, K}
+\nomenclature{$p_{tb,s}$}{Main steam pressure of turbine, Pa}
+\nomenclature{$p_{tb,c}$}{Exhaust pressure of turbine, Pa}
+\nomenclature{$T_{tb,s,d}$}{Designed mean steam temperature of turbine, K}
+%\nomenclature{$p_{da}$}{Pressure of deaerator, Pa}
 \nomenclature[S]{1}{First fluid, Air}
 \nomenclature[S]{2}{Second fluid, Water}
 
@@ -243,16 +248,16 @@ A dish collector product of SES\nomenclature[C]{SES}{Stirling Energy System} use
 		Parameters	&	Value\\
 		\midrule
 		$d_{cav}$	&	0.46 m\\
-		$\delta_{insu}$	&	0.075 m\\
+		$\delta_{ins}$	&	0.075 m\\
 		$dep_{cav}$	&	0.23 m\\
 		$d_{ap}$	&	0.184 m\\
-		$\lambda_{insu}$	&	0.06 W/(m$\cdot$K)\\
-		$\epsilon_{insu}$	&	0.6\\
+		$k_{ins}$	&	0.06 W/(m$\cdot$K)\\
+		$\epsilon_{ins}$	&	0.6\\
 		$\alpha_{cav}$	&	0.87\\
 		$\delta_a$	&	0.005 m\\
-		$d_{i,air}$	&	0.07 m\\
+		$d_{dr,i}$	&	0.07 m\\
 		$A_{dc}$	&	87.7 m$^2$\\
-		$\theta_{dish}$	&	45$^\circ$\\
+		$\theta_{dr}$	&	45$^\circ$\\
 		$\gamma$	&	0.97\\
 		$\eta_{shading}$	&	0.95\\
 		$\rho$	&	0.91\\
@@ -261,30 +266,31 @@ A dish collector product of SES\nomenclature[C]{SES}{Stirling Energy System} use
 	\end{center}
 	\label{tab:dc}
 \end{table}
-\nomenclature[G]{$\delta_{insu}$}{Thickness of receiver insulating layer, m}
+%\nomenclature[G]{$\delta_{ins}$}{Thickness of receiver insulating layer, m}
 \nomenclature{$dep$}{Depth, m}
 \nomenclature{$d$}{Diameter, m}
-\nomenclature[G]{$\lambda_{insu}$}{Thermal conductivity of receiver insulating layer, W/(m$\cdot$K)}
-\nomenclature[G]{$\epsilon_{insu}$}{Emissivity of reciver insulating layer}
+%\nomenclature[G]{$k_{ins}$}{Thermal conductivity of receiver insulating layer, W/(m$\cdot$K)}
+\nomenclature[G]{$\epsilon$}{Emissivity}
+\nomenclature[G]{$\delta$}{Thicknes, m}
 \nomenclature[G]{$\delta_{a}$}{Thickness of air tube in volumetric receiver, m}
-\nomenclature{$d_{i,air}$}{Inner diameter of air tube, m}
-\nomenclature[G]{$\theta_{dish}$}{Dish aperture angle (0$^{\circ}$ is horizental, 90$^{\circ}$ is vertically down)}
+%\nomenclature{$d_{dr,i}$}{Inner diameter of air tube, m}
+\nomenclature[G]{$\theta_{dr}$}{Dish collector aperture angle, rad (0 is horizontal, $\pi/2$ is vertically down)}
 \nomenclature[G]{$\gamma$}{Intercept factor}
 \nomenclature[G]{$\eta_{shading}$}{Shading factor}
 \nomenclature[G]{$\rho$}{Reflectivity}
-\nomenclature{$A_{stirling,1}$}{Heat transfer area of Stirling engine at air side, m$^2$}
-\nomenclature{$A_{stirling,2}$}{Heat transfer area of Stirling engine at water side, m$^2$}
-\nomenclature{$k_{stirling}$}{Specific heat ratio of the working gas in Stirling engine}
-\nomenclature[G]{$\gamma_{stirling}$}{Compression ratio of Stirling engine}
+\nomenclature{$A_{se,1}$}{Heat transfer area of Stirling engine at air side, m$^2$}
+\nomenclature{$A_{se,2}$}{Heat transfer area of Stirling engine at water side, m$^2$}
+\nomenclature{$k_{se}$}{Specific heat ratio of the working gas in Stirling engine}
+\nomenclature[G]{$\gamma_{se}$}{Compression ratio of Stirling engine}
 \nomenclature{$n_g$}{Amount of working gas in each Stirling engine, mol}
-\nomenclature{$n_{stirlingEngine}$}{Number of Stirling engines in the Stirling engine array}
+\nomenclature{$n_{se}$}{Number of Stirling engines in the Stirling engine array}
 
 The dish receiver model concerns the losses include: collector losses due to mirror reflectivity, receiver intercept losses, losses due to shading, and thermal losses. Thermal losses take the largest portion of all those losses, which are due to conduction, convection and radiation. Figure~\ref{fig:thermal-lose} shows the heat network of dish receiver, which concerns the losses:
 \begin{itemize}
-	\item Radiation losses reflected off of the receiver cavity surfaces and out of the receiver through the aperture. ($q_{rad,reflect}$)
+	\item Radiation losses reflected off of the receiver cavity surfaces and out of the receiver through the aperture. ($q_{rad,ref}$)
 	\item Conductive losses through the receiver insulating layer. ($q_{cond,tot}$)
-	\item Free convection from the cavity in the absence of wind. ($q_{conv,free}$)
-	\item Forced convection in the presence of wind. ($q_{conv,forced}$)
+	\item Natural convection from the cavity in the absence of wind. ($q_{conv,nat}$)
+	\item Forced convection in the presence of wind. ($q_{conv,for}$)
 	\item Emission losses due to thermal radiation emitted from the receiver aperture. ($q_{rad,emit}$)
 \end{itemize}
 
@@ -296,68 +302,66 @@ The dish receiver model concerns the losses include: collector losses due to mir
 \end{center}
 \end{figure}
 
-$q_{dish,air}$ can be written as
+$q_{dr,1}$ can be written as
 \begin{equation*}
-	q_{dish,air}=h_{dish,air}A_{dish,air}\Delta{}T_{ln,Drec,air}
+	q_{dr,1}=h_{dr,1}A_{dr,1}\Delta{}T_{ln,dr,1}
 \end{equation*}
-\nomenclature{$A_{dish,air}$}{Heat transfer area of dish receiver between tube and air, m$^2$}
 
 where
 
 \begin{equation*}
-	h_{dish,air}=Nu_{tube}\lambda_{dish,air}/d_{i,air}
+	h_{dr,1}=Nu_{dr,1}k_{dr,1}/d_{dr,i}
 \end{equation*}
 \nomenclature{$Nu$}{Nusselt number}
 
 \begin{equation*}
-	Nu_{tube}=c_rNu_{tube}^{'}
+	Nu_{dr,1}=c_rNu_{dr,1}^{'}
 \end{equation*}
 \nomenclature{$c_r$}{Heat transfer correction factor of coiled tube of volumetric receiver}
 
 For helical spiral pipe, multiplier $c_r$ based on curvature ratio can be written as~\cite{Pablo2008}
 
 \begin{equation*}
-	c_{r}=1+3.5\frac{d_{i,air}}{d_{cav}-d_{i,air}-2\delta_{a}}
+	c_{r}=1+3.5\frac{d_{dr,i}}{d_{cav}-d_{dr,i}-2\delta_{a}}
 \end{equation*}
 
-$Nu_{tube}^{'}$ is the Nusselt number of straight circular tube, which can be obtained by~\cite{Serth2007}
+$Nu_{dr,1}^{'}$ is the Nusselt number of straight circular tube, which can be obtained by~\cite{Serth2007}
 
 \begin{equation*}
-	Nu_{tube}^{'}= 0.027Re_{tube}^{0.8}Pr_{tube}^{1/3}(\mu_{tube}/\mu_{tube,w})^{0.14}
+	Nu_{dr,1}^{'}= 0.027Re_{dr,1}^{0.8}Pr_{dr,1}^{1/3}(\mu_{dr,1}/\mu_{cav})^{0.14}
 \end{equation*}
 \nomenclature{$Pr$}{Prandtl number}
 \nomenclature{$Re$}{Reynolds number}
 \nomenclature[G]{$\mu$}{Viscosity, kg/(m$\cdot$s)}
-\nomenclature[S]{$w$}{Tube wall}
 
 \begin{equation*}
-	c_{r}=1+3.5\frac{d_{i,air}}{d_{cav}-d_{i,air}-2\delta_{a}}
+	c_{r}=1+3.5\frac{d_{dr,i}}{d_{cav}-d_{dr,i}-2\delta_{a}}
 \end{equation*}
 
-and $\Delta{}T_{ln,Drec,air}$ can be written as
+and $\Delta{}T_{ln,dr,1}$ can be written as
 
 \begin{equation*}
-	\Delta{}T_{ln,Drec,air}=\frac{(T_{cav}-T_{dish,inlet})-(T_{cav}-T_{dish,outlet})}{\ln\dfrac{T_{cav}-T_{dish,inlet}}{T_{cav}-T_{dish,outlet}}}
+	\Delta{}T_{ln,dr,1}=\frac{(T_{cav}-T_{dr,i})-(T_{cav}-T_{dr,o})}{\ln\dfrac{T_{cav}-T_{dr,i}}{T_{cav}-T_{dr,o}}}
 \end{equation*}
 
-To get $q_{dish,air}$, $T_{cav}$ is required. As shown in Figure~\ref{fig:thermal-lose}, we need to solve the heat network.
+To get $q_{dr,1}$, $T_{cav}$ is required. As shown in Figure~\ref{fig:thermal-lose}, we need to solve the heat network.
 
 \begin{equation}
 \begin{aligned}
-	q_{in} = q_{rad,reflect}+q_{dish,air}+q_{cond,tot}+q_{conv,tot}+
+	q_{in} = q_{rad,ref}+q_{dr,1}+q_{cond,tot}+q_{conv,tot}+
 	\\q_{rad,emit}\label{eq:q_in sum}
 \end{aligned}
 \end{equation}
 \nomenclature{$q_{in}$}{Solar energy launched into dish receiver aperture, W}
-\nomenclature{$q_{rad,reflect}$}{Reflected radiation by volumetric receiver, W}
-\nomenclature{$q_{dish,air}$}{Energy absorbed by air in the dish collector}
-\nomenclature{$q_{cond,tot}$}{Total conduction loss}
-\nomenclature{$q_{conv,tot}$}{Total convection loss}
-\nomenclature{$q_{rad,emit}$}{Radiation emitted by dish receiver}
+\nomenclature[S]{$ref$}{Reflected radiation}
+%\nomenclature{$q_{dr,1}$}{Energy absorbed by air in the dish collector}
+%\nomenclature{$q_{cond,tot}$}{Total conduction loss}
+%\nomenclature{$q_{conv,tot}$}{Total convection loss}
+%\nomenclature{$q_{rad,emit}$}{Radiation emitted by dish receiver}
 
 
 $q_{in}$ and $\eta_{dc}$ can be obtained by
-\nomenclature[G]{$\eta$}{Thermal efficiency}
+\nomenclature[G]{$\eta$}{Efficiency}
 
 \begin{equation}
 	q_{in}=I_r\cdot A_{dc}\gamma\eta_{shading}\rho
@@ -365,14 +369,14 @@ $q_{in}$ and $\eta_{dc}$ can be obtained by
 \end{equation}
 
 \begin{equation}
-	\eta_{dc}=q_{dish,air}/\left(I_r\cdot A_{dc}\right)
+	\eta_{dc}=q_{dr,1}/\left(I_r\cdot A_{dc}\right)
 	\label{eq:eta_dc}
 \end{equation}
 
 Other losses are presented in following sections.
 
 \subsubsection{Reflected loss of dish receiver}
-To determine the reflected loss of the cavity surfaces of the dish receiver $q_{rad,reflect}$, the effective absorptance of the cavity receiver $\alpha_{eff}$\nomenclature[S]{$eff$}{Effective parameter of the dish receiver cavity} is required to determine the fraction of energy reflected out of the receiver. The effective absorptance of a cavity receiver without a receiver aperture cover is given by Equation~(\ref{eq:alpha_eff}) where $\alpha_{cav}$ is the cavity surface absrptance, $A_a$ is the cavity aperture area, and $A_{cav}$ is the total inner surface area of the cavity~\cite{Duffie2013}. Sandra National Laboratories gave an estimate value of the absorptance of the cavity surface $\alpha_{cav}$ of an existing Stirling dish receiver to be 0.87~\cite{Hogan1994}. To achieve higher effective absorptance, a smaller ratio of the two surface area should be used. But the ratio is constrained by the concentration ratio of the receiver.
+To determine the reflected loss of the cavity surfaces of the dish receiver $q_{rad,ref}$, the effective absorptance of the cavity receiver $\alpha_{eff}$\nomenclature[S]{$eff$}{Effective parameter of the dish receiver cavity} is required to determine the fraction of energy reflected out of the receiver. The effective absorptance of a cavity receiver without a receiver aperture cover is given by Equation~(\ref{eq:alpha_eff}) where $\alpha_{cav}$ is the cavity surface absrptance, $A_a$ is the cavity aperture area, and $A_{cav}$ is the total inner surface area of the cavity~\cite{Duffie2013}. Sandra National Laboratories gave an estimate value of the absorptance of the cavity surface $\alpha_{cav}$ of an existing Stirling dish receiver to be 0.87~\cite{Hogan1994}. To achieve higher effective absorptance, a smaller ratio of the two surface area should be used. But the ratio is constrained by the concentration ratio of the receiver.
 
 \begin{equation}
 	\alpha_{eff}=\dfrac{\alpha_{cav}}{\alpha_{cav}+\left(1-\alpha_{cav}\right)\left(A_{ap}/A_{cav}\right)}
@@ -381,30 +385,40 @@ To determine the reflected loss of the cavity surfaces of the dish receiver $q_{
 \nomenclature[G]{$\alpha$}{Absorptance}
 \nomenclature[S]{$ap$}{Aperture of the dish receiver}
 \nomenclature[S]{$cav$}{Cavity of the dish receiver}
+\nomenclature[S]{$ins$}{Insulating layer of the dish receiver}
+\nomenclature[S]{$cond$}{Conduction}
+\nomenclature[S]{$conv$}{Convection}
+\nomenclature[S]{$rad$}{Radiation}
+\nomenclature[S]{$emit$}{Emitted radiation}
+\nomenclature[S]{$nat$}{Nature convection}
+\nomenclature[S]{$for$}{Forced convection}
+\nomenclature[S]{$diff$}{Difference between cascade system and separate systems}
+\nomenclature[S]{$i$}{Inner}
+\nomenclature[S]{$o$}{Outer}
 
 \begin{equation*}
-	q_{rad,reflect}=q_{in}(1-\alpha_{eff})
+	q_{rad,ref}=q_{in}(1-\alpha_{eff})
 \end{equation*}
 
 \subsubsection{Conduction loss of dish receiver}
-Conduction loss of dish receiver $q_{cond,tot}$ equals to the different two parts: convection loss from the insulating layer to the atmosphere $q_{cond,conv}$ and radiation loss from the insulating layer to the atmosphere $q_{cond,rad}$. Both of the two parts are related to the temperature of insulating layer $T_{insu}$.
-\nomenclature{$T_{insu}$}{Temperature of insulating outside layer, K}
+Conduction loss of dish receiver $q_{cond,tot}$ equals to the different two parts: convection loss from the insulating layer to the atmosphere $q_{cond,conv}$ and radiation loss from the insulating layer to the atmosphere $q_{cond,rad}$. Both of the two parts are related to the temperature of insulating layer $T_{ins}$.
+%\nomenclature{$T_{ins}$}{Temperature of insulating outside layer, K}
 
 \begin{equation*}
-	q_{cond,tot}=\dfrac{T_{cav}-T_{insu}}{\ln\dfrac{d_{cav}+2\delta_{insu}}{d_{cav}}/(2\pi\lambda_{insu}dep_{cav})}
+	q_{cond,tot}=\dfrac{T_{cav}-T_{ins}}{\ln\dfrac{d_{cav}+2\delta_{ins}}{d_{cav}}/(2\pi{}k_{ins}dep_{cav})}
 \end{equation*}
 \begin{equation*}
 \begin{split}
-	q_{cond,conv}=h_{insu}A_{insu}(T_{insu}-T_{amb})
-	\\=\dfrac{k_{insu}Nu_{insu}A_{insu}(T_{insu}-T_{amb})}{d_{cav}+2\delta_{insu}}
+	q_{cond,conv}=h_{ins}A_{ins}(T_{ins}-T_{amb})
+	\\=\dfrac{k_{ins}Nu_{ins}A_{ins}(T_{ins}-T_{amb})}{d_{cav}+2\delta_{ins}}
 \end{split}
 \end{equation*}
-\nomenclature{$k_{insu}$}{Thermal conductivity of air at the temperature of outside insulating layer, W/(m$\cdot$K)}
+\nomenclature{$k$}{Thermal conductivity, W/(m$\cdot$K)}
 
-where $Nu_{insu}$ can be obtained by the correlation for flow over a circular cylinder.~\cite{Churchill1977} 
+where $Nu_{ins}$ can be obtained by the correlation for flow over a circular cylinder.~\cite{Churchill1977} 
 
 \begin{equation*}
-	q_{cond,rad}=\epsilon_{insu}A_{insu}\sigma(T_{insu}^4 - T_{amb}^4)	
+	q_{cond,rad}=\epsilon_{ins}A_{ins}\sigma(T_{ins}^4 - T_{amb}^4)	
 \end{equation*}
 And 
 \begin{equation*}
@@ -415,20 +429,20 @@ And
 Ma~\cite{Ma1993} conducted tests to determine the free convection losses from the receiver for alternative setups, and the data were consistent with Stine and McDonald's free convection correlation. It is assumed that forced convection is independent of free convection in the receiver, so the total convection losses can be represented as the sum of the free and forced convection losses as shown in Figure~\ref{fig:thermal-lose}.
 
 \begin{equation*}
-	q_{con,tot} = (h_{free} + h_{forced})A_{cav}(T_{cav}-T_{amb})
+	q_{con,tot} = (h_{nat} + h_{for})A_{cav}(T_{cav}-T_{amb})
 \end{equation*}
 
 
-where $h_{free}=k_{film}Nu_{free}/\overline{d_{cav}}$, $\overline{d_{cav}}=d_{cav}-2d_i-4 \delta_a$.
+where $h_{nat}=k_{film}Nu_{nat}/\overline{d_{cav}}$, $\overline{d_{cav}}=d_{cav}-2d_{tr,i}-4 \delta_a$,$d_{tr,i}=0.066\,$m.
 \nomenclature{$\overline{d_{cav}}$}{Effective diameter of the cavity, m}
-\nomenclature{$d_i$}{Inner diameter of trough receiver, m}$d_{i}=0.066\,$m
+%\nomenclature{$d_{tr,i}$}{Inner diameter of trough receiver, m}
 
 Wu~\cite{Wu2010} present a comprehensive review and systematic summarization of convection heat loss from cavity receiver in parabolic dish solar thermal power system. And we choose the correlation presented by Leibfried~\cite{Leibfried1995}. This correlation gives an extended model of Koenig~\cite{Koenig1981} and Stine~\cite{Stine1994} with better results.
 
 For forced convection loss, side-on wind convection loss model given by Ma~\cite{Ma1993}, which is independent of the aperture orientation, is used
 
 \begin{equation*}
-	h_{forced}=0.1967v_{wind}^{1.849}
+	h_{for}=0.1967v_w^{1.849}
 \end{equation*}
 
 \subsection{Trough collector}
@@ -451,30 +465,30 @@ LS-3 is used as the trough collector, its sketch is shown in Figure~\ref{fig:tc}
 		Parameters	&	Value\\
 		\midrule
 		$A_{tc}$	&	545 m$^2$\\
-		$w_{trough}$&	5.76 m\\
-		$d_i$		&	0.066 m\\
-		$d_o$	&	0.07 m\\
-		$\rho$		&	0.94\\
-		$\gamma$	&	0.93\\
-		$\tau$		&	0.95\\
-		$\alpha_{abs}$	&	0.96\\
-		$F_e$		&	0.97\\
-		$\phi$	&	70$^\circ$\\
+		$w_{tc}$&	5.76 m\\
+		$d_{tr,i}$		&	0.066 m\\
+		$d_{tr,o}$	&	0.07 m\\
+		$\rho_{tc}$		&	0.94\\
+		$\gamma_{tc}$	&	0.93\\
+		$\tau_{tc}$		&	0.95\\
+		$\alpha_{tc}$	&	0.96\\
+		$Fe_{tc}$		&	0.97\\
+		$\phi_{tc}$	&	70$^\circ$\\
 		\bottomrule
 	\end{tabular}
 	\end{center}
 	\label{tab:tc}
 \end{table}
-\nomenclature{$d_o$}{Outer diameter of trough receiver, m}
-\nomenclature{$F_e$}{Soiling factor of the trough collector}
-\nomenclature{$w_{trough}$}{Width of trough collector, m}
-\nomenclature[G]{$\phi$}{Incidence angle}
+%\nomenclature{$d_{tr,o}$}{Outer diameter of trough receiver, m}
+\nomenclature{$Fe$}{Soiling factor}
+\nomenclature{$w_{tc}$}{Width of trough collector, m}
+\nomenclature[G]{$\phi_{tc}$}{Incidence angle of trough collector, rad}
 
 \begin{equation*}
-	q^{''}=I_rw_{trough}\eta_{opt,0}K(\phi)F_{e}/P
+	q^{''}=I_rw_{tc}\eta_{opt,0}K(\phi_{tc})F_{e}/P
 \end{equation*}
 
-where $P=\pi{}d$, $K(\phi)$ is the incidence angle modifier, $\eta_{opt,0}$
+where $P=\pi{}d_{tr,o}$, $K(\phi)$ is the incidence angle modifier, $\eta_{opt,0}$
 is peak optical efficiency (optical efficiency with an incidence angle of 0).
 \nomenclature{$K$}{Incidence angle modifier of trough collector}
 \nomenclature[G]{$\eta_{opt,0}$}{Optical efficiency with an incidence angle of 0}
@@ -484,20 +498,20 @@ Assume overall heat transfer coefficient $U(T_{abs})$ is uniform for whole lengt
 \nomenclature{$q^{''}$}{Heat flux, W/m$^2$}
 
 \begin{equation}
-	\frac{T_{o}-T_{amb}-\dfrac{q^{''}}{U(T_{abs})}}{T_{i}-T_{amb}-\dfrac{q^{''}}{U(T_{abs})}}=\exp(-\frac{U(T_{abs})PL}{q_{m}c_{p}})\label{eq:CTCHF}
+	\frac{T_{tr,o}-T_{amb}-\dfrac{q^{''}}{U(T_{abs})}}{T_{tr,i}-T_{amb}-\dfrac{q^{''}}{U(T_{abs})}}=\exp(-\frac{U(T_{abs})PL}{q_{m,3}c_{p,tr}})\label{eq:CTCHF}
 \end{equation}
 
-Since the $Nu$ in the pipe is very large (about $1\times10^4$), small temperature difference exists between the absorber and oil. So $(T_{i}+T_{o})/2$ can be used as the average value of $T_{abs}$, and $U(T_{abs})$ can be obtained by the a second-order polynomial function given by Romero\cite{Romero2007}. Then using Equation (\ref{eq:CTCHF}), we can get the length $L$ required to get the required number of trough collectors in a row.
+Since the $Nu$ in the pipe is very large (about $1\times10^4$), small temperature difference exists between the absorber and oil. So $(T_{tr,i}+T_{tr,o})/2$ can be used as the average value of $T_{abs}$, and $U(T_{abs})$ can be obtained by the a second-order polynomial function given by Romero\cite{Romero2007}. Then using Equation (\ref{eq:CTCHF}), we can get the length $L$ required to get the required number of trough collectors in a row.
 
 The efficiency of the trough collector
 
 \begin{equation*}
-	\eta_{trough}=\frac{q_m(h_{out}-h_{in})}{I_rw_{trough}L}
+	\eta_{tc}=\frac{q_{m,3}(h_{tr,o}-h_{tr,i})}{I_rw_{tc}L}
 \end{equation*}
 
 \subsection{Stirling engine array}
 
-Stirling engine array is used in the cascade system, Figure~\ref{fig:Layout of Stirling engines} shows the layout of the Stirling engine array. Each Stirling engine in the Stirling engine array has the identical parameters: $U_{stirling,1}=30\,$W/m$^2\cdot$K, $U_{stirling,2}=150\,$W/m$^2\cdot$K, $A_{stirling,1}=6\,$m$^2$, $A_{stirling,2}=6\,$m$^2$, $k_{stirling}=1.4$, $\gamma_{stirling}=3.375$, $n_g=7.84\times{}10^{-2}\,$mol, $n_{se}=10\,$s$^{-1}$.
+Stirling engine array is used in the cascade system, Figure~\ref{fig:Layout of Stirling engines} shows the layout of the Stirling engine array. Each Stirling engine in the Stirling engine array has the identical parameters: $U_{se,1}=30\,$W/m$^2\cdot$K, $U_{se,2}=150\,$W/m$^2\cdot$K, $A_{se,1}=6\,$m$^2$, $A_{se,2}=6\,$m$^2$, $k_{se}=1.4$, $\gamma_{se}=3.375$, $n_g=7.84\times{}10^{-2}\,$mol, $s_{se}=10\,$s$^{-1}$.
 
 \noindent \begin{figure}[htbp]
 \begin{center}
@@ -528,7 +542,7 @@ Depending on the flow directions of heating and cooling flows, there are two flo
 
 In Figure~\ref{fig:Layout of Stirling engines}, $T_{1,i,1}=T_{1,i},q_{m,1,r}=q_{m,1}/n_{2}$. For $x$ from $1$ to $n_1-1$, where $x$ is the column number of Stirling engines, $T_{1,i,x+1}=T_{1,o,x},T_{2,i,x+1}=T_{2,o,x}$.
 \nomenclature{$n_1$}{Number of columns of the Stirling engine array}
-\nomenclature{$q_{m,1}$}{Total mass flow rate of air, kg/s}
+\nomenclature{$q_{m}$}{Mass flow rate, kg/s}
 
 Assume that the positive flow direction is to the right, for parallel flow,
 \nomenclature{$n_2$}{Number of rows of the Stirling engine array}
@@ -541,7 +555,7 @@ Assume that the positive flow direction is to the right, for parallel flow,
 	q_{m,2,r}=q_{m,2}/n_{2}
 \end{equation*}
 \nomenclature{$q_{m,2,r}$}{Mass flow rate of water in each row of Stirling engine array, kg/s}
-\nomenclature{$q_{m,2}$}{Total mass flow rate of water, kg/s}
+%\nomenclature{$q_{m,2}$}{Total mass flow rate of water, kg/s}
 
 for counter flow,
 
@@ -555,77 +569,77 @@ for counter flow,
 For a Stirling engine in column $x$\nomenclature[S]{$x$}{Stirling engine in column $x$}, $x$ from $1$ to $n_1$, according to Appendix~\ref{sec:Stirling-engine-model},
 
 \begin{equation*}
-	T_{H,x}=T_{1,i,x}-\dfrac{T_{1,i,x}-T_{1,o,x}}{1-\exp(-\dfrac{U_{stirling,1}A_{stirling,1}}{q_{m,1,r}c_{p,1,x}})}\label{eq:T_H_x}
+	T_{H,x}=T_{1,i,x}-\dfrac{T_{1,i,x}-T_{1,o,x}}{1-\exp(-\dfrac{U_{se,1}A_{se,1}}{q_{m,1,r}c_{p,1,x}})}\label{eq:T_H_x}
 \end{equation*}
 
 
 \begin{equation*}
-	T_{L,x}=T_{2,i,x}-\dfrac{T_{2,i,x}-T_{2,o,x}}{1-\exp(-\dfrac{U_{stirling,2}A_{stirling,2}}{q_{m,2,r}c_{p,2,x}})}\label{eq:T_L_x}
+	T_{L,x}=T_{2,i,x}-\dfrac{T_{2,i,x}-T_{2,o,x}}{1-\exp(-\dfrac{U_{se,2}A_{se,2}}{q_{m,2,r}c_{p,2,x}})}\label{eq:T_L_x}
 \end{equation*}
 
 Assuming a linear temperature profile across the regenerator, the mean effective temperature $T_{R,x}=\dfrac{T_{H,x}-T_{L,x}}{\ln(T_{H,x}/T_{L,x})}$~\cite{Der2007,Cavazzuti2012}, and the symmetrical regenerator behaviour assumption $e_{x}=\dfrac{T_{R,x}-T_{L,x}}{T_{H,x}-T_{L,x}}$~\cite{Formosa2010,Juhasz2010}, then the efficiency of each Stirling engine in column $x$ can be written as~\cite{Stine1985,Goswami2015}
 
 \begin{equation*}
-	\eta_{stirling,x}=\dfrac{T_{H,x}-T_{L,x}}{T_{H,x}+\dfrac{1-e_{x}}{k-1}\cdot\dfrac{T_{H,x}-T_{L,x}}{\ln\gamma_{stirling}}}\label{eq:eta_striling_x}
+	\eta_{se,x}=\dfrac{T_{H,x}-T_{L,x}}{T_{H,x}+\dfrac{1-e_{x}}{k-1}\cdot\dfrac{T_{H,x}-T_{L,x}}{\ln\gamma_{se}}}\label{eq:eta_striling_x}
 \end{equation*}
 
 For energy balance,
 
 \begin{equation*}
-	q_{m,1,r}(h_{1,i,x}-h_{1,o,x})(1-\eta_{stirling,x})=q_{m,2,r}(h_{2,o,x}-h_{2,i,x})
+	q_{m,1,r}(h_{1,i,x}-h_{1,o,x})(1-\eta_{se,x})=q_{m,2,r}(h_{2,o,x}-h_{2,i,x})
 \end{equation*}
 
-And in each Stirling cycle, the heat absorbed by the working gas is 
+And the power of Stirling engine in column $x$ can be written as 
 \begin{equation*}
-\begin{split}
-	n_gR\left(T_{H,x}\ln\gamma_{stirling}+\dfrac{1-e_{x}}{k-1}\left(T_{H,x}-T_{L,x}\right)\right)=\\q_{m,1,r}(h_{1,i,x}-h_{1,o,x})/n_{se}
-\end{split}
+%	\begin{split}
+		n_gR\left(T_{H,x}-T_{L,x}\right)s_{se}\ln\gamma_{se} = q_{m,1,r}(h_{1,i,x}-h_{1,o,x})\eta_{se,x}
+%	\end{split}
 \end{equation*}
 
-By solving above equations, efficiency of the Stirling engine array $\eta_{stirling}$ can be obtained by
+By solving above equations, efficiency of the Stirling engine array $\eta_{se}$ can be obtained by
 
 \begin{equation*}
-	\eta_{stirling}=1-\dfrac{q_{m,2}(h_{2,o,n_1}-h_{2,i,1})}{q_{m,1}(h_{1,i,1}-h_{1,o,n_1})}\label{eq:eta_stirling-1}
+	\eta_{se}=1-\dfrac{q_{m,2}(h_{2,o,n_1}-h_{2,i,1})}{q_{m,1}(h_{1,i,1}-h_{1,o,n_1})}\label{eq:eta_stirling-1}
 \end{equation*}
 
 
 and power of each Stirling engine in column $x$
 \begin{equation*}
-	P_{stirlingEngine,x}=q_{m,1,r}(h_{1,i,x}-h_{1,o,x})\eta_{stirling,x}
+	P_{se,x}=q_{m,1,r}(h_{1,i,x}-h_{1,o,x})\eta_{se,x}
 \end{equation*}
 
 
 and power of the Stirling engine array
 \begin{equation*}
-	P_{stirling}=\eta_{stirling}q_{m,1}(h_{1,i,1}-h_{1,o,n_1})
+	P_{se}=\eta_{se}q_{m,1}(h_{1,i,1}-h_{1,o,n_1})
 \end{equation*}
 
 \subsection{Steam turbine}
 
-A steam turbine product, N-6 2.35, of Qingdao Jieneng Power Station Engineering Co., Ltd is used for calculation. Its isentropic efficiency $\eta_{i,turbine}$ can be obtained by the given design parameters.
+A steam turbine product, N-6 2.35, of Qingdao Jieneng Power Station Engineering Co., Ltd is used for calculation. Its isentropic efficiency $\eta_{tb,i}$ can be obtained by the given design parameters.
 \nomenclature[S]{$i$}{Isentropic}
 
 Using basic design parameters in Table~\ref{tab:system-data}, parameters of state 2,2 and 2,3 in Figure~\ref{fig:System-1} of the steam turbine can be obtained by the following equations.
 
 \begin{equation*}
-	\eta_{i,turbine}=\frac{h_{2,1}-h_{2,2}}{h_{2,1}-h_{i,2,2}}
+	\eta_{tb,i}=\frac{h_{2,1}-h_{2,2}}{h_{2,1}-h_{i,2,2}}
 \end{equation*}
 
 \begin{equation*}
-	\eta_{i,turbine}=\frac{h_{2,1}-h_{2,3}}{h_{2,1}-h_{i,2,3}}
+	\eta_{tb,i}=\frac{h_{2,1}-h_{2,3}}{h_{2,1}-h_{i,2,3}}
 \end{equation*}
 
 The output power of steam turbine
 
 \begin{equation*}
-	P_{turbine}=\left(1-y\right)q_{m,2}\left(h_{2,1}-h_{2,2}\right)+yq_{m,2}\left(h_{2,1}-h_{2,3}\right)
+	P_{tb}=\left(1-y\right)q_{m,2}\left(h_{2,1}-h_{2,2}\right)+yq_{m,2}\left(h_{2,1}-h_{2,3}\right)
 \end{equation*}
 \nomenclature{$y$}{Extraction rate of steam turbine}
 
 The sum power of pumps
 
 \begin{equation*}
-	P_{pump}=\left(1-y\right)q_{m,2}\left(h_{2,5}-h_{2,4}\right)+q_{m,2}\left(h_{2,8}-h_{2,7}\right)
+	P_{pu}=\left(1-y\right)q_{m,2}\left(h_{2,5}-h_{2,4}\right)+q_{m,2}\left(h_{2,8}-h_{2,7}\right)
 \end{equation*}
 
 Heat injected in the water circuit
@@ -637,7 +651,7 @@ Heat injected in the water circuit
 The efficiency of Rankine cycle can be expressed as
 
 \begin{equation*}
-	\eta_{rankine}=(P_{turbine}-P_{pump}/\eta_{generator})/Q_{2}
+	\eta_{rankine}=(P_{tb}-P_{pu}/\eta_{ge})/Q_{2}
 \end{equation*}
 
 %\subsubsection{Condensor}
@@ -661,30 +675,30 @@ Figure~\ref{fig:System-2} shows the sketch of the separate systems. These two se
 Steam turbine has the same main parameters and same isentropic efficiency with that of the cascade system. Pressure of deaerator are the same of the cascade system. So parameters of state 2,2 and 2,3 in Figure~\ref{fig:System-2} of the steam turbine can be obtained by the following equations.
 
 \begin{equation*}
-	\eta_{i,turbine}=\frac{h_{2,1,s}-h_{2,2,s}}{h_{2,1,s}-h_{i,2,2,s}}
+	\eta_{tb,i}=\frac{h_{2,1,s}-h_{2,2,s}}{h_{2,1,s}-h_{i,2,2,s}}
 \end{equation*}
 \nomenclature[S]{$s$}{Separate systems}
 
 \begin{equation*}
-	\eta_{i,turbine}=\frac{h_{2,1,s}-h_{2,3,s}}{h_{2,1,s}-h_{i,2,3,s}}
+	\eta_{tb,i}=\frac{h_{2,1,s}-h_{2,3,s}}{h_{2,1,s}-h_{i,2,3,s}}
 \end{equation*}
 
 The output power of steam turbine
 
 \begin{equation*}
-	P_{turbine,s}=\left(1-y_{s}\right)q_{m,2,s}\left(h_{2,1,s}-h_{2,2,s}\right)+y_{s}q_{m,2,s}\left(h_{2,1,s}-h_{2,3,s}\right)
+	P_{tb,s}=\left(1-y_{s}\right)q_{m,2,s}\left(h_{2,1,s}-h_{2,2,s}\right)+y_{s}q_{m,2,s}\left(h_{2,1,s}-h_{2,3,s}\right)
 \end{equation*}
 
 The output power of generator
 
 \begin{equation*}
-	P_{generator,s}=P_{turbine,s}\eta_{generator}
+	P_{ge,s}=P_{tb,s}\eta_{ge}
 \end{equation*}
 
 The sum power of pumps
 
 \begin{equation*}
-	P_{pump,s}=\left(1-y_{s}\right)q_{m,2,s}\left(h_{2,5,s}-h_{2,4,s}\right)+q_{m,2,s}\left(h_{2,7,s}-h_{2,6,s}\right)
+	P_{pu,s}=\left(1-y_{s}\right)q_{m,2,s}\left(h_{2,5,s}-h_{2,4,s}\right)+q_{m,2,s}\left(h_{2,7,s}-h_{2,6,s}\right)
 \end{equation*}
 
 Heat injected in the water circuit
@@ -696,7 +710,7 @@ Heat injected in the water circuit
 The generator efficiency is the same of that in the cascade system, and the efficiency of Rankine cycle can be expressed as
 
 \begin{equation*}
-	\eta_{rankine,s}=(P_{turbine,s}-P_{pump,s}/\eta_{generator})/Q_{2,s}
+	\eta_{rankine,s}=(P_{tb,s}-P_{pu,s}/\eta_{ge})/Q_{2,s}
 \end{equation*}
 
 \subsection{Separate dish system}
@@ -713,15 +727,15 @@ $T_{H,s}$ is chosen to be equal to outlet temperature of air in dish receiver. $
 \end{equation*}
 
 \begin{equation*}
-	\eta_{stirling,s}=\dfrac{T_{H,s}-T_{L,s}}{T_{H,s}+\dfrac{1-e_{s}}{k-1}\cdot\dfrac{T_{H,s}-T_{L,s}}{\ln\gamma}}
+	\eta_{se,s}=\dfrac{T_{H,s}-T_{L,s}}{T_{H,s}+\dfrac{1-e_{s}}{k-1}\cdot\dfrac{T_{H,s}-T_{L,s}}{\ln\gamma}}
 \end{equation*}
 
 The power of Stirling engines
 
 \begin{equation*}
-	P_{stirling,s}=n_{dc}A_{dc}I_r\eta_{dc}\eta_{stirling,s}
+	P_{se,s}=n_{dc}A_{dc}I_r\eta_{dc}\eta_{se,s}
 \end{equation*}
-\nomenclature{$n$}{Number of collectors}
+\nomenclature{$n$}{Number}
 
 \section{Results and Conclusion}
 
@@ -734,29 +748,29 @@ The results presented in Table~\ref{tab:importantResults} are issued using desig
 		\toprule
 		Parameters	&	Value\\
 		\midrule
-		$\eta_{system}$		&	0.1974\\
-		$\eta_{system,s}$	&	0.1962\\
+		$\eta$		&	0.1974\\
+		$\eta_s$	&	0.1962\\
 		$\eta_{diff}$		&	0.0062\\
-		$\eta_{stirling}$	&	0.3407\\
-		$\eta_{stirling,s}$	&	0.3786\\
+		$\eta_{se}$	&	0.3407\\
+		$\eta_{se,s}$	&	0.3786\\
 		$\eta_{rankine}$	&	0.2660\\
 		$\eta_{rankine,s}$	&	0.2678\\
-		$P_{generator}$		&	$6\times10^6\,$W\\
-		$P_{generator,s}$	&	$5.826\times10^6\,$W\\
-		$P_{stirling}$		&	$3.552\times10^5\,$W\\
-		$P_{stirling,s}$	&	$4.909\times10^5\,$W\\
+		$P_{ge}$		&	$6\times10^6\,$W\\
+		$P_{ge,s}$	&	$5.826\times10^6\,$W\\
+		$P_{se}$		&	$3.552\times10^5\,$W\\
+		$P_{se,s}$	&	$4.909\times10^5\,$W\\
 		\bottomrule
 	\end{tabular}
 	\end{center}
 	\label{tab:importantResults}
 \end{table}
-\nomenclature[G]{$\eta_{system}$}{Efficiency of cascade system}
-\nomenclature[G]{$\eta_{system,s}$}{Efficiency of separate systems}
-\nomenclature[G]{$\eta_{stirling}$}{Efficiency of Stirling engine array}
-\nomenclature[G]{$\eta_{stirling,s}$}{Efficiency of Stirling engines in separate dish system}
-\nomenclature[G]{$\eta_{diff}$}{Efficiency difference of cascade system and separate systems, $\eta_{system}-\eta_{system,s}$}
-\nomenclature{$P_{stirling}$}{Power of Stirling engine array, W}
-\nomenclature{$P_{stirling,s}$}{Total power of Stirling engines in separate dish system, W}
+\nomenclature[G]{$\eta$}{Efficiency of cascade system}
+\nomenclature[G]{$\eta_s$}{Efficiency of separate systems}
+%\nomenclature[G]{$\eta_{se}$}{Efficiency of Stirling engine array}
+%\nomenclature[G]{$\eta_{se,s}$}{Efficiency of Stirling engines in separate dish system}
+%\nomenclature[G]{$\eta_{diff}$}{Efficiency difference of cascade system and separate systems, $\eta-\eta_s$}
+%\nomenclature{$P_{se}$}{Power of Stirling engine array, W}
+%\nomenclature{$P_{se,s}$}{Total power of Stirling engines in separate dish system, W}
 
 \begin{table}[htbp]
 	\caption{Results of Stirling engine array with two different flow types}
@@ -765,7 +779,7 @@ The results presented in Table~\ref{tab:importantResults} are issued using desig
 		\toprule
 		\multirow{3}{*}{$x$}	&	\multicolumn{4}{c}{Parallel flow}	&\multicolumn{4}{c}{Counter flow}\tabularnewline
 		\cline{2-5}	\cline{6-9}
-		&$T_{1,i}$&$T_{2,i}$&$P_{stirling}$&$\eta_{stirling}$&$T_{1,i}$&$T_{2,i}$&$P_{stirling}$&$\eta_{stirling}$\tabularnewline
+		&$T_{1,i}$&$T_{2,i}$&$P_{se}$&$\eta_{se}$&$T_{1,i}$&$T_{2,i}$&$P_{se}$&$\eta_{se}$\tabularnewline
 		&K&K&W&-&K&K&W&-\tabularnewline
 		\midrule
 		1	&	1073.15	&	327.17	&	5000	&	0.3648	&	1073.15	&	348.09	&	4867	&	0.3601\\
@@ -856,7 +870,7 @@ The first version of cascade system with two different types of collectors and t
 
 \section{\noindent \label{sec:CTHT}Heat transfer to a constant temperature heat source}
 
-Constant $U$, $T_{c}$, $q_{m}$, $c_{p}$, for a given \nomenclature[S]{$i$}{Inlet}$T_{i}$,
+Constant $U$, $T_{c}$, $q_{m}$, $c_{p}$, for a given \nomenclature[S]{$i$}{Inlet}$T_{tr,i}$,
 
 \noindent \begin{center}
 \begin{figure}[h]
@@ -869,7 +883,7 @@ Constant $U$, $T_{c}$, $q_{m}$, $c_{p}$, for a given \nomenclature[S]{$i$}{Inlet
 
 \par\end{center}
 
-if $A(x)=Px$, $x$ from $0$ to $L$, $T(x)$ from $T_{i}$ to \nomenclature[S]{$o$}{Outlet}$T_{o}$, 
+if $A(x)=Px$, $x$ from $0$ to $L$, $T(x)$ from $T_{tr,i}$ to \nomenclature[S]{$o$}{Outlet}$T_{tr,o}$, 
 
 \begin{equation*}
 	q_{m}c_{p}dT(x)=(T_{c}-T(x))UPdx
@@ -881,7 +895,7 @@ so,
 	\frac{dT(x)}{dx}=-\frac{UP}{q_{m}c_{p}}(T(x)-T_{c})
 \end{equation*}
 
-Set $F(x)=T(x)-T_{c}$, then $F(0)=T_{i}-T_{c}$, and
+Set $F(x)=T(x)-T_{c}$, then $F(0)=T_{tr,i}-T_{c}$, and
 
 \begin{equation*}
 	\dfrac{dF(x)}{F(x)}=-\dfrac{UP}{q_{m}c_{p}}dx
@@ -901,7 +915,7 @@ Set $F(x)=T(x)-T_{c}$, then $F(0)=T_{i}-T_{c}$, and
 That is
 
 \begin{equation*}
-	\frac{T_{o}-T_{c}}{T_{i}-T_{c}}=\exp(-\frac{UA}{q_{m}c_{p}})
+	\frac{T_{tr,o}-T_{c}}{T_{tr,i}-T_{c}}=\exp(-\frac{UA}{q_{m}c_{p}})
 \end{equation*}
 \clearpage{}
 
@@ -909,7 +923,7 @@ That is
 heat flux}
 
 Constant $U$, $T_{amb}$, $q_{m}$, $c_{p}$, $q^{''}$, for given
-$T_{i}$,
+$T_{tr,i}$,
 
 \noindent \begin{center}
 \begin{figure}[h]
@@ -920,7 +934,7 @@ heat flux}
 
 \par\end{center}
 
-if $A(x)=Px$, $x$ from $0$ to $L$, $T(x)$ from $T_{i}$ to $T_{o}$,
+if $A(x)=Px$, $x$ from $0$ to $L$, $T(x)$ from $T_{tr,i}$ to $T_{tr,o}$,
 
 \begin{equation*}
 	q_{m}c_{p}dT(x)=(T_{amb}-T(x))UPdx+q^{''}Pdx
@@ -932,7 +946,7 @@ so
 	\frac{dT(x)}{dx}=-\frac{UP}{q_{m}c_{p}}T(x)+\frac{q^{''}P+UPT_{amb}}{q_{m}c_{p}}
 \end{equation*}
 
-Set $G(x)=T(x)-T_{amb}-\dfrac{q^{''}}{U}$, then $G(0)=T_{i}-T_{amb}-\dfrac{q^{''}}{U}$ and
+Set $G(x)=T(x)-T_{amb}-\dfrac{q^{''}}{U}$, then $G(0)=T_{tr,i}-T_{amb}-\dfrac{q^{''}}{U}$ and
 
 \begin{equation*}
 	\dfrac{dG(x)}{G(x)}=-\dfrac{UP}{q_{m}c_{p}}dx
@@ -949,7 +963,7 @@ Set $G(x)=T(x)-T_{amb}-\dfrac{q^{''}}{U}$, then $G(0)=T_{i}-T_{amb}-\dfrac{q^{''
 That is
 
 \begin{equation*}
-	\frac{T_{o}-T_{amb}-\frac{q^{''}}{U}}{T_{i}-T_{amb}-\frac{q^{''}}{U}}=\exp(-\frac{UA}{q_{m}c_{p}})
+	\frac{T_{tr,o}-T_{amb}-\frac{q^{''}}{U}}{T_{tr,i}-T_{amb}-\frac{q^{''}}{U}}=\exp(-\frac{UA}{q_{m}c_{p}})
 \end{equation*}
 \clearpage{}
 
@@ -962,7 +976,7 @@ A simple Stirling engine model is used for the system. The cycle efficiency is g
 \end{equation}
 
 
-where \nomenclature{$e$}{Regeneration effectiveness of the Stirling engine}$e=\dfrac{T_{R}-T_{L}}{T_{H}-T_{L}}$,\nomenclature{$T_R$}{Regenerator temperature, K}$T_{R}$ is the\emph{ }regenerator temperature, \nomenclature{$c_p$}{Heat capacity of Stirling engine working gas at constant pressure, J/(kg$\cdot$K)}\nomenclature{$c_v$}{Heat capacity of Stirling engine working gas at constant volume, J/(kg$\cdot$K)}$k=\dfrac{c_{p}}{c_{v}}$ for the working gas, $\gamma_{stirling}=\dfrac{V_{max}}{V_{min}}$ is the compression ratio.
+where \nomenclature{$e$}{Regeneration effectiveness of the Stirling engine}$e=\dfrac{T_{R}-T_{L}}{T_{H}-T_{L}}$,\nomenclature{$T_R$}{Regenerator temperature, K}$T_{R}$ is the\emph{ }regenerator temperature, \nomenclature{$c_p$}{Heat capacity of Stirling engine working gas at constant pressure, J/(kg$\cdot$K)}\nomenclature{$c_v$}{Heat capacity of Stirling engine working gas at constant volume, J/(kg$\cdot$K)}$k=\dfrac{c_{p}}{c_{v}}$ for the working gas, $\gamma_{se}=\dfrac{V_{max}}{V_{min}}$ is the compression ratio.
 
 The heat transfer diagram is shown in Figure \ref{fig:Heat-transfer-diagram}. Flow 1 is used for heating the hot chamber of Stirling engine, $T_{1i}$ is the inlet temperature, $T_{1o}$ is the outlet temperature. Flow 2 is used for cooling the cold chamber of Stirling engine, $T_{2i}$ is the inlet temperature, $T_{2o}$ is the outlet temperature. \nomenclature{$T_H$}{Highest temperature of expansion space, K}$T_{H}$ is the highest temperature of expansion space, \nomenclature{$T_L$}{Lowest temperature of compression space, K}$T_{L}$ is the lowest temperature of compression space.
 
